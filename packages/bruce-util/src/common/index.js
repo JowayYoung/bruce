@@ -3,18 +3,17 @@ import {
 	RecordMemPosition,
 	StatMemCount,
 	StatMemKeyword
-} from "./array";
+} from "./array.js";
 import {
 	FormatCountdown,
 	FormatDiffTime
-} from "./date";
+} from "./date.js";
 import {
-	Ajax,
 	AsyncTo,
 	Debounce,
 	Throttle,
 	WaitFor
-} from "./function";
+} from "./function.js";
 import {
 	ByteSize,
 	FillNum,
@@ -22,15 +21,15 @@ import {
 	RandomNumPlus,
 	RoundNum,
 	ThousandNum
-} from "./number";
+} from "./number.js";
 import {
 	GetKeys
-} from "./object";
+} from "./object.js";
 import {
 	CheckText,
 	CheckTextPlus,
 	MatchBracketText
-} from "./regexp";
+} from "./regexp.js";
 import {
 	DesePhone,
 	FormatPhone,
@@ -39,7 +38,7 @@ import {
 	RemoveTag,
 	ReverseText,
 	StartScore
-} from "./string";
+} from "./string.js";
 import {
 	CompareObj,
 	EnvType,
@@ -70,10 +69,9 @@ import {
 	IsWeakSet,
 	IsWeb,
 	TypeOf
-} from "./type";
+} from "./type.js";
 
 export {
-	Ajax,
 	AsyncTo,
 	ByteSize,
 	CheckText,

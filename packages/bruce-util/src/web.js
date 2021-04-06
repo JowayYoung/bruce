@@ -1,16 +1,17 @@
-import _Array from "./common/array";
-import _Dates from "./common/date";
-import _Functions from "./common/function";
-import _Numbers from "./common/number";
-import _Object from "./common/object";
-import _Regexps from "./common/regexp";
-import _Strings from "./common/string";
-import _Types from "./common/type";
-import Cookies from "./web/cookie";
-import Doms from "./web/dom";
-import Storages from "./web/storage";
-import Types from "./web/type";
-import Urls from "./web/url";
+import _Array from "./common/array.js";
+import _Dates from "./common/date.js";
+import _Functions from "./common/function.js";
+import _Numbers from "./common/number.js";
+import _Object from "./common/object.js";
+import _Regexps from "./common/regexp.js";
+import _Strings from "./common/string.js";
+import _Types from "./common/type.js";
+import Cookies from "./web/cookie.js";
+import Doms from "./web/dom.js";
+import Functions from "./web/function.js";
+import Storages from "./web/storage.js";
+import Types from "./web/type.js";
+import Urls from "./web/url.js";
 
 export default {
 	..._Array,
@@ -23,6 +24,7 @@ export default {
 	..._Types,
 	...Cookies,
 	...Doms,
+	...Functions,
 	...Storages,
 	...Types,
 	...Urls

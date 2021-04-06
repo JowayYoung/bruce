@@ -2,7 +2,7 @@ import {
 	GetCookie,
 	RemoveCookie,
 	SetCookie
-} from "./cookie";
+} from "./cookie.js";
 import {
 	AutoResponse,
 	CopyPaste,
@@ -10,9 +10,11 @@ import {
 	FilterXss,
 	Img2Base64,
 	Jsonp,
-	LoadScript,
-	ToastMsg
-} from "./dom";
+	LoadScript
+} from "./dom.js";
+import {
+	Ajax
+} from "./function.js";
 import {
 	ClearLStorage,
 	ClearSStorage,
@@ -22,19 +24,20 @@ import {
 	RemoveSStorage,
 	SetLStorage,
 	SetSStorage
-} from "./storage";
+} from "./storage.js";
 import {
 	BrowserType,
 	IsElement
-} from "./type";
+} from "./type.js";
 import {
 	ParseUrlSearch,
 	RemoveUrlSearch,
 	SetUrlSearch,
 	StringifyUrlSearch
-} from "./url";
+} from "./url.js";
 
 export {
+	Ajax,
 	AutoResponse,
 	BrowserType,
 	ClearLStorage,
@@ -58,6 +61,5 @@ export {
 	SetLStorage,
 	SetSStorage,
 	SetUrlSearch,
-	StringifyUrlSearch,
-	ToastMsg
+	StringifyUrlSearch
 };

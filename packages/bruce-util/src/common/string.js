@@ -1,5 +1,5 @@
 /** 字符工具 **/
-import { MATCH } from "./regexp";
+import { MATCH } from "./regexp.js";
 
 /**
  * @name 脱敏手机

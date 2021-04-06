@@ -1,5 +1,5 @@
 /** URL工具 **/
-import { IsEmptyArray, IsEmptyObject } from "../common/type";
+import { IsEmptyArray, IsEmptyObject } from "../common/index.js";
 
 /**
  * @name URL参数反序列化

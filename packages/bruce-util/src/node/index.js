@@ -4,13 +4,13 @@ import {
 	ReadFileForBFS,
 	ReadFileForDFS,
 	RemoveDir
-} from "./fs";
+} from "./fs.js";
 import {
 	RunCmd
-} from "./process";
+} from "./process.js";
 import {
 	NodeType
-} from "./type";
+} from "./type.js";
 
 export {
 	CopyDir,

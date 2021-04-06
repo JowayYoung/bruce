@@ -1,5 +1,5 @@
 /** DOM工具 **/
-import { AsyncTo } from "../common/function";
+import { AsyncTo } from "../common/index.js";
 
 /**
  * @name 自适应
@@ -114,24 +114,6 @@ async function LoadScript(url = "", pst = "head") {
 	return !err && res;
 }
 
-/**
- * @name 提示消息
- * @param {string} [msg="Tips"] 消息
- * @param {number} [delay=1000] 时延
- * @param {string} [classNames=""] 类名
- * @param {string} [id="toast"] ID
- */
-function ToastMsg(msg = "Tips", delay = 1000, classNames = "", id = "toast") {
-	if (document.getElementById(id)) return;
-	const body = document.getElementsByTagName("body")[0];
-	const toast = document.createElement("div");
-	toast.setAttribute("class", classNames);
-	toast.setAttribute("id", id);
-	toast.innerHTML = msg;
-	body.appendChild(toast);
-	setTimeout(() => body.removeChild(toast), delay);
-}
-
 export {
 	AutoResponse,
 	CopyPaste,
@@ -139,8 +121,7 @@ export {
 	FilterXss,
 	Img2Base64,
 	Jsonp,
-	LoadScript,
-	ToastMsg
+	LoadScript
 };
 
 export default {
@@ -150,6 +131,5 @@ export default {
 	FilterXss,
 	Img2Base64,
 	Jsonp,
-	LoadScript,
-	ToastMsg
+	LoadScript
 };

@@ -1,7 +1,7 @@
 /** 类型工具 **/
 import Os from "os";
 
-import { RunCmd } from "./process";
+import { RunCmd } from "./index.js";
 
 /**
  * @name Node类型
