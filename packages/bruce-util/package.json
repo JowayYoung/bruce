@@ -44,7 +44,8 @@
 	"scripts": {
 		"build": "rollup -c",
 		"remove": "rimraf node_modules package-lock.json yarn.lock",
-		"test": "node dist/test.js"
+		"test:node": "node dist/test.js",
+		"test:web": "cd dist && http-server -p 9999"
 	},
 	"dependencies": {
 		"copy-dir": "1.3.0",
