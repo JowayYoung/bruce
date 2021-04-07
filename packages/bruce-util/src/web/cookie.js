@@ -37,9 +37,3 @@ export {
 	RemoveCookie,
 	SetCookie
 };
-
-export default {
-	GetCookie,
-	RemoveCookie,
-	SetCookie
-};

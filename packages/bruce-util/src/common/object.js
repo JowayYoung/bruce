@@ -12,7 +12,3 @@ function GetKeys(obj = {}, keys = []) {
 export {
 	GetKeys
 };
-
-export default {
-	GetKeys
-};

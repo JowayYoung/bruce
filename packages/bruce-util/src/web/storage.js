@@ -74,14 +74,3 @@ export {
 	SetLStorage,
 	SetSStorage
 };
-
-export default {
-	ClearLStorage,
-	ClearSStorage,
-	GetLStorage,
-	GetSStorage,
-	RemoveLStorage,
-	RemoveSStorage,
-	SetLStorage,
-	SetSStorage
-};

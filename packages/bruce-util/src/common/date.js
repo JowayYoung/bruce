@@ -60,8 +60,3 @@ export {
 	FormatCountdown,
 	FormatDiffTime
 };
-
-export default {
-	FormatCountdown,
-	FormatDiffTime
-};

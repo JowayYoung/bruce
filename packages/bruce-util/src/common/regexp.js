@@ -85,9 +85,3 @@ export {
 	CheckTextPlus,
 	MatchBracketText
 };
-
-export default {
-	CheckText,
-	CheckTextPlus,
-	MatchBracketText
-};

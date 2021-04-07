@@ -84,12 +84,3 @@ export {
 	RoundNum,
 	ThousandNum
 };
-
-export default {
-	ByteSize,
-	FillNum,
-	RandomNum,
-	RandomNumPlus,
-	RoundNum,
-	ThousandNum
-};

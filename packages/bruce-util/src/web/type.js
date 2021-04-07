@@ -126,8 +126,3 @@ export {
 	BrowserType,
 	IsElement
 };
-
-export default {
-	BrowserType,
-	IsElement
-};

@@ -123,13 +123,3 @@ export {
 	Jsonp,
 	LoadScript
 };
-
-export default {
-	AutoResponse,
-	CopyPaste,
-	DownloadFile,
-	FilterXss,
-	Img2Base64,
-	Jsonp,
-	LoadScript
-};

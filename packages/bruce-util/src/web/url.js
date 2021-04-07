@@ -62,10 +62,3 @@ export {
 	SetUrlSearch,
 	StringifyUrlSearch
 };
-
-export default {
-	ParseUrlSearch,
-	RemoveUrlSearch,
-	SetUrlSearch,
-	StringifyUrlSearch
-};

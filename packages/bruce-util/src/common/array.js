@@ -41,10 +41,3 @@ export {
 	StatMemCount,
 	StatMemKeyword
 };
-
-export default {
-	GroupMemKey,
-	RecordMemPosition,
-	StatMemCount,
-	StatMemKeyword
-};

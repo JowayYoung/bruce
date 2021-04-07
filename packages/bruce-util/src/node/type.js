@@ -28,7 +28,3 @@ function NodeType() {
 export {
 	NodeType
 };
-
-export default {
-	NodeType
-};

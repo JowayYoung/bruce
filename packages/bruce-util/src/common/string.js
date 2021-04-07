@@ -77,13 +77,3 @@ export {
 	ReverseText,
 	StartScore
 };
-
-export default {
-	DesePhone,
-	FormatPhone,
-	RandomColor,
-	RandomId,
-	RemoveTag,
-	ReverseText,
-	StartScore
-};

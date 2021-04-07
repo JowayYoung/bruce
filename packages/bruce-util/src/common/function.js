@@ -51,10 +51,3 @@ export {
 	Throttle,
 	WaitFor
 };
-
-export default {
-	AsyncTo,
-	Debounce,
-	Throttle,
-	WaitFor
-};

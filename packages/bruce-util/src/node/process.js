@@ -12,7 +12,3 @@ function RunCmd(cmd = "node -v") {
 export {
 	RunCmd
 };
-
-export default {
-	RunCmd
-};

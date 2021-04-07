@@ -92,11 +92,3 @@ export {
 	ReadFileForDFS,
 	RemoveDir
 };
-
-export default {
-	CopyDir,
-	CreateDir,
-	ReadFileForBFS,
-	ReadFileForDFS,
-	RemoveDir
-};
