@@ -1,8 +1,8 @@
 import { readFileSync, writeFileSync } from "fs";
 
-import { LOCALE_TEXT } from "../i18n/index.js";
-import LocaleAnswer from "../package/locale-answer/index.js";
-import { AbsPath, ShowMsg, ShowTitle } from "../util/setting.js";
+import { LOCALE_TEXT } from "../../i18n/index.js";
+import LocaleAnswer from "../locale-answer/index.js";
+import { AbsPath, ShowMsg, ShowTitle } from "../../util/setting.js";
 
 export default async function() {
 	ShowTitle("locale");

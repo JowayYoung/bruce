@@ -6,8 +6,8 @@ import LatestVersion from "latest-version";
 import Semver from "semver";
 
 import { ACTION_TEXT, GLOB_TEXT } from "../i18n/index.js";
-import Locale from "../lib/locale.js";
-import Remove from "../lib/remove.js";
+import Locale from "../package/action-locale/index.js";
+import Remove from "../package/action-remove/index.js";
 import { ShowMsg } from "../util/setting.js";
 
 const { blueBright, greenBright, yellowBright } = Chalk;
