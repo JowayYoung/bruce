@@ -36,7 +36,7 @@
 		max-width: 900px;
 		min-height: 200px;
 		max-height: 680px;
-		background-color: $background;
+		background-color: #fff;
 		box-shadow: $box-shadow;
 	}
 	&-title {
@@ -73,7 +73,7 @@
 		transition: all 300ms;
 		&:hover,
 		&:active {
-			background-color: rgba($primary, .5);
+			transform: rotate(180deg);
 		}
 	}
 	&-toast {
