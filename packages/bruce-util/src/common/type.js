@@ -196,6 +196,7 @@ export {
 	IsEmpty, // 判断空
 	IsEmptyArray, // 判断空数组
 	IsEmptyObject, // 判断空对象
+	IsEqual, // 判断相等
 	IsError, // 判断错误
 	IsFunction, // 判断函数
 	IsMap, // 判断Map

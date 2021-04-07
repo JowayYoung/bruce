@@ -40,4 +40,18 @@ export default [{
 		name: "BruceUtil"
 	},
 	plugins: PLUGINS
+}, {
+	input: "src/node.js",
+	output: {
+		file: "dist/node.js",
+		format: "cjs"
+	},
+	plugins: PLUGINS
+}, {
+	input: "src/node.js",
+	output: {
+		file: "dist/node.esm.js",
+		format: "esm"
+	},
+	plugins: PLUGINS
 }];

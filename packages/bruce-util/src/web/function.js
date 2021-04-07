@@ -1,5 +1,5 @@
 /** 函数工具 **/
-import { StringifyUrlSearch } from "./index.js";
+import { StringifyUrlSearch } from "./url.js";
 
 /**
  * @name 异步请求

@@ -1,5 +1,5 @@
 /** DOM工具 **/
-import { AsyncTo } from "../common/index.js";
+import { AsyncTo } from "../common/function.js";
 
 /**
  * @name 自适应
