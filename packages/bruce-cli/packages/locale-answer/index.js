@@ -1,6 +1,6 @@
 import Inquirer from "inquirer";
 
-import { QUESTION_TEXT } from "../../i18n/index.js";
+import { QUESTION_TEXT } from "../../languages/index.js";
 
 const { prompt } = Inquirer;
 

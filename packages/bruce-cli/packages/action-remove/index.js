@@ -2,8 +2,8 @@ import { promisify } from "util";
 import Ora from "ora";
 import Rimraf from "rimraf";
 
-import { REMOVE_TEXT } from "../../i18n/index.js";
-import { AbsPath, ShowMsg, ShowTitle } from "../../util/setting.js";
+import { REMOVE_TEXT } from "../../languages/index.js";
+import { AbsPath, ShowMsg, ShowTitle } from "../../utils/setting.js";
 
 export default async function() {
 	ShowTitle("remove");

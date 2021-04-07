@@ -5,10 +5,10 @@ import Commander from "commander";
 import LatestVersion from "latest-version";
 import Semver from "semver";
 
-import { ACTION_TEXT, GLOB_TEXT } from "../i18n/index.js";
-import Locale from "../package/action-locale/index.js";
-import Remove from "../package/action-remove/index.js";
-import { ShowMsg } from "../util/setting.js";
+import { ACTION_TEXT, GLOB_TEXT } from "../languages/index.js";
+import Locale from "../packages/action-locale/index.js";
+import Remove from "../packages/action-remove/index.js";
+import { ShowMsg } from "../utils/setting.js";
 
 const { blueBright, greenBright, yellowBright } = Chalk;
 const { lt, neq } = Semver;

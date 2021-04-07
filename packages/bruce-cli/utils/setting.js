@@ -2,7 +2,7 @@ import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import Chalk from "chalk";
 
-import { ACTION_TEXT } from "../i18n/index.js";
+import { ACTION_TEXT } from "../languages/index.js";
 
 const { white } = Chalk;
 const __filename = fileURLToPath(import.meta.url);
