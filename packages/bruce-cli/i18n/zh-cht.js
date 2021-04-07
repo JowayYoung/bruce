@@ -1,16 +1,19 @@
-const Chalk = require("chalk");
-const Figures = require("figures");
+import Chalk from "chalk";
+import Figures from "figures";
+
+const { blueBright, greenBright, redBright, yellowBright } = Chalk;
+const { cross, play, pointer, radioOn, tick, warning } = Figures;
 
 const GLOB_TEXT = {
-	desc: `Description:\n${Chalk.blueBright("@bruce/cli")} 一個零配置開箱即用的${Chalk.redBright("Default/React/Vue")}應用自動化構建腳手架\n文檔詳情請查看 ${Chalk.yellowBright("https://github.com/JowayYoung/bruce")}`,
+	desc: `Description:\n${blueBright("@bruce/cli")} 一個零配置開箱即用的${redBright("Default/React/Vue")}應用自動化構建腳手架\n文檔詳情請查看 ${yellowBright("https://github.com/JowayYoung/bruce")}`,
 	help: "使用信息",
-	judgeBrucerc: `${Figures.cross} ${Chalk.blueBright("brucerc.js")}不存在，請重置項目配置`,
-	judgeModules: `${Figures.cross} 請執行${Chalk.greenBright("npm i")}或${Chalk.greenBright("yarn")}安裝依賴`,
-	judgePackage: `${Figures.cross} ${Chalk.blueBright("package.json")}不存在，請重置項目配置`,
-	judgeSrc: `${Figures.cross} ${Chalk.blueBright("src目錄")}不存在，請重置項目配置`,
-	judgeTsconfig: `${Figures.cross} ${Chalk.blueBright("tsconfig.json")}不存在，請重置項目配置`,
-	judgeVerBruce: `${Figures.cross} ${Chalk.blueBright("@bruce/cli")}已發布最新版本，請執行${Chalk.greenBright("npm i -g @bruce/cli")}更新`,
-	judgeVerNode: `${Figures.cross} 當前${Chalk.blueBright("Node")}版本過低，請更新到${Chalk.greenBright("v12")}以上`,
+	judgeBrucerc: `${cross} ${blueBright("brucerc.js")}不存在，請重置項目配置`,
+	judgeModules: `${cross} 請執行${greenBright("npm i")}或${greenBright("yarn")}安裝依賴`,
+	judgePackage: `${cross} ${blueBright("package.json")}不存在，請重置項目配置`,
+	judgeSrc: `${cross} ${blueBright("src目錄")}不存在，請重置項目配置`,
+	judgeTsconfig: `${cross} ${blueBright("tsconfig.json")}不存在，請重置項目配置`,
+	judgeVerBruce: `${cross} ${blueBright("@bruce/cli")}已發布最新版本，請執行${greenBright("npm i -g @bruce/cli")}更新`,
+	judgeVerNode: `${cross} 當前${blueBright("Node")}版本過低，請更新到${greenBright("v12")}以上`,
 	version: "版本編號"
 };
 
@@ -25,13 +28,13 @@ const ACTION_TEXT = {
 const QUESTION_TEXT = {
 	deps: "請選擇應用依賴",
 	frame: "請選擇開發框架",
-	judgeCompExist: `${Figures.cross} 組件已存在，請使用其他名稱創建組件`,
-	judgeCompName: `${Figures.cross} 名稱只能由數字、小寫字母或中劃線組成，且首位字符只能為小寫字母`,
-	judgePort: `${Figures.cross} 調試端口必須為正整數`,
-	judgePortExist: port => `${Figures.cross} 調試端口${Chalk.blueBright(port)}已被占用`,
-	judgeProjExist: `${Figures.cross} 項目已存在，請使用其他名稱初始項目`,
-	judgeProjName: `${Figures.cross} 名稱只能由數字、字母或中劃線組成，且首位字符只能為數字或字母`,
-	judgeVendor: `${Figures.cross} 構建依賴不能為空`,
+	judgeCompExist: `${cross} 組件已存在，請使用其他名稱創建組件`,
+	judgeCompName: `${cross} 名稱只能由數字、小寫字母或中劃線組成，且首位字符只能為小寫字母`,
+	judgePort: `${cross} 調試端口必須為正整數`,
+	judgePortExist: port => `${cross} 調試端口${blueBright(port)}已被占用`,
+	judgeProjExist: `${cross} 項目已存在，請使用其他名稱初始項目`,
+	judgeProjName: `${cross} 名稱只能由數字、字母或中劃線組成，且首位字符只能為數字或字母`,
+	judgeVendor: `${cross} 構建依賴不能為空`,
 	locale: "請選擇國際語言",
 	mode: "請選擇構建環境",
 	modeMap: { dev: "開發環境", test: "測試環境", prod: "生產環境" }, // eslint-disable-line
@@ -56,21 +59,21 @@ const QUESTION_TEXT = {
 };
 
 const BUILD_TEXT = {
-	buildFail: (name, ver, mode) => `${Figures.cross} [${mode}]項目構建失敗：${Chalk.blueBright(name)}@${Chalk.yellowBright(ver)}`,
-	buildSucceed: (name, ver, mode) => `${Figures.tick} [${mode}]項目構建成功：${Chalk.blueBright(name)}@${Chalk.yellowBright(ver)}`,
-	dllFail: `${Figures.cross} 動態鏈接庫構建失敗`,
-	dllSucceed: `${Figures.tick} 動態鏈接庫構建成功`,
+	buildFail: (name, ver, mode) => `${cross} [${mode}]項目構建失敗：${blueBright(name)}@${yellowBright(ver)}`,
+	buildSucceed: (name, ver, mode) => `${tick} [${mode}]項目構建成功：${blueBright(name)}@${yellowBright(ver)}`,
+	dllFail: `${cross} 動態鏈接庫構建失敗`,
+	dllSucceed: `${tick} 動態鏈接庫構建成功`,
 	judgeBrucerc: GLOB_TEXT.judgeBrucerc,
-	judgeCorejs: `${Figures.cross} ${Chalk.blueBright("core-js")}版本請控制在${Chalk.greenBright("v3")}以上`,
-	judgeEntry: `${Figures.cross} 入口文件配置錯誤，請重置項目配置`,
+	judgeCorejs: `${cross} ${blueBright("core-js")}版本請控制在${greenBright("v3")}以上`,
+	judgeEntry: `${cross} 入口文件配置錯誤，請重置項目配置`,
 	judgeModules: GLOB_TEXT.judgeModules,
 	judgePackage: GLOB_TEXT.judgePackage,
-	judgePolyfill: `${Figures.cross} ${Chalk.blueBright("@babel/polyfill")}已棄用，請使用${Chalk.blueBright("core-js/stable")}和${Chalk.blueBright("regenerator-runtime/runtime")}`,
+	judgePolyfill: `${cross} ${blueBright("@babel/polyfill")}已棄用，請使用${blueBright("core-js/stable")}和${blueBright("regenerator-runtime/runtime")}`,
 	judgeSrc: GLOB_TEXT.judgeSrc,
 	judgeTsconfig: GLOB_TEXT.judgeTsconfig,
-	listening: `監聽開發環境 ${Figures.pointer}${Figures.pointer}`,
-	listLocalhost: `${Figures.radioOn} 本地網: `,
-	listNetwork: `${Figures.radioOn} 局域網: `,
+	listening: `監聽開發環境 ${pointer}${pointer}`,
+	listLocalhost: `${radioOn} 本地網: `,
+	listNetwork: `${radioOn} 局域網: `,
 	table: {
 		analyze: "分析打包結果",
 		compress: "深度壓縮文件",
@@ -85,38 +88,38 @@ const BUILD_TEXT = {
 		timed: "時間化根目錄",
 		upload: "上傳到服務器"
 	},
-	uploadFail: `${Figures.cross} 項目上傳失敗`,
+	uploadFail: `${cross} 項目上傳失敗`,
 	uploading: "項目正在上傳中......",
-	uploadSucceed: `${Figures.tick} 項目上傳成功`,
-	watch: file => `${Chalk.blueBright(file)}配置被修改，請重新執行${Chalk.greenBright("bruce b")}構建項目`
+	uploadSucceed: `${tick} 項目上傳成功`,
+	watch: file => `${blueBright(file)}配置被修改，請重新執行${greenBright("bruce b")}構建項目`
 };
 
 const INIT_TEXT = {
 	getting: "依賴正在獲取中......",
-	initFail: `${Figures.warning} 項目初始成功(${Chalk.redBright(GLOB_TEXT.judgeModules)})`,
-	initSucceed: `${Figures.tick} 項目初始成功`,
+	initFail: `${warning} 項目初始成功(${redBright(GLOB_TEXT.judgeModules)})`,
+	initSucceed: `${tick} 項目初始成功`,
 	installing: "依賴正在安裝中......",
-	start: name => `${Figures.play} 開始使用以下命令：\n${Figures.radioOn} ${Chalk.greenBright(`cd ${name}`)}\n${Figures.radioOn} ${Chalk.greenBright("bruce b")}`
+	start: name => `${play} 開始使用以下命令：\n${radioOn} ${greenBright(`cd ${name}`)}\n${radioOn} ${greenBright("bruce b")}`
 };
 
 const LOCALE_TEXT = {
-	localed: `${Figures.tick} 語言切換成功`
+	localed: `${tick} 語言切換成功`
 };
 
 const NEW_TEXT = {
 	judgeBrucerc: GLOB_TEXT.judgeBrucerc,
-	judgeFrame: `${Figures.cross} 非MVVM項目無法執行此命令`,
+	judgeFrame: `${cross} 非MVVM項目無法執行此命令`,
 	judgeModules: GLOB_TEXT.judgeModules,
 	judgePackage: GLOB_TEXT.judgePackage,
 	judgeSrc: GLOB_TEXT.judgeSrc,
 	judgeTsconfig: GLOB_TEXT.judgeTsconfig,
-	name: `${Figures.radioOn} 組件名稱: `,
-	newed: `${Figures.tick} 組件創建成功`,
-	path: `${Figures.radioOn} 組件路徑: `
+	name: `${radioOn} 組件名稱: `,
+	newed: `${tick} 組件創建成功`,
+	path: `${radioOn} 組件路徑: `
 };
 
 const REMOVE_TEXT = {
-	removed: `${Figures.tick} 依賴刪除成功`,
+	removed: `${tick} 依賴刪除成功`,
 	removing: "依賴正在刪除中......"
 };
 
