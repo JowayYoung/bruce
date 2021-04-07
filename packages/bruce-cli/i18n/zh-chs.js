@@ -122,7 +122,7 @@ const REMOVE_TEXT = {
 
 const FormatBool = bool => bool ? "是" : "否";
 
-module.exports = {
+export {
 	ACTION_TEXT,
 	BUILD_TEXT,
 	GLOB_TEXT,
