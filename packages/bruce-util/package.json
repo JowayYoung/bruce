@@ -1,7 +1,7 @@
 {
 	"name": "@bruce/util",
 	"version": "0.0.1",
-	"description": "A front-end Web/Node general utils library",
+	"description": "A Web/Node General Utils Library",
 	"keywords": [
 		"@bruce/util",
 		"bruce",

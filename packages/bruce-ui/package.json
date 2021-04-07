@@ -1,7 +1,7 @@
 {
 	"name": "@bruce/ui",
 	"version": "0.0.1",
-	"description": "A front-end general UI component library",
+	"description": "A React General UI Component Library",
 	"keywords": [
 		"@bruce/ui",
 		"bruce",
