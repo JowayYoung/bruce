@@ -1,0 +1,1 @@
+import io from"inquirer";import{LANG as zr}from"../question/index.js";export default async function xr(){return await io.prompt(zr)}

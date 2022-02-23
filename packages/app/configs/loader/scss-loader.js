@@ -1,0 +1,1 @@
+export default function x(){return{loader:"sass-loader",options:{sassOptions:{fiber:!1},sourceMap:!0}}}

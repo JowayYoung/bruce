@@ -1,0 +1,1 @@
+export default function sr(){return{exclude:/node_modules/,include:/src/,test:/\.txt/,type:"asset/source"}}

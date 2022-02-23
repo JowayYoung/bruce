@@ -1,0 +1,1 @@
+import{JudgeFile as n}from"../../constants/util/index.js";export default function m(){return{index:n("src")}}

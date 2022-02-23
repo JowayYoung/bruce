@@ -1,0 +1,1 @@
+import Q from"html-webpack-plugin";import{AbsPath as w}from"../../constants/util/index.js";export default function R(){return new Q({chunks:["manifest","vendor","index"],chunksSortMode:"manual",favicon:w("src/assets/img/favicon.ico"),filename:"index.html",inject:"body",template:w("src/index.html")})}

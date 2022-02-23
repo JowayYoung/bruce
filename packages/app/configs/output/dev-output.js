@@ -1,0 +1,1 @@
+import{AbsPath as w}from"../../constants/util/index.js";export default function P(){return{filename:"js/[name].bundle.js",path:w("dist"),publicPath:"/"}}

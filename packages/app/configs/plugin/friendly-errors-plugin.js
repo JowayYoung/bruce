@@ -1,0 +1,1 @@
+import K from"@soda/friendly-errors-webpack-plugin";export default function M(){return new K}

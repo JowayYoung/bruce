@@ -1,0 +1,1 @@
+export default function ae({debug:e=!1,useHash:t=!1}={}){return{exclude:/node_modules/,generator:{filename:`img/[name]${t?".[hash:8]":""}[ext]`},include:/src/,parser:{dataUrlCondition:{maxSize:10240}},test:/\.(jpe?g|png|gif|webp)$/,type:e?"asset/resource":"asset"}}

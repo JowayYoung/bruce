@@ -1,0 +1,17 @@
+# 详情请参考文档：https://doc.yangzw.vip/bruce/app
+alias: {}
+browsers: []
+eslintIgnores: []
+eslintRules: {}
+frame: ""
+openPages: []
+proxy: {}
+proxyHost: ""
+publicPath: ""
+scriptAssets: []
+style: ""
+styleAssets: []
+stylelintIgnores: []
+stylelintRules: {}
+uploadOpts: ~
+useTs: FALSE

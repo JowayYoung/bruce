@@ -1,0 +1,1 @@
+import{VueLoaderPlugin as re}from"vue-loader";export default function mi(){return new re}

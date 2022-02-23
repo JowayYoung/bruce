@@ -1,0 +1,1 @@
+import $ from"compression-webpack-plugin";export default function H({disabled:e=!0}={}){return e?null:new $({test:/\.(css|js)$/,threshold:10240})}
