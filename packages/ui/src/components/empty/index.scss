@@ -1,0 +1,29 @@
+@import "../../assets/css/theme";
+.empty {
+	&-component {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-width: 200px;
+		height: 100%;
+		min-height: 200px;
+		> img {
+			height: 100px;
+		}
+		@include autoResponse(lg) {
+			min-width: 4rem;
+			min-height: 4rem;
+			> img {
+				height: 2rem;
+			}
+		}
+	}
+	&-text {
+		margin-top: 20px;
+		padding: 0 10px;
+		font-size: 14px;
+		color: $text-tertiary;
+	}
+}

@@ -1,0 +1,61 @@
+@import "../../assets/css/theme";
+$size: 40px;
+.button {
+	&-component {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 10px;
+		border: none;
+		width: fit-content;
+		min-width: $size;
+		height: $size;
+		background-color: $primary;
+		cursor: pointer;
+		line-height: $size;
+		font-size: 16px;
+		color: $block-primary;
+		transition: all 300ms;
+		&:active {
+			opacity: .8;
+		}
+		&:disabled {
+			opacity: .5;
+			cursor: default;
+		}
+		@include autoResponse(lg) {
+			$size: .8rem;
+			padding: 0 .2rem;
+			min-width: $size;
+			height: $size;
+			line-height: $size;
+			font-size: .32rem;
+		}
+	}
+	&-cancel {
+		background-color: $block-secondary;
+		color: $text-secondary;
+	}
+	&-circle {
+		border-radius: 5px;
+		@include autoResponse(lg) {
+			border-radius: .1rem;
+		}
+	}
+	&-round {
+		border-radius: $size;
+		@include autoResponse(lg) {
+			$size: .8rem;
+			border-radius: $size;
+		}
+	}
+	&-icon {
+		margin-right: 5px;
+		width: 1em;
+		height: 1em;
+		transition: all 300ms;
+		@include autoResponse(lg) {
+			margin-right: .1rem;
+		}
+	}
+}

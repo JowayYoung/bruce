@@ -1,0 +1,18 @@
+{
+	"version": "independent",
+	"npmClient": "yarn",
+	"useWorkspaces": true,
+	"command": {
+		"publish": {
+			"ignoreChanges": [
+				".DS_Store",
+				"dist",
+				"node_modules",
+				"package-lock.json",
+				"yarn.lock"
+			],
+			"message": "chore: publish release %v",
+			"registry": "https://registry.npmjs.org/"
+		}
+	}
+}
