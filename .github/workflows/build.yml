@@ -20,5 +20,5 @@ jobs: # 任务
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.DOCS }}
-          publish_dir: root # 打包文件位置
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # 打包文件位置
