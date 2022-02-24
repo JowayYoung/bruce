@@ -1,0 +1,5 @@
+{
+	"eslint.options": {
+		"overrideConfigFile": "E:/Github/vscode-lint/tslint/tslintrc.react.js"
+	}
+}

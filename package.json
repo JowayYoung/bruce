@@ -3,7 +3,8 @@
 	"private": true,
 	"scripts": {
 		"clean": "lerna clean && rimraf .umi dist node_modules package-lock.json yarn.lock",
-		"doc": "dumi dev",
+		"docs": "dumi dev",
+		"docs:build": "dumi build",
 		"init": "lerna bootstrap",
 		"lint": "eslint . --ext .js -c packages/app/templates/eslint/eslintrc.cjs && eslint . --ext .ts -c packages/app/templates/tslint/tslintrc.cjs"
 	},

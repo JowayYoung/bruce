@@ -1,9 +1,5 @@
-.DS_Store
-.gitattributes
 .umi
-.vscode
+.umi-production
 coverage
 dist
 node_modules
-package-lock.json
-yarn.lock

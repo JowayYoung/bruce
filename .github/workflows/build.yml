@@ -1,0 +1,27 @@
+name: Generate Document # 动作名称
+
+on: # 触发条件：在push到main分支后
+  push:
+    branches:
+      - main
+
+jobs: # 任务
+  cbd: # 任务ID
+    name: doc cbd # 任务名称(检出C构建B部署D)
+    runs-on: ubuntu-latest # 虚拟机环境
+    steps: # 运行步骤
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false # 使用actions/checkout@v2在大多数情况下必须将持久凭证设置为false才能使部署正确工作
+      # 打包文件
+      - name: Build
+        run: yarn && yarn run docs:build
+      # 部署GP
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          ACCESS_TOKEN: ${{secrets.DOCS}}
+          BRANCH: gh-pages # 打包完毕部署的分支
+          FOLDER: dist # 打包文件位置
