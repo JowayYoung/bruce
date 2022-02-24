@@ -26,6 +26,7 @@ export default defineConfig({
 			title: "个人官网"
 		}
 	],
+	outputPath: "root",
 	publicPath: "/bruce/",
 	styles: [
 		"*{box-sizing:border-box;margin:0;padding:0}::-webkit-scrollbar{width:4px;height:4px;background-color:transparent}::-webkit-scrollbar-track{background-color:transparent}::-webkit-scrollbar-thumb{border-radius:2px;background-color:#f66}.gap{display:inline-block;width:10px}.mark{font-weight:bold;color:#f66}",
