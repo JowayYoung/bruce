@@ -28,7 +28,7 @@ export default defineConfig({
 	],
 	publicPath: "/bruce/",
 	styles: [
-		"*{box-sizing:border-box;margin:0;padding:0}::-webkit-scrollbar{width:4px;height:4px;background-color:transparent}::-webkit-scrollbar-track{background-color:transparent}::-webkit-scrollbar-thumb{border-radius:2px;background-color:#f66}.gap{display:inline-block;width:10px}.mark{font-weight:bold;color:#f66}",
+		"*{box-sizing:border-box;margin:0;padding:0}::-webkit-scrollbar{width:4px;height:4px;background-color:transparent}::-webkit-scrollbar-track{background-color:transparent}::-webkit-scrollbar-thumb{border-radius:2px;background-color:#f66}p{word-break:break-all}.gap{display:inline-block;width:10px}.mark{font-weight:bold;color:#f66}",
 		".contains-task-list{margin-left:15px!important}.task-list-item::marker{color:transparent}.task-list-item input[type=checkbox]{vertical-align:middle}",
 		".home-contact{display:flex;justify-content:center}.home-contact-item{display:block;border:1px solid #666;border-radius:5px;height:300px}.home-contact-item:not(:first-child){margin-left:30px}",
 		".browser{display:flex;align-items:center;width:100px}.browser img{margin-right:5px;width:25px}",
