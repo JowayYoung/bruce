@@ -24,4 +24,4 @@ jobs: # 任务
         with:
           github_token: ${{ secrets.DOCS }}
           publish_branch: gh-pages # 打包完毕部署的分支
-          publish_dir: dist # 打包文件位置
+          publish_dir: root # 打包文件位置
