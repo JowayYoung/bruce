@@ -19,4 +19,4 @@ toc: menu
 
 正确使用姿势请观看该[视频](https://www.bilibili.com/video/BV1UK41157fX)，简单易用方便快捷，**一次安装全局运行**，实在是**远离架构专注编码的必备工具**。
 
-笔者的个人官网使用`@bruce/app`构建，有兴趣的同学请戳[JowayYoung个人官网](https://yangzw.vip)查看详情。
+笔者的个人官网使用`@yangzw/bruce-app`构建，有兴趣的同学请戳[JowayYoung个人官网](https://yangzw.vip)查看详情。

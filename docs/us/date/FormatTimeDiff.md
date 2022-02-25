@@ -5,7 +5,7 @@
 **date**|日期|`String / Number / Date`|-|`String`格式为`YYYY-MM-DD HH:mm:ss`，在`Safari`下需将`-`换成`/`
 
 ```js
-import { FormatTimeDiff } from "@bruce/us";
+import { FormatTimeDiff } from "@yangzw/bruce-us";
 
 FormatTimeDiff("2022-12-31"); // "10个月后"
 ```

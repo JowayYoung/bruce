@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsClass } from "@bruce/us";
+import { IsClass } from "@yangzw/bruce-us";
 
 IsClass(class Bruce {}); // true
 ```

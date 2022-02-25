@@ -13,7 +13,7 @@
 空类型：可输出`error`、`empty`、`emptyarray`、`emptyobject`
 
 ```js
-import { TypeOf } from "@bruce/us";
+import { TypeOf } from "@yangzw/bruce-us";
 
 TypeOf("123"); // "string"
 TypeOf(123); // "number"

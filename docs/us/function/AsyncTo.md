@@ -5,7 +5,7 @@
 **pfn**|Promise函数|`Function`|-
 
 ```js
-import { AsyncTo } from "@bruce/us";
+import { AsyncTo } from "@yangzw/bruce-us";
 
 (async() => {
 	const [err, res] = await AsyncTo(GetData());

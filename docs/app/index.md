@@ -3,7 +3,7 @@ title: 入门
 order: 1
 toc: menu
 nav:
-  title: "@bruce/app"
+  title: "@yangzw/bruce-app"
   order: 1
 ---
 
@@ -17,9 +17,9 @@ nav:
 
 ## 介绍
 
-[![author](https://img.shields.io/badge/@bruce/app-JS/React/Vue应用自动化构建脚手架-66f.svg)](https://github.com/JowayYoung/bruce)
+[![author](https://img.shields.io/badge/@yangzw/bruce--app-JS/React/Vue应用自动化构建脚手架-66f.svg)](https://github.com/JowayYoung/bruce)
 
-`@bruce/app`是一个零配置开箱即用的**JS/React/Vue**应用自动化构建脚手架，真正实现构建代码与业务代码完全分离，无需关注构建过程，专心编写业务代码。
+`@yangzw/bruce-app`是一个零配置开箱即用的**JS/React/Vue**应用自动化构建脚手架，真正实现构建代码与业务代码完全分离，无需关注构建过程，专心编写业务代码。
 
 其**零配置开箱即用**的优点非常适合`入门级`、`初中级`和`快速开发应用`的前端开发者使用，还可通过创建配置文件覆盖其默认配置，只需专注业务代码的编写无需关注构建代码的编写，让应用结构更简洁。
 
@@ -34,7 +34,7 @@ nav:
 
 ## 依赖
 
-`@bruce/app`是一个基于`webpack v5`开发的极速零配置开箱即用的Web应用构建工具(**每次更新都会保持最新依赖**)，集成各种常用工具(`postcss`、`sass`、`less`、`babel`、`typescript`、`stylelint`、`eslint`等)扩展构建功能，用于管理**JS/React/Vue**技术栈的应用。
+`@yangzw/bruce-app`是一个基于`webpack v5`开发的极速零配置开箱即用的Web应用构建工具(**每次更新都会保持最新依赖**)，集成各种常用工具(`postcss`、`sass`、`less`、`babel`、`typescript`、`stylelint`、`eslint`等)扩展构建功能，用于管理**JS/React/Vue**技术栈的应用。
 
 [![commander](https://img.shields.io/badge/commander-9.x.x-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![inquirer](https://img.shields.io/badge/inquirer-8.x.x-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
@@ -52,8 +52,8 @@ nav:
 
 ## 安装
 
-- 使用`npm`安装：`npm i -g @bruce/app`
-- 使用`yarn`安装：`yarn add global @bruce/app`
+- 使用`npm`安装：`npm i -g @yangzw/bruce-app`
+- 使用`yarn`安装：`yarn add global @yangzw/bruce-app`
 
 ## 使用
 

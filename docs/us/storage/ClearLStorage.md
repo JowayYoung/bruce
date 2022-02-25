@@ -1,7 +1,7 @@
 > 清空LocalStorage - `Web`
 
 ```js
-import { ClearLStorage } from "@bruce/us";
+import { ClearLStorage } from "@yangzw/bruce-us";
 
 ClearLStorage();
 ```

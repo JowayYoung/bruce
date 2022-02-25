@@ -6,7 +6,7 @@
 **key**|属性|`String`|`""`
 
 ```js
-import { GroupArrKey } from "@bruce/us";
+import { GroupArrKey } from "@yangzw/bruce-us";
 
 const arr = [
 	{ area: "德国", name: "奔驰" },

@@ -1,3 +1,3 @@
-# @bruce/ui
+# @yangzw/bruce-ui
 
-请查看[@bruce/ui](https://doc.yangzw.vip/bruce/ui)文档
+请查看[@yangzw/bruce-ui](https://doc.yangzw.vip/bruce/ui)文档

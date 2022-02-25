@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsMap } from "@bruce/us";
+import { IsMap } from "@yangzw/bruce-us";
 
 IsMap(new Map()); // true
 ```

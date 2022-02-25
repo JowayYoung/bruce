@@ -1,7 +1,7 @@
 > 清空SessionStorage - `Web`
 
 ```js
-import { ClearSStorage } from "@bruce/us";
+import { ClearSStorage } from "@yangzw/bruce-us";
 
 ClearSStorage();
 ```

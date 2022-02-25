@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsElement } from "@bruce/us";
+import { IsElement } from "@yangzw/bruce-us";
 
 IsElement(document.body); // true
 ```

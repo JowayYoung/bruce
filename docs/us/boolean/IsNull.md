@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsNull } from "@bruce/us";
+import { IsNull } from "@yangzw/bruce-us";
 
 IsNull(null); // true
 ```

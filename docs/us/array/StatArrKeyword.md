@@ -6,7 +6,7 @@
 **keys**|关键字集合|`Array`|`[]`
 
 ```js
-import { StatArrKeyword } from "@bruce/us";
+import { StatArrKeyword } from "@yangzw/bruce-us";
 
 const arr1 = [
 	"今天天气真好，我想出去钓鱼",

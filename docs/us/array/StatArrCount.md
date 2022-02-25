@@ -5,7 +5,7 @@
 **arr**|数组|`Array`|`[]`
 
 ```js
-import { StatArrCount } from "@bruce/us";
+import { StatArrCount } from "@yangzw/bruce-us";
 
 const arr = [0, 1, 1, 2, 2, 2];
 

@@ -5,32 +5,32 @@ hero:
   title: Bruce FEES
   desc: 一套多功能【前端工程化多包管理】实践方案<br>APP应用🌐 / ICO图标🔥 / IMG图像🖼️ / LIB类库🔗 / PKG模块📦 / STD规范⚙️ / UI组件🎨 / US工具🛠️
   actions:
-    - text: "从@bruce/app开始"
+    - text: 从 bruce-app 开始
       link: /app
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
-    title: "@bruce/app"
+    title: "@yangzw/bruce-app"
     desc: 一个零配置开箱即用的JS/React/Vue应用自动化构建脚手架，真正实现构建代码与业务代码完全分离，无需关注构建过程，专心编写业务代码
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
-    title: "@bruce/lib"
+    title: "@yangzw/bruce-lib"
     desc: 一个零配置开箱即用的JS/React/Vue类库自动化构建脚手架，真正实现构建代码与业务代码完全分离，无需关注构建过程，专心编写业务代码
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
-    title: "@bruce/std"
+    title: "@yangzw/bruce-std"
     desc: 一个集成Stylelint与Eslint的VSCode配置工具，配合VSCode插件为用户提供前端文件的代码校验、代码修复和错误提示的功能
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
-    title: "@bruce/ico"
+    title: "@yangzw/bruce-ico"
     desc: 一个基于CSS背景遮罩生成CSS图标的图标处理工具，为图标提供文件监听、格式转换和动态样式的功能
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
-    title: "@bruce/img"
+    title: "@yangzw/bruce-img"
     desc: 一个多功能无限制的图像批处理工具，为图像提供压缩、分组、标记和变换的批处理功能
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
-    title: "@bruce/pkg"
+    title: "@yangzw/bruce-pkg"
     desc: 一个强化NPM命令的模块处理工具，为模块提供基本骨架创建与链式检查发布的功能
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
-    title: "@bruce/ui"
+    title: "@yangzw/bruce-ui"
     desc: 一个React通用组件库，提供基础组件、表单组件、向导组件、展示组件和反馈组件等
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
-    title: "@bruce/us"
+    title: "@yangzw/bruce-us"
     desc: 一个无框架约束的通用工具库，提供Web平台、Node平台和双平台的常用工具函数
 footer: Copyright © 2017-present | MIT Licensed<br>Powered By <span class="mark">JowayYoung</span>
 ---
@@ -58,26 +58,26 @@ footer: Copyright © 2017-present | MIT Licensed<br>Powered By <span class="mark
 使用`npm`安装所需的实践方案，`xyz`为上述可用包名。
 
 ```bash
-npm i -g @bruce/xyz
+npm i -g @yangzw/bruce-xyz
 ```
 
 使用`yarn`安装所需的实践方案，`xyz`为上述可用包名。
 
 ```bash
-yarn add global @bruce/xyz
+yarn add global @yangzw/bruce-xyz
 ```
 
 > 使用npm安装失败
 
 - [x] 切换`npm`镜像为淘宝镜像：`npm config set registry https://registry.npm.taobao.org/`
 - [x] 切换`node`镜像为淘宝镜像：`npm config set disturl https://npm.taobao.org/mirrors/node/`
-- [x] 重新执行安装命令：`npm i -g @bruce/xyz`
+- [x] 重新执行安装命令：`npm i -g @yangzw/bruce-xyz`
 
 > 使用yarn安装失败
 
 - [x] 切换`yarn`镜像为淘宝镜像：`yarn config set registry https://registry.npm.taobao.org/`
 - [x] 切换`node`镜像为淘宝镜像：`yarn config set disturl https://npm.taobao.org/mirrors/node/`
-- [x] 重新执行安装命令：`yarn add global @bruce/xyz`
+- [x] 重新执行安装命令：`yarn add global @yangzw/bruce-xyz`
 
 ---
 
@@ -85,7 +85,7 @@ yarn add global @bruce/xyz
 
 ### 反馈
 
-如有问题请到[GitHub Issues](https://github.com/JowayYoung/bruce/issues)留言或通过以下方式联系**JowayYoung**。
+如有问题请到[Github Issues](https://github.com/JowayYoung/bruce/issues)留言或通过以下方式联系**JowayYoung**。
 
 <div class="home-contact">
 	<img class="home-contact-item" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/03bcc13d83524f9eb8a61a1cab0543af~tplv-k3u1fbpfcp-watermark.image">

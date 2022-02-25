@@ -6,20 +6,20 @@ toc: menu
 
 ## 引用
 
-`@bruce/us`基于`rollup`使用`UMD`与`ESM`规范打包，因此可用**IIFE**、**AMD**、**CJS**和**ESM**四种方式引用。推荐使用`IIFE`、`CJS`、`ESM`三种引用方式，后续所有演示均使用**ESM**。
+`@yangzw/bruce-us`基于`rollup`使用`UMD`与`ESM`规范打包，因此可用**IIFE**、**AMD**、**CJS**和**ESM**四种方式引用。推荐使用`IIFE`、`CJS`、`ESM`三种引用方式，后续所有演示均使用**ESM**。
 
 由于`package.json`中使用`main`指定了入口文件，所以以下引用方式都是等价的，但只能在`Web`下使用。
 
 ```js
-const { TypeOf, WebType } = require("@bruce/us");
+const { TypeOf, WebType } = require("@yangzw/bruce-us");
 // 或
-import { TypeOf, WebType } from "@bruce/us";
+import { TypeOf, WebType } from "@yangzw/bruce-us";
 
 // 『上面两段代码』(推荐) 等价 『下面两段代码』
 
-const { TypeOf, WebType } = require("@bruce/us/dist/web");
+const { TypeOf, WebType } = require("@yangzw/bruce-us/dist/web");
 // 或
-import { TypeOf, WebType } from "@bruce/us/dist/web";
+import { TypeOf, WebType } from "@yangzw/bruce-us/dist/web";
 ```
 
 若在`Node`下使用，请换成以下引用方式。
@@ -32,7 +32,7 @@ import { NodeType, TypeOf } from "trample/dist/node";
 
 ## IIFE
 
-把`node_modules/@bruce/us/dist/web.umd.js`复制出来，放到新建的`js/bruce-us`文件夹中，通过HTML的`<script>`直接引用。适用于结构单一与依赖较少的`Web`项目。
+把`node_modules/@yangzw/bruce-us/dist/web.umd.js`复制出来，放到新建的`js/bruce-us`文件夹中，通过HTML的`<script>`直接引用。适用于结构单一与依赖较少的`Web`项目。
 
 ```html
 <body>
@@ -47,7 +47,7 @@ import { NodeType, TypeOf } from "trample/dist/node";
 
 ## AMD
 
-把`node_modules/@bruce/us/dist/web.umd.js`复制出来，放到新建的`js/bruce-us`文件夹中，需建立在[RequireJS](https://github.com/requirejs/requirejs)下使用。适用于`Web`项目。
+把`node_modules/@yangzw/bruce-us/dist/web.umd.js`复制出来，放到新建的`js/bruce-us`文件夹中，需建立在[RequireJS](https://github.com/requirejs/requirejs)下使用。适用于`Web`项目。
 
 ```js
 require.config({
@@ -68,7 +68,7 @@ require(["BruceUs"], function(BruceUs) {
 
 ```js
 // Web
-const { TypeOf, WebType } = require("@bruce/us");
+const { TypeOf, WebType } = require("@yangzw/bruce-us");
 
 console.log(TypeOf("bruce"));
 console.log(WebType());
@@ -76,7 +76,7 @@ console.log(WebType());
 
 ```js
 // Node
-const { NodeType, TypeOf } = require("@bruce/us/dist/node");
+const { NodeType, TypeOf } = require("@yangzw/bruce-us/dist/node");
 
 console.log(TypeOf("bruce"));
 console.log(NodeType());
@@ -88,7 +88,7 @@ console.log(NodeType());
 
 ```js
 // Web
-import { TypeOf, WebType } from "@bruce/us";
+import { TypeOf, WebType } from "@yangzw/bruce-us";
 
 console.log(TypeOf("bruce"));
 console.log(WebType());
@@ -96,7 +96,7 @@ console.log(WebType());
 
 ```js
 // Node
-import { NodeType, TypeOf } from "@bruce/us/dist/node";
+import { NodeType, TypeOf } from "@yangzw/bruce-us/dist/node";
 
 console.log(TypeOf("bruce"));
 console.log(NodeType());
@@ -104,7 +104,7 @@ console.log(NodeType());
 
 ## 打包
 
-`@bruce/us`提供ESM形式的`web.esm.js`，在`package.json`中已配置`module`字段指向`web.esm.js`。
+`@yangzw/bruce-us`提供ESM形式的`web.esm.js`，在`package.json`中已配置`module`字段指向`web.esm.js`。
 
 ```json
 {

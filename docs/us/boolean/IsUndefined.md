@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsUndefined } from "@bruce/us";
+import { IsUndefined } from "@yangzw/bruce-us";
 
 IsUndefined(undefined); // true
 ```

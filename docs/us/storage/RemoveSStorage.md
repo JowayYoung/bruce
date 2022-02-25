@@ -5,7 +5,7 @@
 **key**|键|`String`|`""`
 
 ```js
-import { RemoveSStorage } from "@bruce/us";
+import { RemoveSStorage } from "@yangzw/bruce-us";
 
 RemoveSStorage("love");
 ```

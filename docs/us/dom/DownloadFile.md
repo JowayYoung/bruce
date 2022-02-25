@@ -6,7 +6,7 @@
 **name**|文件名|`String`|`""`
 
 ```js
-import { DownloadFile } from "@bruce/us";
+import { DownloadFile } from "@yangzw/bruce-us";
 
 DownloadFile("https://static.xyz.com/pig.jpg", "pig.jpg");
 ```

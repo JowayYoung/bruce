@@ -30,5 +30,5 @@ toc: menu
 
 - 推荐使用[VSCode](https://code.visualstudio.com)开发应用，以下配置也是基于`VSCode`驱动
 - 若启用`CSS校验`或`JS校验`，需在`VSCode`上安装[Stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)与[Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)才能校验代码并高亮显示警告与错误
-- `Stylelint`或`Eslint`的详细配置可参照`@bruce/std`
+- `Stylelint`或`Eslint`的详细配置可参照`@yangzw/bruce-std`
 - 内置的全局变量`RUN_ENV`用于获取当前运行环境，在使用`JS校验`时会报语法错误，可在代码后面追加`// eslint-disable-line`

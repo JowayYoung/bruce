@@ -4,11 +4,11 @@
 
 ### 多包开发计划
 
-- [x] **@bruce/app**：应用
-- [ ] **@bruce/ico**：图标
-- [ ] **@bruce/img**：图像
-- [ ] **@bruce/lib**：类库
-- [ ] **@bruce/pkg**：模块
-- [ ] **@bruce/std**：规范
-- [ ] **@bruce/ui**：组件
-- [x] **@bruce/us**：工具
+- [x] **@yangzw/bruce-app**：应用
+- [ ] **@yangzw/bruce-ico**：图标
+- [ ] **@yangzw/bruce-img**：图像
+- [ ] **@yangzw/bruce-lib**：类库
+- [ ] **@yangzw/bruce-pkg**：模块
+- [ ] **@yangzw/bruce-std**：规范
+- [ ] **@yangzw/bruce-ui**：组件
+- [x] **@yangzw/bruce-us**：工具

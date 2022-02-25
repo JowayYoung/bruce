@@ -6,7 +6,7 @@
 **text**|文本|`String`|`""`
 
 ```js
-import { MatchBracketText } from "@bruce/us";
+import { MatchBracketText } from "@yangzw/bruce-us";
 
 MatchBracketText(
 	"<img src=\"*\">",

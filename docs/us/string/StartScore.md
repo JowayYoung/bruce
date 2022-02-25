@@ -6,7 +6,7 @@
 **len**|长度|`Number`|`5`
 
 ```js
-import { StartScore } from "@bruce/us";
+import { StartScore } from "@yangzw/bruce-us";
 
 StartScore(8, 10); // "★★★★★★★★☆☆"
 ```

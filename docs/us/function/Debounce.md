@@ -6,7 +6,7 @@
 **dura**|时延|`Number`|`50`
 
 ```js
-import { Debounce } from "@bruce/us";
+import { Debounce } from "@yangzw/bruce-us";
 
 const handler = Debounce(() => console.log("Click"), 2000);
 document.body.addEventListener("click", handler);

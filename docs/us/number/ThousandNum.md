@@ -5,7 +5,7 @@
 **num**|数值|`Number`|`0`
 
 ```js
-import { ThousandNum } from "@bruce/us";
+import { ThousandNum } from "@yangzw/bruce-us";
 
 ThousandNum(12345.6789); // "12,345.6,789"
 ```

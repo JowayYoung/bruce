@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsWeakMap } from "@bruce/us";
+import { IsWeakMap } from "@yangzw/bruce-us";
 
 IsWeakMap(new WeakMap()); // true
 ```

@@ -5,7 +5,7 @@
 **phone**|手机|`String`|`""`
 
 ```js
-import { DesePhone } from "@bruce/us";
+import { DesePhone } from "@yangzw/bruce-us";
 
 DesePhone("18866669999"); // "188****9999"
 ```

@@ -5,7 +5,7 @@
 **search**|参数集合|`Argument`|-
 
 ```js
-import { RemoveUrlSearch } from "@bruce/us";
+import { RemoveUrlSearch } from "@yangzw/bruce-us";
 
 RemoveUrlSearch("name", "sex");
 ```

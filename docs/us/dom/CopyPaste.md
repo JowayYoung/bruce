@@ -5,7 +5,7 @@
 **elem**|节点|`Element`|`document.body`
 
 ```js
-import { CopyPaste } from "@bruce/us";
+import { CopyPaste } from "@yangzw/bruce-us";
 
 CopyPaste(document.getElementById("input"));
 ```

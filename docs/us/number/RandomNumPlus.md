@@ -7,7 +7,7 @@
 **count**|个数|`Number`|`1`
 
 ```js
-import { RandomNumPlus } from "@bruce/us";
+import { RandomNumPlus } from "@yangzw/bruce-us";
 
 RandomNumPlus(0, 100, 3); // [40, 59, 27]
 ```

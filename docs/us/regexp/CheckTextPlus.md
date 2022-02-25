@@ -7,7 +7,7 @@
 **msg**|提示|`String`|`""`
 
 ```js
-import { CheckTextPlus } from "@bruce/us";
+import { CheckTextPlus } from "@yangzw/bruce-us";
 
 CheckTextPlus(/^(fe)?male$/g, "male", "性别输入错误"); // { flag: true, msg: "" }
 ```

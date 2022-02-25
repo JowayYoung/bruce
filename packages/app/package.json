@@ -1,5 +1,5 @@
 {
-	"name": "@bruce/app",
+	"name": "@yangzw/bruce-app",
 	"version": "1.0.0",
 	"description": "A JS/React/Vue Application Automation Build Scaffold With Zero Configuration Out Of The Box",
 	"keywords": [
@@ -64,7 +64,7 @@
 		"@babel/preset-react": "7.16.7",
 		"@babel/preset-typescript": "7.16.7",
 		"@babel/runtime-corejs3": "7.17.2",
-		"@bruce/us": "1.0.0",
+		"@yangzw/bruce-us": "1.0.0",
 		"@soda/friendly-errors-webpack-plugin": "1.8.1",
 		"@typescript-eslint/eslint-plugin": "5.12.1",
 		"@typescript-eslint/parser": "5.12.1",
@@ -98,7 +98,7 @@
 		"mini-css-extract-plugin": "2.5.3",
 		"ora": "6.1.0",
 		"portscanner": "2.2.0",
-		"postcss": "8.4.6",
+		"postcss": "8.4.7",
 		"postcss-html": "1.3.0",
 		"postcss-import": "14.0.2",
 		"postcss-less": "6.0.0",
@@ -106,7 +106,7 @@
 		"postcss-preset-env": "7.4.1",
 		"postcss-scss": "4.0.3",
 		"resolve-url-loader": "5.0.0",
-		"sass": "1.49.8",
+		"sass": "1.49.9",
 		"sass-loader": "12.6.0",
 		"semver": "7.3.5",
 		"style-loader": "3.3.1",

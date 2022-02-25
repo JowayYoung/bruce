@@ -3,7 +3,7 @@
 可输出`web`、`node`、`unknow`。
 
 ```js
-import { EnvType } from "@bruce/us";
+import { EnvType } from "@yangzw/bruce-us";
 
 EnvType(); // "web"
 ```

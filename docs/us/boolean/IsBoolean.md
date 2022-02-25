@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsBoolean } from "@bruce/us";
+import { IsBoolean } from "@yangzw/bruce-us";
 
 IsBoolean(true); // true
 ```

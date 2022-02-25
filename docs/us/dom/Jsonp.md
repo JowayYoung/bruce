@@ -7,7 +7,7 @@
 **cb**|回调函数|`Function`|`null`
 
 ```js
-import { Jsonp } from "@bruce/us";
+import { Jsonp } from "@yangzw/bruce-us";
 
 await Jsonp(
 	"https://static.xyz.com/bruce-us.js",

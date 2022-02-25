@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsRegExp } from "@bruce/us";
+import { IsRegExp } from "@yangzw/bruce-us";
 
 IsRegExp(/123/g); // true
 ```

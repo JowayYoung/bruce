@@ -5,7 +5,7 @@
 **text**|文本|`String`|`""`
 
 ```js
-import { ReverseText } from "@bruce/us";
+import { ReverseText } from "@yangzw/bruce-us";
 
 ReverseText("bruce"); // "ecurb"
 ```

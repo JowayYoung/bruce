@@ -6,7 +6,7 @@
 **dir**|上下文|`String`|`process.cwd()`
 
 ```js
-import { AbsPath } from "@bruce/us/dist/node.esm.js";
+import { AbsPath } from "@yangzw/bruce-us/dist/node.esm.js";
 
 AbsPath("brucerc.js"); // "E:\client\battle\brucerc.js"
 ```

@@ -5,7 +5,7 @@
 **dir**|路径|`String`|`""`
 
 ```js
-import { RemoveDir } from "@bruce/us/dist/node.esm.js";
+import { RemoveDir } from "@yangzw/bruce-us/dist/node.esm.js";
 
 RemoveDir("src/bruce");
 ```

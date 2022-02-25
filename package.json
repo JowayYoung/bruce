@@ -1,5 +1,5 @@
 {
-	"name": "@bruce/root",
+	"name": "@yangzw/bruce",
 	"private": true,
 	"scripts": {
 		"clean": "lerna clean && rimraf .umi dist node_modules package-lock.json yarn.lock",

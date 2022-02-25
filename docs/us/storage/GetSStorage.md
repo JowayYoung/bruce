@@ -5,7 +5,7 @@
 **key**|键|`String`|`""`
 
 ```js
-import { GetSStorage } from "@bruce/us";
+import { GetSStorage } from "@yangzw/bruce-us";
 
 GetSStorage("love"); // "Love"
 ```

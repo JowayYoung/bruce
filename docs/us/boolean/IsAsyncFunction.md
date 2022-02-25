@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsAsyncFunction } from "@bruce/us";
+import { IsAsyncFunction } from "@yangzw/bruce-us";
 
 const afn = async() => "bruce";
 

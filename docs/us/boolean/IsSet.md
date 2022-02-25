@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsSet } from "@bruce/us";
+import { IsSet } from "@yangzw/bruce-us";
 
 IsSet(new Set()); // true
 ```

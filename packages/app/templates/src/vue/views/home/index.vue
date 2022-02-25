@@ -1,7 +1,7 @@
 <template>
 	<div class="home-view">
 		<p class="home-desc">How to configure this <strong class="home-tag vue">Vue</strong> project</p>
-		<p class="home-desc">Please check the <a class="home-link gradient-color" href="https://doc.yangzw.vip/bruce/app" target="_blank" rel="noreferrer">@bruce/app doc</a></p>
+		<p class="home-desc">Please check the <a class="home-link gradient-color" href="https://doc.yangzw.vip/bruce/app" target="_blank" rel="noreferrer">@yangzw/bruce-app doc</a></p>
 	</div>
 </template>
 

@@ -3,7 +3,7 @@ title: 入门
 order: 1
 toc: menu
 nav:
-  title: "@bruce/us"
+  title: "@yangzw/bruce-us"
   order: 8
 ---
 
@@ -13,11 +13,11 @@ nav:
 
 ## 介绍
 
-[![author](https://img.shields.io/badge/@bruce/us-Web/Node通用工具库-66f.svg)](https://github.com/JowayYoung/bruce)
+[![author](https://img.shields.io/badge/@yangzw/bruce--us-Web/Node通用工具库-66f.svg)](https://github.com/JowayYoung/bruce)
 
-`@bruce/us`一个无框架约束的通用工具库，提供`Web平台`、`Node平台`和`双平台`的常用工具函数。
+`@yangzw/bruce-us`一个无框架约束的通用工具库，提供`Web平台`、`Node平台`和`双平台`的常用工具函数。
 
-整体包括`87`个公共函数，分别是`Common`函数`55`个，`Web`函数`24`个，`Node`函数`8`个。
+整体包括`87`个函数，分别是`Common`函数`55`个，`Web`函数`24`个，`Node`函数`8`个。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![version](https://img.shields.io/badge/version-1.0.0-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
@@ -30,12 +30,12 @@ nav:
 
 ## 安装
 
-- 使用`npm`安装：`npm i @bruce/us`
-- 使用`yarn`安装：`yarn add @bruce/us`
+- 使用`npm`安装：`npm i @yangzw/bruce-us`
+- 使用`yarn`安装：`yarn add @yangzw/bruce-us`
 
 ## 使用
 
-`@bruce/us`根据**Web**与**Node**两种JS运行环境划分代码，生成两种`bundle.js`。每种文件在不同JS运行环境下运行，必须根据JS运行环境引用文件，否则会报错。
+`@yangzw/bruce-us`根据**Web**与**Node**两种JS运行环境划分代码，生成两种`bundle.js`。每种文件在不同JS运行环境下运行，必须根据JS运行环境引用文件，否则会报错。
 
 模块|工具库|运行环境|对应文件|ESM的对应文件
 :-:|:-:|:-:|:-:|:-:
@@ -49,4 +49,4 @@ nav:
 - **Web**：`>=95%`
 - **Node**：`>=12.0.0`
 
-每个函数功能的右侧都可能标记是`Web`还是`Node`，若无标记则双平台都能使用。
+每个函数功能的右侧都可能标记`Web/Node`，若无标记则双平台都能使用。

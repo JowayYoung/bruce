@@ -6,7 +6,7 @@
 **val**|值|`String / Number / Boolean`|-
 
 ```js
-import { RecordArrPosition } from "@bruce/us";
+import { RecordArrPosition } from "@yangzw/bruce-us";
 
 const arr = [2, 1, 5, 4, 2, 1, 6, 6, 7];
 

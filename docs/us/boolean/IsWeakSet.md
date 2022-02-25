@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsWeakSet } from "@bruce/us";
+import { IsWeakSet } from "@yangzw/bruce-us";
 
 IsWeakSet(new WeakSet()); // true
 ```

@@ -9,8 +9,9 @@ export default defineConfig({
 	logo,
 	mode: "site",
 	navs: [
-		null,
-		{ path: "https://github.com/JowayYoung/bruce", title: "GitHub" },
+		{ path: "/app", title: "bruce-app" },
+		{ path: "/us", title: "bruce-us" },
+		{ path: "https://github.com/JowayYoung/bruce", title: "Github" },
 		{
 			children: [
 				{ path: "https://yangzw.vip", title: "🏠 首页" },

@@ -7,7 +7,7 @@
 **per**|百分比|`Boolean`|`false`
 
 ```js
-import { RoundNum } from "@bruce/us";
+import { RoundNum } from "@yangzw/bruce-us";
 
 RoundNum(0.331234, 2, true); // "33.12%"
 ```

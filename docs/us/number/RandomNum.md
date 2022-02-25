@@ -6,7 +6,7 @@
 **max**|最大数|`Number`|`10`
 
 ```js
-import { RandomNum } from "@bruce/us";
+import { RandomNum } from "@yangzw/bruce-us";
 
 RandomNum(0, 100); // 88
 ```

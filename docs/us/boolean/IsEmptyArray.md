@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsEmptyArray } from "@bruce/us";
+import { IsEmptyArray } from "@yangzw/bruce-us";
 
 IsEmptyArray([]); // true
 ```

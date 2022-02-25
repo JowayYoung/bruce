@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsDate } from "@bruce/us";
+import { IsDate } from "@yangzw/bruce-us";
 
 IsDate(new Date()); // true
 ```

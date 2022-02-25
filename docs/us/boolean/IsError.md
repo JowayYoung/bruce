@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsError } from "@bruce/us";
+import { IsError } from "@yangzw/bruce-us";
 
 IsError(new Error()); // true
 ```

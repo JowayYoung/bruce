@@ -6,7 +6,7 @@
 **len**|补位|`Number`|`0`
 
 ```js
-import { FillNum } from "@bruce/us";
+import { FillNum } from "@yangzw/bruce-us";
 
 FillNum(999, 4); // "0999"
 ```

@@ -15,4 +15,4 @@ toc: menu
 
 ## 问题
 
-如有问题请到[GitHub Issues](https://github.com/JowayYoung/bruce/issues)留言。
+如有问题请到[Github Issues](https://github.com/JowayYoung/bruce/issues)留言。

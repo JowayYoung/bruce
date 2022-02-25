@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsString } from "@bruce/us";
+import { IsString } from "@yangzw/bruce-us";
 
 IsString("123"); // true
 ```

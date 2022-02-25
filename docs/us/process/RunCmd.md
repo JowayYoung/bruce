@@ -5,7 +5,7 @@
 **cmd**|命令行|`String`|`"node -v"`
 
 ```js
-import { RunCmd } from "@bruce/us/dist/node.esm.js";
+import { RunCmd } from "@yangzw/bruce-us/dist/node.esm.js";
 
 RunCmd("npm -v"); // "6.11.3"
 ```

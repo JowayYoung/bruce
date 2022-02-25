@@ -5,7 +5,7 @@
 **dura**|时延|`Number`|`1000`
 
 ```js
-import { WaitFor } from "@bruce/us";
+import { WaitFor } from "@yangzw/bruce-us";
 
 (async() => {
 	await WaitFor(2000);

@@ -5,7 +5,7 @@
 **byte**|字节|`Number`|`0`
 
 ```js
-import { FormatByte } from "@bruce/us";
+import { FormatByte } from "@yangzw/bruce-us";
 
 FormatByte(683468); // "667 KB"
 ```

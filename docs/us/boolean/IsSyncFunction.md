@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsSyncFunction } from "@bruce/us";
+import { IsSyncFunction } from "@yangzw/bruce-us";
 
 IsSyncFunction(() => "bruce"); // true
 ```

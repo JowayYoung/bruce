@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsArguments } from "@bruce/us";
+import { IsArguments } from "@yangzw/bruce-us";
 
 function test() {
 	IsArguments(arguments); // true

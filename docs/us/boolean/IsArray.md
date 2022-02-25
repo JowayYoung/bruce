@@ -5,7 +5,7 @@
 **data**|数据|`Any`|-
 
 ```js
-import { IsArray } from "@bruce/us";
+import { IsArray } from "@yangzw/bruce-us";
 
 IsArray([1, 2, 3]); // true
 ```

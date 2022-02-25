@@ -6,7 +6,7 @@
 **dura**|时延|`Number`|`50`
 
 ```js
-import { Throttle } from "@bruce/us";
+import { Throttle } from "@yangzw/bruce-us";
 
 const handler = Throttle(() => console.log("Scroll"), 2000);
 document.body.addEventListener("scroll", handler);

@@ -5,7 +5,7 @@
 **len**|长度|`Number`|`5`|在`1~10`间
 
 ```js
-import { RandomId } from "@bruce/us";
+import { RandomId } from "@yangzw/bruce-us";
 
 RandomId(8); // "6ohsln3s"
 ```
