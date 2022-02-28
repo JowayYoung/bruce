@@ -3,6 +3,7 @@ import {
 	CopyDir,
 	CreateDir,
 	ReadDir,
+	ReadJson,
 	RemoveDir
 } from "./fs";
 import {
@@ -21,6 +22,7 @@ export {
 	CopyDir,
 	CreateDir,
 	ReadDir,
+	ReadJson,
 	RemoveDir,
 	// ✅Os系统
 	GetIP,

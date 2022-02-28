@@ -13,8 +13,8 @@
 		"type": "git",
 		"url": "https://github.com/JowayYoung/bruce.git"
 	},
-	"private": true,
 	"license": "MIT",
+	"private": true,
 	"main": "dist/index.js",
 	"jsnext:main": "dist/index.js",
 	"module": "dist/index.esm.js",
@@ -29,7 +29,7 @@
 		"npm": ">=6.9.0"
 	},
 	"dependencies": {
-		"@yangzw/bruce-us": "1.0.0",
+		"@yangzw/bruce-us": "1.0.1",
 		"axios": "0.26.0",
 		"classnames": "2.3.1",
 		"react": "17.0.2",

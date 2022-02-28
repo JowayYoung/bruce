@@ -1,1 +1,1 @@
-import O from"postcss-import";import k from"postcss-preset-env";import{BROWSERS_ES5 as o}from"../../constants/util/index.js";export default function v(s=[]){const t=s.length?s:o;return{loader:"postcss-loader",options:{postcssOptions:{plugins:[O(),k({browsers:t})]}}}}
+import O from"postcss-import";import k from"postcss-preset-env";import{BROWSERS_ES5 as n}from"../../constants/util/index.js";export default function v(s=[]){const o=s.length?s:n;return{loader:"postcss-loader",options:{postcssOptions:{plugins:[O(),k({browsers:o})]}}}}

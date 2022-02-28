@@ -83,6 +83,7 @@ declare function AbsPath(path?: string, dir?: string): string;
 declare function CopyDir(src: string | undefined, dist: string | undefined, filter: FilterFunc): void;
 declare function CreateDir(dir?: string): void;
 declare function ReadDir(type?: string, dir?: string, filter?: RegExp): string[];
+declare function ReadJson(path?: string, dir?: string): object;
 declare function RemoveDir(dir?: string): void;
 
 declare function GetIP(): string;
@@ -153,4 +154,4 @@ declare function RemoveUrlSearch(...search: string[]): void;
 declare function SetUrlSearch(search?: SearchObj): void;
 declare function StringifyUrlSearch(search?: SearchObj, clear?: boolean): string;
 
-export { AbsPath, Ajax, AsyncTo, AutoResponse, CheckText, CheckTextPlus, ClearLStorage, ClearSStorage, CopyDir, CopyPaste, CreateDir, Debounce, DesePhone, DownloadFile, EnvType, FillNum, FilterObj, FilterXss, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetCookie, GetIP, GetLStorage, GetSStorage, GroupArrKey, Img2Base64, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, Jsonp, LoadScript, MatchBracketText, NodeType, ParseUrlSearch, RandomColor, RandomId, RandomNum, RandomNumPlus, ReadDir, RecordArrPosition, RemoveCookie, RemoveDir, RemoveLStorage, RemoveSStorage, RemoveTag, RemoveUrlSearch, ReverseText, RoundNum, RunCmd, SetCookie, SetLStorage, SetSStorage, SetUrlSearch, StartScore, StatArrCount, StatArrKeyword, StringifyUrlSearch, ThousandNum, Throttle, TypeOf, WaitFor, WebType };
+export { AbsPath, Ajax, AsyncTo, AutoResponse, CheckText, CheckTextPlus, ClearLStorage, ClearSStorage, CopyDir, CopyPaste, CreateDir, Debounce, DesePhone, DownloadFile, EnvType, FillNum, FilterObj, FilterXss, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetCookie, GetIP, GetLStorage, GetSStorage, GroupArrKey, Img2Base64, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, Jsonp, LoadScript, MatchBracketText, NodeType, ParseUrlSearch, RandomColor, RandomId, RandomNum, RandomNumPlus, ReadDir, ReadJson, RecordArrPosition, RemoveCookie, RemoveDir, RemoveLStorage, RemoveSStorage, RemoveTag, RemoveUrlSearch, ReverseText, RoundNum, RunCmd, SetCookie, SetLStorage, SetSStorage, SetUrlSearch, StartScore, StatArrCount, StatArrKeyword, StringifyUrlSearch, ThousandNum, Throttle, TypeOf, WaitFor, WebType };

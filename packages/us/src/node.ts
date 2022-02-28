@@ -69,6 +69,7 @@ import {
 	CopyDir,
 	CreateDir,
 	ReadDir,
+	ReadJson,
 	RemoveDir,
 	// ✅Os系统
 	GetIP,
@@ -129,6 +130,7 @@ export {
 	RandomNum,
 	RandomNumPlus,
 	ReadDir,
+	ReadJson,
 	RecordArrPosition,
 	RemoveDir,
 	RemoveTag,

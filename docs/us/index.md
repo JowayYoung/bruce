@@ -17,7 +17,7 @@ nav:
 
 `@yangzw/bruce-us`一个无框架约束的通用工具库，提供`Web平台`、`Node平台`和`双平台`的常用工具函数。
 
-整体包括`87`个函数，分别是`Common`函数`55`个，`Web`函数`24`个，`Node`函数`8`个。
+整体包括`88`个函数，分别是`Common`函数`55`个，`Web`函数`24`个，`Node`函数`9`个。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![version](https://img.shields.io/badge/version-1.0.0-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>

@@ -1,6 +1,6 @@
 /** 文件工具 **/
-import { readdirSync, statSync } from "fs";
-import { join } from "path";
+import { readdirSync, readFileSync, statSync } from "fs";
+import { extname, join } from "path";
 import { cwd } from "process";
 import { copySync, ensureDirSync, removeSync } from "fs-extra";
 
@@ -11,7 +11,7 @@ type FilterFunc = (src: string, dist: string) => boolean;
  * @param {string} [path=""] 路径
  * @param {string} [dir=cwd()] 上下文
  */
-function AbsPath(path = "", dir = cwd()): string {
+function AbsPath(path: string = "", dir: string = cwd()): string {
 	// const __dirname = dirname(fileURLToPath(import.meta.url)); 在使用该函数的文件里直接获取__dirname
 	return join(dir, path);
 }
@@ -84,6 +84,19 @@ function ReadDir(type: string = "bfs", dir: string = cwd(), filter: RegExp = /(n
 }
 
 /**
+ * @name 读取JSON文件
+ * @param {string} [path=""] 路径
+ * @param {string} [dir=cwd()] 上下文
+ */
+function ReadJson(path: string = "", dir: string = cwd()): object {
+	const _path = AbsPath(path, dir);
+	const ext = extname(_path);
+	if (!/^\.json$/.test(ext)) return {};
+	const text = readFileSync(_path, "utf8");
+	return JSON.parse(text);
+}
+
+/**
  * @name 删除文件路径
  * @param {string} [dir=""] 路径
  */
@@ -96,5 +109,6 @@ export {
 	CopyDir,
 	CreateDir,
 	ReadDir,
+	ReadJson,
 	RemoveDir
 };

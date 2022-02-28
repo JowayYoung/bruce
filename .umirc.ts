@@ -21,7 +21,7 @@ export default defineConfig({
 				{ path: "https://yangzw.vip/store", title: "📦 收藏" },
 				{ path: "https://yangzw.vip/life", title: "🚩 生活" },
 				{ path: "https://yangzw.vip/about", title: "⚡ 关于" },
-				{ path: "https://yangzw.vip/contact", title: "🔗 联系" },
+				{ path: "https://yangzw.vip/contact", title: "🔗 联系" }
 			],
 			path: "https://yangzw.vip",
 			title: "个人官网"
