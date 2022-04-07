@@ -1,5 +1,3 @@
-import { dirname, join } from "path";
-import { fileURLToPath } from "url";
 import CommonjsPlugin from "@rollup/plugin-commonjs";
 import ImagePlugin from "@rollup/plugin-image";
 import NodeResolvePlugin from "@rollup/plugin-node-resolve";
@@ -12,8 +10,6 @@ import { terser as TerserPlugin } from "rollup-plugin-terser";
 import PostcssBase64 from "postcss-base64";
 import PostcssImport from "postcss-import";
 import PostcssPresetEnv from "postcss-preset-env";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const EXTERNALS = [
 	"react",
@@ -52,7 +48,7 @@ const PLUGINS = [
 	NodeResolvePlugin(),
 	CommonjsPlugin(),
 	ImagePlugin(),
-	TypescriptPlugin({ tsconfig: join(__dirname, "../../tsconfig.json") }),
+	TypescriptPlugin(),
 	ReplacePlugin({
 		preventAssignment: true,
 		values: { "process.env.NODE_ENV": JSON.stringify("production") }
@@ -66,34 +62,19 @@ const PLUGINS = [
 export default [{
 	external: EXTERNALS,
 	input: "src/index.tsx",
-	output: {
-		file: "dist/index.js",
-		format: "cjs",
-		globals: GLOBALS
-	},
+	output: { file: "dist/index.js", format: "cjs", globals: GLOBALS },
 	plugins: [...PLUGINS, CleandirPlugin("dist")]
 }, {
 	external: EXTERNALS,
 	input: "src/index.tsx",
-	output: {
-		file: "dist/index.esm.js",
-		format: "esm",
-		globals: GLOBALS
-	},
+	output: { file: "dist/index.esm.js", format: "esm", globals: GLOBALS },
 	plugins: PLUGINS
 }, {
 	input: "src/index.umd.tsx",
-	output: {
-		file: "dist/index.umd.js",
-		format: "umd",
-		name: "bruceUi"
-	},
+	output: { file: "dist/index.umd.js", format: "umd", name: "bruceUi" },
 	plugins: PLUGINS
 }, {
 	input: "src/index.tsx",
-	output: {
-		file: "dist/index.d.ts",
-		format: "esm"
-	},
+	output: { file: "dist/index.d.ts", format: "esm" },
 	plugins: [PLUGINS[0], DtsPlugin()]
 }];

@@ -1,15 +1,15 @@
 /** 数组工具 **/
 
-interface KeyArr {
-	[index: string|number]: string|number
+interface KeyObj {
+	[key: string | number]: string | number
 }
 
 interface GroupObj {
-	[key: string|number]: KeyArr[]
+	[key: string | number]: KeyObj[]
 }
 
 interface CountObj {
-	[key: string|number]: number
+	[key: string | number]: number
 }
 
 /**
@@ -17,7 +17,7 @@ interface CountObj {
  * @param {array} [arr=[]] 数组
  * @param {string} [key=""] 属性
  */
-function GroupArrKey(arr: KeyArr[] = [], key: string = ""): GroupObj {
+function GroupArrKey(arr: KeyObj[] = [], key: string = ""): GroupObj {
 	return key ? arr.reduce((t: GroupObj, v) => (!t[v[key]] && (t[v[key]] = []), t[v[key]].push(v), t), {}) : {};
 }
 
@@ -26,7 +26,7 @@ function GroupArrKey(arr: KeyArr[] = [], key: string = ""): GroupObj {
  * @param {array} [arr=[]] 数组
  * @param {string|number|boolean} [val] 值
  */
-function RecordArrPosition(arr: Array<string|number|boolean> = [], val: string|number|boolean): number[] {
+function RecordArrPosition(arr: Array<string | number | boolean> = [], val: string | number |boolean): number[] {
 	return arr.reduce((t: number[], v, i) => (v === val && t.push(i), t), []);
 }
 
@@ -34,7 +34,7 @@ function RecordArrPosition(arr: Array<string|number|boolean> = [], val: string|n
  * @name 统计成员个数
  * @param {array} [arr=[]] 数组
  */
-function StatArrCount(arr: Array<string|number> = []): CountObj {
+function StatArrCount(arr: Array<string | number> = []): CountObj {
 	return arr.reduce((t: CountObj, v) => (t[v] = (t[v] || 0) + 1, t), {});
 }
 

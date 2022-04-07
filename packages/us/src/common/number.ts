@@ -62,7 +62,7 @@ function RandomNumPlus(min: number = 0, max: number = 10, count: number = 1): nu
  * @param {number} [dec=2] 小数个数
  * @param {boolean} [per=false] 百分比
  */
-function RoundNum(num: number = 0, dec: number = 2, per: boolean = false): string|number {
+function RoundNum(num: number = 0, dec: number = 2, per: boolean = false): string | number {
 	return per
 		? `${Math.round(num * 10 ** dec * 100) / 10 ** dec}%`
 		: Math.round(num * 10 ** dec) / 10 ** dec;

@@ -17,7 +17,7 @@ toc: menu
 - `bruce-app i`初始应用根目录的入口文件为`src/index.(js|ts|jsx|tsx)`，千万不要将入口文件修改为其他路径、名称或后缀
 - `bruce-app i`初始应用若为TS，就不要修改`brucerc.(js|json|yml)`的`useTs`，只有确保其为`true`才能正常编译与校验TS
 - `bruce-app i`初始应用若为TS，会在应用根目录下自动生成TS配置文件`tsconfig.json`
-- 针对相对路径较长的文件，可通过导入快捷方式符快速定位文件路径：`#`表示根目录，`@`表示`src目录`
+- 针对相对路径较长的文件，可通过导入快捷方式符快速定位文件路径：`@`表示`src目录`
 - 使用`CSS图标`时必须把图标统一放置到`src/assets/icon`下，文件格式可为`jpg/png/svg/webp`
 
 ## 代码垫片

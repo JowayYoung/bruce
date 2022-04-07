@@ -5,7 +5,7 @@ interface SystemObj {
 }
 
 interface SystemVsObj {
-	[key: string|number]: RegExp
+	[key: string | number]: RegExp
 }
 
 interface PlatformObj {
@@ -29,7 +29,7 @@ interface SupporterVsObj {
 }
 
 interface ShellObj {
-	[key: string|number]: RegExp[]
+	[key: string | number]: RegExp[]
 }
 
 interface WebObj {

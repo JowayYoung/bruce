@@ -1,14 +1,14 @@
-interface KeyArr {
-    [index: string | number]: string | number;
+interface KeyObj {
+    [key: string | number]: string | number;
 }
 interface GroupObj {
-    [key: string | number]: KeyArr[];
+    [key: string | number]: KeyObj[];
 }
 interface CountObj {
     [key: string | number]: number;
 }
-declare function GroupArrKey(arr?: KeyArr[], key?: string): GroupObj;
-declare function RecordArrPosition(arr: (string | number | boolean)[] | undefined, val: string | number | boolean): number[];
+declare function GroupArrKey(arr?: KeyObj[], key?: string): GroupObj;
+declare function RecordArrPosition(arr: Array<string | number | boolean>, val: string | number | boolean): number[];
 declare function StatArrCount(arr?: Array<string | number>): CountObj;
 declare function StatArrKeyword(arr?: string[], keys?: string[]): string[];
 
@@ -80,7 +80,7 @@ declare function StartScore(rate?: number, len?: number): string;
 
 declare type FilterFunc = (src: string, dist: string) => boolean;
 declare function AbsPath(path?: string, dir?: string): string;
-declare function CopyDir(src: string | undefined, dist: string | undefined, filter: FilterFunc): void;
+declare function CopyDir(src: string, dist: string, filter: FilterFunc): void;
 declare function CreateDir(dir?: string): void;
 declare function ReadDir(type?: string, dir?: string, filter?: RegExp): string[];
 declare function ReadJson(path?: string, dir?: string): object;
@@ -114,12 +114,12 @@ declare function Jsonp<T>(url?: string, name?: string, cb?: null | ((d: T) => T)
 declare function LoadScript(url?: string, pst?: string): Promise<boolean>;
 
 interface AjaxObj {
-    data: {
+    data?: {
         [key: string]: string;
     };
-    error: null | ((status: number) => void);
-    success: null | ((res: string) => void);
-    type: string;
+    error?: null | ((status: number) => void);
+    success?: null | ((res: string) => void);
+    type?: string;
     url: string;
 }
 declare function Ajax({ data, error, success, type, url }: AjaxObj): void;
@@ -130,8 +130,8 @@ declare function GetLStorage<T>(key?: string): T;
 declare function GetSStorage<T>(key?: string): T;
 declare function RemoveLStorage(key?: string): void;
 declare function RemoveSStorage(key?: string): void;
-declare function SetLStorage<T>(key: string | undefined, val: T): void;
-declare function SetSStorage<T>(key: string | undefined, val: T): void;
+declare function SetLStorage<T>(key: string, val: T): void;
+declare function SetSStorage<T>(key: string, val: T): void;
 
 interface WebObj {
     engine: string;

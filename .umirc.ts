@@ -10,6 +10,7 @@ export default defineConfig({
 	mode: "site",
 	navs: [
 		{ path: "/app", title: "bruce-app" },
+		{ path: "/pkg", title: "bruce-pkg" },
 		{ path: "/us", title: "bruce-us" },
 		{ path: "https://github.com/JowayYoung/bruce", title: "Github" },
 		{

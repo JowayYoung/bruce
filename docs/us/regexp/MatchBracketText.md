@@ -10,6 +10,6 @@ import { MatchBracketText } from "@yangzw/bruce-us";
 
 MatchBracketText(
 	"<img src=\"*\">",
-	"<img src=\"pig.jpg\"><p>trample</p><img src=\"dada.png\">"
+	"<img src=\"pig.jpg\"><p>bruce</p><img src=\"dada.png\">"
 ); // ["pig.jpg", "dada.png"]
 ```

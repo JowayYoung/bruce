@@ -15,7 +15,7 @@ jobs: # 任务
         uses: actions/checkout@v2
       # 打包文件
       - name: Build
-        run: yarn && yarn run docs:build
+        run: yarn && yarn run deploy
       # 部署GP
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

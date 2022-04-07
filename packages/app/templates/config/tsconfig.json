@@ -30,7 +30,7 @@
 			"@/*": ["src/*"]
 		},
 		"sourceMap": true,
-		"strict": true,
+		"strict": false,
 		"target": "ES6",
 		"typeRoots": [
 			"node_modules/@types",

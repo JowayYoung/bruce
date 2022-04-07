@@ -5,7 +5,7 @@ import Day from "dayjs";
  * @name 格式倒计时
  * @param {string|number|date} [date] 日期：YYYY-MM-DD HH:mm:ss
  */
-function FormatCountdown(date: string|number|Date): string {
+function FormatCountdown(date: string | number | Date): string {
 	if (!date) return "时间无效";
 	const nowTime = +new Date();
 	const nextTime = +new Date(date);
@@ -29,7 +29,7 @@ function FormatCountdown(date: string|number|Date): string {
  * @name 格式时间差
  * @param {string|number|date} [date] 日期：YYYY-MM-DD HH:mm:ss
  */
-function FormatTimeDiff(date: string|number|Date): string {
+function FormatTimeDiff(date: string | number | Date): string {
 	if (!date) return "时间无效";
 	const nowTime = +new Date();
 	const tgtTime = +new Date(date);

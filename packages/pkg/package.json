@@ -1,0 +1,51 @@
+{
+	"name": "@yangzw/bruce-pkg",
+	"version": "1.0.0",
+	"description": "A Package Processing Tool For Strengthening NPM Command",
+	"keywords": [
+		"bruce-pkg",
+		"pkg",
+		"master",
+		"package",
+		"create",
+		"publish"
+	],
+	"author": {
+		"name": "JowayYoung",
+		"phone": "18819249731",
+		"email": "young.joway@aliyun.com"
+	},
+	"homepage": "https://github.com/JowayYoung",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JowayYoung/bruce.git"
+	},
+	"license": "MIT",
+	"type": "module",
+	"main": "index.js",
+	"bin": {
+		"bruce-pkg": "index.js"
+	},
+	"scripts": {
+		"remove": "rimraf node_modules package-lock.json yarn.lock"
+	},
+	"engines": {
+		"node": ">=16.0.0",
+		"npm": ">=7.10.0"
+	},
+	"dependencies": {
+		"@yangzw/bruce-us": "1.0.1",
+		"chalk": "5.0.1",
+		"commander": "9.1.0",
+		"execa": "6.1.0",
+		"figures": "4.0.1",
+		"inquirer": "8.2.2",
+		"listr2": "4.0.5",
+		"ora": "6.1.0",
+		"semver": "7.3.6",
+		"update-notifier": "5.1.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

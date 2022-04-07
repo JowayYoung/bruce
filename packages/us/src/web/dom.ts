@@ -92,7 +92,7 @@ async function Img2Base64(url: string = "", type: string = "jpg"): Promise<strin
  * @param {string} [name="jsonp"] 全局变量
  * @param {function} [cb=null] 回调函数
  */
-async function Jsonp<T>(url: string = "", name: string = "jsonp", cb: null|((d: T) => T) = null): Promise<boolean> {
+async function Jsonp<T>(url: string = "", name: string = "jsonp", cb: null | ((d: T) => T) = null): Promise<boolean> {
 	const promise: Promise<boolean> = new Promise((resolve, reject) => {
 		const script = document.createElement("script");
 		script.setAttribute("src", url);

@@ -30,7 +30,7 @@
 			"@/*": ["src/*"]
 		},
 		"sourceMap": true,
-		"strict": true,
+		"strict": false,
 		"target": "ES5",
 		"typeRoots": [
 			"node_modules/@types",
@@ -38,15 +38,11 @@
 		]
 	},
 	"exclude": [
+		"dist",
 		"node_modules",
-		"packages/app",
-		"packages/**/dist"
+		"packages"
 	],
 	"include": [
-		"docs",
-		"packages/ui/src",
-		"packages/ui/test",
-		"packages/us/src",
-		"packages/us/test"
+		".umirc.ts"
 	]
 }

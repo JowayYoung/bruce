@@ -25,9 +25,9 @@ import { TypeOf, WebType } from "@yangzw/bruce-us/dist/web";
 若在`Node`下使用，请换成以下引用方式。
 
 ```js
-const { NodeType, TypeOf } = require("trample/dist/node");
+const { NodeType, TypeOf } = require("@yangzw/bruce-us/dist/node");
 // 或
-import { NodeType, TypeOf } from "trample/dist/node";
+import { NodeType, TypeOf } from "@yangzw/bruce-us/dist/node";
 ```
 
 ## IIFE
@@ -37,7 +37,7 @@ import { NodeType, TypeOf } from "trample/dist/node";
 ```html
 <body>
 	<div>...</div>
-	<script src="js/trample/web.umd.js"></script>
+	<script src="js/bruce-us/web.umd.js"></script>
 	<script>
 		console.log(window.BruceUs.TypeOf("bruce"));
 		console.log(window.BruceUs.WebType());

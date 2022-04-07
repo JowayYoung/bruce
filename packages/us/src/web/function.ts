@@ -2,12 +2,12 @@
 import { StringifyUrlSearch } from "./url";
 
 interface AjaxObj {
-	data: {
+	data?: {
 		[key: string]: string
 	}
-	error: null|((status: number) => void)
-	success: null|((res: string) => void)
-	type: string
+	error?: null | ((status: number) => void)
+	success?: null | ((res: string) => void)
+	type?: string
 	url: string
 }
 
