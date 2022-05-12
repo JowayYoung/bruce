@@ -1,1 +1,1 @@
-import io from"inquirer";import{CACHE as Ar}from"../question/index.js";export default async function qr(){return await io.prompt(Ar)}
+import io from"inquirer";import{CACHE as Cr}from"../question/index.js";export default async function Ar(){return await io.prompt(Cr)}

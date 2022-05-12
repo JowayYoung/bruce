@@ -11,6 +11,7 @@ export default defineConfig({
 	navs: [
 		{ path: "/app", title: "bruce-app" },
 		{ path: "/pkg", title: "bruce-pkg" },
+		{ path: "/std", title: "bruce-std" },
 		{ path: "/us", title: "bruce-us" },
 		{ path: "https://github.com/JowayYoung/bruce", title: "Github" },
 		{

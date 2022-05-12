@@ -1,1 +1,1 @@
-import io from"inquirer";import{NAMEM as nt,TEMP as at}from"../question/index.js";const{prompt:ko}=io;export default async function kr(){const{temp:t}=await ko(at),{namem:m}=await ko(nt(t));return{namem:m,temp:t}}
+import io from"inquirer";import{NAMEM as nt,TEMP as at}from"../question/index.js";const{prompt:ko}=io;export default async function zr(){const{temp:t}=await ko(at),{namem:m}=await ko(nt(t));return{namem:m,temp:t}}

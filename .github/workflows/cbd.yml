@@ -16,7 +16,7 @@ jobs: # 任务
       # 打包文件
       - name: Build
         run: yarn && yarn run deploy
-      # 部署GP
+      # 部署站点
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

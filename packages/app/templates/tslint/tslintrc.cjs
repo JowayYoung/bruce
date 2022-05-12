@@ -9,7 +9,7 @@ module.exports = {
 		node: true
 	},
 	extends: [
-		"standard",
+		"standard-with-typescript", // https://github.com/standard/eslint-config-standard-with-typescript/issues/792
 		"plugin:@typescript-eslint/recommended"
 	],
 	parser: "@typescript-eslint/parser",

@@ -9,7 +9,7 @@ module.exports = {
 		node: true
 	},
 	extends: [
-		"standard",
+		"standard-with-typescript",
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
 		"plugin:@typescript-eslint/recommended"
@@ -65,5 +65,10 @@ module.exports = {
 		"space-before-function-paren": ["error", "never"],
 		"switch-colon-spacing": ["error"]
 		/* eslint-enable quote-props */
+	},
+	settings: {
+		react: {
+			version: "detect"
+		}
 	}
 };

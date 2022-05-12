@@ -9,7 +9,7 @@ module.exports = {
 		node: true
 	},
 	extends: [
-		"standard",
+		"standard-with-typescript",
 		"plugin:vue/recommended",
 		"plugin:@typescript-eslint/recommended"
 	],

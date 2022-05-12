@@ -22,7 +22,7 @@ declare namespace Button {
         disabled: boolean;
         href: string;
         icon: string;
-        onClick: any;
+        onClick: null;
         shape: string;
         type: string;
     };
@@ -40,7 +40,7 @@ declare namespace Empty {
         children: string;
         className: string;
         height: number;
-        icon: any;
+        icon: null;
     };
 }
 

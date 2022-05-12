@@ -58,5 +58,10 @@ module.exports = {
 		"space-before-function-paren": ["error", "never"],
 		"switch-colon-spacing": ["error"]
 		/* eslint-enable quote-props */
+	},
+	settings: {
+		react: {
+			version: "detect"
+		}
 	}
 };

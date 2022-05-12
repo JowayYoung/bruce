@@ -27,9 +27,9 @@ const ACTION_TEXT = {
 };
 
 const CMD_TEXT = {
-	desc: `Description:\n${blueBright("@yangzw/bruce-img")} 一个多功能无限制的图像批处理工具\n作者 ${yellowBright("JowayYoung")}\n邮箱 ${yellowBright("young.joway@aliyun.com")}\n官网 ${yellowBright("https://yangzw.vip")}\n仓库 ${yellowBright("https://github.com/JowayYoung/bruce")}\n文档 ${yellowBright("https://doc.yangzw.vip/bruce/img")}`,
+	desc: `Description:\n${blueBright("@yangzw/bruce-img")} 一个多功能无限制的图像处理工具\n作者 ${yellowBright("JowayYoung")}\n邮箱 ${yellowBright("young.joway@aliyun.com")}\n官网 ${yellowBright("https://yangzw.vip")}\n仓库 ${yellowBright("https://github.com/JowayYoung/bruce")}\n文档 ${yellowBright("https://doc.yangzw.vip/bruce/img")}`,
 	judge: `${cross} ${blueBright("Node")}当前版本过低，请更新到${greenBright("v16")}以上`,
-	name: `${redBright("bruce-img")}`,
+	name: redBright("bruce-img"),
 	version: ver => `${blueBright("@yangzw/bruce-img")} ${ver} Produced by ${greenBright("JowayYoung")}`
 };
 

@@ -1,1 +1,1 @@
-import{VueLoaderPlugin as re}from"vue-loader";export default function mi(){return new re}
+import{VueLoaderPlugin as oe}from"vue-loader";export default function or(){return new oe}

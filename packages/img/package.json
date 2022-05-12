@@ -1,7 +1,7 @@
 {
 	"name": "@yangzw/bruce-img",
-	"version": "1.0.0",
-	"description": "A Image Batch Processing Tool For Multifunctional And Unrestricted",
+	"version": "1.0.1",
+	"description": "A Image Processing Tool For Multifunctional And Unrestricted",
 	"keywords": [
 		"bruce-img",
 		"img",
@@ -42,33 +42,37 @@
 		"type": "git",
 		"url": "https://github.com/JowayYoung/bruce.git"
 	},
-	"license": "MIT",
+	"bugs": {
+		"email": "young.joway@aliyun.com",
+		"url": "https://github.com/JowayYoung/bruce/issues"
+	},
 	"type": "module",
 	"main": "index.js",
 	"bin": {
 		"bruce-img": "index.js"
 	},
 	"scripts": {
-		"remove": "rimraf node_modules package-lock.json yarn.lock"
+		"clean": "rimraf node_modules package-lock.json yarn.lock"
 	},
 	"engines": {
 		"node": ">=16.0.0",
 		"npm": ">=7.10.0"
 	},
 	"dependencies": {
-		"@yangzw/bruce-us": "1.0.1",
+		"@yangzw/bruce-us": "1.0.2",
 		"chalk": "5.0.1",
-		"commander": "9.1.0",
+		"commander": "9.2.0",
 		"figures": "4.0.1",
-		"glob": "7.2.0",
+		"glob": "8.0.1",
 		"image-size": "1.0.1",
-		"inquirer": "8.2.2",
+		"inquirer": "8.2.4",
 		"ora": "6.1.0",
-		"sharp": "0.30.3",
-		"semver": "7.3.6",
+		"sharp": "0.30.4",
+		"semver": "7.3.7",
 		"text-to-svg": "3.1.5",
 		"update-notifier": "5.1.0"
 	},
+	"license": "MIT",
 	"publishConfig": {
 		"access": "public"
 	}

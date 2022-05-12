@@ -22,7 +22,7 @@ features:
     desc: 一个基于CSS背景遮罩生成CSS图标的图标处理工具，为图标提供文件监听、格式转换和动态样式的功能
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: bruce-img
-    desc: 一个多功能无限制的图像批处理工具，为图像提供压缩、分组、标记和变换的批处理功能
+    desc: 一个多功能无限制的图像处理工具，为图像提供压缩、分组、标记和变换的批处理功能
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: bruce-pkg
     desc: 一个强化NPM命令的模块处理工具，为模块提供基本骨架创建与链式检查发布的功能
@@ -31,7 +31,7 @@ features:
     desc: 一个React通用组件库，提供基础组件、表单组件、向导组件、展示组件和反馈组件等
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: bruce-us
-    desc: 一个无框架约束的通用工具库，提供Web平台、Node平台和双平台的常用工具函数
+    desc: 一个无框架约束的通用工具库，提供Web环境、Node环境和双环境的常用工具函数
 footer: Copyright © 2017~Present | MIT Licensed<br>Powered By <span class="mark">JowayYoung</span>
 ---
 

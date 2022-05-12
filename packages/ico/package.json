@@ -1,0 +1,54 @@
+{
+	"name": "@yangzw/bruce-ico",
+	"version": "1.0.0",
+	"description": "An Icon Processing Tool For Generating Css Icons Based On Css Background And Mask",
+	"keywords": [
+		"bruce-ico",
+		"ico",
+		"css",
+		"background",
+		"mask"
+	],
+	"author": {
+		"name": "JowayYoung",
+		"phone": "18819249731",
+		"email": "young.joway@aliyun.com"
+	},
+	"homepage": "https://github.com/JowayYoung",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JowayYoung/bruce.git"
+	},
+	"bugs": {
+		"email": "young.joway@aliyun.com",
+		"url": "https://github.com/JowayYoung/bruce/issues"
+	},
+	"type": "module",
+	"main": "index.js",
+	"bin": {
+		"bruce-ico": "index.js"
+	},
+	"scripts": {
+		"clean": "rimraf node_modules package-lock.json yarn.lock"
+	},
+	"engines": {
+		"node": ">=16.0.0",
+		"npm": ">=7.10.0"
+	},
+	"dependencies": {
+		"@yangzw/bruce-us": "1.0.2",
+		"chalk": "5.0.1",
+		"chokidar": "3.5.3",
+		"commander": "9.2.0",
+		"figures": "4.0.1",
+		"mime-types": "2.1.35",
+		"ora": "6.1.0",
+		"semver": "7.3.7",
+		"update-notifier": "5.1.0"
+	},
+	"license": "MIT",
+	"private": true,
+	"publishConfig": {
+		"access": "public"
+	}
+}

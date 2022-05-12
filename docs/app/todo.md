@@ -11,7 +11,6 @@ toc: menu
 - [ ] `CSS图标`的动态生成
 - [ ] `ssh2-sftp-client`无法上传文件
 - [ ] `stylelint-webpack-plugin`的规则覆盖功能失效
-- [ ] `eslint-config-standard-with-typescript`等待更新，更新完毕需将配置`tslintrc.extends`的`standard`修改为`standard-with-typescript`
 
 ## 问题
 

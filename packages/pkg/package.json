@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-pkg",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A Package Processing Tool For Strengthening NPM Command",
 	"keywords": [
 		"bruce-pkg",
@@ -20,7 +20,10 @@
 		"type": "git",
 		"url": "https://github.com/JowayYoung/bruce.git"
 	},
-	"license": "MIT",
+	"bugs": {
+		"email": "young.joway@aliyun.com",
+		"url": "https://github.com/JowayYoung/bruce/issues"
+	},
 	"type": "module",
 	"main": "index.js",
 	"bin": {
@@ -34,17 +37,18 @@
 		"npm": ">=7.10.0"
 	},
 	"dependencies": {
-		"@yangzw/bruce-us": "1.0.1",
+		"@yangzw/bruce-us": "1.0.2",
 		"chalk": "5.0.1",
-		"commander": "9.1.0",
+		"commander": "9.2.0",
 		"execa": "6.1.0",
 		"figures": "4.0.1",
-		"inquirer": "8.2.2",
+		"inquirer": "8.2.4",
 		"listr2": "4.0.5",
 		"ora": "6.1.0",
-		"semver": "7.3.6",
+		"semver": "7.3.7",
 		"update-notifier": "5.1.0"
 	},
+	"license": "MIT",
 	"publishConfig": {
 		"access": "public"
 	}

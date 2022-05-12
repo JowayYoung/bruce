@@ -10,14 +10,14 @@ toc: menu
 
 ## 介绍
 
-[![author](https://img.shields.io/badge/@yangzw/bruce--us-Web/Node通用工具库-66f.svg)](https://github.com/JowayYoung/bruce)
+[![author](https://img.shields.io/badge/@yangzw/bruce--us-无框架约束的通用工具库-66f.svg)](https://github.com/JowayYoung/bruce)
 
-`@yangzw/bruce-us`是一个无框架约束的通用工具库，提供`Web平台`、`Node平台`和`双平台`的常用工具函数。
+`@yangzw/bruce-us`是一个无框架约束的通用工具库，提供`Web环境`、`Node环境`和`双环境`的常用工具函数。
 
 整体包括`88`个函数，分别是`Common`函数`55`个，`Web`函数`24`个，`Node`函数`9`个。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
-[![version](https://img.shields.io/badge/version-1.0.1-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
+[![version](https://img.shields.io/badge/version-1.0.2-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![web](https://img.shields.io/badge/web-%3E%3D95%25-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![node](https://img.shields.io/badge/node-%3E%3D12.0.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![test](https://img.shields.io/badge/test-passing-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
@@ -46,4 +46,4 @@ toc: menu
 - **Web**：`>=95%`
 - **Node**：`>=12.0.0`
 
-每个函数功能的右侧都可能标记`Web/Node`，若无标记则双平台都能使用。
+每个函数功能的右侧都可能标记`Web/Node`，若无标记则双环境都能使用。

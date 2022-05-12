@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 
 import "./assets/css/reset.css";
@@ -32,5 +32,5 @@ function App() {
 
 console.log("应用构建环境：", process.env.NODE_ENV);
 console.log("应用运行环境：", RUN_ENV); // eslint-disable-line
-RUN_ENV === "dev" && module?.hot?.accept(); // eslint-disable-line
-render(<App />, document.getElementById("root"));
+const container = document.getElementById("root");
+container && createRoot(container).render(<App />);
