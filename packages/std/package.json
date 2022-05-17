@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-std",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A VSCode Configuration Tool Integrating Stylelint And Eslint",
 	"keywords": [
 		"bruce-std",
@@ -36,11 +36,11 @@
 		"npm": ">=7.10.0"
 	},
 	"dependencies": {
-		"@babel/core": "7.17.10",
+		"@babel/core": "7.17.12",
 		"@babel/eslint-parser": "7.17.0",
-		"@babel/preset-react": "7.16.7",
-		"@typescript-eslint/eslint-plugin": "5.23.0",
-		"@typescript-eslint/parser": "5.23.0",
+		"@babel/preset-react": "7.17.12",
+		"@typescript-eslint/eslint-plugin": "5.24.0",
+		"@typescript-eslint/parser": "5.24.0",
 		"eslint": "8.15.0",
 		"eslint-config-standard": "17.0.0",
 		"eslint-config-standard-with-typescript": "git+https://github.com/ChristopherChudzicki/eslint-config-standard-with-typescript.git#v22.0.0",
@@ -62,7 +62,7 @@
 	},
 	"devDependencies": {
 		"@types/react": "18.0.9",
-		"@types/react-dom": "18.0.3",
+		"@types/react-dom": "18.0.4",
 		"react": "18.1.0",
 		"react-dom": "18.1.0",
 		"vue": "3.2.33"

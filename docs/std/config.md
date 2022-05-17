@@ -27,19 +27,19 @@ toc: menu
 		"source.fixAll.stylelint": true
 	},
 	// 扩展自定义配置
-	"eslint.nodePath": "path/vscode-lint/node_modules",
+	"eslint.nodePath": "path/@yangzw/bruce-std/node_modules",
 	"eslint.options": {
-		"overrideConfigFile": "path/vscode-lint/eslint/eslintrc.js" // 可变⚠️
+		"overrideConfigFile": "path/@yangzw/bruce-std/eslint/eslintrc.js" // 可变⚠️
 	},
-	"stylelint.configBasedir": "path/vscode-lint",
-	"stylelint.configFile": "path/vscode-lint/stylelint/stylelintrc.js",
+	"stylelint.configBasedir": "path/@yangzw/bruce-std",
+	"stylelint.configFile": "path/@yangzw/bruce-std/stylelint/stylelintrc.js",
 	"stylelint.customSyntax": "postcss-html", // 可变⚠️
-	"stylelint.stylelintPath": "path/vscode-lint/node_modules/stylelint",
+	"stylelint.stylelintPath": "path/@yangzw/bruce-std/node_modules/stylelint",
 	"stylelint.validate": ["html", "css", "scss", "less", "vue"]
 }
 ```
 
-以上配置的`path`为`vscode-lint`模块所在的**NPM根目录**，可执行`npm config get prefix`获取**NPM根目录**并替换`path`。
+以上配置的`path`为`@yangzw/bruce-std`模块所在的**NPM根目录**，可执行`npm config get prefix`获取**NPM根目录**并替换`path`。
 
 - 执行`npm config get prefix`获取的**NPM根目录**，例如是`E:/Node/prefix/node_modules`
 - 将上述配置的`path`替换为`E:/Node/prefix/node_modules`
@@ -74,20 +74,20 @@ toc: menu
 
 校验不同类型代码需实时修改`eslint.options.overrideConfigFile`的值。
 
-- [x] **JS**：`path/vscode-lint/eslint/eslintrc.js`
-- [x] **React**：`path/vscode-lint/eslint/eslintrc.react.js`
-- [x] **Vue**：`path/vscode-lint/eslint/eslintrc.vue.js`
-- [x] **TS**：`path/vscode-lint/tslint/tslintrc.js`
-- [x] **React TS**：`path/vscode-lint/tslint/tslintrc.react.js`
-- [x] **Vue TS**：`path/vscode-lint/tslint/tslintrc.vue.js`
+- [x] **JS**：`path/@yangzw/bruce-std/eslint/eslintrc.js`
+- [x] **React**：`path/@yangzw/bruce-std/eslint/eslintrc.react.js`
+- [x] **Vue**：`path/@yangzw/bruce-std/eslint/eslintrc.vue.js`
+- [x] **TS**：`path/@yangzw/bruce-std/tslint/tslintrc.js`
+- [x] **React TS**：`path/@yangzw/bruce-std/tslint/tslintrc.react.js`
+- [x] **Vue TS**：`path/@yangzw/bruce-std/tslint/tslintrc.vue.js`
 
 ## 疑问
 
-##### 更新eslint到v6+就会失效
+#### 更新eslint到v6+就会失效
 
-很多同学反映`eslint 6+`在`VSCode`上失效，最高使用版本只能控制在`v5.16.0`。其实这本身就是配置问题，跟版本无关。本项目的`eslint`使用`v8`，只要配置正确就能正常使用。
+很多同学反映`eslint 6+`在`VSCode`中失效，最高使用版本只能控制在`v5.16.0`。其实这本身就是配置问题，与版本无关。本项目的`eslint`使用`v8`，只要配置正确就能正常使用。
 
-上述安装行为使用了`NPM`，那么`settings.json`的`eslint.packageManager`必须配置为`npm`(小写)，但最新版本`Eslint`已默认此项，所以无需配置。若上述安装行为变成`yarn global add vscode-lint`，那么必须在`settings.json`中添加以下配置。
+若使用`npm`安装`@yangzw/bruce-std`，那`settings.json`的`eslint.packageManager`必须配置为`npm`(小写)，但最新版本`Eslint`已默认此项，所以无需配置。若使用`yarn`安装`@yangzw/bruce-std`，那必须在`settings.json`中添加以下配置。
 
 ```json
 {
@@ -95,7 +95,7 @@ toc: menu
 }
 ```
 
-##### 首次安装Eslint并执行上述配置就会失效
+#### 首次安装Eslint并执行上述配置就会失效
 
 首次安装`Eslint`可能会在`js/ts/jsx/tsx/vue文件`的控制台中看到以下警告。
 
@@ -103,4 +103,4 @@ toc: menu
 Eslint is disabled since its execution has not been approved or denied yet. Use the light bulb menu to open the approval dialog.
 ```
 
-说明`Eslint`被禁用了，虽然配置中无明确的禁用字段，但还是被禁用了。此时移步到`VSCode`右下角的工具栏，会看到`禁用图标+ESLINT`的标红按钮，单击它就会弹出一个弹框，选择`Allow Everywhere`就能启用`Eslint`的校验功能了。
+说明`Eslint`被禁用了，虽然配置中无明确的禁用字段，但还是被禁用了。移步到`VSCode`右下角的工具栏，会看到`禁用图标+ESLINT`的标红按钮，单击它就会弹出一个弹框，选择`Allow Everywhere`就能启用`Eslint`的校验功能了。

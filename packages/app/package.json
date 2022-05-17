@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-app",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A JS/React/Vue Application Automation Build Scaffold With Zero Configuration Out Of The Box",
 	"keywords": [
 		"bruce-app",
@@ -60,19 +60,19 @@
 	},
 	"dependencies": {
 		"@babel/cli": "7.17.10",
-		"@babel/core": "7.17.10",
+		"@babel/core": "7.17.12",
 		"@babel/eslint-parser": "7.17.0",
-		"@babel/plugin-transform-runtime": "7.17.10",
-		"@babel/preset-env": "7.17.10",
-		"@babel/preset-react": "7.16.7",
-		"@babel/preset-typescript": "7.16.7",
+		"@babel/plugin-transform-runtime": "7.17.12",
+		"@babel/preset-env": "7.17.12",
+		"@babel/preset-react": "7.17.12",
+		"@babel/preset-typescript": "7.17.12",
 		"@babel/runtime-corejs3": "7.17.9",
 		"@pmmmwh/react-refresh-webpack-plugin": "0.5.6",
 		"@soda/friendly-errors-webpack-plugin": "1.8.1",
-		"@typescript-eslint/eslint-plugin": "5.23.0",
-		"@typescript-eslint/parser": "5.23.0",
+		"@typescript-eslint/eslint-plugin": "5.24.0",
+		"@typescript-eslint/parser": "5.24.0",
 		"@vue/compiler-sfc": "3.2.33",
-		"@yangzw/bruce-us": "1.0.2",
+		"@yangzw/bruce-us": "1.0.3",
 		"babel-loader": "8.2.5",
 		"chalk": "5.0.1",
 		"chokidar": "3.5.3",
@@ -134,7 +134,7 @@
 		"webpack-dev-server": "4.9.0",
 		"webpack-merge": "5.8.0",
 		"webpackbar": "5.0.2",
-		"yaml": "2.0.1"
+		"yaml": "2.1.0"
 	},
 	"license": "MIT",
 	"publishConfig": {

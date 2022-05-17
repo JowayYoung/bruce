@@ -10,6 +10,7 @@ export default defineConfig({
 	mode: "site",
 	navs: [
 		{ path: "/app", title: "bruce-app" },
+		{ path: "/img", title: "bruce-img" },
 		{ path: "/pkg", title: "bruce-pkg" },
 		{ path: "/std", title: "bruce-std" },
 		{ path: "/us", title: "bruce-us" },

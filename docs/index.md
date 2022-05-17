@@ -35,13 +35,13 @@ features:
 footer: Copyright © 2017~Present | MIT Licensed<br>Powered By <span class="mark">JowayYoung</span>
 ---
 
-### Bruce FEES
+## Bruce FEES
 
 **Bruce FEES**是一套多功能**前端工程化多包管理**实践方案，包括多个前端开发流程中常用的`脚手架`、`工具`和`类库`，其目的是简化整个开发流程，对那些重复繁琐的流程使用工具自动化完成，以提升整体的开发效率。
 
 基于`lerna`、`webpack`、`rollup`、`postcss`、`sass`、`less`、`babel`、`typescript`、`stylelint`、`eslint`、`jest`、`react`、`vue`、`dumi`等模块搭建与开发底层架构，使用`Monorepo`组织与管理业务代码。
 
-### 特性
+## 特性
 
 - 📦 大部分解决方案已做到`零配置开箱即用`
 - ⚡ 提炼自身多年前端工程化的`工作经验`与`解决方案`
@@ -49,7 +49,7 @@ footer: Copyright © 2017~Present | MIT Licensed<br>Powered By <span class="mark
 - ⚙️ 基于`全链路开发`与`设计工具体系`完成每个解决方案
 - 📋 深入每个场景做好开发阶段的`编码细节`与`代码规范`
 
-### 安装
+## 安装
 
 在安装前必须确保`node`在`v16`以上，可用[nvm](https://github.com/nvm-sh/nvm)或[n](https://github.com/tj/n)控制多版本`node`环境。
 
@@ -81,9 +81,9 @@ yarn add global @yangzw/bruce-xyz
 
 ---
 
-每个包安装完毕请结合文档详情使用，有疑问请联系**JowayYoung**。
+每个子包安装完毕请结合文档详情使用，有疑问请联系**JowayYoung**。
 
-### 反馈
+## 反馈
 
 如有问题请到[Github Issues](https://github.com/JowayYoung/bruce/issues)留言或通过以下方式联系**JowayYoung**。
 

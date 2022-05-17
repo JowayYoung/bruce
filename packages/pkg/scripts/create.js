@@ -35,7 +35,6 @@ export default async function Create() {
 				type: "git",
 				url: ""
 			},
-			license: "MIT",
 			main: "index.js",
 			scripts: {
 				remove: "rimraf dist node_modules package-lock.json yarn.lock",
@@ -46,7 +45,8 @@ export default async function Create() {
 				npm: ">=7.10.0"
 			},
 			dependencies: {},
-			devDependencies: {}
+			devDependencies: {},
+			license: "MIT"
 		/* eslint-enable */
 		}, scope ? {
 			publishConfig: { access: "public" }
