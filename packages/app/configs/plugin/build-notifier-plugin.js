@@ -1,1 +1,1 @@
-import S from"webpack-build-notifier";import{ACTION_TEXT as D}from"../../constants/i18n/index.js";export default function E(){return new S({suppressSuccess:!0,suppressWarning:!0,title:D.build})}
+import S from"webpack-build-notifier";import{ACTION_TEXT as F}from"../../constants/i18n/index.js";export default function G(){return new S({suppressSuccess:!0,suppressWarning:!0,title:F.build})}

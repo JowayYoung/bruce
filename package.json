@@ -9,9 +9,9 @@
 		"lint": "eslint . --ext .js -c packages/app/templates/eslint/eslintrc.cjs && eslint . --ext .ts -c packages/app/templates/tslint/tslintrc.cjs"
 	},
 	"devDependencies": {
-		"dumi": "1.1.40",
+		"dumi": "1.1.42",
 		"dumi-theme-mobile": "1.1.22",
-		"lerna": "4.0.0"
+		"lerna": "5.1.4"
 	},
 	"private": true,
 	"workspaces": [

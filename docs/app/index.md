@@ -21,7 +21,7 @@ toc: menu
 其**零配置开箱即用**的优点非常适合`入门级`、`初中级`和`快速开发应用`的前端开发者使用，还可通过创建配置文件覆盖其默认配置，只需专注业务代码的编写无需关注构建代码的编写，让应用结构更简洁。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
-[![version](https://img.shields.io/badge/version-1.0.3-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
+[![version](https://img.shields.io/badge/version-1.0.4-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![test](https://img.shields.io/badge/test-passing-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
@@ -34,7 +34,7 @@ toc: menu
 `@yangzw/bruce-app`是一个基于`webpack v5`开发的极速零配置开箱即用的Web应用构建工具(**每次更新都会保持最新依赖**)，集成各种常用工具(`postcss`、`sass`、`less`、`babel`、`typescript`、`stylelint`、`eslint`等)扩展构建功能，用于管理**JS/React/Vue**技术栈的应用。
 
 [![commander](https://img.shields.io/badge/commander-9.x.x-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
-[![inquirer](https://img.shields.io/badge/inquirer-8.x.x-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
+[![inquirer](https://img.shields.io/badge/inquirer-9.x.x-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![webpack](https://img.shields.io/badge/webpack-5.x.x-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![postcss](https://img.shields.io/badge/postcss-8.x.x-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![sass](https://img.shields.io/badge/sass-1.x.x-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>

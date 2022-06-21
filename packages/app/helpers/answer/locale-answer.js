@@ -1,1 +1,1 @@
-import io from"inquirer";import{LANG as Br}from"../question/index.js";export default async function qr(){return await io.prompt(Br)}
+import io from"inquirer";import{LANG as Cr}from"../question/index.js";export default async function zr(){return await io.prompt(Cr)}

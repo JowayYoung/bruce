@@ -1,1 +1,1 @@
-import zo from"./build-answer.js";import xr from"./init-answer.js";import qr from"./locale-answer.js";import zr from"./new-answer.js";import Ar from"./remove-answer.js";export{zo as BuildAnswer,xr as InitAnswer,qr as LocaleAnswer,zr as NewAnswer,Ar as RemoveAnswer};
+import zo from"./build-answer.js";import qr from"./init-answer.js";import zr from"./locale-answer.js";import Ar from"./new-answer.js";import Br from"./remove-answer.js";export{zo as BuildAnswer,qr as InitAnswer,zr as LocaleAnswer,Ar as NewAnswer,Br as RemoveAnswer};

@@ -1,1 +1,1 @@
-import{CssLoader as a,PostcssLoader as v,StyleLoader as y}from"../loader/index.js";export default function de({browsers:e=[],debug:r=!1}={}){return{include:/(node_modules|src)/,test:/\.css$/,use:[y(r),a(),v(e)]}}
+import{CssLoader as a,PostcssLoader as x,StyleLoader as b}from"../loader/index.js";export default function de({browsers:e=[],debug:r=!1}={}){return{include:/(node_modules|src)/,test:/\.css$/,use:[b(r),a(),x(e)]}}

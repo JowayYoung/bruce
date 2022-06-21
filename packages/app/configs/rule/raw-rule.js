@@ -1,1 +1,1 @@
-export default function fr(){return{exclude:/node_modules/,include:/src/,test:/\.txt/,type:"asset/source"}}
+export default function jr(){return{exclude:/node_modules/,include:/src/,test:/\.txt/,type:"asset/source"}}

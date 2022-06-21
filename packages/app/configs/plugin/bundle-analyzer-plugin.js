@@ -1,1 +1,1 @@
-import{BundleAnalyzerPlugin as F}from"webpack-bundle-analyzer";export default function G({disabled:e=!0}={}){return e?null:new F}
+import{BundleAnalyzerPlugin as H}from"webpack-bundle-analyzer";export default function J({disabled:e=!0}={}){return e?null:new H}

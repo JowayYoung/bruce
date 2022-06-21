@@ -1,1 +1,1 @@
-import B from"webpackbar";export default function W(){return new B({name:"Webpack Build"})}
+import W from"webpackbar";export default function D(){return new W({name:"Webpack Build"})}

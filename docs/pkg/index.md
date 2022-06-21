@@ -6,7 +6,7 @@ toc: menu
 
 ## 背景
 
-每次**创建模块**需手动输入很多参数却只能生成一个`package.json`，其他骨架文件还需手动创建。每次**发布模块**需手动确认环境、镜像和账号状态，以保障模块被发布到正确位置。这些操作重复繁琐却很有必要，因此将它们的操作步骤与执行流程合并为一条命令，能让`模块开发`的工作流程更丝滑。
+每次**创建模块**需手动输入很多参数却只能生成一个`package.json`，其他骨架文件还需手动创建。每次**发布模块**需手动确认环境、镜像和账号状态，以保障模块被发布到正确位置。这些操作重复繁琐却很有必要，因此将它们的操作步骤与执行流程合并为一条命令，让`模块开发`的工作流程更丝滑。
 
 ## 介绍
 
@@ -17,7 +17,7 @@ toc: menu
 强化`npm init`与`npm publish`两个常用命令，提供更强大便捷的扩展功能。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
-[![version](https://img.shields.io/badge/version-1.0.2-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
+[![version](https://img.shields.io/badge/version-1.0.3-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![test](https://img.shields.io/badge/test-passing-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>

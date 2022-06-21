@@ -6,16 +6,18 @@ toc: menu
 
 ## 背景
 
+遇到批处理图像的情况，每次都要找`UI设计师`处理，人家都是爱鸟不鸟的样子。自己动手，丰衣足食！
+
 ## 介绍
 
 [![author](https://img.shields.io/badge/@yangzw/bruce--img-多功能无限制的图像处理工具-66f.svg)](https://github.com/JowayYoung/bruce)
 
-`@yangzw/bruce-std`是一个多功能无限制的图像处理工具，为图像提供`压缩`、`分组`、`标记`和`变换`的批处理功能。
+`@yangzw/bruce-img`是一个多功能无限制的图像处理工具，为图像提供`压缩`、`分组`、`标记`和`变换`的批处理功能。
 
 囊括的功能都是一些常规图像批处理操作，以前只能使用相关图像处理工具完成这些功能，但现在你多一个选择，可用命令行完成这些功能。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
-[![version](https://img.shields.io/badge/version-1.0.2-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
+[![version](https://img.shields.io/badge/version-1.0.3-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![test](https://img.shields.io/badge/test-passing-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>

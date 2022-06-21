@@ -1,1 +1,1 @@
-import{VueLoader as b}from"../loader/index.js";export default function pr(){return{exclude:/node_modules/,include:/src/,test:/\.vue$/,use:[b()]}}
+import{VueLoader as g}from"../loader/index.js";export default function ur(){return{exclude:/node_modules/,include:/src/,test:/\.vue$/,use:[g()]}}

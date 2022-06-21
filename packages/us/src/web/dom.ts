@@ -38,8 +38,8 @@ function CopyPaste(elem: HTMLElement = document.body): void {
  * @param {string} [name=""] 文件名
  */
 function DownloadFile(url: string = "", name: string = ""): void {
+	const event = new Event("MouseEvents");
 	const target = document.createElement("a");
-	const event = document.createEvent("MouseEvents");
 	target.setAttribute("href", url);
 	target.setAttribute("download", name);
 	target.click();

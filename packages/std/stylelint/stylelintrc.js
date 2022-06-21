@@ -24,10 +24,13 @@ module.exports = {
 		"color-function-notation": "legacy",
 		"color-no-invalid-hex": true,
 		"comment-empty-line-before": "never",
+		"custom-property-empty-line-before": "never",
 		"declaration-colon-newline-after": null,
 		"declaration-empty-line-before": "never",
 		"function-linear-gradient-no-nonstandard-direction": null,
+		"function-no-unknown": null,
 		"indentation": "tab",
+		"max-line-length": null,
 		"no-descending-specificity": null,
 		"no-empty-source": null,
 		"no-missing-end-of-source-newline": null,
@@ -292,6 +295,8 @@ module.exports = {
 			"animation-fill-mode",
 			// Webkit专有属性
 			"-webkit-overflow-scrolling",
+			"-webkit-box-orient",
+			"-webkit-line-clamp",
 			"-webkit-text-fill-color",
 			"-webkit-tap-highlight-color"
 		],

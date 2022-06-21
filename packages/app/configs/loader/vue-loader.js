@@ -1,1 +1,1 @@
-export default function b(){return{loader:"vue-loader"}}
+export default function g(){return{loader:"vue-loader"}}
