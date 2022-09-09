@@ -1,4 +1,4 @@
-// 校验HTML和Vue的CSS时开启配置的stylelint.configBasedir和stylelint.customSyntax
+// 校验HTML与Vue的CSS时开启配置的stylelint.configBasedir与stylelint.customSyntax
 // https://stylelint.io/migration-guide/to-14/
 // https://github.com/stylelint/stylelint/blob/14.0.0/docs/migration-guide/to-14.md#syntax-option-and-automatic-inferral-of-syntax
 // https://gitmemory.cn/index.php/repo/stylelint/stylelint/issues/5746

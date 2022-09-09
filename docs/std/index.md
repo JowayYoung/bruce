@@ -24,7 +24,7 @@ toc: menu
 它用于约束团队成员的`编码规范`与`编码风格`，从而增加项目代码的`可维护性`与`可接入性`，保障项目整体质量，可减少`无用代码`、`重复代码`、`错误代码`和`漏洞代码`的产生几率。它的根本目的是**一次部署全局运行**，统一所有项目的`编码规范`与`编码风格`，养成规范的码字习惯，减少不必要的错误与隐患。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
-[![version](https://img.shields.io/badge/version-1.0.3-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
+[![version](https://img.shields.io/badge/version-1.0.4-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![test](https://img.shields.io/badge/test-passing-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
@@ -34,7 +34,7 @@ toc: menu
 
 ## 依赖
 
-`@yangzw/bruce-std`依赖以下`NPM模块`的最新版本。
+`@yangzw/bruce-std`依赖以下`Npm模块`的最新版本。
 
 [![postcss](https://img.shields.io/badge/postcss-8.x.x-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![babel](https://img.shields.io/badge/babel-7.x.x-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
@@ -46,7 +46,7 @@ toc: menu
 为了方便表述，统一以下名词。
 
 - 以下提及的**Stylelint**与**Eslint**都为`VSCode插件`
-- 以下提及的**stylelint**与**eslint**都为`NPM模块`
+- 以下提及的**stylelint**与**eslint**都为`Npm模块`
 
 ## 安装
 

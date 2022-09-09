@@ -136,7 +136,7 @@ function IsEmptyArray<T>(data: T): boolean {
 	return Array.isArray(data) && !data.length;
 }
 
-function IsEmptyObject<T>(data: T): boolean {
+function IsEmptyObject<T extends object>(data: T): boolean {
 	return IsObject(data) && !Object.keys(data).length;
 }
 

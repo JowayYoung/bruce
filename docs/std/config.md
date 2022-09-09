@@ -39,7 +39,7 @@ toc: menu
 }
 ```
 
-以上配置的`path`为`@yangzw/bruce-std`模块所在的**NPM根目录**，可执行`npm config get prefix`获取**NPM根目录**并替换`path`。
+上述配置的`path`为`@yangzw/bruce-std`模块所在的**NPM根目录**，可执行`npm config get prefix`获取**NPM根目录**并替换`path`。
 
 - 执行`npm config get prefix`获取的**NPM根目录**，例如是`E:/Node/prefix/node_modules`
 - 将上述配置的`path`替换为`E:/Node/prefix/node_modules`

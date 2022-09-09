@@ -1,5 +1,5 @@
 {
 	"eslint.options": {
-		"overrideConfigFile": "E:/Node/prefix/node_modules/@yangzw/bruce-std/tslint/tslintrc.react.js"
+		"overrideConfigFile": "E:/Node/prefix/node_modules/@yangzw/bruce-std/tslint/tslintrc.js"
 	}
 }

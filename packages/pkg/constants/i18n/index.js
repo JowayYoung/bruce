@@ -12,7 +12,7 @@ const ACTION_TEXT = {
 };
 
 const CMD_TEXT = {
-	desc: `Description:\n${blueBright("@yangzw/bruce-pkg")} 一个强化NPM命令的模块处理工具\n作者 ${yellowBright("JowayYoung")}\n邮箱 ${yellowBright("young.joway@aliyun.com")}\n官网 ${yellowBright("https://yangzw.vip")}\n仓库 ${yellowBright("https://github.com/JowayYoung/bruce")}\n文档 ${yellowBright("https://doc.yangzw.vip/bruce/pkg")}`,
+	desc: `Description:\n${blueBright("@yangzw/bruce-pkg")} 一个强化NPM命令的模块处理工具\n作者 ${yellowBright("JowayYoung")}\n邮箱 ${yellowBright("young.joway@aliyun.com")}\n官网 ${yellowBright("https://yangzw.vip")}\n仓库 ${yellowBright("https://github.com/JowayYoung/bruce")}\n文档 ${yellowBright("https://jowayyoung.github.io/bruce/pkg")}`,
 	judge: `${cross} ${blueBright("Node")}当前版本过低，请更新到${greenBright("v16")}以上`,
 	name: redBright("bruce-pkg"),
 	version: ver => `${blueBright("@yangzw/bruce-pkg")} ${ver} Produced by ${greenBright("JowayYoung")}`

@@ -9,6 +9,6 @@
 - [x] **@yangzw/bruce-img**：图像
 - [ ] **@yangzw/bruce-lib**：类库
 - [x] **@yangzw/bruce-pkg**：模块
-- [ ] **@yangzw/bruce-std**：规范
+- [x] **@yangzw/bruce-std**：规范
 - [ ] **@yangzw/bruce-ui**：组件
 - [x] **@yangzw/bruce-us**：工具

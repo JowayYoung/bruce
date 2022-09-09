@@ -27,6 +27,7 @@ module.exports = {
 		/* eslint-disable quote-props */
 		"@typescript-eslint/indent": ["error", "tab"], // ts
 		"@typescript-eslint/no-inferrable-types": ["off"], // ts
+		"@typescript-eslint/no-misused-promises": ["off"], // ts
 		"@typescript-eslint/no-unused-vars": ["error"], // ts
 		"@typescript-eslint/quotes": ["error", "double"], // ts
 		"@typescript-eslint/semi": ["error", "always"], // ts

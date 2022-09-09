@@ -83,23 +83,24 @@ toc: menu
 **eslintIgnores**|Eslint忽略路径列表|`Array`|`[]`|配置详情请查看[eslint-ignores](https://eslint.org/docs/user-guide/configuring#using-eslintignore-in-packagejson)
 **eslintRules**|Eslint校验规则列表|`Object`|`{}`|配置详情请查看[eslint-rules](https://eslint.org/docs/user-guide/configuring#configuring-rules)、[rules](https://eslint.org/docs/rules)、[vue-rules](https://eslint.vuejs.org/rules)和[ts-rules](https://typescript-eslint.io/rules)
 **frame**|开发框架|`String`|`js`|可选`js/react/vue`，由命令生成，请不要做任何修改
-**openPages**|打开页面|`Array`|`[]`|在`开发环境`下默认浏览器会自动匹配当前页面路径
+**openPages**|打开页面|`Array`|`[]`|在`开发环境`中默认浏览器会自动匹配当前页面路径
 **proxy**|接口代理|`Array/Object`|`{}`|配置详情请查看[webpack-dev-server->proxy](https://webpack.js.org/configuration/dev-server/#devserver-proxy)
-**proxyHost**|代理域名|`String`|`""`|在`开发环境`下默认浏览器会自动匹配当前页面域名
+**proxyHost**|代理域名|`String`|`""`|在`开发环境`中默认浏览器会自动匹配当前页面域名
 **publicPath**|公共路径|`String/Function`|`""`|追加资源文件前缀，可用函数区分环境模式输出不同前缀，函数形式为`mode=>{}`
 **scriptAssets**|脚本资源|`Array`|`[]`|在HTML的`<body>`内插入脚本
 **style**|预设样式|`String`|`scss`|可选`scss/less`，由命令生成，请不要做任何修改
 **styleAssets**|样式资源|`Array`|`[]`|在HTML的`<head>`内插入样式
 **stylelintIgnores**|Stylelint忽略路径列表|`Array`|`[]`|配置详情请查看[stylelint-ignores](https://stylelint.io/user-guide/configuration/#ignorefiles)
 **stylelintRules**|Stylelint校验规则列表|`Object`|`{}`|配置详情请查看[stylelint-rules](https://stylelint.io/user-guide/configuration/#rules)与[rules](https://stylelint.io/user-guide/rules)
+**transpileDeps**|转译依赖|`Array`|`[]`|转译`node_modules`中无`ES5`输出代码的模块
 **uploadOpts**|上传配置|`Object/Function`|`null`|内置`ssh2-sftp-client`有问题，暂时无法使用，配置详情请查看[ssh2-sftp-client](https://github.com/theophilusx/ssh2-sftp-client)
 **useTs**|集成TypeScript|`Boolean`|`false`|可选`true/false`，由命令生成，请不要做任何修改
 
 > 覆盖默认配置
 
-- 若使用`js文件`，必须使用CJS规范，导出形式为`module.exports = { ... };`
+- 若使用`js文件`，必须使用`CJS规范`，导出形式为`module.exports = { ... };`
 - 若配置文件的属性是`null/""/[]/{}`其中之一，会使用内置配置默认值
-- 若需自定义上传操作，必须把`uploadOpts`设置为`null`或删除该字段，并使用`buildSuccessCb`定义上传操作
+- 若需自定义上传操作，必须把`uploadOpts`设置为`null`或删除该字段并使用`buildSuccessCb`定义上传操作
 
 ```js
 module.exports = {
@@ -150,6 +151,11 @@ module.exports = {
 	stylelintRules: {
 		"color-hex-case": "upper"
 	},
+	transpileDeps: [
+		"dom7",
+		"ssr-window",
+		"swiper"
+	],
 	uploadOpts: {
 		host: "Your Server IP",
 		password: "Your Server Password",

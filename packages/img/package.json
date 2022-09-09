@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-img",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "A Image Processing Tool For Multifunctional And Unrestricted",
 	"keywords": [
 		"bruce-img",
@@ -59,18 +59,18 @@
 		"npm": ">=7.10.0"
 	},
 	"dependencies": {
-		"@yangzw/bruce-us": "1.0.4",
+		"@yangzw/bruce-us": "1.0.5",
 		"chalk": "5.0.1",
-		"commander": "9.3.0",
-		"figures": "4.0.1",
+		"commander": "9.4.0",
+		"figures": "5.0.0",
 		"glob": "8.0.3",
-		"image-size": "1.0.1",
-		"inquirer": "9.0.0",
-		"ora": "6.1.0",
-		"sharp": "0.30.6",
+		"image-size": "1.0.2",
+		"inquirer": "9.1.1",
+		"ora": "6.1.2",
+		"sharp": "0.31.0",
 		"semver": "7.3.7",
 		"text-to-svg": "3.1.5",
-		"update-notifier": "5.1.0"
+		"update-notifier": "6.0.2"
 	},
 	"license": "MIT",
 	"publishConfig": {

@@ -39,7 +39,7 @@ declare function IsArguments<T>(data: T): boolean;
 declare function IsError<T>(data: T): boolean;
 declare function IsEmpty<T>(data: T): boolean;
 declare function IsEmptyArray<T>(data: T): boolean;
-declare function IsEmptyObject<T>(data: T): boolean;
+declare function IsEmptyObject<T extends object>(data: T): boolean;
 
 declare function FormatCountdown(date: string | number | Date): string;
 declare function FormatTimeDiff(date: string | number | Date): string;

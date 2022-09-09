@@ -1,1 +1,0 @@
-import{dirname as w}from"path";import{fileURLToPath as B}from"url";import{CopyDir as Ae}from"@yangzw/bruce-us/dist/node.js";import{AbsPath as E}from"../../constants/util/index.js";export default function at({name:t="demo"}={}){const o=w(B(import.meta.url)),r=E("../../templates/asset",o);Ae(r,`${t}/src/assets`)}

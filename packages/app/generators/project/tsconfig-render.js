@@ -1,1 +1,0 @@
-import{dirname as w}from"path";import{fileURLToPath as B}from"url";import{CopyDir as Ae}from"@yangzw/bruce-us/dist/node.js";import{AbsPath as E}from"../../constants/util/index.js";export default function Se({name:o="demo",useTs:t=!1}={}){if(!t)return;const n=w(B(import.meta.url)),r=E("../../templates/config/tsconfig.json",n);Ae(r,`${o}/tsconfig.json`)}
