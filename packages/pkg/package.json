@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-pkg",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "A Package Processing Tool For Strengthening NPM Command",
 	"keywords": [
 		"bruce-pkg",
@@ -37,15 +37,15 @@
 		"npm": ">=7.10.0"
 	},
 	"dependencies": {
-		"@yangzw/bruce-us": "1.0.5",
-		"chalk": "5.0.1",
-		"commander": "9.4.0",
+		"@yangzw/bruce-us": "1.0.6",
+		"chalk": "5.1.2",
+		"commander": "9.4.1",
 		"execa": "6.1.0",
 		"figures": "5.0.0",
-		"inquirer": "9.1.1",
+		"inquirer": "9.1.4",
 		"listr2": "5.0.5",
 		"ora": "6.1.2",
-		"semver": "7.3.7",
+		"semver": "7.3.8",
 		"update-notifier": "6.0.2"
 	},
 	"license": "MIT",

@@ -21,7 +21,7 @@ toc: menu
 其**零配置开箱即用**的优点非常适合`入门级`、`初中级`和`快速开发应用`的前端开发者使用，还可通过创建配置文件覆盖其默认配置，只需专注业务代码的编写无需关注构建代码的编写，让应用结构更简洁。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
-[![version](https://img.shields.io/badge/version-1.0.5-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
+[![version](https://img.shields.io/badge/version-1.0.6-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![test](https://img.shields.io/badge/test-passing-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>

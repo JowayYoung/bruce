@@ -1,17 +1,18 @@
 {
 	"name": "@yangzw/bruce",
 	"scripts": {
-		"build": "rimraf packages/*/dist && lerna run build && rimraf packages/ui/dist/components && rimraf packages/us/dist/{src,test}",
+		"build": "yarn run remove && lerna run build",
 		"clean": "lerna clean && rimraf .umi dist node_modules package-lock.json yarn.lock",
 		"deploy": "dumi build",
 		"docs": "dumi dev",
 		"init": "lerna bootstrap",
-		"lint": "eslint . --ext .js -c packages/app/templates/eslint/eslintrc.cjs && eslint . --ext .ts -c packages/app/templates/tslint/tslintrc.cjs"
+		"lint": "eslint . --ext .js -c packages/app/templates/eslint/eslintrc.cjs && eslint . --ext .ts -c packages/app/templates/tslint/tslintrc.cjs",
+		"remove": "rimraf packages/*/dist"
 	},
 	"devDependencies": {
-		"dumi": "1.1.47",
-		"dumi-theme-mobile": "1.1.24",
-		"lerna": "5.5.0"
+		"dumi": "1.1.49",
+		"dumi-theme-mobile": "1.1.26",
+		"lerna": "5.6.2"
 	},
 	"private": true,
 	"workspaces": [
