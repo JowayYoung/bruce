@@ -1,55 +1,70 @@
 /** 数组工具 **/
+type KeyType = string | number;
 
-interface KeyObj {
-	[key: string | number]: string | number
-}
+type ValueType = string | number | boolean;
 
-interface GroupObj {
-	[key: string | number]: KeyObj[]
-}
+type CountType = {
+	[key in KeyType]: number
+};
 
-interface CountObj {
-	[key: string | number]: number
-}
+type GroupType = {
+	[key in KeyType]: MemberType[]
+};
+
+type MemberType = {
+	[key in KeyType]: string | number
+};
 
 /**
- * @name 分组成员特性
+ * @name 分割数组
  * @param {array} [arr=[]] 数组
- * @param {string} [key=""] 属性
+ * @param {number} [size=1] 尺寸
  */
-function GroupArrKey(arr: KeyObj[] = [], key: string = ""): GroupObj {
-	return key ? arr.reduce((t: GroupObj, v) => (!t[v[key]] && (t[v[key]] = []), t[v[key]].push(v), t), {}) : {};
+function ChunkArr<T>(arr: T[] = [], size: number = 1): T[][] {
+	return arr.length
+		? arr.reduce((t: T[][], v) => (t[t.length - 1].length === size ? t.push([v]) : t[t.length - 1].push(v), t), [[]])
+		: [];
 }
 
 /**
- * @name 记录成员位置
+ * @name 分组数组
+ * @param {array} [arr=[]] 数组
+ * @param {string|number} [key=""] 属性
+ */
+function GroupArr(arr: MemberType[] = [], key: KeyType = ""): GroupType {
+	return key ? arr.reduce((t: GroupType, v) => (!t[v[key]] && (t[v[key]] = []), t[v[key]].push(v), t), {}) : {};
+}
+
+/**
+ * @name 统计数组成员个数
+ * @param {array} [arr=[]] 数组
+ */
+function StatArrMemCount(arr: KeyType[] = []): CountType {
+	return arr.reduce((t: CountType, v) => (t[v] = (t[v] || 0) + 1, t), {});
+}
+
+/**
+ * @name 统计数组成员所含关键字
+ * @param {array} [arr=[]] 数组
+ * @param {array} [keywords=[]] 关键字集合
+ */
+function StatArrMemKeyword(arr: string[] = [], keywords: string[] = []): string[] {
+	return keywords.reduce((t: string[], v) => (arr.some(w => w.includes(v)) && t.push(v), t), []);
+}
+
+/**
+ * @name 记录数组成员位置
  * @param {array} [arr=[]] 数组
  * @param {string|number|boolean} [val] 值
  */
-function RecordArrPosition(arr: Array<string | number | boolean> = [], val: string | number |boolean): number[] {
+function StatArrMemPosition(arr: ValueType[] = [], val: ValueType): number[] {
 	return arr.reduce((t: number[], v, i) => (v === val && t.push(i), t), []);
 }
 
-/**
- * @name 统计成员个数
- * @param {array} [arr=[]] 数组
- */
-function StatArrCount(arr: Array<string | number> = []): CountObj {
-	return arr.reduce((t: CountObj, v) => (t[v] = (t[v] || 0) + 1, t), {});
-}
-
-/**
- * @name 统计成员所含关键字
- * @param {array} [arr=[]] 数组
- * @param {array} [keys=[]] 关键字集合
- */
-function StatArrKeyword(arr: string[] = [], keys: string[] = []): string[] {
-	return keys.reduce((t: string[], v) => (arr.some(w => w.includes(v)) && t.push(v), t), []);
-}
-
 export {
-	GroupArrKey,
-	RecordArrPosition,
-	StatArrCount,
-	StatArrKeyword
+	ChunkArr,
+	GroupArr,
+	StatArrMemCount,
+	StatArrMemKeyword,
+	StatArrMemPosition
 };

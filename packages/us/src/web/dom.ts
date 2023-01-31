@@ -1,6 +1,10 @@
 /** DOM工具 **/
 import { AsyncTo } from "../common/function";
 
+type EventOpts = "contextmenu" | "copy" | "selectstart";
+
+type TgtFunc<T> = (d: T) => void;
+
 /**
  * @name 自适应
  * @param {number} [width=750] 设计图宽度
@@ -12,6 +16,22 @@ function AutoResponse(width: number = 750): void {
 	} else {
 		target.style.fontSize = `${target.clientWidth / width * 100}px`;
 	}
+}
+
+/**
+ * @name B64转文件
+ * @param {string} [base64=""] base64
+ * @param {string} [filename="unknow"] 文件名称
+ */
+function Base64ToFile(base64 = "", name = "unknow"): File {
+	const arr = base64.split(",");
+	const type = arr[0]?.match(/:(.*?);/)?.[1] ?? "jpg";
+	const ext = type.split("/")[1];
+	const bstr = atob(arr[1]);
+	let len = bstr.length;
+	const u8arr = new Uint8Array(len);
+	while (len--) { u8arr[len] = bstr.charCodeAt(len); }
+	return new File([u8arr], `${name}.${ext}`, { type });
 }
 
 /**
@@ -35,9 +55,9 @@ function CopyPaste(elem: HTMLElement = document.body): void {
 /**
  * @name 下载文件
  * @param {string} [url=""] 地址
- * @param {string} [name=""] 文件名
+ * @param {string} [name="unknow"] 文件名称
  */
-function DownloadFile(url: string = "", name: string = ""): void {
+function DownloadFile(url: string = "", name: string = "unknow"): void {
 	const event = new Event("MouseEvents");
 	const target = document.createElement("a");
 	target.setAttribute("href", url);
@@ -47,8 +67,22 @@ function DownloadFile(url: string = "", name: string = ""): void {
 }
 
 /**
+ * @name 下载文本
+ * @param {string} [text=""] 文本
+ * @param {string} [name="unknow"] 文件名称
+ */
+function DownloadText(text: string = "", name: string = "unknow"): void {
+	const event = new Event("MouseEvents");
+	const target = document.createElement("a");
+	target.setAttribute("href", `data:text/plain;charset=utf-8,${encodeURIComponent(text)}`);
+	target.setAttribute("download", name);
+	target.click();
+	target.dispatchEvent(event);
+}
+
+/**
  * @name 过滤XSS
- * @param {string} [html=""] HTML内容
+ * @param {string} [html=""] HTML
  */
 function FilterXss(html: string = ""): string {
 	const elem = document.createElement("div");
@@ -58,11 +92,21 @@ function FilterXss(html: string = ""): string {
 }
 
 /**
+ * @name 高亮文本
+ * @param {string} [text=""] 文本
+ * @param {string} [keyword=""] 关键字
+ */
+function HighlightText(text: string = "", keyword: string = ""): string {
+	const separator = text.match(keyword)?.[0];
+	return separator ? text.split(separator).join(`<span>${separator}</span>`) : text;
+}
+
+/**
  * @name 图像转B64
  * @param {string} [url=""] 地址
- * @param {string} [type="jpg"] 类型：jpg、png
+ * @param {string} [type="jpg"] 类型：jpg、jpeg、png
  */
-async function Img2Base64(url: string = "", type: string = "jpg"): Promise<string> {
+async function ImgToBase64(url: string = "", type: "jpg" | "jpeg" | "png" = "jpg"): Promise<string> {
 	const promise: Promise<string> = new Promise((resolve, reject) => {
 		const img = new Image();
 		type === "jpg" && (type = "jpeg");
@@ -92,7 +136,7 @@ async function Img2Base64(url: string = "", type: string = "jpg"): Promise<strin
  * @param {string} [name="jsonp"] 全局变量
  * @param {function} [cb=null] 回调函数
  */
-async function Jsonp<T>(url: string = "", name: string = "jsonp", cb: null | ((d: T) => T) = null): Promise<boolean> {
+async function Jsonp<T>(url: string = "", name: string = "jsonp", cb?: TgtFunc<T>): Promise<boolean> {
 	const promise: Promise<boolean> = new Promise((resolve, reject) => {
 		const script = document.createElement("script");
 		script.setAttribute("src", url);
@@ -111,7 +155,7 @@ async function Jsonp<T>(url: string = "", name: string = "jsonp", cb: null | ((d
  * @param {string} [url=""] 地址
  * @param {string} [pst="body"] 插入位置：head、body
  */
-async function LoadScript(url: string = "", pst: string = "body"): Promise<boolean> {
+async function LoadScript(url: string = "", pst: "body" | "head" = "body"): Promise<boolean> {
 	const promise: Promise<boolean> = new Promise((resolve, reject) => {
 		const scripts = document.getElementsByTagName("script");
 		if ([...scripts].some(v => v.src === url || v.src.includes(url))) {
@@ -128,12 +172,25 @@ async function LoadScript(url: string = "", pst: string = "body"): Promise<boole
 	return !err && !!res;
 }
 
+/**
+ * @name 禁止事件
+ * @param {array} [events=[]] 事件：contextmenu、copy、selectstart
+ */
+function ProhibitEvent(events: EventOpts[] = []): void {
+	const evs = [...new Set(events)].sort();
+	evs.forEach(v => document.addEventListener(v, e => e.preventDefault()));
+}
+
 export {
 	AutoResponse,
+	Base64ToFile,
 	CopyPaste,
 	DownloadFile,
+	DownloadText,
 	FilterXss,
-	Img2Base64,
+	HighlightText,
+	ImgToBase64,
 	Jsonp,
-	LoadScript
+	LoadScript,
+	ProhibitEvent
 };

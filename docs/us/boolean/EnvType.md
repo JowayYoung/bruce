@@ -1,6 +1,7 @@
 > 环境类型
 
-可输出`web`、`node`、`unknow`。
+- [x] **web**：`Web环境`
+- [x] **node**：`Node环境`
 
 ```js
 import { EnvType } from "@yangzw/bruce-us";

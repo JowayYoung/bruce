@@ -5,7 +5,7 @@
 **search**|参数集合|`Object`|`{}`
 
 ```js
-import { SetUrlSearch } from "@yangzw/bruce-us";
+import { SetUrlSearch } from "@yangzw/bruce-us/dist/web";
 
 SetUrlSearch({ name: "xyz", sex: "female" });
 ```

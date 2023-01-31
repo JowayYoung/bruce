@@ -7,8 +7,6 @@
 ```js
 import { WaitFor } from "@yangzw/bruce-us";
 
-(async() => {
-	await WaitFor(2000);
-	console.log("bruce");
-})();
+await WaitFor(2000);
+console.log("bruce");
 ```

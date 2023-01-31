@@ -3,7 +3,7 @@ import Day from "dayjs";
 
 /**
  * @name 格式倒计时
- * @param {string|number|date} [date] 日期：YYYY-MM-DD HH:mm:ss
+ * @param {string|number|date} [date] 日期
  */
 function FormatCountdown(date: string | number | Date): string {
 	if (!date) return "时间无效";
@@ -27,9 +27,10 @@ function FormatCountdown(date: string | number | Date): string {
 
 /**
  * @name 格式时间差
- * @param {string|number|date} [date] 日期：YYYY-MM-DD HH:mm:ss
+ * @param {string|number|date} [date] 日期
+ * @param {string} [format] 日期：YYYY-MM-DD
  */
-function FormatTimeDiff(date: string | number | Date): string {
+function FormatTimeDiff(date: string | number | Date, format: string = "YYYY-MM-DD"): string {
 	if (!date) return "时间无效";
 	const nowTime = +new Date();
 	const tgtTime = +new Date(date);
@@ -49,7 +50,7 @@ function FormatTimeDiff(date: string | number | Date): string {
 	const monDiff = absDiff / mon;
 	const yearDiff = absDiff / year;
 	if (yearDiff >= 1 || monDiff >= 12) {
-		return Day(tgtTime).format("YYYY-MM-DD HH:mm:ss");
+		return Day(tgtTime).format(format);
 	} else if (monDiff >= 1 && monDiff < 12) {
 		return `${parseInt(monDiff.toString())}个月${slot}`;
 	} else if (dayDiff >= 1 && dayDiff < monNum) {

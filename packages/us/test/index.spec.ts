@@ -1,14 +1,14 @@
 import {
-	GroupArrKey,
-	RecordArrPosition,
-	StatArrCount,
-	StatArrKeyword
+	GroupArr,
+	StatArrMemCount,
+	StatArrMemKeyword,
+	StatArrMemPosition
 } from "../src/common/array";
 
 // https://juejin.cn/post/6901565843348881416
 // https://juejin.cn/post/6953072509021323278
 
-test("Common Array GroupArrKey", () => {
+test("Common Array GroupArr", () => {
 	const arr = [
 		{ area: "德国", name: "奔驰" },
 		{ area: "德国", name: "宝马" },
@@ -27,25 +27,18 @@ test("Common Array GroupArrKey", () => {
 			{ area: "英国", name: "路虎" }
 		]
 	};
-	expect(GroupArrKey(arr, "area")).toStrictEqual(tgt);
-	expect(GroupArrKey(arr)).toStrictEqual({});
+	expect(GroupArr(arr, "area")).toStrictEqual(tgt);
+	expect(GroupArr(arr)).toStrictEqual({});
 });
 
-test("Common Array RecordArrPosition", () => {
-	const arr = [2, 1, 5, 4, 2, 1, 6, 6, 7];
-	const tgt = [0, 4];
-	expect(RecordArrPosition(arr, 2)).toStrictEqual(tgt);
-	expect(RecordArrPosition(arr, 0)).toStrictEqual([]);
-});
-
-test("Common Array StatArrCount", () => {
+test("Common Array StatArrMemCount", () => {
 	const arr = [0, 1, 1, 2, 2, 2];
 	const tgt = { 0: 1, 1: 2, 2: 3 };
-	const res = StatArrCount(arr);
+	const res = StatArrMemCount(arr);
 	expect(res).toStrictEqual(tgt);
 });
 
-test("Common Array StatArrKeyword", () => {
+test("Common Array StatArrMemKeyword", () => {
 	const arr1 = [
 		"今天天气真好，我想出去钓鱼",
 		"我一边看电视，一边写作业",
@@ -54,6 +47,13 @@ test("Common Array StatArrKeyword", () => {
 	];
 	const arr2 = ["偷懒", "喜欢", "睡觉", "摸鱼", "真好", "一边", "明天"];
 	const tgt = ["喜欢", "摸鱼", "真好", "一边"];
-	const res = StatArrKeyword(arr1, arr2);
+	const res = StatArrMemKeyword(arr1, arr2);
 	expect(res).toStrictEqual(tgt);
+});
+
+test("Common Array StatArrMemPosition", () => {
+	const arr = [2, 1, 5, 4, 2, 1, 6, 6, 7];
+	const tgt = [0, 4];
+	expect(StatArrMemPosition(arr, 2)).toStrictEqual(tgt);
+	expect(StatArrMemPosition(arr, 0)).toStrictEqual([]);
 });

@@ -1,12 +1,11 @@
 /** 函数工具 **/
-
 type TgtFunc<T> = (...args: T[]) => void;
 
 /**
- * @name 格式异步返回值
+ * @name 异步格式化
  * @param {function} [pfn] Promise函数
  */
-async function AsyncTo<T, U = Error>(pfn: Promise<T>, error?: object): Promise<[U, undefined]|[null, T]> {
+async function AsyncTo<T, U = Error>(pfn: Promise<T>, error?: object): Promise<[U, undefined] | [null, T]> {
 	return await pfn
 		.then<[null, T]>((data: T) => [null, data])
 		.catch<[U, undefined]>((err: U) => [error ? Object.assign({}, err, error) : err, undefined]);

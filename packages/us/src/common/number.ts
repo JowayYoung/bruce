@@ -1,12 +1,71 @@
 /** 数值工具 **/
 
 /**
+* @name 计算数值
+ * @param {number} [type="+"] 运算：+、-、*、/
+ * @param {number} [num1=0] 数值
+ * @param {number} [num2=0] 数值
+ */
+function CalcNum(type: "+" | "-" | "*" | "/" = "+", num1: number = 0, num2: number = 0): number {
+	num1 = parseFloat(num1.toString());
+	num2 = parseFloat(num2.toString());
+	if (isNaN(num1) || isNaN(num2)) return NaN;
+	const dot1 = (num1.toString().split(".")[1] || "").length;
+	const dot2 = (num2.toString().split(".")[1] || "").length;
+	const maxDotLen = Math.max(dot1, dot2, 0);
+	const pow = Math.pow(10, maxDotLen);
+	const x = Math.round(num1 * pow);
+	const y = Math.round(num2 * pow);
+	if (type === "+") {
+		return (x + y) / pow;
+	} else if (type === "-") {
+		return (x - y) / pow;
+	} else if (type === "*") {
+		return (x * y) / (pow * pow);
+	} else if (type === "/") {
+		return x / y;
+	} else {
+		return (x + y) / pow;
+	}
+}
+
+/**
+* @name N个计算数值
+ * @param {number} [type="+"] 运算：+、-、*、/
+ * @param {array} [nums=[]] 数值集合
+ */
+function CalcNumPlus(type: "+" | "-" | "*" | "/" = "+", ...nums: number[]): number {
+	const config = { "*": 1, "+": 0, "/": 1, "-": 0 };
+	let res = config[type] || 0;
+	for (let i = 0; i < nums.length; i++) {
+		if (i === 0 && (type === "-" || type === "/")) {
+			res = nums[i];
+			continue;
+		}
+		res = CalcNum(type, res, nums[i]);
+	}
+	return res;
+}
+
+/**
  * @name 补零数值
  * @param {number} [num=0] 数值
  * @param {number} [len=0] 补位
  */
 function FillNum(num: number = 0, len: number = 0): string {
 	return num.toString().padStart(len, "0");
+}
+
+/**
+ * @name 取整数值
+ * @param {number} [num=0] 数值
+ * @param {number} [dec=2] 小数个数
+ * @param {string} [type="round"] 数学函数：ceil向上取整、floor向下取整、round四舍五入
+ */
+function FixedNum(num: number = 0, dec: number = 2, mathType: "ceil" | "floor" | "round" = "round"): number {
+	const pow = Math.pow(10, dec);
+	const mathFunc = Math[mathType];
+	return mathFunc(num * pow) / pow;
 }
 
 /**
@@ -77,7 +136,10 @@ function ThousandNum(num: number = 0): string {
 }
 
 export {
+	CalcNum,
+	CalcNumPlus,
 	FillNum,
+	FixedNum,
 	FormatByte,
 	RandomNum,
 	RandomNumPlus,

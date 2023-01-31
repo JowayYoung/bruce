@@ -1,4 +1,4 @@
-> 格式异步返回值
+> 异步格式化
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
@@ -7,9 +7,6 @@
 ```js
 import { AsyncTo } from "@yangzw/bruce-us";
 
-(async() => {
-	const [err, res] = await AsyncTo(GetData());
-	await WaitFor(2000);
-	console.log(err, res);
-})();
+const [err, res] = await AsyncTo(GetData());
+console.log(err, res);
 ```

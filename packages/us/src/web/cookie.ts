@@ -1,15 +1,14 @@
 /** Cookie工具 **/
-
-interface CookieObj {
+interface CookieType {
 	[key: string]: string
 }
 
 /**
  * @name 读取Cookie
  */
-function GetCookie(): CookieObj {
+function GetCookie(): CookieType {
 	const cookies = document.cookie;
-	return cookies ? cookies.split("; ").reduce((t: CookieObj, v) => {
+	return cookies ? cookies.split("; ").reduce((t: CookieType, v) => {
 		const cookie = v.split("=");
 		t[cookie[0]] = cookie[1];
 		return t;

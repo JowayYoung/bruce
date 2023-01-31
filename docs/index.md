@@ -16,7 +16,7 @@ features:
     desc: 一个零配置开箱即用的JS/React/Vue类库自动化构建脚手架，真正实现构建代码与业务代码完全分离，无需关注构建过程，专心编写业务代码
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: bruce-std
-    desc: 一个集成Stylelint与Eslint的VSCode配置工具，配合VSCode插件为用户提供前端文件的代码校验、代码修复和错误提示的功能
+    desc: 一个集成Stylelint、Eslint和Commitlint的VSCode配置工具，配合VSCode插件为用户提供前端文件的代码校验、代码修复和错误提示的功能
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: bruce-ico
     desc: 一个基于CSS背景遮罩生成CSS图标的图标处理工具，为图标提供文件监听、格式转换和动态样式的功能
@@ -39,7 +39,7 @@ footer: Copyright © 2017~Present | MIT Licensed<br>Powered By <span class="mark
 
 **Bruce FEES**是一套多功能**前端工程化多包管理**实践方案，包括多个前端开发流程中常用的`脚手架`、`工具`和`类库`，其目的是简化整个开发流程，对那些重复繁琐的流程使用工具自动化完成，以提升整体的开发效率。
 
-基于`lerna`、`webpack`、`rollup`、`postcss`、`sass`、`less`、`babel`、`typescript`、`stylelint`、`eslint`、`jest`、`react`、`vue`、`dumi`等模块搭建与开发底层架构，使用`Monorepo`组织与管理业务代码。
+基于`webpack`、`rollup`、`postcss`、`sass`、`less`、`babel`、`typescript`、`stylelint`、`eslint`、`jest`、`react`、`vue`、`dumi`搭建与开发底层架构，基于`Monorepo`、`yarn`和`lerna`组织与管理项目代码。
 
 ## 特性
 

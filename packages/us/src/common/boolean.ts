@@ -1,12 +1,11 @@
 /** 布尔工具 **/
+type InfoType = "web" | "node";
 
 /**
  * @name 环境类型
  */
-function EnvType(): string {
-	return typeof window !== "undefined"
-		? "web"
-		: typeof global !== "undefined" ? "node" : "unknow";
+function EnvType(): InfoType {
+	return typeof window === "undefined" ? "node" : "web";
 }
 
 /**

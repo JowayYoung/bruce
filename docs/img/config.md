@@ -38,7 +38,7 @@ toc: menu
 	- `inside`：保留宽高比，将尺寸调整到尽可能大，同时确保其尺寸小于或等于指定尺寸
 	- `outside`：保留宽高比，将尺寸调整到尽可能小，同时确保其尺寸大于或等于指定尺寸
 - **bgcolor**：背景色
-	- `transparent`：透明，需配合`--format png`使用
+	- `transparent`：透明，要配合`--format png`使用
 	- `HEX`：16进制色值，可选`#xyz`或`#uvwxyz`
 	- `RGB`：RGB色值，`rgba(r,g,b)`
 	- `RGBA`：RGBA色值：`rgba(r,g,b,a)`

@@ -2,10 +2,10 @@
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**search**|参数集合|`Argument`|-
+**params**|参数集合|`String[]`|`[]`
 
 ```js
-import { RemoveUrlSearch } from "@yangzw/bruce-us";
+import { RemoveUrlSearch } from "@yangzw/bruce-us/dist/web";
 
-RemoveUrlSearch("name", "sex");
+RemoveUrlSearch(["name", "sex"]);
 ```

@@ -1,8 +1,9 @@
 import {
-	GroupArrKey,
-	RecordArrPosition,
-	StatArrCount,
-	StatArrKeyword
+	ChunkArr,
+	GroupArr,
+	StatArrMemCount,
+	StatArrMemKeyword,
+	StatArrMemPosition
 } from "./array";
 import {
 	EnvType,
@@ -45,7 +46,10 @@ import {
 	WaitFor
 } from "./function";
 import {
+	CalcNum,
+	CalcNumPlus,
 	FillNum,
+	FixedNum,
 	FormatByte,
 	RandomNum,
 	RandomNumPlus,
@@ -53,7 +57,9 @@ import {
 	ThousandNum
 } from "./number";
 import {
-	FilterObj
+	CheckObjValidKey,
+	FilterObjKey,
+	RemoveObjEmptyKey
 } from "./object";
 import {
 	CheckText,
@@ -72,10 +78,11 @@ import {
 
 export {
 	// ✅数组Array
-	GroupArrKey,
-	RecordArrPosition,
-	StatArrCount,
-	StatArrKeyword,
+	ChunkArr,
+	GroupArr,
+	StatArrMemCount,
+	StatArrMemKeyword,
+	StatArrMemPosition,
 	// ✅布尔Boolean
 	EnvType,
 	IsArguments,
@@ -114,14 +121,19 @@ export {
 	Throttle,
 	WaitFor,
 	// ✅数值Number
+	CalcNum,
+	CalcNumPlus,
 	FillNum,
+	FixedNum,
 	FormatByte,
 	RandomNum,
 	RandomNumPlus,
 	RoundNum,
 	ThousandNum,
 	// ✅对象Object
-	FilterObj,
+	CheckObjValidKey,
+	FilterObjKey,
+	RemoveObjEmptyKey,
 	// ✅正则Regexp
 	CheckText,
 	CheckTextPlus,

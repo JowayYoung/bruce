@@ -2,10 +2,10 @@
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**date**|日期|`String / Number / Date`|-|`String`格式为`YYYY-MM-DD HH:mm:ss`，在`Safari`中需将`-`换成`/`
+**date**|日期|`String/Number/Date`|-|`String`格式参考[DayJS](https://dayjs.gitee.io/docs/en/parse/string-format)，在`Safari`中要将`-`换成`/`
 
 ```js
 import { FormatCountdown } from "@yangzw/bruce-us";
 
-FormatCountdown("2022-12-31"); // "317天12时7分20秒"
+FormatCountdown("2023-12-31"); // "317天12时7分20秒"
 ```

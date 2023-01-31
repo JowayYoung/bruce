@@ -4,13 +4,10 @@
 :-:|:-:|:-:|:-:|-
 **data**|数据|`Any`|-
 
-基础数据类型：可输出`undefined`、`null`、`string`、`number`、`boolean`、`symbol`
-
-复合数据类型：可输出`array`、`object`、`date`、`regexp`、`function`、`class`、`set`、`map`、`weakset`、`weakmap`、`element`
-
-函数类型：可输出`asyncfunction`、`function`、`arguments`
-
-空类型：可输出`error`、`empty`、`emptyarray`、`emptyobject`
+- [x] **基础数据类型**：`undefined`、`null`、`string`、`number`、`boolean`、`symbol`
+- [x] **复合数据类型**：`array`、`object`、`date`、`regexp`、`function`、`class`、`set`、`map`、`weakset`、`weakmap`、`element`
+- [x] **函数类型**：`asyncfunction`、`function`、`arguments`
+- [x] **空类型**：`error`、`empty`、`emptyarray`、`emptyobject`
 
 ```js
 import { TypeOf } from "@yangzw/bruce-us";

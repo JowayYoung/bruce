@@ -1,5 +1,6 @@
 import {
 	AbsPath,
+	CheckPath,
 	CopyDir,
 	CreateDir,
 	ReadDir,
@@ -19,6 +20,7 @@ import {
 export {
 	// ✅Fs文件
 	AbsPath,
+	CheckPath,
 	CopyDir,
 	CreateDir,
 	ReadDir,

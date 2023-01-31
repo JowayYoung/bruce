@@ -7,5 +7,5 @@
 ```js
 import { RunCmd } from "@yangzw/bruce-us/dist/node.esm.js";
 
-RunCmd("npm -v"); // "6.11.3"
+RunCmd("npm -v"); // "8.19.3"
 ```

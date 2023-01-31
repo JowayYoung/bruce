@@ -6,7 +6,7 @@
 **clear**|清除假值|`Boolean`|`false`|假值包括`undefined`、`null`、`""`、`NaN`
 
 ```js
-import { StringifyUrlSearch } from "@yangzw/bruce-us";
+import { StringifyUrlSearch } from "@yangzw/bruce-us/dist/web";
 
 StringifyUrlSearch({ address: "", name: "young", sex: "male" }, true); // "?name=young&sex=male"
 ```

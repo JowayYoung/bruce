@@ -5,13 +5,13 @@
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
 **data**|参数集合|`Object`|`{}`
-**error**|失败回调函数|`Function`|`null`
-**success**|成功回调函数|`Function`|`null`
-**type**|类型|`String`|`"get"`|可选`get/post`
+**error**|失败回调函数|`Function`|-
+**success**|成功回调函数|`Function`|-
+**type**|类型|`get/post`|`"get"`
 **url**|地址|`String`|`""`
 
 ```js
-import { Ajax } from "@yangzw/bruce-us";
+import { Ajax } from "@yangzw/bruce-us/dist/web";
 
 Ajax({
 	data: { a: 1, b: 2 },

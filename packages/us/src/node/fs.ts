@@ -1,5 +1,5 @@
 /** 文件工具 **/
-import { readdirSync, readFileSync, statSync } from "fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "fs";
 import { extname, join } from "path";
 import { cwd } from "process";
 import { copySync, ensureDirSync, removeSync } from "fs-extra";
@@ -14,6 +14,15 @@ type FilterFunc = (src: string, dist: string) => boolean;
 function AbsPath(path: string = "", dir: string = cwd()): string {
 	// const __dirname = dirname(fileURLToPath(import.meta.url)); 在使用该函数的文件里直接获取__dirname
 	return join(dir, path);
+}
+
+/**
+ * @name 检查路径
+ * @param {string} [path=""] 路径
+ * @param {string} [dir=cwd()] 上下文
+ */
+function CheckPath(path: string = "", dir: string = cwd()): boolean {
+	return existsSync(AbsPath(path, dir));
 }
 
 /**
@@ -40,8 +49,7 @@ function CreateDir(dir: string = ""): void {
  * @param {string} [dir=""] 路径
  * @param {regexp} [filter=/(node_modules|\.git|\.DS_Store)$/] 过滤正则
  */
-
-function ReadDir(type: string = "bfs", dir: string = cwd(), filter: RegExp = /(node_modules|\.git|\.DS_Store)$/): string[] {
+function ReadDir(type: "bfs" | "dfs" = "bfs", dir: string = cwd(), filter: RegExp = /(node_modules|\.git|\.DS_Store)$/): string[] {
 	if (type === "bfs") {
 		const paths = [];
 		const queue = [];
@@ -106,6 +114,7 @@ function RemoveDir(dir: string = ""): void {
 
 export {
 	AbsPath,
+	CheckPath,
 	CopyDir,
 	CreateDir,
 	ReadDir,

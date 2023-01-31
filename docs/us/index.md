@@ -14,10 +14,10 @@ toc: menu
 
 `@yangzw/bruce-us`是一个无框架约束的通用工具库，提供`Web环境`、`Node环境`和`双环境`的常用工具函数。
 
-整体包括`88`个函数，分别是`Common`函数`55`个，`Web`函数`24`个，`Node`函数`9`个。
+整体包括`100`个函数，分别是`Common`函数`62`个，`Web`函数`28`个，`Node`函数`10`个。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
-[![version](https://img.shields.io/badge/version-1.0.6-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
+[![version](https://img.shields.io/badge/version-1.0.7-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![web](https://img.shields.io/badge/web-%3E%3D95%25-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![node](https://img.shields.io/badge/node-%3E%3D12.0.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![test](https://img.shields.io/badge/test-passing-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
@@ -32,12 +32,13 @@ toc: menu
 
 ## 使用
 
-`@yangzw/bruce-us`根据**Web**与**Node**两种`JS运行环境`划分代码，生成两种`bundle.js`。每种文件在不同`JS运行环境`中运行，必须根据`JS运行环境`引用文件，否则会报错。
+`@yangzw/bruce-us`根据**Web**与**Node**两种`JS运行环境`划分代码，生成三种`bundle.js`。每种文件在不同`JS运行环境`中运行，必须根据`JS运行环境`引用文件，否则会报错。
 
-模块|工具库|运行环境|对应文件|ESM的对应文件
-:-:|:-:|:-:|:-:|:-:
-**Web**|Web函数工具库|浏览器|`web.js`|`web.esm.js`
-**Node**|Node函数工具库|服务器|`node.js`|`node.esm.js`
+模块|工具库|运行环境|对应文件|ESM对应文件|UMD对应文件
+:-:|:-:|:-:|:-:|:-:|:-:
+**Common**|通用工具库|浏览器与服务器|`index.js`|`index.esm.js`|`index.umd.js`
+**Web**|Web函数工具库|浏览器|`web.js`|`web.esm.js`|`web.umd.js`
+**Node**|Node函数工具库|服务器|`node.js`|`node.esm.js`|-
 
 详情请查看[文档](/us/usage)。
 

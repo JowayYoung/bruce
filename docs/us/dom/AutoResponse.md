@@ -5,7 +5,7 @@
 **width**|设计图宽度|`Number`|`750`
 
 ```js
-import { AutoResponse } from "@yangzw/bruce-us";
+import { AutoResponse } from "@yangzw/bruce-us/dist/web";
 
 AutoResponse();
 ```

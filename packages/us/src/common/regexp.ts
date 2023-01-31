@@ -1,18 +1,19 @@
 /** 正则工具 **/
+type FieldOpts = "address" | "count" | "date" | "email" | "idcard" | "image" | "name" | "number" | "password" | "phone";
 
-interface MatchObj {
-	[key: string]: {
+type MatchType = {
+	[key in FieldOpts]: {
 		msg: string
 		regexp: RegExp
 	}
-}
+};
 
-interface CheckObj {
+interface CheckType {
 	flag: boolean
 	msg: string
 }
 
-const MATCH: MatchObj = {
+const MATCH: MatchType = {
 	address: {
 		msg: "地址只能由2~200位中文、英文、数字或空格组成",
 		regexp: /^[\u4e00-\u9fa5A-Za-z0-9 ]{2,200}$/g
@@ -22,7 +23,7 @@ const MATCH: MatchObj = {
 		regexp: /^\d{1,}$/g
 	},
 	date: {
-		msg: "日期只能由YYYY-MM-DD hh:mm:ss形式组成",
+		msg: "日期只能由YYYY-MM-DD HH:mm:ss形式组成",
 		regexp: /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/g
 	},
 	email: {
@@ -50,7 +51,7 @@ const MATCH: MatchObj = {
 		regexp: /^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)])+$)^.{8,20}$/g
 	},
 	phone: {
-		msg: "手机只能由11位数字组成且需符合通讯运营商规范",
+		msg: "手机只能由11位数字组成且符合通讯运营商规范",
 		regexp: /^1\d{10}$/g
 	}
 };
@@ -62,7 +63,7 @@ const SIGN = "^$.*+-?=!:|\\/()[]{}".split("");
  * @param {string} [type=""] 类型：address、count、date、email、idcard、image、name、number、password、phone
  * @param {string} [text=""] 文本
  */
-function CheckText(type: string = "", text: string = ""): CheckObj {
+function CheckText(type: FieldOpts = "phone", text: string = ""): CheckType {
 	const { regexp, msg } = MATCH[type];
 	const flag = regexp.test(text);
 	return { flag, msg: flag ? "" : msg };
@@ -74,7 +75,7 @@ function CheckText(type: string = "", text: string = ""): CheckObj {
  * @param {string} [text=""] 文本
  * @param {string} [msg=""] 提示
  */
-function CheckTextPlus(regexp: RegExp, text: string = "", msg: string = ""): CheckObj {
+function CheckTextPlus(regexp: RegExp, text: string = "", msg: string = ""): CheckType {
 	const flag = regexp.test(text);
 	return { flag, msg: flag ? "" : msg };
 }

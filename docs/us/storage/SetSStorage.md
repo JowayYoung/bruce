@@ -6,7 +6,7 @@
 **val**|值|`String`|`""`
 
 ```js
-import { SetSStorage } from "@yangzw/bruce-us";
+import { SetSStorage } from "@yangzw/bruce-us/dist/web";
 
 SetSStorage("love", "我爱你");
 ```

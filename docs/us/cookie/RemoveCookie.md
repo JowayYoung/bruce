@@ -5,7 +5,7 @@
 **key**|键|`String`|`""`
 
 ```js
-import { RemoveCookie } from "@yangzw/bruce-us";
+import { RemoveCookie } from "@yangzw/bruce-us/dist/web";
 
 RemoveCookie("user_id");
 ```

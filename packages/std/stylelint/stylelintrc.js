@@ -29,6 +29,7 @@ module.exports = {
 		"declaration-empty-line-before": "never",
 		"function-linear-gradient-no-nonstandard-direction": null,
 		"function-no-unknown": null,
+		"import-notation": null,
 		"indentation": "tab",
 		"max-line-length": null,
 		"no-descending-specificity": null,

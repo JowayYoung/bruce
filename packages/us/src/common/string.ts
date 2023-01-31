@@ -16,7 +16,7 @@ function DesePhone(phone: string = ""): string {
  * @param {string} [phone=""] 手机
  * @param {string} [sign="-"] 标记：-、\s
  */
-function FormatPhone(phone: string = "", sign: string = "-"): string {
+function FormatPhone(phone: string = "", sign: "-" | " " = "-"): string {
 	return MATCH.phone.regexp.test(phone) && ["-", " "].includes(sign)
 		? phone.toString().replace(/(\d{3})(\d{4})(\d{4})/g, `$1${sign}$2${sign}$3`)
 		: phone;
@@ -40,10 +40,10 @@ function RandomId(len: number = 5): string {
 
 /**
  * @name 删除标签
- * @param {string} [text=""] 文本
+ * @param {string} [html=""] HTML
  */
-function RemoveTag(text: string = ""): string {
-	return text.replace(/<[^>]*>/g, "");
+function RemoveTag(html: string = ""): string {
+	return html.replace(/<[^>]*>/g, "");
 }
 
 /**

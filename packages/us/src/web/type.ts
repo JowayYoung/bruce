@@ -1,78 +1,77 @@
 /** 类型工具 **/
+type EngineOpts = "webkit" | "gecko" | "presto" | "trident";
 
-interface SystemObj {
+type PlatformOpts = "desktop" | "mobile";
+
+type ShellOpts = "uc" | "qq" | "sougou" | "maxthon" | "2345" | "360" | "liebao" | "xiaomi" | "huawei" | "oppo" | "vivo" | "wechat" | "baidu" | "toutiao";
+
+type SupporterOpts = "chrome" | "safari" | "edge" | "firefox" | "opera" | "iexplore";
+
+type SystemOpts = "windows" | "macos" | "linux" | "android" | "ios";
+
+type EngineType = {
+	[key in EngineOpts]: RegExp[]
+};
+
+type ShellType = {
+	[key in ShellOpts]: RegExp[]
+};
+
+type SupporterType = {
+	[key in SupporterOpts]: RegExp[]
+};
+
+type SystemType = {
+	[key in SystemOpts]: RegExp
+};
+
+interface SystemVsType {
 	[key: string]: RegExp
 }
 
-interface SystemVsObj {
-	[key: string | number]: RegExp
-}
-
-interface PlatformObj {
-	[key: string]: string[]
-}
-
-interface EngineObj {
-	[key: string]: RegExp[]
-}
-
-interface SupporterObj {
-	[key: string]: string
-}
-
-interface SupporterForWebkitObj {
-	[key: string]: RegExp
-}
-
-interface SupporterVsObj {
-	[key: string]: RegExp
-}
-
-interface ShellObj {
-	[key: string | number]: RegExp[]
-}
-
-interface WebObj {
-	engine: string
+interface InfoType {
+	engine: EngineOpts | "unknow"
 	engineVs: string
-	platform: string
-	supporter: string
+	platform: PlatformOpts
+	supporter: SupporterOpts | "unknow"
 	supporterVs: string
-	system: string
+	system: SystemOpts | "unknow"
 	systemVs: string
-	shell?: string
+	shell?: ShellOpts | "none"
 	shellVs?: string
 }
 
 /**
  * @name Web类型
- * @param {string} [ua=navigator.userAgent.toLowerCase()] 用户代理
+ * @param {string} [ua=navigator.userAgent] 用户代理
  */
-function WebType(ua = navigator.userAgent.toLowerCase()): WebObj {
+function WebType(ua = navigator.userAgent): InfoType {
 	// 权重：系统 > 平台 > 内核 > 载体 > 外壳
-	const testUa = (regexp: RegExp): boolean => regexp.test(ua);
+	const _ua = ua.toLowerCase();
+	const testUa = (regexp: RegExp): boolean => regexp.test(_ua);
 	const testVs = (regexp: RegExp): string => regexp
-		? (ua.match(regexp) ?? "").toString().replace(/[^0-9|_.]/g, "").replace(/_/g, ".")
+		? (_ua.match(regexp) ?? "").toString().replace(/[^0-9|_.]/g, "").replace(/_/g, ".")
 		: "unknow";
 	/* eslint-disable sort-keys */
 	// 系统
-	const systemMap: SystemObj = {
-		windows: /windows|win32|win64|wow32|wow64/g, // windows系统
-		macos: /macintosh|macintel/g, // macos系统
-		linux: /x11/g, // linux系统
-		android: /android|adr/g, // android系统
-		ios: /ios|iphone|ipad|ipod|iwatch/g // ios系统
+	const systemMap: SystemType = {
+		windows: /windows|win32|win64|wow32|wow64/g,
+		macos: /macintosh|macintel/g,
+		linux: /x11|ubuntu/g,
+		android: /android|adr/g,
+		ios: /ios|iphone|ipad|ipod/g
 	};
-	const systemVsMap: SystemVsObj = {
-		macos: /os x [\d._]+/g,
+	const systemVsMap: SystemVsType = {
+		macos: /mac os x [\d._]+/g,
+		linux: /ubuntu\/[\d._]+/g,
 		android: /android [\d._]+/g,
 		ios: /os [\d._]+/g
 	};
-	const systemVsForWindows = (): string => {
-		const vs = (ua.match(/(windows nt [\d._]+)|(windows [\w._]+)/g) ?? "")
+	const systemVsByWin = (): string => {
+		const vs = (_ua.match(/(windows nt [\d._]+)|(windows [\w._]+)/g) ?? "")
 			.toString()
 			.replace(/windows( nt)? /g, "");
-		const map: SystemVsObj = {
+		const map: SystemVsType = {
 			2000: /^(5\.0|2000)/g,
 			xp: /^(5\.1|xp)/g,
 			2003: /^(5\.2|2003)/g,
@@ -84,86 +83,72 @@ function WebType(ua = navigator.userAgent.toLowerCase()): WebObj {
 		};
 		return Object.keys(map).find(v => map[v].test(vs)) ?? "unknow";
 	};
-	const system = Object.keys(systemMap).find(v => testUa(systemMap[v])) ?? "unknow";
+	const system = (Object.keys(systemMap).find(v => testUa(systemMap[v as SystemOpts])) ?? "unknow") as (SystemOpts | "unknow");
 	const systemVs = system === "unknow"
 		? "unknow version"
 		: system === "windows"
-			? systemVsForWindows()
-			: testVs(systemVsMap[system]);
+			? systemVsByWin()
+			: testVs(systemVsMap[system]) || "unknow version";
 	// 平台
-	const platformMap: PlatformObj = {
-		desktop: ["windows", "macos", "linux"], // 桌面端
-		mobile: ["android", "ios"] // 移动端
-	};
-	const platform = testUa(/mobile/g)
-		? "mobile"
-		: Object.keys(platformMap).find(v => platformMap[v].includes(system)) ?? "unknow";
+	const platform: PlatformOpts = testUa(/mobile/g) ? "mobile" : "desktop";
 	// 内核
-	const engineMap: EngineObj = {
-		webkit: [/applewebkit/g, /applewebkit\/[\d._]+/g], // webkit内核
-		gecko: [/(?=.*gecko)(?=.*firefox)/g, /gecko\/[\d._]+/g], // gecko内核
-		presto: [/presto/g, /presto\/[\d._]+/g], // presto内核
-		trident: [/trident|compatible|msie/g, /trident\/[\d._]+/g] // trident内核
+	const engineMap: EngineType = {
+		webkit: [/applewebkit/g, /applewebkit\/[\d._]+/g],
+		gecko: [/gecko\//g, /rv:[\d._]+/g],
+		presto: [/presto/g, /presto\/[\d._]+/g],
+		trident: [/compatible|msie|trident/g, /trident\/[\d._]+/g]
 	};
-	const engine = Object.keys(engineMap).find(v => testUa(engineMap[v][0])) ?? "unknow";
+	const engine = (Object.keys(engineMap).find(v => testUa(engineMap[v as EngineOpts][0])) ?? "unknow") as (EngineOpts | "unknow");
 	const engineVs = engine === "unknow"
 		? "unknow version"
-		: testVs(engineMap[engine][1]);
+		: testVs(engineMap[engine][1]) || "unknow version";
 	// 载体
-	const supporterMap: SupporterObj = {
-		gecko: "firefox", // firefox浏览器
-		presto: "opera", // opera浏览器
-		trident: "iexplore" // iexplore浏览器
+	const supporterMap: SupporterType = {
+		safari: [/.*safari.*version.*|.*version.*safari.*/g, /version\/[\d._]+/g],
+		edge: [/edge?/g, /edge?\/[\d._]+/g],
+		firefox: [/firefox/g, /firefox\/[\d._]+/g],
+		opera: [/op(era|r)/g, /(version|opr)\/[\d._]+/g],
+		iexplore: [/compatible|msie|trident/g, /(msie |rv:)[\d._]+/g],
+		chrome: [/chrome/g, /chrome\/[\d._]+/g]
 	};
-	const supporterForWebkit = (): string => {
-		const map: SupporterForWebkitObj = {
-			edge: /edge/g, // edge浏览器
-			opera: /opr/g, // opera浏览器
-			chrome: /chrome/g, // chrome浏览器
-			safari: /safari/g // safari浏览器
-		};
-		return Object.keys(map).find(v => testUa(map[v])) ?? "unknow";
-	};
-	const supporterVsMap: SupporterVsObj = {
-		chrome: /chrome\/[\d._]+/g,
-		safari: /version\/[\d._]+/g,
-		firefox: /firefox\/[\d._]+/g,
-		opera: /opr\/[\d._]+/g,
-		iexplore: /(msie [\d._]+)|(rv:[\d._]+)/g,
-		edge: /edge\/[\d._]+/g
-	};
-	const supporter = supporterMap[engine]
-		? engine === "webkit" ? supporterForWebkit() : supporterMap[engine]
-		: "unknow";
-	const supporterVs = testVs(supporterVsMap[supporter]);
+	const supporter = (Object.keys(supporterMap).find(v => testUa(supporterMap[v as SupporterOpts][0])) ?? "unknow") as (SupporterOpts | "unknow");
+	const supporterVs = supporter === "unknow"
+		? "unknow version"
+		: testVs(supporterMap[supporter][1]) || "unknow version";
 	// 外壳
-	const shellMap: ShellObj = {
-		wechat: [/micromessenger/g, /micromessenger\/[\d._]+/g], // 微信浏览器
+	const shellMap: ShellType = {
+		uc: [/ucweb|uc?browser|uclite/g, /(ucweb|uc?browser\/|uclite\/)[\d._]+/g], // UC浏览器
 		qq: [/qqbrowser/g, /qqbrowser\/[\d._]+/g], // QQ浏览器
-		uc: [/ucbrowser/g, /ucbrowser\/[\d._]+/g], // UC浏览器
-		360: [/qihu 360se/g], // 360浏览器(无版本)
+		sougou: [/metasr|sogoumobilebrowser/g, /(metasr |sogoumobilebrowser\/)[\d._]+/], // 搜狗浏览器
+		maxthon: [/maxthon/g, /maxthon(\/| )[\d._]+/g], // 遨游浏览器
 		2345: [/2345explorer/g, /2345explorer\/[\d._]+/g], // 2345浏览器
-		sougou: [/metasr/g], // 搜狗浏览器(无版本)
+		360: [/360se/g], // 360浏览器(无版本)
 		liebao: [/lbbrowser/g], // 猎豹浏览器(无版本)
-		maxthon: [/maxthon/g, /maxthon\/[\d._]+/g] // 遨游浏览器
+		xiaomi: [/xiaomi|miuibrowser/g, /miuibrowser\/[\d._]+/g], // 小米浏览器(内置)
+		huawei: [/huaweibrowser/g, /huaweibrowser\/[\d._]+/g], // 华为浏览器(内置)
+		oppo: [/heytapbrowser/g, /heytapbrowser\/[\d._]+/g], // OPPO浏览器(内置)
+		vivo: [/vivobrowser/g, /vivobrowser\/[\d._]+/g], // VIVO浏览器(内置)
+		wechat: [/micromessenger/g, /micromessenger\/[\d._]+/g], // 微信浏览器(应用)
+		baidu: [/baiduboxapp/g, /baiduboxapp\/[\d._]+/g], // 百度浏览器(应用)
+		toutiao: [/newsarticle|ttwebview/g, /(newsarticle|ttwebview)\/[\d._]+/g] // 头条浏览器(应用)
 	};
-	const shell = Object.keys(shellMap).find(v => testUa(shellMap[v][0])) ?? "none";
+	const shell = (Object.keys(shellMap).find(v => testUa(shellMap[v as ShellOpts][0])) ?? "none") as (ShellOpts | "none");
 	const shellVs = shell === "none"
 		? "none"
-		: !shellMap[shell][1]
-			? "unknow version"
-			: testVs(shellMap[shell][1]);
+		: shellMap[shell][1]
+			? testVs(shellMap[shell][1]) || "unknow version"
+			: "unknow version";
 	/* eslint-enable */
 	return Object.assign({
 		engine, // webkit gecko presto trident
 		engineVs,
 		platform, // desktop mobile
-		supporter, // chrome safari firefox opera iexplore edge
+		supporter, // chrome safari edge firefox opera iexplore
 		supporterVs,
 		system, // windows macos linux android ios
 		systemVs
 	}, shell === "none" ? {} : {
-		shell, // wechat qq uc 360 2345 sougou liebao maxthon
+		shell, // uc qq sougou maxthon 2345 360 liebao xiaomi huawei oppo vivo wechat baidu toutiao
 		shellVs
 	});
 }

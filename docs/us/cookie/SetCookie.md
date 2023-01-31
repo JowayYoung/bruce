@@ -7,7 +7,7 @@
 **day**|过期时间|`Number`|`1`|以日计算
 
 ```js
-import { SetCookie } from "@yangzw/bruce-us";
+import { SetCookie } from "@yangzw/bruce-us/dist/web";
 
 SetCookie("user_id", "123abc", 7);
 ```

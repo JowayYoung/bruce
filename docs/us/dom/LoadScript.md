@@ -3,10 +3,10 @@
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
 **url**|地址|`String`|`""`
-**pst**|插入位置|`String`|`"body"`|可选`head/body`
+**pst**|插入位置|`head/body`|`"body"`
 
 ```js
-import { LoadScript } from "@yangzw/bruce-us";
+import { LoadScript } from "@yangzw/bruce-us/dist/web";
 
-await LoadScript("https://static.xyz.com/bruce-us.js", "body");
+await LoadScript("https://static.xyz.com/bruce-us.js", "head");
 ```

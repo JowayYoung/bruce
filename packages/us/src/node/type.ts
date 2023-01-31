@@ -3,31 +3,33 @@ import { release, type } from "os";
 
 import { RunCmd } from "./process";
 
-interface SystemObj {
-	[key: string]: RegExp
-}
+type SystemOpts = "windows" | "macos" | "linux";
 
-interface NodeObj {
+type SystemType = {
+	[key in SystemOpts]: RegExp
+};
+
+interface InfoType {
 	nodeVs: string
 	npmVs: string
-	system: string
+	system: SystemOpts
 	systemVs: string
 }
 
 /**
  * @name Node类型
  */
-function NodeType(): NodeObj {
+function NodeType(): InfoType {
 	const info = type().toLocaleLowerCase();
 	const testUa = (regexp: RegExp): boolean => regexp.test(info);
 	/* eslint-disable sort-keys */
-	const systemMap: SystemObj = {
-		windows: /windows/g, // windows系统
-		macos: /darwin/g, // macos系统
-		linux: /linux/g // linux系统
+	const systemMap: SystemType = {
+		windows: /windows/g,
+		macos: /darwin/g,
+		linux: /linux/g
 	};
 	/* eslint-enable */
-	const system = Object.keys(systemMap).find(v => testUa(systemMap[v])) ?? "unknow";
+	const system = Object.keys(systemMap).find(v => testUa(systemMap[v as SystemOpts])) as SystemOpts;
 	return {
 		nodeVs: RunCmd("node -v").replace(/(v|\n|\r\n)/g, ""),
 		npmVs: RunCmd("npm -v").replace(/\n/g, ""),

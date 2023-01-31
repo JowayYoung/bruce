@@ -5,14 +5,19 @@ import {
 } from "./cookie";
 import {
 	AutoResponse,
+	Base64ToFile,
 	CopyPaste,
 	DownloadFile,
+	DownloadText,
 	FilterXss,
-	Img2Base64,
+	HighlightText,
+	ImgToBase64,
 	Jsonp,
-	LoadScript
+	LoadScript,
+	ProhibitEvent
 } from "./dom";
 import {
+	Aios,
 	Ajax
 } from "./function";
 import {
@@ -42,13 +47,18 @@ export {
 	SetCookie,
 	// ✅Dom节点
 	AutoResponse,
+	Base64ToFile,
 	CopyPaste,
 	DownloadFile,
+	DownloadText,
 	FilterXss,
-	Img2Base64,
+	HighlightText,
+	ImgToBase64,
 	Jsonp,
 	LoadScript,
+	ProhibitEvent,
 	// ✅Function函数
+	Aios,
 	Ajax,
 	// ✅Storage存储
 	ClearLStorage,
