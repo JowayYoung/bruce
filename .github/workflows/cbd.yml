@@ -10,6 +10,11 @@ jobs: # 任务
     name: doc cbd # 任务名称(检出C构建B部署D)
     runs-on: ubuntu-latest # 虚拟机环境
     steps: # 运行步骤
+      # 切换Node环境
+      - name: Toggle
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.19.0
       # 拉取代码
       - name: Checkout
         uses: actions/checkout@v3
