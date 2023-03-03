@@ -1,12 +1,14 @@
 /** 数值工具 **/
 
+type OperationOpts = "+" | "-" | "*" | "/";
+
 /**
 * @name 计算数值
  * @param {number} [type="+"] 运算：+、-、*、/
  * @param {number} [num1=0] 数值
  * @param {number} [num2=0] 数值
  */
-function CalcNum(type: "+" | "-" | "*" | "/" = "+", num1: number = 0, num2: number = 0): number {
+function CalcNum(type: OperationOpts = "+", num1: number = 0, num2: number = 0): number {
 	num1 = parseFloat(num1.toString());
 	num2 = parseFloat(num2.toString());
 	if (isNaN(num1) || isNaN(num2)) return NaN;
@@ -34,7 +36,7 @@ function CalcNum(type: "+" | "-" | "*" | "/" = "+", num1: number = 0, num2: numb
  * @param {number} [type="+"] 运算：+、-、*、/
  * @param {array} [nums=[]] 数值集合
  */
-function CalcNumPlus(type: "+" | "-" | "*" | "/" = "+", ...nums: number[]): number {
+function CalcNumPlus(type: OperationOpts = "+", ...nums: number[]): number {
 	const config = { "*": 1, "+": 0, "/": 1, "-": 0 };
 	let res = config[type] || 0;
 	for (let i = 0; i < nums.length; i++) {
@@ -58,13 +60,23 @@ function FillNum(num: number = 0, len: number = 0): string {
 
 /**
  * @name 取整数值
- * @param {number} [num=0] 数值
  * @param {number} [dec=2] 小数个数
+ * @param {number} [num=0] 数值
  * @param {string} [type="round"] 数学函数：ceil向上取整、floor向下取整、round四舍五入
  */
-function FixedNum(num: number = 0, dec: number = 2, mathType: "ceil" | "floor" | "round" = "round"): number {
+interface FixedNumType {
+	dec?: number
+	num: number
+	type?: "ceil" | "floor" | "round"
+}
+
+function FixedNum({
+	dec = 2,
+	num = 0,
+	type = "round"
+}: FixedNumType): number {
 	const pow = Math.pow(10, dec);
-	const mathFunc = Math[mathType];
+	const mathFunc = Math[type] || Math.round;
 	return mathFunc(num * pow) / pow;
 }
 
@@ -117,11 +129,21 @@ function RandomNumPlus(min: number = 0, max: number = 10, count: number = 1): nu
 
 /**
  * @name 精确数值(四舍五入与百分比)
- * @param {number} [num=0] 数值
  * @param {number} [dec=2] 小数个数
+ * @param {number} [num=0] 数值
  * @param {boolean} [per=false] 百分比
  */
-function RoundNum(num: number = 0, dec: number = 2, per: boolean = false): string | number {
+interface RoundNumType {
+	dec?: number
+	num: number
+	per?: boolean
+}
+
+function RoundNum({
+	dec = 2,
+	num = 0,
+	per = false
+}: RoundNumType): string | number {
 	return per
 		? `${Math.round(num * 10 ** dec * 100) / 10 ** dec}%`
 		: Math.round(num * 10 ** dec) / 10 ** dec;

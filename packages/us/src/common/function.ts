@@ -55,7 +55,7 @@ function Throttle<T>(fn: TgtFunc<T>, dura: number = 50): TgtFunc<T> {
  * @param {number} [dura=1000] 时延
  */
 async function WaitFor(dura: number = 1000): Promise<boolean> {
-	return await new Promise(resolve => setTimeout(() => resolve(true), dura));
+	return await new Promise<boolean>(resolve => setTimeout(() => resolve(true), dura));
 }
 
 export {

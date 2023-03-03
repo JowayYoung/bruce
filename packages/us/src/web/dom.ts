@@ -1,10 +1,6 @@
 /** DOM工具 **/
 import { AsyncTo } from "../common/function";
 
-type EventOpts = "contextmenu" | "copy" | "selectstart";
-
-type TgtFunc<T> = (d: T) => void;
-
 /**
  * @name 自适应
  * @param {number} [width=750] 设计图宽度
@@ -107,7 +103,7 @@ function HighlightText(text: string = "", keyword: string = ""): string {
  * @param {string} [type="jpg"] 类型：jpg、jpeg、png
  */
 async function ImgToBase64(url: string = "", type: "jpg" | "jpeg" | "png" = "jpg"): Promise<string> {
-	const promise: Promise<string> = new Promise((resolve, reject) => {
+	const promise = new Promise<string>(resolve => {
 		const img = new Image();
 		type === "jpg" && (type = "jpeg");
 		img.setAttribute("src", url);
@@ -124,29 +120,39 @@ async function ImgToBase64(url: string = "", type: "jpg" | "jpeg" | "png" = "jpg
 				resolve("");
 			}
 		});
-		img.addEventListener("error", () => reject(new Error("error")));
+		img.addEventListener("error", () => resolve(""));
 	});
-	const [err, res] = await AsyncTo<string>(promise);
+	const [err, res] = await AsyncTo(promise);
 	return !err && res ? res : "";
 }
 
 /**
  * @name JSONP
- * @param {string} [url=""] 地址
+ * @param {function} [cb] 回调函数
  * @param {string} [name="jsonp"] 全局变量
- * @param {function} [cb=null] 回调函数
+ * @param {string} [url=""] 地址
  */
-async function Jsonp<T>(url: string = "", name: string = "jsonp", cb?: TgtFunc<T>): Promise<boolean> {
-	const promise: Promise<boolean> = new Promise((resolve, reject) => {
+interface JsonpType<T> {
+	cb?: (data: T) => void
+	name: string
+	url: string
+}
+
+async function Jsonp<T>({
+	cb,
+	name = "jsonp",
+	url = ""
+}: JsonpType<T>): Promise<boolean> {
+	const promise = new Promise<boolean>(resolve => {
 		const script = document.createElement("script");
 		script.setAttribute("src", url);
 		script.setAttribute("async", "true");
 		script.addEventListener("load", () => resolve(true));
-		script.addEventListener("error", () => reject(new Error("error")));
+		script.addEventListener("error", () => resolve(false));
 		(window as any)[name] = (data: T) => cb?.(data); // eslint-disable-line
 		document.body.appendChild(script);
 	});
-	const [err, res] = await AsyncTo<boolean>(promise);
+	const [err, res] = await AsyncTo(promise);
 	return !err && !!res;
 }
 
@@ -156,19 +162,19 @@ async function Jsonp<T>(url: string = "", name: string = "jsonp", cb?: TgtFunc<T
  * @param {string} [pst="body"] 插入位置：head、body
  */
 async function LoadScript(url: string = "", pst: "body" | "head" = "body"): Promise<boolean> {
-	const promise: Promise<boolean> = new Promise((resolve, reject) => {
+	const promise = new Promise<boolean>(resolve => {
 		const scripts = document.getElementsByTagName("script");
 		if ([...scripts].some(v => v.src === url || v.src.includes(url))) {
-			reject(new Error(`<${pst}>已存在${url}该脚本`));
+			resolve(false);
 		}
 		const script = document.createElement("script");
 		script.setAttribute("src", url);
 		script.addEventListener("load", () => resolve(true));
-		script.addEventListener("error", () => reject(new Error("error")));
+		script.addEventListener("error", () => resolve(false));
 		pst === "head" && document.head.appendChild(script);
 		pst === "body" && document.body.appendChild(script);
 	});
-	const [err, res] = await AsyncTo<boolean>(promise);
+	const [err, res] = await AsyncTo(promise);
 	return !err && !!res;
 }
 
@@ -176,6 +182,8 @@ async function LoadScript(url: string = "", pst: "body" | "head" = "body"): Prom
  * @name 禁止事件
  * @param {array} [events=[]] 事件：contextmenu、copy、selectstart
  */
+type EventOpts = "contextmenu" | "copy" | "selectstart";
+
 function ProhibitEvent(events: EventOpts[] = []): void {
 	const evs = [...new Set(events)].sort();
 	evs.forEach(v => document.addEventListener(v, e => e.preventDefault()));

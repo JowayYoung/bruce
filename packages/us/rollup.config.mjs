@@ -83,13 +83,13 @@ export default [{
 }, {
 	input: "src/index.ts",
 	output: { file: "dist/index.d.ts", format: "esm" },
-	plugins: [DtsPlugin({ compilerOptions: { skipLibCheck: true } })]
+	plugins: [DtsPlugin()]
 }, {
 	input: "src/web.ts",
 	output: { file: "dist/web.d.ts", format: "esm" },
-	plugins: [DtsPlugin({ compilerOptions: { skipLibCheck: true } })]
+	plugins: [DtsPlugin()]
 }, {
 	input: "src/node.ts",
 	output: { file: "dist/node.d.ts", format: "esm" },
-	plugins: [DtsPlugin({ compilerOptions: { skipLibCheck: true } })]
+	plugins: [DtsPlugin()]
 }];

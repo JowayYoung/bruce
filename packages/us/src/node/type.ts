@@ -3,11 +3,12 @@ import { release, type } from "os";
 
 import { RunCmd } from "./process";
 
+/**
+ * @name Node类型
+ */
 type SystemOpts = "windows" | "macos" | "linux";
 
-type SystemType = {
-	[key in SystemOpts]: RegExp
-};
+type SystemType = Record<SystemOpts, RegExp>;
 
 interface InfoType {
 	nodeVs: string
@@ -16,9 +17,6 @@ interface InfoType {
 	systemVs: string
 }
 
-/**
- * @name Node类型
- */
 function NodeType(): InfoType {
 	const info = type().toLocaleLowerCase();
 	const testUa = (regexp: RegExp): boolean => regexp.test(info);

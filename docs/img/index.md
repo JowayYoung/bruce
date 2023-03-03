@@ -17,7 +17,7 @@ toc: menu
 囊括的功能都是一些常规图像批处理操作，以前只能使用相关图像处理工具完成这些功能，但现在你多一个选择，可用命令行完成这些功能。
 
 [![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
-[![version](https://img.shields.io/badge/version-1.0.6-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
+[![version](https://img.shields.io/badge/version-1.0.7-f66.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>
 [![test](https://img.shields.io/badge/test-passing-f90.svg)](https://github.com/JowayYoung/bruce)<span class="gap"></span>

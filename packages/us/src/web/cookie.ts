@@ -1,7 +1,5 @@
 /** Cookie工具 **/
-interface CookieType {
-	[key: string]: string
-}
+type CookieType = Record<string, string>;
 
 /**
  * @name 读取Cookie

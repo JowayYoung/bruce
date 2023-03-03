@@ -1,22 +1,16 @@
-type KeyType = string | number;
-type ValueType = string | number | boolean;
-type CountType = {
-    [key in KeyType]: number;
-};
-type GroupType = {
-    [key in KeyType]: MemberType[];
-};
-type MemberType = {
-    [key in KeyType]: string | number;
-};
+type KeyOpts$1 = string | number;
 declare function ChunkArr<T>(arr?: T[], size?: number): T[][];
-declare function GroupArr(arr?: MemberType[], key?: KeyType): GroupType;
-declare function StatArrMemCount(arr?: KeyType[]): CountType;
+type MemberType = Record<KeyOpts$1, string | number>;
+type GroupType = Record<KeyOpts$1, MemberType[]>;
+declare function GroupArr(arr?: MemberType[], key?: KeyOpts$1): GroupType;
+type CountType = Record<KeyOpts$1, number>;
+declare function StatArrMemCount(arr?: KeyOpts$1[]): CountType;
 declare function StatArrMemKeyword(arr?: string[], keywords?: string[]): string[];
-declare function StatArrMemPosition(arr: ValueType[] | undefined, val: ValueType): number[];
+type ValueOpts = string | number | boolean;
+declare function StatArrMemPosition(arr: ValueOpts[] | undefined, val: ValueOpts): number[];
 
-type InfoType$1 = "web" | "node";
-declare function EnvType(): InfoType$1;
+type EnvOpts = "web" | "node";
+declare function EnvType(): EnvOpts;
 declare function IsWeb(): boolean;
 declare function IsNode(): boolean;
 declare function TypeOf<T>(data: T): string;
@@ -45,8 +39,9 @@ declare function IsEmpty<T>(data: T): boolean;
 declare function IsEmptyArray<T>(data: T): boolean;
 declare function IsEmptyObject<T extends object>(data: T): boolean;
 
-declare function FormatCountdown(date: string | number | Date): string;
-declare function FormatTimeDiff(date: string | number | Date, format?: string): string;
+type DateOpts = string | number | Date;
+declare function FormatCountdown(date: DateOpts): string;
+declare function FormatTimeDiff(date: DateOpts, format?: string): string;
 
 type TgtFunc<T> = (...args: T[]) => void;
 declare function AsyncTo<T, U = Error>(pfn: Promise<T>, error?: object): Promise<[U, undefined] | [null, T]>;
@@ -54,14 +49,25 @@ declare function Debounce<T>(fn: TgtFunc<T>, dura?: number): TgtFunc<T>;
 declare function Throttle<T>(fn: TgtFunc<T>, dura?: number): TgtFunc<T>;
 declare function WaitFor(dura?: number): Promise<boolean>;
 
-declare function CalcNum(type?: "+" | "-" | "*" | "/", num1?: number, num2?: number): number;
-declare function CalcNumPlus(type?: "+" | "-" | "*" | "/", ...nums: number[]): number;
+type OperationOpts = "+" | "-" | "*" | "/";
+declare function CalcNum(type?: OperationOpts, num1?: number, num2?: number): number;
+declare function CalcNumPlus(type?: OperationOpts, ...nums: number[]): number;
 declare function FillNum(num?: number, len?: number): string;
-declare function FixedNum(num?: number, dec?: number, mathType?: "ceil" | "floor" | "round"): number;
+interface FixedNumType {
+    dec?: number;
+    num: number;
+    type?: "ceil" | "floor" | "round";
+}
+declare function FixedNum({ dec, num, type }: FixedNumType): number;
 declare function FormatByte(byte?: number): string;
 declare function RandomNum(min?: number, max?: number): number;
 declare function RandomNumPlus(min?: number, max?: number, count?: number): number[];
-declare function RoundNum(num?: number, dec?: number, per?: boolean): string | number;
+interface RoundNumType {
+    dec?: number;
+    num: number;
+    per?: boolean;
+}
+declare function RoundNum({ dec, num, per }: RoundNumType): string | number;
 declare function ThousandNum(num?: number): string;
 
 type KeyOpts = string | number | symbol;
@@ -89,15 +95,36 @@ declare function RemoveTag(html?: string): string;
 declare function ReverseText(text?: string): string;
 declare function StartScore(rate?: number, len?: number): string;
 
-type FilterFunc = (src: string, dist: string) => boolean;
 declare function AbsPath(path?: string, dir?: string): string;
 declare function CheckPath(path?: string, dir?: string): boolean;
-declare function CopyDir(src: string | undefined, dist: string | undefined, filter: FilterFunc): void;
+interface CopyDirType {
+    dist: string;
+    filter?: (src: string, dist: string) => boolean;
+    src: string;
+}
+declare function CopyDir({ dist, filter, src }: CopyDirType): void;
 declare function CreateDir(dir?: string): void;
-declare function ReadDir(type?: "bfs" | "dfs", dir?: string, filter?: RegExp): string[];
+interface ReadDirType {
+    dir: string;
+    regexp?: RegExp;
+    type?: "bfs" | "dfs";
+}
+declare function ReadDir({ dir, regexp, type }: ReadDirType): string[];
 declare function ReadJson(path?: string, dir?: string): object;
+declare function ReadYaml(path?: string, dir?: string): object;
 declare function RemoveDir(dir?: string): void;
 
+interface AutoPortType {
+    cb?: (port: number) => void;
+    host?: string;
+    port: number;
+}
+declare function AutoPort({ cb, host, port }: AutoPortType): Promise<void>;
+interface CheckPortType {
+    host?: string;
+    port: number;
+}
+declare function CheckPort({ host, port }: CheckPortType): Promise<boolean>;
 declare function GetIP(): string;
 
 declare function RunCmd(cmd?: string): string;
@@ -111,4 +138,4 @@ interface InfoType {
 }
 declare function NodeType(): InfoType;
 
-export { AbsPath, AsyncTo, CalcNum, CalcNumPlus, CheckObjValidKey, CheckPath, CheckText, CheckTextPlus, ChunkArr, CopyDir, CreateDir, Debounce, DesePhone, EnvType, FillNum, FilterObjKey, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetIP, GroupArr, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, MatchBracketText, NodeType, RandomColor, RandomId, RandomNum, RandomNumPlus, ReadDir, ReadJson, RemoveDir, RemoveObjEmptyKey, RemoveTag, ReverseText, RoundNum, RunCmd, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, ThousandNum, Throttle, TypeOf, WaitFor };
+export { AbsPath, AsyncTo, AutoPort, CalcNum, CalcNumPlus, CheckObjValidKey, CheckPath, CheckPort, CheckText, CheckTextPlus, ChunkArr, CopyDir, CreateDir, Debounce, DesePhone, EnvType, FillNum, FilterObjKey, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetIP, GroupArr, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, MatchBracketText, NodeType, RandomColor, RandomId, RandomNum, RandomNumPlus, ReadDir, ReadJson, ReadYaml, RemoveDir, RemoveObjEmptyKey, RemoveTag, ReverseText, RoundNum, RunCmd, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, ThousandNum, Throttle, TypeOf, WaitFor };

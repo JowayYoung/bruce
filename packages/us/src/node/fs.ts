@@ -3,8 +3,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from "fs";
 import { extname, join } from "path";
 import { cwd } from "process";
 import { copySync, ensureDirSync, removeSync } from "fs-extra";
-
-type FilterFunc = (src: string, dist: string) => boolean;
+import Yaml from "yaml";
 
 /**
  * @name 绝对路径
@@ -27,11 +26,21 @@ function CheckPath(path: string = "", dir: string = cwd()): boolean {
 
 /**
  * @name 复制文件路径
- * @param {string} [src=""] 输入路径
- * @param {string} [dist=""] 输出路径
  * @param {function} [filter] 过滤函数(返回true表示复制，返回false表示不复制)
+ * @param {string} [dist=""] 输出路径
+ * @param {string} [src=""] 输入路径
  */
-function CopyDir(src: string = "", dist: string = "", filter: FilterFunc): void {
+interface CopyDirType {
+	dist: string
+	filter?: (src: string, dist: string) => boolean
+	src: string
+}
+
+function CopyDir({
+	dist = "",
+	filter,
+	src = ""
+}: CopyDirType): void {
 	copySync(src, dist, { filter });
 }
 
@@ -45,19 +54,29 @@ function CreateDir(dir: string = ""): void {
 
 /**
  * @name 读取文件路径
- * @param {string} [type="bfs"] 类型：bfs、dfs
  * @param {string} [dir=""] 路径
- * @param {regexp} [filter=/(node_modules|\.git|\.DS_Store)$/] 过滤正则
+ * @param {regexp} [regexp=/(node_modules|\.git|\.DS_Store)$/] 过滤正则
+ * @param {string} [type="bfs"] 类型：bfs、dfs
  */
-function ReadDir(type: "bfs" | "dfs" = "bfs", dir: string = cwd(), filter: RegExp = /(node_modules|\.git|\.DS_Store)$/): string[] {
+interface ReadDirType {
+	dir: string
+	regexp?: RegExp
+	type?: "bfs" | "dfs"
+}
+
+function ReadDir({
+	dir = cwd(),
+	regexp = /(node_modules|\.git|\.DS_Store)$/,
+	type = "bfs"
+}: ReadDirType): string[] {
 	if (type === "bfs") {
 		const paths = [];
 		const queue = [];
-		!filter.test(dir) && queue.unshift(dir);
+		!regexp.test(dir) && queue.unshift(dir);
 		while (queue.length) {
 			const topPath = queue.shift() ?? "";
 			const stat = statSync(topPath);
-			if (stat && !filter.test(topPath)) {
+			if (stat && !regexp.test(topPath)) {
 				const { isDirectory, isFile } = stat;
 				if (isDirectory()) {
 					readdirSync(topPath).forEach(v => {
@@ -73,11 +92,15 @@ function ReadDir(type: "bfs" | "dfs" = "bfs", dir: string = cwd(), filter: RegEx
 	} else if (type === "dfs") {
 		const paths: string[] = [];
 		const stat = statSync(dir);
-		if (!filter.test(dir)) {
+		if (!regexp.test(dir)) {
 			if (stat.isDirectory()) {
 				readdirSync(dir).reduce((t, v) => {
 					const spath = join(dir, v);
-					const spaths = ReadDir("dfs", spath, filter);
+					const spaths = ReadDir({
+						dir: spath,
+						regexp,
+						type: "dfs"
+					});
 					t.push(...spaths);
 					return t;
 				}, paths);
@@ -105,6 +128,19 @@ function ReadJson(path: string = "", dir: string = cwd()): object {
 }
 
 /**
+ * @name 读取YAML文件
+ * @param {string} [path=""] 路径
+ * @param {string} [dir=cwd()] 上下文
+ */
+function ReadYaml(path: string = "", dir: string = cwd()): object {
+	const _path = AbsPath(path, dir);
+	const ext = extname(_path);
+	if (!/^\.ya?ml$/.test(ext)) return {};
+	const text = readFileSync(_path, "utf8");
+	return Yaml.parse(text);
+}
+
+/**
  * @name 删除文件路径
  * @param {string} [dir=""] 路径
  */
@@ -119,5 +155,6 @@ export {
 	CreateDir,
 	ReadDir,
 	ReadJson,
+	ReadYaml,
 	RemoveDir
 };

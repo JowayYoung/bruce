@@ -101,6 +101,7 @@ import {
 	// ✅Type类型
 	WebType,
 	// ✅Url链接
+	CallApp,
 	ParseUrlSearch,
 	RemoveUrlSearch,
 	SetUrlSearch,
@@ -115,6 +116,7 @@ export {
 	Base64ToFile,
 	CalcNum,
 	CalcNumPlus,
+	CallApp,
 	CheckObjValidKey,
 	CheckText,
 	CheckTextPlus,

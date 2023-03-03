@@ -4,20 +4,17 @@ import Axios from "axios";
 import { AsyncTo } from "../common/function";
 import { StringifyUrlSearch } from "./url";
 
-interface AjaxType {
-	data?: {
-		[key: string]: string
-	}
-	error?: (status: number) => void
-	success?: (res: string) => void
-	type?: "get" | "post"
-	url: string
-}
-
+/**
+ * @name 异步请求
+ * @param {object} [data={}] 参数集合
+ * @param {object} [headers={}] 请求头
+ * @param {string} [method="get"] 方法：get、post
+ * @param {function} [progress] 上传进度回调函数
+ * @param {string} [url=""] 地址
+ * @param {boolean} [useJson={}] 参数JSON化
+ */
 interface RequestType {
-	data?: {
-		[key: string]: string | number
-	}
+	data?: Record<string, string | number>
 	headers?: object
 	method?: "get" | "post"
 	progress?: (p: object) => void
@@ -32,15 +29,6 @@ interface ResponseType<T> {
 	msg: string
 }
 
-/**
- * @name 异步请求
- * @param {object} [data={}] 参数集合
- * @param {object} [headers={}] 请求头
- * @param {string} [method="get"] 方法：get、post
- * @param {function} [progress] 上传进度回调函数
- * @param {string} [url=""] 地址
- * @param {boolean} [useJson={}] 参数JSON化
- */
 async function Aios<T>({
 	data = {},
 	headers = {},
@@ -71,6 +59,14 @@ async function Aios<T>({
  * @param {string} [type="get"] 类型：get、post
  * @param {string} [url=""] 地址
  */
+interface AjaxType {
+	data?: Record<string, string>
+	error?: (status: number) => void
+	success?: (res: string) => void
+	type?: "get" | "post"
+	url: string
+}
+
 function Ajax({
 	data = {},
 	error,

@@ -5,9 +5,12 @@ import {
 	CreateDir,
 	ReadDir,
 	ReadJson,
+	ReadYaml,
 	RemoveDir
 } from "./fs";
 import {
+	AutoPort,
+	CheckPort,
 	GetIP
 } from "./os";
 import {
@@ -25,8 +28,11 @@ export {
 	CreateDir,
 	ReadDir,
 	ReadJson,
+	ReadYaml,
 	RemoveDir,
 	// ✅Os系统
+	AutoPort,
+	CheckPort,
 	GetIP,
 	// ✅Process进程
 	RunCmd,

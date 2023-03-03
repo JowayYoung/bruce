@@ -1,19 +1,5 @@
 /** 数组工具 **/
-type KeyType = string | number;
-
-type ValueType = string | number | boolean;
-
-type CountType = {
-	[key in KeyType]: number
-};
-
-type GroupType = {
-	[key in KeyType]: MemberType[]
-};
-
-type MemberType = {
-	[key in KeyType]: string | number
-};
+type KeyOpts = string | number;
 
 /**
  * @name 分割数组
@@ -31,7 +17,11 @@ function ChunkArr<T>(arr: T[] = [], size: number = 1): T[][] {
  * @param {array} [arr=[]] 数组
  * @param {string|number} [key=""] 属性
  */
-function GroupArr(arr: MemberType[] = [], key: KeyType = ""): GroupType {
+type MemberType = Record<KeyOpts, string | number>;
+
+type GroupType = Record<KeyOpts, MemberType[]>;
+
+function GroupArr(arr: MemberType[] = [], key: KeyOpts = ""): GroupType {
 	return key ? arr.reduce((t: GroupType, v) => (!t[v[key]] && (t[v[key]] = []), t[v[key]].push(v), t), {}) : {};
 }
 
@@ -39,7 +29,9 @@ function GroupArr(arr: MemberType[] = [], key: KeyType = ""): GroupType {
  * @name 统计数组成员个数
  * @param {array} [arr=[]] 数组
  */
-function StatArrMemCount(arr: KeyType[] = []): CountType {
+type CountType = Record<KeyOpts, number>;
+
+function StatArrMemCount(arr: KeyOpts[] = []): CountType {
 	return arr.reduce((t: CountType, v) => (t[v] = (t[v] || 0) + 1, t), {});
 }
 
@@ -57,7 +49,9 @@ function StatArrMemKeyword(arr: string[] = [], keywords: string[] = []): string[
  * @param {array} [arr=[]] 数组
  * @param {string|number|boolean} [val] 值
  */
-function StatArrMemPosition(arr: ValueType[] = [], val: ValueType): number[] {
+type ValueOpts = string | number | boolean;
+
+function StatArrMemPosition(arr: ValueOpts[] = [], val: ValueOpts): number[] {
 	return arr.reduce((t: number[], v, i) => (v === val && t.push(i), t), []);
 }
 

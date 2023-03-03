@@ -1,10 +1,11 @@
 /** 布尔工具 **/
-type InfoType = "web" | "node";
 
 /**
  * @name 环境类型
  */
-function EnvType(): InfoType {
+type EnvOpts = "web" | "node";
+
+function EnvType(): EnvOpts {
 	return typeof window === "undefined" ? "node" : "web";
 }
 

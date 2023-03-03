@@ -51,7 +51,7 @@ function RemoveSStorage(key: string = ""): void {
 /**
  * @name 设置LocalStorage
  * @param {string} [key=""] 键
- * @param {string} [val=""] 值
+ * @param {any} [val=""] 值
  */
 function SetLStorage<T>(key: string = "", val: T): void {
 	localStorage.setItem(key, JSON.stringify(val));
@@ -60,7 +60,7 @@ function SetLStorage<T>(key: string = "", val: T): void {
 /**
  * @name 设置SessionStorage
  * @param {string} [key=""] 键
- * @param {string} [val=""] 值
+ * @param {any} [val=""] 值
  */
 function SetSStorage<T>(key: string = "", val: T): void {
 	sessionStorage.setItem(key, JSON.stringify(val));

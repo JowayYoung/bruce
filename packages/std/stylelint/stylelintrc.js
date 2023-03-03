@@ -2,6 +2,11 @@
 // https://stylelint.io/migration-guide/to-14/
 // https://github.com/stylelint/stylelint/blob/14.0.0/docs/migration-guide/to-14.md#syntax-option-and-automatic-inferral-of-syntax
 // https://gitmemory.cn/index.php/repo/stylelint/stylelint/issues/5746
+// declaration-colon-newline-after 在下个版本会移除(无关紧要)
+// indentation 在下个版本会移除
+// max-line-length 在下个版本会移除(无关紧要)
+// no-missing-end-of-source-newline 在下个版本会移除(无关紧要)
+// number-leading-zero 在下个版本会移除
 
 module.exports = {
 	extends: "stylelint-config-standard",

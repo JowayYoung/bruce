@@ -1,8 +1,106 @@
 /** URL工具 **/
 import { IsEmptyArray, IsEmptyObject } from "../common/boolean";
+import { WebType } from "./type";
 
-interface SearchType {
-	[key: string]: string | number
+type SearchType = Record<string, string | number>;
+
+/**
+ * @name 唤起应用
+ * @param {string} [download=""] 下载地址
+ * @param {string} [downloadAndroid=""] Android下载地址
+ * @param {string} [downloadIos=""] iOS下载地址
+ * @param {string} [downloadYyb=""] 应用宝下载地址
+ * @param {string} [host=""] 域名
+ * @param {object} [params={}] 查询参数
+ * @param {string} [path=""] 路径
+ * @param {string} [protocol=""] 协议
+ * @param {boolean} [debug=false] 调试
+ * @param {function} [fail] 失败回调函数
+ * @param {function} [start] 开始回调函数
+ * @param {function} [startWechat] 开始回调函数(在微信内)
+ * @param {number} [timeout=3000] 时延
+ */
+interface AppConfigType {
+	download: string
+	downloadAndroid: string
+	downloadIos: string
+	downloadYyb?: string
+	host: string
+	params?: Record<string, string>
+	path: string
+	protocol: string
+}
+
+interface AppOptionType {
+	debug?: boolean
+	fail?: () => void // 唤起应用失败，跳转下载链接
+	start?: () => void // 唤起应用
+	startWechat?: () => void // 微信内唤起应用
+	timeout?: number
+}
+
+const defaultConfig: AppConfigType = {
+	download: "",
+	downloadAndroid: "",
+	downloadIos: "",
+	downloadYyb: "",
+	host: "",
+	params: {},
+	path: "",
+	protocol: ""
+};
+
+const defaultOption: AppOptionType = {
+	debug: false,
+	timeout: 3000
+};
+
+class CallApp {
+	protected option: AppOptionType;
+	protected scheme: string;
+	protected link: string;
+	constructor(conf: AppConfigType = defaultConfig, opts: AppOptionType = {}) {
+		const { system, shell } = WebType();
+		const {
+			download,
+			downloadAndroid,
+			downloadIos,
+			downloadYyb,
+			host,
+			params,
+			path,
+			protocol
+		} = Object.assign(defaultConfig, conf);
+		this.option = Object.assign(defaultOption, opts);
+		this.scheme = `${protocol}://${host}${path}${StringifyUrlSearch(params)}`;
+		this.link = (shell === "wechat" && downloadYyb ? downloadYyb : system === "ios" ? downloadIos : downloadAndroid) || download;
+	}
+	protected fallback(): void {
+		const { fail, timeout = 3000 } = this.option;
+		const timer = setTimeout(() => {
+			fail?.();
+			window.location.href = this.link;
+		}, timeout);
+		setTimeout(() => {
+			window.addEventListener("blur", () => clearTimeout(timer));
+		}, timeout - 500);
+	}
+	onCall(): void {
+		const { platform, shell } = WebType();
+		const { debug, start, startWechat } = this.option;
+		debug && console.log("scheme", this.scheme);
+		debug && console.log("link", this.link);
+		if (platform !== "mobile") {
+			new Error("无法在桌面端唤起应用");
+		} else if (shell === "wechat" && startWechat) {
+			// 微信内无法唤起应用
+			startWechat();
+		} else {
+			start?.();
+			window.location.href = this.scheme;
+			this.fallback();
+		}
+	}
 }
 
 /**
@@ -61,6 +159,7 @@ function StringifyUrlSearch(search: SearchType = {}, clear = false): string {
 }
 
 export {
+	CallApp,
 	ParseUrlSearch,
 	RemoveUrlSearch,
 	SetUrlSearch,

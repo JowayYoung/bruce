@@ -1,11 +1,13 @@
 /** 日期工具 **/
 import Day from "dayjs";
 
+type DateOpts = string | number | Date;
+
 /**
  * @name 格式倒计时
  * @param {string|number|date} [date] 日期
  */
-function FormatCountdown(date: string | number | Date): string {
+function FormatCountdown(date: DateOpts): string {
 	if (!date) return "时间无效";
 	const nowTime = +new Date();
 	const nextTime = +new Date(date);
@@ -30,7 +32,7 @@ function FormatCountdown(date: string | number | Date): string {
  * @param {string|number|date} [date] 日期
  * @param {string} [format] 日期：YYYY-MM-DD
  */
-function FormatTimeDiff(date: string | number | Date, format: string = "YYYY-MM-DD"): string {
+function FormatTimeDiff(date: DateOpts, format: string = "YYYY-MM-DD"): string {
 	if (!date) return "时间无效";
 	const nowTime = +new Date();
 	const tgtTime = +new Date(date);

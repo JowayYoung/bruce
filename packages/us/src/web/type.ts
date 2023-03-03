@@ -1,4 +1,9 @@
 /** 类型工具 **/
+
+/**
+ * @name Web类型
+ * @param {string} [ua=navigator.userAgent] 用户代理
+ */
 type EngineOpts = "webkit" | "gecko" | "presto" | "trident";
 
 type PlatformOpts = "desktop" | "mobile";
@@ -9,25 +14,15 @@ type SupporterOpts = "chrome" | "safari" | "edge" | "firefox" | "opera" | "iexpl
 
 type SystemOpts = "windows" | "macos" | "linux" | "android" | "ios";
 
-type EngineType = {
-	[key in EngineOpts]: RegExp[]
-};
+type EngineType = Record<EngineOpts, RegExp[]>;
 
-type ShellType = {
-	[key in ShellOpts]: RegExp[]
-};
+type ShellType = Record<ShellOpts, RegExp[]>;
 
-type SupporterType = {
-	[key in SupporterOpts]: RegExp[]
-};
+type SupporterType = Record<SupporterOpts, RegExp[]>;
 
-type SystemType = {
-	[key in SystemOpts]: RegExp
-};
+type SystemType = Record<SystemOpts, RegExp>;
 
-interface SystemVsType {
-	[key: string]: RegExp
-}
+type SystemVsType = Record<string, RegExp>;
 
 interface InfoType {
 	engine: EngineOpts | "unknow"
@@ -41,10 +36,6 @@ interface InfoType {
 	shellVs?: string
 }
 
-/**
- * @name Web类型
- * @param {string} [ua=navigator.userAgent] 用户代理
- */
 function WebType(ua = navigator.userAgent): InfoType {
 	// 权重：系统 > 平台 > 内核 > 载体 > 外壳
 	const _ua = ua.toLowerCase();

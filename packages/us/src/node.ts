@@ -77,8 +77,11 @@ import {
 	CreateDir,
 	ReadDir,
 	ReadJson,
+	ReadYaml,
 	RemoveDir,
 	// ✅Os系统
+	AutoPort,
+	CheckPort,
 	GetIP,
 	// ✅Process进程
 	RunCmd,
@@ -89,10 +92,12 @@ import {
 export {
 	AbsPath,
 	AsyncTo,
+	AutoPort,
 	CalcNum,
 	CalcNumPlus,
 	CheckObjValidKey,
 	CheckPath,
+	CheckPort,
 	CheckText,
 	CheckTextPlus,
 	ChunkArr,
@@ -144,6 +149,7 @@ export {
 	RandomNumPlus,
 	ReadDir,
 	ReadJson,
+	ReadYaml,
 	RemoveDir,
 	RemoveObjEmptyKey,
 	RemoveTag,

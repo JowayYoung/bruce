@@ -34,6 +34,7 @@ import {
 	WebType
 } from "./type";
 import {
+	CallApp,
 	ParseUrlSearch,
 	RemoveUrlSearch,
 	SetUrlSearch,
@@ -72,6 +73,7 @@ export {
 	// ✅Type类型
 	WebType,
 	// ✅Url链接
+	CallApp,
 	ParseUrlSearch,
 	RemoveUrlSearch,
 	SetUrlSearch,

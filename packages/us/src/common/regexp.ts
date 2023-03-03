@@ -1,12 +1,10 @@
 /** 正则工具 **/
 type FieldOpts = "address" | "count" | "date" | "email" | "idcard" | "image" | "name" | "number" | "password" | "phone";
 
-type MatchType = {
-	[key in FieldOpts]: {
-		msg: string
-		regexp: RegExp
-	}
-};
+type MatchType = Record<FieldOpts, {
+	msg: string
+	regexp: RegExp
+}>;
 
 interface CheckType {
 	flag: boolean
