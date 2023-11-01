@@ -1,18 +1,23 @@
 {
 	"name": "@yangzw/bruce",
+	"type": "module",
 	"scripts": {
-		"build": "yarn run remove && lerna run build",
-		"clean": "lerna clean && rimraf .umi dist node_modules package-lock.json yarn.lock",
-		"deploy": "dumi build",
-		"docs": "dumi dev",
-		"init": "lerna bootstrap",
-		"lint": "eslint . --ext .js -c packages/app/templates/eslint/eslintrc.cjs && eslint . --ext .ts -c packages/app/templates/tslint/tslintrc.cjs",
-		"remove": "rimraf packages/*/dist"
+		"build": "pnpm recursive exec -- npm run build",
+		"clean": "npm run clean:module && npm run clean:output",
+		"clean:module": "rimraf node_modules pnpm-lock.yaml && pnpm recursive exec -- rimraf node_modules pnpm-lock.yaml",
+		"clean:output": "pnpm recursive exec -- rimraf coverage dist",
+		"init": "pnpm i -r",
+		"mini": "ts-node-esm tasks/mini.ts && pnpm recursive exec -- npm run mount",
+		"rebuild": "npm run clean && npm run init && npm run build && npm run mini"
+	},
+	"dependencies": {
+		"@yangzw/bruce-us": "workspace:*",
+		"terser": "5.24.0"
 	},
 	"devDependencies": {
-		"dumi": "1.1.50",
-		"dumi-theme-mobile": "1.1.26",
-		"lerna": "6.4.1"
+		"@types/node": "20.8.10",
+		"ts-node": "10.9.1",
+		"typescript": "5.2.2"
 	},
 	"private": true,
 	"workspaces": [

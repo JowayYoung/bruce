@@ -1,9 +1,9 @@
 name: CBD # 动作名称
 
-on: # 触发条件：在push到main分支后
+on: # 触发条件：在push到pnpm-ts分支后
   push:
     branches:
-      - main
+      - pnpm-ts
 
 jobs: # 任务
   cbd: # 任务ID
@@ -14,16 +14,16 @@ jobs: # 任务
       - name: Toggle
         uses: actions/setup-node@v3
         with:
-          node-version: 16.19.0
+          node-version: 18.18.0
       # 拉取代码
       - name: Checkout
         uses: actions/checkout@v3
       # 打包文件
       - name: Build
-        run: yarn && yarn run deploy
+        run: cd packages/doc && yarn && yarn run deploy
       # 部署站点
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # 打包文件位置
+          publish_dir: packages/doc/dist/build # 打包文件位置

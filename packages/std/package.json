@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-std",
-	"version": "1.0.7",
+	"version": "1.1.3",
 	"description": "A VSCode Configuration Tool Integrating Stylelint And Eslint",
 	"keywords": [
 		"bruce-std",
@@ -16,8 +16,7 @@
 	],
 	"author": {
 		"name": "JowayYoung",
-		"phone": "18819249731",
-		"email": "young.joway@aliyun.com"
+		"email": "young.joway@outlook.com"
 	},
 	"homepage": "https://github.com/JowayYoung",
 	"repository": {
@@ -25,47 +24,61 @@
 		"url": "https://github.com/JowayYoung/bruce.git"
 	},
 	"bugs": {
-		"email": "young.joway@aliyun.com",
+		"email": "young.joway@outlook.com",
 		"url": "https://github.com/JowayYoung/bruce/issues"
 	},
+	"main": "dist/index.mjs",
+	"bin": {
+		"bruce-std": "dist/index.mjs"
+	},
 	"scripts": {
-		"clean": "rimraf node_modules package-lock.json yarn.lock"
+		"build": "rimraf dist && tsc --project tsconfig.config.json && tsc --project tsconfig.json && npm link",
+		"dev": "nodemon --watch config --watch src --watch package.json --watch tsconfig.json --ext ts,mts --exec \"npm run build\"",
+		"mount": "npm link"
 	},
 	"engines": {
 		"node": ">=16.0.0",
 		"npm": ">=7.10.0"
 	},
 	"dependencies": {
-		"@babel/core": "7.21.0",
-		"@babel/eslint-parser": "7.19.1",
-		"@babel/preset-react": "7.18.6",
-		"@typescript-eslint/eslint-plugin": "5.54.0",
-		"@typescript-eslint/parser": "5.54.0",
-		"eslint": "8.35.0",
-		"eslint-config-standard": "17.0.0",
-		"eslint-config-standard-with-typescript": "34.0.0",
+		"@babel/core": "7.23.2",
+		"@babel/eslint-parser": "7.22.15",
+		"@babel/preset-react": "7.22.15",
+		"@typescript-eslint/eslint-plugin": "6.9.1",
+		"@typescript-eslint/parser": "6.9.1",
+		"@yangzw/bruce-us": "workspace:*",
+		"chalk": "5.3.0",
+		"clipboardy": "4.0.0",
+		"commander": "11.1.0",
+		"eslint": "8.52.0",
+		"eslint-config-standard": "17.1.0",
+		"eslint-config-standard-with-typescript": "39.1.1",
 		"eslint-plugin-html": "7.1.0",
-		"eslint-plugin-import": "2.27.5",
-		"eslint-plugin-n": "15.6.1",
+		"eslint-plugin-import": "2.29.0",
+		"eslint-plugin-n": "16.2.0",
 		"eslint-plugin-promise": "6.1.1",
-		"eslint-plugin-react": "7.32.2",
+		"eslint-plugin-react": "7.33.2",
 		"eslint-plugin-react-hooks": "4.6.0",
-		"eslint-plugin-vue": "9.9.0",
+		"eslint-plugin-vue": "9.18.1",
+		"figures": "6.0.1",
+		"ora": "7.0.1",
+		"postcss": "8.4.31",
 		"postcss-html": "1.5.0",
 		"postcss-less": "6.0.0",
-		"postcss-scss": "4.0.6",
-		"stylelint": "15.2.0",
-		"stylelint-config-standard": "30.0.1",
-		"stylelint-order": "6.0.2",
-		"typescript": "4.9.5",
-		"vue-eslint-parser": "9.1.0"
+		"postcss-scss": "4.0.9",
+		"semver": "7.5.4",
+		"strip-json-comments": "5.0.1",
+		"stylelint": "15.11.0",
+		"stylelint-config-standard": "34.0.0",
+		"stylelint-order": "6.0.3",
+		"vue-eslint-parser": "9.3.2"
 	},
 	"devDependencies": {
-		"@types/react": "18.0.28",
-		"@types/react-dom": "18.0.11",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"vue": "3.2.47"
+		"@types/eslint": "8.44.6",
+		"@types/node": "20.8.10",
+		"@types/semver": "7.5.4",
+		"nodemon": "3.0.1",
+		"typescript": "5.2.2"
 	},
 	"license": "MIT",
 	"publishConfig": {

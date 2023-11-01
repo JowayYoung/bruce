@@ -1,0 +1,83 @@
+$red: #f66;
+$pueple: #66f;
+$orange: #f90;
+$blue: #09f;
+$cyan: #9c3;
+$green: #3c9;
+a,
+b {
+	margin: .2rem;
+}
+code {
+	margin: .2rem;
+	&.red {
+		color: $red;
+	}
+}
+hr {
+	border-top-color: $red;
+}
+img[src^="https://img.shields.io"]:not(:last-child) {
+	margin-right: .4rem;
+}
+.center {
+	margin: 0 auto;
+}
+.gap {
+	display: inline-block;
+	width: 10px;
+}
+.mark-red {
+	font-weight: bold;
+	color: $red;
+}
+.mark-purple {
+	font-weight: bold;
+	color: $pueple;
+}
+.mark-orange {
+	font-weight: bold;
+	color: $orange;
+}
+.mark-blue {
+	font-weight: bold;
+	color: $blue;
+}
+.mark-cyan {
+	font-weight: bold;
+	color: $cyan;
+}
+.mark-green {
+	font-weight: bold;
+	color: $green;
+}
+.normal-text {
+	cursor: pointer;
+	line-height: 1.5;
+	font-weight: normal;
+}
+.normal-imgs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		margin: 1rem;
+	}
+	@media (width <= 719px) {
+		flex-direction: column;
+	}
+}
+// 样式覆盖
+.vp-hero-info-wrapper {
+	min-height: 600px;
+}
+.vp-highlight-item {
+	&-wrapper {
+		transition: all 300ms;
+	}
+}
+.vp-feature-item {
+	@media (width >= 1440px) {
+		flex-basis: calc(33% - 3rem);
+	}
+}

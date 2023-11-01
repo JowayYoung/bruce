@@ -7,7 +7,7 @@
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
-		"jsx": "react",
+		"jsx": "preserve",
 		"lib": [
 			"DOM",
 			"DOM.Iterable",
@@ -21,28 +21,22 @@
 			"ES2022",
 			"ESNext"
 		],
-		"module": "ES6",
-		"moduleResolution": "node",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"outDir": "dist",
 		"removeComments": true,
 		"resolveJsonModule": true,
-		"paths": {
-			"#/*": ["*"],
-			"@/*": ["src/*"]
-		},
-		"sourceMap": true,
+		"sourceMap": false,
 		"strict": true,
-		"target": "ES5",
-		"typeRoots": [
-			"node_modules/@types",
-			"typings"
-		]
+		"target": "ES6"
 	},
 	"exclude": [
-		"dist",
-		"node_modules",
-		"packages"
+		"node_modules"
 	],
 	"include": [
-		".umirc.ts"
+		"packages/**/*.ts",
+		"packages/**/*.mts",
+		"packages/**/*.tsx",
+		"tasks/**/*.ts"
 	]
 }

@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-pkg",
-	"version": "1.0.7",
+	"version": "1.1.3",
 	"description": "A Package Processing Tool For Strengthening NPM Command",
 	"keywords": [
 		"bruce-pkg",
@@ -12,8 +12,7 @@
 	],
 	"author": {
 		"name": "JowayYoung",
-		"phone": "18819249731",
-		"email": "young.joway@aliyun.com"
+		"email": "young.joway@outlook.com"
 	},
 	"homepage": "https://github.com/JowayYoung",
 	"repository": {
@@ -21,32 +20,41 @@
 		"url": "https://github.com/JowayYoung/bruce.git"
 	},
 	"bugs": {
-		"email": "young.joway@aliyun.com",
+		"email": "young.joway@outlook.com",
 		"url": "https://github.com/JowayYoung/bruce/issues"
 	},
 	"type": "module",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"bin": {
-		"bruce-pkg": "index.js"
+		"bruce-pkg": "dist/index.js"
 	},
 	"scripts": {
-		"remove": "rimraf node_modules package-lock.json yarn.lock"
+		"build": "rimraf dist && tsc --project tsconfig.json && npm link",
+		"dev": "nodemon --watch src --watch package.json --watch tsconfig.json --ext ts --exec \"npm run build\"",
+		"mount": "npm link"
 	},
 	"engines": {
 		"node": ">=16.0.0",
 		"npm": ">=7.10.0"
 	},
 	"dependencies": {
-		"@yangzw/bruce-us": "1.0.8",
-		"chalk": "5.2.0",
-		"commander": "10.0.0",
-		"execa": "7.0.0",
-		"figures": "5.0.0",
-		"inquirer": "9.1.4",
-		"listr2": "5.0.7",
-		"ora": "6.1.2",
-		"semver": "7.3.8",
-		"update-notifier": "6.0.2"
+		"@yangzw/bruce-us": "workspace:*",
+		"chalk": "5.3.0",
+		"commander": "11.1.0",
+		"enquirer": "2.4.1",
+		"execa": "8.0.1",
+		"figures": "6.0.1",
+		"inquirer": "9.2.11",
+		"listr2": "6.6.1",
+		"ora": "7.0.1",
+		"semver": "7.5.4"
+	},
+	"devDependencies": {
+		"@types/inquirer": "9.0.6",
+		"@types/node": "20.8.10",
+		"@types/semver": "7.5.4",
+		"nodemon": "3.0.1",
+		"typescript": "5.2.2"
 	},
 	"license": "MIT",
 	"publishConfig": {

@@ -1,0 +1,7 @@
+.DS_Store
+coverage
+node_modules
+src
+test
+jest.config.ts
+rollup.config.ts

@@ -1,8 +1,5 @@
 .DS_Store
-.umi
-.umi-production
-.umi-test
 coverage
 node_modules
-package-lock.json
-yarn.lock
+packages/doc/dist
+pnpm-lock.yaml

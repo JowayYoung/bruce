@@ -1,0 +1,1 @@
+import{ACTION_TEXT as r}from"../langs/index.js";const Jt={name:/^[\da-z][\da-z_-]*[\da-z]$/,scope:/^[\da-z]{1,}$/};function io(o){console.log(`##### ${r[o]} #####`)}export{Jt as DATA_REGEXP,io as ShowTitle};
