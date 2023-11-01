@@ -6,11 +6,11 @@ containerClass: home
 # Banner
 heroText: Bruce FEES
 tagline: 前端工程化多包管理解决方案
-heroImage: /logo.svg
-heroImageDark: /logo.svg
+heroImage: https://jowayyoung.github.io/static/bruce/logo.svg
+heroImageDark: https://jowayyoung.github.io/static/bruce/logo.svg
 heroImageStyle:
-bgImage: /bg/red-light.svg
-bgImageDark: /bg/red-dark.svg
+bgImage: https://jowayyoung.github.io/static/bruce/bg/red-light.svg
+bgImageDark: https://jowayyoung.github.io/static/bruce/bg/red-dark.svg
 bgImageStyle:
   background-attachment: fixed
 # heroFullScreen: true
@@ -36,14 +36,14 @@ actions:
 highlights:
   - header: 介绍
     description: <div><p><b>Bruce FEES</b>是一套完整的多功能的<b>前端工程化多包管理解决方案</b>，涵盖前端开发流程中常见的多个<b>脚手架</b>、<b>工具</b>和<b>类库</b>。</p><p>它基于<b>webpack、rollup、postcss、sass、less、babel、typescript、stylelint、eslint、jest、react、vue、vuepress</b>等多个<b>Npm模块</b>搭建和开发底层架构，采用<b>Monorepo模式</b>和<b>pnpm</b>组织和管理仓库代码。</p><p>目的是简化整个前端开发流程，通过自动化工具处理那些重复繁琐的任务，以提高整体开发效率并降低维护成本。这个框架还致力提供一个高度可扩展的基础架构，方便开发人员在项目中增加新的工具和技术，以满足不断变化的需求。</p></div>
-    image: /summary.svg
-    bgImage: /bg/cyan-light.svg
-    bgImageDark: /bg/cyan-dark.svg
+    image: https://jowayyoung.github.io/static/bruce/summary.svg
+    bgImage: https://jowayyoung.github.io/static/bruce/bg/cyan-light.svg
+    bgImageDark: https://jowayyoung.github.io/static/bruce/bg/cyan-dark.svg
   - header: 方案
     description: 一套完整的多功能前端工程化多包管理解决方案
-    image: /scheme.svg
-    bgImage: /bg/blue-light.svg
-    bgImageDark: /bg/blue-dark.svg
+    image: https://jowayyoung.github.io/static/bruce/scheme.svg
+    bgImage: https://jowayyoung.github.io/static/bruce/bg/blue-light.svg
+    bgImageDark: https://jowayyoung.github.io/static/bruce/bg/blue-dark.svg
     features:
       - details: 一个零配置开箱即用的JS/React应用自动化构建脚手架，真正实现构建代码和业务代码完全分离，无需关注构建过程，专心编写业务代码
         link: /app/index.md
@@ -73,9 +73,9 @@ highlights:
         link:
         title:
   - header: 特性
-    image: /feature.svg
-    bgImage: /bg/purple-light.svg
-    bgImageDark: /bg/purple-dark.svg
+    image: https://jowayyoung.github.io/static/bruce/feature.svg
+    bgImage: https://jowayyoung.github.io/static/bruce/bg/purple-light.svg
+    bgImageDark: https://jowayyoung.github.io/static/bruce/bg/purple-dark.svg
     highlights:
       - title: 📦 开箱即用
         details: 涵盖的解决方案全部做到零配置开箱即用
@@ -89,14 +89,14 @@ highlights:
         details: 提炼自身多年的前端工程化和架构设计的工作经验和解决方案
   - header: 安装
     description: <div><p>在安装之前必须确保<code>node</code>在<code>v16</code>以上，可用<a href="https://github.com/nvm-sh/nvm">nvm</a>或<a href="https://github.com/tj/n">n</a>控制多版本的<code>node环境</code>。</p><p>使用<code>npm</code>安装所需的解决方案到全局环境中，<code>xyz</code>为上述可用包名。</p><p>💥<code>npm i -g @yangzw/bruce-xyz</code></p><p>使用<code>yarn</code>安装所需的解决方案到全局环境中，<code>xyz</code>为上述可用包名。</p><p>💥<code>yarn add global @yangzw/bruce-xyz</code></p><p>使用<code>pnpm</code>安装所需的解决方案到全局环境中，<code>xyz</code>为上述可用包名。</p><p>💥<code>pnpm i -g @yangzw/bruce-xyz</code></p><hr><p><b>使用npm安装失败</b></p><p>✅ 切换npm镜像为淘宝镜像：<code>npm config set registry https://registry.npmmirror.com/</code></p><p>✅ 切换node镜像为淘宝镜像：<code>npm config set disturl https://npm.taobao.org/mirrors/node/</code></p><p>✅ 重新执行安装命令：<code>npm i -g @yangzw/bruce-xyz</code></p><p><b>使用yarn安装失败</b></p><p>✅ 切换yarn镜像为淘宝镜像：<code>yarn config set registry https://registry.npmmirror.com/</code></p><p>✅ 切换node镜像为淘宝镜像：<code>yarn config set disturl https://npm.taobao.org/mirrors/node/</code></p><p>✅ 重新执行安装命令：<code>yarn add global @yangzw/bruce-xyz</code></p><p><b>使用pnpm安装失败</b></p><p>✅ 切换pnpm镜像为淘宝镜像：<code>pnpm config set registry https://registry.npmmirror.com/</code></p><p>✅ 切换node镜像为淘宝镜像：<code>pnpm config set disturl https://npm.taobao.org/mirrors/node/</code></p><p>✅ 重新执行安装命令：<code>pnpm i -g @yangzw/bruce-xyz</code></p><hr><p>在安装每个子包之后，请结合文档来使用。当然你也可以fork一份仓库代码，搭建一套属于自己的<b>前端工程化多包管理解决方案</b>。</p></div>
-    image: /install.svg
-    bgImage: /bg/orange-light.svg
-    bgImageDark: /bg/orange-dark.svg
+    image: https://jowayyoung.github.io/static/bruce/install.svg
+    bgImage: https://jowayyoung.github.io/static/bruce/bg/orange-light.svg
+    bgImageDark: https://jowayyoung.github.io/static/bruce/bg/orange-dark.svg
   - header: 反馈
-    description: <div><p><b>JowayYoung</b>，<b>资深前端工程师</b>，目前就职于网易互动娱乐事业群，负责前端工程化和前端架构设计相关工作。同时热爱技术输出，也是<b>掘金社区Lv7优秀作家</b>，发表过多本掘金小册。</p><ul><li><a href="https://juejin.cn/book/6850413616484040711" target="_blank">《玩转CSS的艺术之美》</a></li><li><a href="https://juejin.cn/book/7034689774719860739" target="_blank">《从零到一落地前端工程化》</a></li><li>《Node命令行工具的实战通关秘诀》 <small>写作中，争取12月份完成</small></li></ul><p>如果有问题请到<a href="https://github.com/JowayYoung/bruce/issues">Github Issues</a>留言或通过这些方式联系<b>JowayYoung</b>。</p><div class="normal-imgs"><img src="/qrcode-me.jpg" height="400"><img src="/qrcode-us.jpg" height="400"></div></div>
-    image: /feedback.svg
-    bgImage: /bg/green-light.svg
-    bgImageDark: /bg/green-dark.svg
+    description: <div><p><b>JowayYoung</b>，<b>资深前端工程师</b>，目前就职于网易互动娱乐事业群，负责前端工程化和前端架构设计相关工作。同时热爱技术输出，也是<b>掘金社区Lv7优秀作家</b>，发表过多本掘金小册。</p><ul><li><a href="https://juejin.cn/book/6850413616484040711" target="_blank">《玩转CSS的艺术之美》</a></li><li><a href="https://juejin.cn/book/7034689774719860739" target="_blank">《从零到一落地前端工程化》</a></li><li>《Node命令行工具的实战通关秘诀》 <small>写作中，争取12月份完成</small></li></ul><p>如果有问题请到<a href="https://github.com/JowayYoung/bruce/issues">Github Issues</a>留言或通过这些方式联系<b>JowayYoung</b>。</p><div class="normal-imgs"><img src="https://jowayyoung.github.io/static/bruce/qrcode-me.jpg" height="400"><img src="https://jowayyoung.github.io/static/bruce/qrcode-us.jpg" height="400"></div></div>
+    image: https://jowayyoung.github.io/static/bruce/feedback.svg
+    bgImage: https://jowayyoung.github.io/static/bruce/bg/green-light.svg
+    bgImageDark: https://jowayyoung.github.io/static/bruce/bg/green-dark.svg
 copyright: false
 footer: <span class="mark-blue">MIT Licensed</span> | Copyright © <span class="mark-orange">2017~Present</span><br>Powered By <span class="mark-red">JowayYoung</span>
 ---

@@ -27,7 +27,7 @@ export default defineUserConfig({
 		favicon: "favicon.ico",
 		fullscreen: true,
 		iconAssets: "fontawesome",
-		logo: "logo.svg",
+		logo: "https://jowayyoung.github.io/static/bruce/logo.svg",
 		navbar: [
 			{ icon: "lightbulb", link: "/index.md", text: "指南" },
 			{ icon: "globe", link: "/app/index.md", text: "app" },
