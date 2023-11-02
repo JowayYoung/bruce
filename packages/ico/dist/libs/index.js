@@ -1,1 +1,1 @@
-import to from"./generate.js";import ao from"./watch.js";export{to as Generate,ao as Watch};
+import oo from"./generate.js";import ao from"./watch.js";export{oo as Generate,ao as Watch};

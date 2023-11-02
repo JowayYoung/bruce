@@ -26,7 +26,7 @@ icon: lightbulb
 在全局环境中使用它，开发人员可以轻松地进行代码校验和格式化，避免常见的错误和漏洞，在编码时遵循统一的编码规范和编码风格。这样不仅可以提高代码的可读性和可维护性，还能降低项目的学习成本和维护成本，使团队协作更加高效顺畅。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.3-f66.svg)
+![version](https://img.shields.io/badge/version-1.1.4-f66.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)
 ![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)

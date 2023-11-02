@@ -18,7 +18,7 @@ icon: lightbulb
 它的主要作用是采用高效的图像处理算法，可以快速完成图像批处理操作，提高工作效率。通过多种图像处理技术和批处理技术的结合，例如图像压缩、分组、标记和变换，可以帮助用户快速完成各种图像批处理操作。用户可以使用它对大量的图像进行压缩，以减小图像的存储空间，或对这些图像进行分组、标记或变换，以便后续的处理和分析。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.3-f66.svg)
+![version](https://img.shields.io/badge/version-1.1.4-f66.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)
 ![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)

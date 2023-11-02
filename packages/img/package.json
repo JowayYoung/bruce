@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-img",
-	"version": "1.1.3",
+	"version": "1.1.4",
 	"description": "A Image Processing Tool For Multifunctional And Unrestricted",
 	"keywords": [
 		"bruce-img",
@@ -64,7 +64,7 @@
 		"npm": ">=7.10.0"
 	},
 	"dependencies": {
-		"@yangzw/bruce-us": "1.1.3",
+		"@yangzw/bruce-us": "1.1.4",
 		"chalk": "5.3.0",
 		"commander": "11.1.0",
 		"figures": "6.0.1",
