@@ -12,7 +12,7 @@
 		"rebuild": "npm run clean && npm run init && npm run build && npm run mini"
 	},
 	"dependencies": {
-		"@yangzw/bruce-us": "workspace:*",
+		"@yangzw/bruce-us": "1.1.5",
 		"terser": "5.24.0"
 	},
 	"devDependencies": {
