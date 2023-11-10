@@ -1,1 +1,1 @@
-import{ACTION_TEXT as r}from"../langs/index.js";const gt={name:/^[\da-z][\da-z_-]*[\da-z]$/,scope:/^[\da-z]{1,}$/};function Je(o){console.log(`##### ${r[o]} #####`)}export{gt as DATA_REGEXP,Je as ShowTitle};
+import{ACTION_TEXT as r}from"../langs/index.js";const Jt={name:/^[\da-z][\da-z_-]*[\da-z]$/,scope:/^[\da-z]{1,}$/};function io(o){console.log(`##### ${r[o]} #####`)}export{Jt as DATA_REGEXP,io as ShowTitle};

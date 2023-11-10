@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-ui",
-	"version": "1.1.4",
+	"version": "1.1.5",
 	"description": "A React General User Design",
 	"keywords": [
 		"bruce-ui",
@@ -46,7 +46,7 @@
 		"npm": ">=6.9.0"
 	},
 	"dependencies": {
-		"@yangzw/bruce-us": "1.1.4",
+		"@yangzw/bruce-us": "workspace:*",
 		"classnames": "2.3.2",
 		"disable-scroll": "0.6.0",
 		"react": "18.2.0",
@@ -61,16 +61,16 @@
 		"@rollup/plugin-replace": "5.0.5",
 		"@rollup/plugin-terser": "0.4.4",
 		"@rollup/plugin-typescript": "11.1.5",
-		"@types/react": "18.2.34",
-		"@types/react-copy-to-clipboard": "5.0.6",
-		"@types/react-dom": "18.2.14",
-		"@vitejs/plugin-react": "4.1.0",
+		"@types/react": "18.2.37",
+		"@types/react-copy-to-clipboard": "5.0.7",
+		"@types/react-dom": "18.2.15",
+		"@vitejs/plugin-react": "4.1.1",
 		"nodemon": "3.0.1",
 		"postcss": "8.4.31",
 		"postcss-base64": "0.7.1",
 		"postcss-import": "15.1.0",
 		"postcss-preset-env": "9.3.0",
-		"rollup": "4.2.0",
+		"rollup": "4.3.0",
 		"rollup-plugin-cleandir": "2.0.0",
 		"rollup-plugin-dts": "6.1.0",
 		"rollup-plugin-postcss": "4.0.2",

@@ -23,7 +23,7 @@ order: 1
 整体包括`106`个函数，分别是`Common`函数`63`个，`Web`函数`29`个，`Node`函数`14`个。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.4-f66.svg)
+![version](https://img.shields.io/badge/version-1.1.5-f66.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D12.0.0-3c9.svg)
 ![npm](https://img.shields.io/badge/npm-%3E%3D6.9.0-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)

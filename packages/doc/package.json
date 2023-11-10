@@ -35,9 +35,9 @@
 	},
 	"dependencies": {
 		"@vuepress/client": "2.0.0-beta.67",
-		"vue": "3.3.7",
+		"vue": "3.3.8",
 		"vuepress": "2.0.0-beta.67",
-		"vuepress-theme-hope": "2.0.0-beta.244"
+		"vuepress-theme-hope": "2.0.0-beta.247"
 	},
 	"devDependencies": {},
 	"license": "MIT",

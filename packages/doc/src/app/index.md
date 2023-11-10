@@ -24,7 +24,7 @@ icon: lightbulb
 总之，它提供一种非常简便和直观的编程环境和工作流程，让开发人员可以更加专注于应用本身的开发和调试，以提高开发效率和工作质量。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.4-f66.svg)
+![version](https://img.shields.io/badge/version-1.1.5-f66.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)
 ![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)

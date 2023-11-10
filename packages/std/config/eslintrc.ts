@@ -229,6 +229,7 @@ const ESLINT: Linter.Config = {
 		],
 		files: [
 			"*.js",
+			"*.cjs",
 			"*.mjs"
 		],
 		parser: "@babel/eslint-parser",
@@ -251,6 +252,7 @@ const ESLINT: Linter.Config = {
 		],
 		files: [
 			"*.ts",
+			"*.cts",
 			"*.mts"
 		],
 		parser: "@typescript-eslint/parser",
