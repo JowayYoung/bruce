@@ -29,8 +29,46 @@ img[src^="https://img.shields.io"]:not(:last-child) {
 }
 .line {
 	display: block;
+	position: relative;
 	margin: 20px 0;
 	line-height: 1.5;
+	&.line-top {
+		margin-top: 40px;
+		&::before {
+			position: absolute;
+			left: 0;
+			bottom: 100%;
+			margin-bottom: 19px;
+			width: 100%;
+			height: 1px;
+			background-color: $red;
+			content: "";
+		}
+	}
+	&.line-bottom {
+		margin-bottom: 40px;
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 100%;
+			margin-top: 19px;
+			width: 100%;
+			height: 1px;
+			background-color: $red;
+			content: "";
+		}
+	}
+}
+.point {
+	display: block;
+	padding: 0 10px;
+	font-style: normal;
+	&::before {
+		margin-right: 5px;
+		font-weight: bold;
+		font-size: 20px;
+		content: "·";
+	}
 }
 .mark-red {
 	font-weight: bold;
@@ -62,7 +100,8 @@ img[src^="https://img.shields.io"]:not(:last-child) {
 	font-weight: normal;
 }
 .normal-imgs {
-	display: flex;
+	// display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	img {
