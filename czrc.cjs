@@ -11,7 +11,6 @@ module.exports = {
 	},
 	scopes: [
 		{ name: "bruce-app" },
-		{ name: "bruce-doc" },
 		{ name: "bruce-ico" },
 		{ name: "bruce-img" },
 		{ name: "bruce-lib" },
@@ -20,6 +19,7 @@ module.exports = {
 		{ name: "bruce-type" },
 		{ name: "bruce-ui" },
 		{ name: "bruce-us" },
+		{ name: "docs" },
 		{ name: "配置文件" },
 		{ name: "其它影响" }
 	],

@@ -20,10 +20,10 @@ jobs: # 任务
         uses: actions/checkout@v3
       # 打包文件
       - name: Build
-        run: cd packages/doc && yarn && yarn run deploy
+        run: cd docs && npm i && npm run build
       # 部署站点
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: packages/doc/dist/build # 打包文件位置
+          publish_dir: docs/dist/build # 打包文件位置

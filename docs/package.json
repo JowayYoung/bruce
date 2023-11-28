@@ -1,0 +1,45 @@
+{
+	"name": "bruce-doc",
+	"version": "1.0.0",
+	"description": "Bruce FEES Official Website",
+	"keywords": [
+		"bruce-doc",
+		"doc",
+		"document",
+		"site",
+		"website"
+	],
+	"author": {
+		"name": "JowayYoung",
+		"email": "young.joway@outlook.com"
+	},
+	"homepage": "https://github.com/JowayYoung",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JowayYoung/bruce.git"
+	},
+	"bugs": {
+		"email": "young.joway@outlook.com",
+		"url": "https://github.com/JowayYoung/bruce/issues"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "vuepress build src",
+		"clean": "rimraf node_modules package-lock.json pnpm-lock.yaml yarn.lock",
+		"dev": "vuepress dev src",
+		"init": "npm run clean && npm i"
+	},
+	"engines": {
+		"node": ">=16.0.0",
+		"npm": ">=7.10.0"
+	},
+	"dependencies": {
+		"@vuepress/client": "2.0.0-rc.0",
+		"vue": "3.3.9",
+		"vuepress": "2.0.0-rc.0",
+		"vuepress-theme-hope": "2.0.0-rc.1"
+	},
+	"devDependencies": {},
+	"license": "MIT",
+	"private": true
+}

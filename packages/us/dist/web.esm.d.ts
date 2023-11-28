@@ -119,11 +119,12 @@ interface ResponseType<T> {
     flag: boolean;
     msg: string;
 }
-declare function Aios<T>({ data, headers, method, progress, url, useCookie, useJson }: {
+declare function Aios<T>({ data, headers, method, progress, timeout, url, useCookie, useJson }: {
     data?: Record<string | number, string | number | boolean | null | undefined>;
     headers?: object;
     method?: "get" | "post";
     progress?: (p: object) => void;
+    timeout?: number;
     url: string;
     useCookie?: boolean;
     useJson?: boolean;

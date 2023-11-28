@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-type",
-	"version": "1.1.5",
+	"version": "1.1.6",
 	"description": "A TypeScript Types Tool For Bruce FEES",
 	"keywords": [
 		"bruce-type",
@@ -36,12 +36,12 @@
 	"devDependencies": {
 		"@rollup/plugin-terser": "0.4.4",
 		"@rollup/plugin-typescript": "11.1.5",
-		"@types/node": "20.9.0",
+		"@types/node": "20.10.0",
 		"nodemon": "3.0.1",
-		"rollup": "4.3.0",
+		"rollup": "4.6.0",
 		"rollup-plugin-cleandir": "2.0.0",
 		"rollup-plugin-dts": "6.1.0",
-		"typescript": "5.2.2"
+		"typescript": "5.3.2"
 	},
 	"license": "MIT",
 	"publishConfig": {

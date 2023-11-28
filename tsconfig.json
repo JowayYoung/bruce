@@ -34,6 +34,7 @@
 		"node_modules"
 	],
 	"include": [
+		"docs/**/*.ts",
 		"packages/**/*.ts",
 		"packages/**/*.mts",
 		"packages/**/*.tsx",
