@@ -27,6 +27,11 @@ img[src^="https://img.shields.io"]:not(:last-child) {
 	display: inline-block;
 	width: 10px;
 }
+.line {
+	display: block;
+	margin: 20px 0;
+	line-height: 1.5;
+}
 .mark-red {
 	font-weight: bold;
 	color: $red;
@@ -71,10 +76,8 @@ img[src^="https://img.shields.io"]:not(:last-child) {
 .vp-hero-info-wrapper {
 	min-height: 600px;
 }
-.vp-highlight-item {
-	&-wrapper {
-		transition: all 300ms;
-	}
+.vp-highlight-item-wrapper {
+	transition: all 300ms;
 }
 .vp-feature-item {
 	@media (width >= 1440px) {
