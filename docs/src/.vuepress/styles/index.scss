@@ -23,10 +23,6 @@ img[src^="https://img.shields.io"]:not(:last-child) {
 .center {
 	margin: 0 auto;
 }
-.gap {
-	display: inline-block;
-	width: 10px;
-}
 .line {
 	display: block;
 	position: relative;
@@ -93,23 +89,6 @@ img[src^="https://img.shields.io"]:not(:last-child) {
 .mark-green {
 	font-weight: bold;
 	color: $green;
-}
-.normal-text {
-	cursor: pointer;
-	line-height: 1.5;
-	font-weight: normal;
-}
-.normal-imgs {
-	// display: flex;
-	display: none;
-	justify-content: center;
-	align-items: center;
-	img {
-		margin: 1rem;
-	}
-	@media (width <= 719px) {
-		flex-direction: column;
-	}
 }
 // 样式覆盖
 .vp-hero-info-wrapper {

@@ -6,7 +6,7 @@ order: 2
 
 ## 引用
 
-`@yangzw/bruce-us`基于`rollup`使用`CJS/ESM/UMD`规范打包，所以可用**IIFE**、**AMD**、**CJS**和**ESM**四种方式引用。推荐使用`IIFE`、`CJS`和`ESM`三种引用方式，后续所有示例都基于**ESM**。
+`@yangzw/bruce-us`基于`rollup`使用`CJS/ESM/UMD`规范打包，所以可用**IIFE**、**AMD**、**CJS**和**ESM**四种方式引用。推荐使用`IIFE`、`CJS`和`ESM`三种引用方式，后续所有示例都是基于**ESM**。
 
 `package.json`中使用`main`指定入口文件，所以这些引用方式都是等价。
 
