@@ -60,7 +60,7 @@ highlights:
       - details: 一个强化Npm命令的模块处理工具，为模块提供基本骨架创建和链式检查发布的功能
         link: /pkg/index.md
         title: ⚡ bruce-pkg
-      - details: 一个集成Stylelint、Eslint和Commitlint的VSCode配置工具，配合VSCode插件为用户提供前端文件的代码校验、代码修复和错误提示的功能
+      - details: 一个集成代码校验的VSCode配置工具，配合VSCode插件为用户提供项目文件的代码校验、代码美化、代码修复和错误提示的功能
         link: /std/index.md
         title: ⚙️ bruce-std
       - details: 一个React通用组件库，提供基础组件、表单组件、向导组件、展示组件、反馈组件等通用组件
@@ -93,7 +93,7 @@ highlights:
     bgImage: https://jowayyoung.github.io/static/bruce/bg/orange-light.svg
     bgImageDark: https://jowayyoung.github.io/static/bruce/bg/orange-dark.svg
   - header: 反馈
-    description: <span class="line"><b>JowayYoung</b>，<b>资深前端工程师</b>，就职于网易互动娱乐事业群，负责前端工程化和前端架构设计的相关工作。同时，拥有弃医从码的神奇经历，非常热爱技术输出，也是<b>掘金社区Lv7优秀作家</b>，发表过多本掘金小册。</span><span class="line"><em class="point"><a href="https://juejin.cn/book/6850413616484040711" target="_blank">《玩转CSS的艺术之美》</a></em><em class="point"><a href="https://juejin.cn/book/7034689774719860739" target="_blank">《从零到一落地前端工程化》</a></em><em class="point">《Node命令行工具的实战通关秘诀》 <small>写作中，争取2023年12月底完成</small></em></span><span class="line">如果有问题请到<a href="https://github.com/JowayYoung/bruce/issues">Github Issues</a>留言或通过右边的方式联系我<b>JowayYoung</b>。</span>
+    description: <span class="line"><b>JowayYoung</b>，<b>资深前端工程师</b>，就职于网易互动娱乐事业群，负责前端工程化和前端架构设计相关的工作。同时，拥有弃医从码的神奇经历，非常热爱技术输出，也是<b>掘金社区Lv7优秀作家</b>，发表过多本掘金小册。</span><span class="line"><em class="point"><a href="https://juejin.cn/book/6850413616484040711" target="_blank">《玩转CSS的艺术之美》</a></em><em class="point"><a href="https://juejin.cn/book/7034689774719860739" target="_blank">《从零到一落地前端工程化》</a></em><em class="point">《Node命令行工具的实战通关秘诀》 <small>写作中，争取2023年12月底完成</small></em></span><span class="line">如果有问题请到<a href="https://github.com/JowayYoung/bruce/issues">Github Issues</a>留言或通过右边的方式联系我<b>JowayYoung</b>。</span>
     # image: https://jowayyoung.github.io/static/bruce/feedback.svg
     # image: https://jowayyoung.github.io/static/bruce/qrcode-me.jpg
     image: https://jowayyoung.github.io/static/bruce/qrcode-us.jpg

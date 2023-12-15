@@ -35,7 +35,7 @@ order: 3
 **frame**|请选择开发框架|`js`|可选`js/react`
 **appName**|请输入应用名称|`unknown`|只能由数字、字母或中划线组成且首末位字符只能为数字或字母
 **style**|请选择预设样式|`scss`|可选`scss/less`
-**deps**|请选择应用依赖|`[]`|提供`js/react`相关开发依赖，可选通用设计、通用工具、页面路由、状态管理和网络请求
+**deps**|请选择应用依赖|`[]`|提供`js/react`相关的开发依赖，可选通用设计、通用工具、页面路由、状态管理和网络请求
 **useTs**|请确认是否集成TypeScript|`false`|生成`tsconfig.json`，可以使用TS开发项目
 **useInstaller**|请确认是否安装应用依赖|`false`|默认使用`yarn`安装，其次使用`npm`安装
 **ext**|请选择配置后缀|`js/ts`|可选`js/json/ts/yaml`
@@ -81,14 +81,14 @@ order: 3
 
 功能|配置|格式|描述
 :-:|:-:|:-:|-
-**分析打包结果**|`-a, --analyze`|`true`|不设置则不生效
-**压缩文件数据**|`-c, --compress`|`true`|不设置则不生效
-**校验样式代码**|`-lc, --lintcss`|`true`|不设置则不生效
-**校验脚本代码**|`-lj, --lintjs`|`true`|不设置则不生效
-**环境模式**|`-m, --mode`|`test/pre/prod`|不设置则默认为`prod`
-**哈希文件名称**|`-n, --named`|`true`|不设置则不生效
-**代码垫片**|`-p, --polyfill`|`es5/es6/custom/dynamic`|不设置则默认为`es6`
-**时化应用目录**|`-t, --timed`|`true`|不设置则不生效
+**分析打包结果**|`-a, --analyze`|`true`|不设置就不生效
+**压缩文件数据**|`-c, --compress`|`true`|不设置就不生效
+**校验样式代码**|`-lc, --lintcss`|`true`|不设置就不生效
+**校验脚本代码**|`-lj, --lintjs`|`true`|不设置就不生效
+**环境模式**|`-m, --mode`|`test/pre/prod`|不设置就默认为`prod`
+**哈希文件名称**|`-n, --named`|`true`|不设置就不生效
+**代码垫片**|`-p, --polyfill`|`es5/es6/custom/dynamic`|不设置就默认为`es6`
+**时化应用目录**|`-t, --timed`|`true`|不设置就不生效
 
 - 示例1：`bruce-app build --mode test --polyfill es5 --analyze --lintcss --lintjs`
 - 示例2：`bruce-app b -m pre -p dynamic -a -lc -lj`
@@ -97,11 +97,11 @@ order: 3
 
 功能|配置|格式|描述
 :-:|:-:|:-:|-
-**开发框架**|`-f, --frame`|`js/react`|不设置则默认为`js`
-**安装应用依赖**|`-i, --install`|`true`|不设置则不生效
-**应用名称**|`-n, --name`|`unknown`|不设置则默认为`unknown`
-**预设样式**|`-s, --style`|`scss`|不设置则默认为`scss`
-**集成TypeScript**|`-ts, --typescript`|`true`|不设置则不生效
+**开发框架**|`-f, --frame`|`js/react`|不设置就默认为`js`
+**安装应用依赖**|`-i, --install`|`true`|不设置就不生效
+**应用名称**|`-n, --name`|`unknown`|不设置就默认为`unknown`
+**预设样式**|`-s, --style`|`scss`|不设置就默认为`scss`
+**集成TypeScript**|`-ts, --typescript`|`true`|不设置就不生效
 
 - 示例1：`bruce-app create --name test-react-ts --frame react --style less -i -ts`
 - 示例2：`bruce-app c -n test-react -f react -s less -i`
@@ -110,11 +110,11 @@ order: 3
 
 功能|配置|格式|描述
 :-:|:-:|:-:|-
-**开启证书服务**|`-e, --encrypt`|`true`|不设置则不生效
-**校验样式代码**|`-lc, --lintcss`|`true`|不设置则不生效
-**校验脚本代码**|`-lj, --lintjs`|`true`|不设置则不生效
-**打开初始网页**|`-o, --open`|`true`|不设置则不生效
-**代码垫片**|`-p, --port`|`9999`|不设置则默认为`9999`
+**开启证书服务**|`-e, --encrypt`|`true`|不设置就不生效
+**校验样式代码**|`-lc, --lintcss`|`true`|不设置就不生效
+**校验脚本代码**|`-lj, --lintjs`|`true`|不设置就不生效
+**打开初始网页**|`-o, --open`|`true`|不设置就不生效
+**代码垫片**|`-p, --port`|`9999`|不设置就默认为`9999`
 
 - 示例1：`bruce-app dev --port 9876 --encrypt --lintcss --lintjs --open`
 - 示例2：`bruce-app d -p 9876 -e -lc -lj -o`
@@ -123,8 +123,8 @@ order: 3
 
 功能|配置|格式|描述
 :-:|:-:|:-:|-
-**代码垫片**|`-n, --name`|`demo`|不设置则默认为`demo`
-**代码垫片**|`-t, --template`|`component/layout/flow/view/page`|不设置则默认为`9999`
+**代码垫片**|`-n, --name`|`demo`|不设置就默认为`demo`
+**代码垫片**|`-t, --template`|`component/layout/flow/view/page`|不设置就默认为`9999`
 
 - 示例1：`bruce-app init --name navbar --template layout`
 - 示例2：`bruce-app i -n navbar -t layout`

@@ -6,10 +6,10 @@ $cyan: #9c3;
 $green: #3c9;
 a,
 b {
-	margin: .2rem;
+	margin: 0.2rem;
 }
 code {
-	margin: .2rem;
+	margin: 0.2rem;
 	&.red {
 		color: $red;
 	}
@@ -17,8 +17,9 @@ code {
 hr {
 	border-top-color: $red;
 }
-img[src^="https://img.shields.io"]:not(:last-child) {
-	margin-right: .4rem;
+img[src^="https://img.shields.io"]:not(:last-child)
+{
+	margin-right: 0.4rem;
 }
 .center {
 	margin: 0 auto;

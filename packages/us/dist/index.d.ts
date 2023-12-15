@@ -74,10 +74,15 @@ declare function FilterObjKey<T>(obj?: ObjType<T>, keys?: KeyEnum[]): ObjType<T>
 declare function RemoveObjEmptyKey<T>(obj?: ObjType<T>, clear?: boolean): void;
 
 type FieldEnum = "address" | "count" | "date" | "email" | "idcard" | "image" | "name" | "number" | "password" | "phone";
+type MatchType = Record<FieldEnum, {
+    msg: string;
+    regexp: RegExp;
+}>;
 interface CheckType {
     flag: boolean;
     msg: string;
 }
+declare const MATCH: MatchType;
 declare function CheckText(type?: FieldEnum, text?: string): CheckType;
 declare function CheckTextPlus(regexp: RegExp, text?: string, msg?: string): CheckType;
 declare function MatchBracketText(tgt?: string, text?: string): string[];
@@ -90,4 +95,4 @@ declare function RemoveTag(html?: string): string;
 declare function ReverseText(text?: string): string;
 declare function StartScore(rate?: number, len?: number): string;
 
-export { AsyncTo, CalcNum, CalcNumPlus, CheckObjValidKey, CheckText, CheckTextPlus, ChunkArr, Debounce, DesePhone, EnvType, FillNum, FilterObjKey, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GroupArr, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, MatchBracketText, RandomColor, RandomId, RandomNum, RandomNumPlus, RecentMonths, RemoveObjEmptyKey, RemoveTag, ReverseText, RoundNum, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, ThousandNum, Throttle, TypeOf, WaitFor };
+export { AsyncTo, CalcNum, CalcNumPlus, CheckObjValidKey, CheckText, CheckTextPlus, ChunkArr, Debounce, DesePhone, EnvType, FillNum, FilterObjKey, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GroupArr, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, MATCH, MatchBracketText, RandomColor, RandomId, RandomNum, RandomNumPlus, RecentMonths, RemoveObjEmptyKey, RemoveTag, ReverseText, RoundNum, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, ThousandNum, Throttle, TypeOf, WaitFor };

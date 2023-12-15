@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-ico",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"description": "An Icon Processing Tool For Generating Css Icons Based On Css Background And Mask",
 	"keywords": [
 		"bruce-ico",
@@ -33,8 +33,8 @@
 		"mount": "npm link"
 	},
 	"engines": {
-		"node": ">=16.0.0",
-		"npm": ">=7.10.0"
+		"node": ">=18.0.0",
+		"npm": ">=8.6.0"
 	},
 	"dependencies": {
 		"@yangzw/bruce-us": "workspace:*",
@@ -49,10 +49,10 @@
 	},
 	"devDependencies": {
 		"@types/mime-types": "2.1.4",
-		"@types/node": "20.10.0",
+		"@types/node": "20.10.4",
 		"@types/semver": "7.5.6",
-		"nodemon": "3.0.1",
-		"typescript": "5.3.2"
+		"nodemon": "3.0.2",
+		"typescript": "5.3.3"
 	},
 	"license": "MIT",
 	"publishConfig": {

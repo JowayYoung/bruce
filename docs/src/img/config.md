@@ -8,11 +8,11 @@ order: 2
 
 功能|配置|格式|描述
 :-:|:-:|:-:|-
-类型|`-t, --type`|`format/size/volume`|不设置则默认为`format`
+类型|`-t, --type`|`format/size/volume`|不设置就默认为`format`
 
 - `format`表示基于格式分组，`size`表示基于尺寸分组，`volume`表示基于体积分组
 - `volume`分组会生成`小中大`三个文件夹，分别放置的体积为`0~10k`、`10~100k`和`100k以上`
-- 在分组时如果检测到已经存在相同名称的图像，则自动为当前图像名称增加`Hash`
+- 在分组时如果检测到已经存在相同名称的图像，就自动为当前图像名称增加`Hash`
 
 ## 图像变换
 
@@ -22,22 +22,22 @@ order: 2
 
 功能|配置|格式|描述
 :-:|:-:|:-:|-
-[模糊](https://sharp.pixelplumbing.com/api-operation#blur)|`-b, --blur`|`0~1000`|不设置则不生效
-[裁剪](https://sharp.pixelplumbing.com/api-resize#extract)|`-e, --extract`|`left,top,width,height`|不设置则不生效
-[格式](https://sharp.pixelplumbing.com/api-output#toformat)|`-f, --toFormat`|`jpg/png/webp`|不设置则使用原来格式
-[平翻](https://sharp.pixelplumbing.com/api-operation#flip)|`-fi, --flip`|`true`|不设置则不生效
-[对翻](https://sharp.pixelplumbing.com/api-operation#flop)|`-fo, --flop`|`true`|不设置则不生效
-[灰度](https://sharp.pixelplumbing.com/api-colour#grayscale)|`-g, --grayscale`|`true`|不设置则不生效
-[负片](https://sharp.pixelplumbing.com/api-operation#negate)|`-ne, --negate`|`true`, `noalpha`|不设置则不生效
-[对比](https://sharp.pixelplumbing.com/api-operation#normalise)|`-no, --normalise`|`true`, `lower,upper`|不设置则不生效
-[尺寸](https://sharp.pixelplumbing.com/api-resize#resize)|`-re, --resize`|`width,height[,fit]`|不设置则不生效
-[旋转](https://sharp.pixelplumbing.com/api-operation#rotate)|`-ro, --rotate`|`angle[,bgcolor]`|不设置则不生效
-[锐化](https://sharp.pixelplumbing.com/api-operation#sharpen)|`-s, --sharpen`|`true`, `[sigma,flat,jagged]`|不设置则不生效
+[模糊](https://sharp.pixelplumbing.com/api-operation#blur)|`-b, --blur`|`0~1000`|不设置就不生效
+[裁剪](https://sharp.pixelplumbing.com/api-resize#extract)|`-e, --extract`|`left,top,width,height`|不设置就不生效
+[格式](https://sharp.pixelplumbing.com/api-output#toformat)|`-f, --toFormat`|`jpg/png/webp`|不设置就使用原来格式
+[平翻](https://sharp.pixelplumbing.com/api-operation#flip)|`-fi, --flip`|`true`|不设置就不生效
+[对翻](https://sharp.pixelplumbing.com/api-operation#flop)|`-fo, --flop`|`true`|不设置就不生效
+[灰度](https://sharp.pixelplumbing.com/api-colour#grayscale)|`-g, --grayscale`|`true`|不设置就不生效
+[负片](https://sharp.pixelplumbing.com/api-operation#negate)|`-ne, --negate`|`true`, `noalpha`|不设置就不生效
+[对比](https://sharp.pixelplumbing.com/api-operation#normalise)|`-no, --normalise`|`true`, `lower,upper`|不设置就不生效
+[尺寸](https://sharp.pixelplumbing.com/api-resize#resize)|`-re, --resize`|`width,height[,fit]`|不设置就不生效
+[旋转](https://sharp.pixelplumbing.com/api-operation#rotate)|`-ro, --rotate`|`angle[,bgcolor]`|不设置就不生效
+[锐化](https://sharp.pixelplumbing.com/api-operation#sharpen)|`-s, --sharpen`|`true`, `[sigma,flat,jagged]`|不设置就不生效
 
 `[]`表示可选
 
 - **top/left**：坐偏移量和上偏移量，以图像左上角为坐标，0或正整数
-- **width/height**：宽度和高度，0或正整数，其一为0则自动缩放
+- **width/height**：宽度和高度，0或正整数，其一为0就自动缩放
 - **noalpha**：表示取消Alpha通道
 - **lower/upper**：最小最大亮度，在`1~99`之间
 - **fit**：填充

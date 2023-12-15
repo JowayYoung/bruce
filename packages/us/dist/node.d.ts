@@ -76,10 +76,15 @@ declare function FilterObjKey<T>(obj?: ObjType<T>, keys?: KeyEnum[]): ObjType<T>
 declare function RemoveObjEmptyKey<T>(obj?: ObjType<T>, clear?: boolean): void;
 
 type FieldEnum = "address" | "count" | "date" | "email" | "idcard" | "image" | "name" | "number" | "password" | "phone";
+type MatchType = Record<FieldEnum, {
+    msg: string;
+    regexp: RegExp;
+}>;
 interface CheckType {
     flag: boolean;
     msg: string;
 }
+declare const MATCH: MatchType;
 declare function CheckText(type?: FieldEnum, text?: string): CheckType;
 declare function CheckTextPlus(regexp: RegExp, text?: string, msg?: string): CheckType;
 declare function MatchBracketText(tgt?: string, text?: string): string[];
@@ -137,4 +142,4 @@ declare function NodeType(): {
     systemVs: string;
 };
 
-export { AbsPath, AsyncTo, AutoPort, CalcNum, CalcNumPlus, CheckObjValidKey, CheckPath, CheckPort, CheckText, CheckTextPlus, ChunkArr, CopyDir, CreateDir, Debounce, DesePhone, EnvType, FillNum, FilterObjKey, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetIP, GroupArr, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, MatchBracketText, NodeType, RandomColor, RandomId, RandomNum, RandomNumPlus, ReadDir, ReadJson, ReadYaml, RecentMonths, RemoveDir, RemoveObjEmptyKey, RemoveTag, ReverseText, RoundNum, RunCmd, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, ThousandNum, Throttle, TypeOf, VerifyPath, WaitFor };
+export { AbsPath, AsyncTo, AutoPort, CalcNum, CalcNumPlus, CheckObjValidKey, CheckPath, CheckPort, CheckText, CheckTextPlus, ChunkArr, CopyDir, CreateDir, Debounce, DesePhone, EnvType, FillNum, FilterObjKey, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetIP, GroupArr, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, MATCH, MatchBracketText, NodeType, RandomColor, RandomId, RandomNum, RandomNumPlus, ReadDir, ReadJson, ReadYaml, RecentMonths, RemoveDir, RemoveObjEmptyKey, RemoveTag, ReverseText, RoundNum, RunCmd, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, ThousandNum, Throttle, TypeOf, VerifyPath, WaitFor };

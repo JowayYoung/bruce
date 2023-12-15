@@ -1,5 +1,5 @@
 ---
-title: 异步格式化
+title: 异步美化
 icon: rocket
 ---
 

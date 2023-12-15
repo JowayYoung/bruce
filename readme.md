@@ -1,17 +1,17 @@
-# Bruce
+## Bruce
 
 请查看[Bruce FEES](https://JowayYoung.github.io/bruce)的文档
 
 ### 开发计划
 
-- [ ] **@yangzw/bruce-app**：应用`@1.1.6`✔️
-- [x] **@yangzw/bruce-ico**：图标`@1.1.6`
-- [x] **@yangzw/bruce-img**：图像`@1.1.6`✔️
+- [ ] **@yangzw/bruce-app**：应用`@1.1.7`✔️
+- [x] **@yangzw/bruce-ico**：图标`@1.1.7`
+- [x] **@yangzw/bruce-img**：图像`@1.1.7`✔️
 - [ ] **@yangzw/bruce-lib**：类库
-- [x] **@yangzw/bruce-pkg**：模块`@1.1.6`✔️
-- [x] **@yangzw/bruce-std**：规范`@1.1.6`✔️
-- [x] **@yangzw/bruce-ui**：组件`@1.1.6`
-- [x] **@yangzw/bruce-us**：工具`@1.1.6`✔️
+- [x] **@yangzw/bruce-pkg**：模块`@1.1.7`✔️
+- [x] **@yangzw/bruce-std**：规范`@1.1.7`✔️
+- [x] **@yangzw/bruce-ui**：组件`@1.1.7`
+- [x] **@yangzw/bruce-us**：工具`@1.1.7`✔️
 
 ### 色彩定义
 
@@ -23,6 +23,8 @@
 ### 问题清单
 
 - [x] `bruce-pkg`依赖的`listr2`目前未升级到`v7`，`v7`存在无法抛出错误的问题，但是`v6`需要显式依赖`enquirer`
+- [x] `vite`从`v4`迁移到`v5`的[注意事项](https://cn.vitejs.dev/guide/migration.html#rollup-4)
+- [ ] `stylelint`从`v15`迁移到`v16`的[注意事项](https://stylelint.io/migration-guide/to-16)
 
 ### 指令步骤
 
@@ -37,9 +39,9 @@
 
 ### 开发细节
 
-##### yarn调试问题
+#### yarn调试问题
 
-整个项目使用`yarn`进行调试，安装`yarn`之后再配置`bin/prefix/cache目录`。**Windows**和**MacOS**同理，以`MacOS`为例。
+整个项目使用`yarn`进行调试，`yarn`安装之后再配置`bin/prefix/cache目录`。**Windows**和**MacOS**同理，以`MacOS`为例。
 
 找到`bin/prefix/cache目录`并手动删除，同时保留配置文件`/usr/local/share/.yarnrc`。
 
@@ -98,7 +100,7 @@ yarn link --link-folder path/prefix/bin
 yarn unlink --link-folder path/prefix/bin
 ```
 
-##### sharp安装问题
+#### sharp安装问题
 
 设置`sharp镜像`指向到淘宝镜像。
 
@@ -114,7 +116,7 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 - **MacOS**选择`darwin-x64.tar.br`下载
 - **Linux**选择`linux-x64.tar.br`下载
 
-##### 使用TS开发具备bin命令的Npm模块
+#### 使用TS开发具备bin命令的Npm模块
 
 首先，配置`tsconfig.json文件`，这些字段必须配置。
 
@@ -161,6 +163,7 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 			"ES2020",
 			"ES2021",
 			"ES2022",
+			"ES2023",
 			"ESNext"
 		],
 		"module": "ESNext",

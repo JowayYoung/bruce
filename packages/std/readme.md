@@ -34,7 +34,7 @@ export default {
 }
 ```
 
-每个项目根目录中必须存在`tsconfig.json`且其配置需要做一些调整。
+每个项目目录中必须存在`tsconfig.json`且其配置需要做一些调整。
 
 ```json
 {
