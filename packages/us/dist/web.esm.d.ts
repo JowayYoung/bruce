@@ -156,7 +156,7 @@ type PlatformEnum = "desktop" | "mobile";
 type ShellEnum = "uc" | "qq" | "sougou" | "maxthon" | "2345" | "360" | "liebao" | "xiaomi" | "huawei" | "oppo" | "vivo" | "wechat" | "baidu" | "toutiao";
 type SupporterEnum = "chrome" | "safari" | "edge" | "firefox" | "opera" | "iexplore";
 type SystemEnum = "windows" | "macos" | "linux" | "android" | "ios";
-declare function WebType(ua?: string): {
+interface WebTypeType {
     engine: EngineEnum | "unknow";
     engineVs: string;
     platform: PlatformEnum;
@@ -166,7 +166,8 @@ declare function WebType(ua?: string): {
     systemVs: string;
     shell?: ShellEnum | "none";
     shellVs?: string;
-};
+}
+declare function WebType(ua?: string): WebTypeType;
 
 type SearchType = Record<string, string>;
 type SearchObjType = Record<string, string | number | boolean | null | undefined>;

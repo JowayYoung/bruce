@@ -22,10 +22,10 @@ order: 1
 
 除了上述优势之外，它还提供自定义配置文件的功能，让开发人员可以根据自己的需求和偏好，自由地修改应用的默认配置，无需过多地投入精力来构建和修改代码，使得应用结构更加简化，也使得开发工作更加高效。
 
-总之，它提供一种非常简便和直观的编程环境和工作流程，让开发人员可以更加专注于应用本身的开发和调试，以提高开发效率和工作质量。
+总之，它提供一种非常简便和直观的编程环境和工作流程，让开发人员可以更加专注于应用本身的开发和调试，以便提高开发效率和工作质量。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.7-f66.svg)
+![version](https://img.shields.io/badge/version-1.1.8-f66.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)
 ![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)
@@ -47,6 +47,7 @@ order: 1
 ![less](https://img.shields.io/npm/v/less?label=less&color=f90)
 ![babel](https://img.shields.io/npm/v/%40babel%2Fcore?label=babel&color=f90)
 ![typescript](https://img.shields.io/npm/v/typescript?label=typescript&color=f90)
+![prettier](https://img.shields.io/npm/v/prettier?label=prettier&color=09f)
 ![stylelint](https://img.shields.io/npm/v/stylelint?label=stylelint&color=09f)
 ![eslint](https://img.shields.io/npm/v/eslint?label=eslint&color=09f)
 ![cssnano](https://img.shields.io/npm/v/cssnano?label=cssnano&color=9c3)

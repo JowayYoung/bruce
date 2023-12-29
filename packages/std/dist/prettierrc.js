@@ -1,1 +1,1 @@
-"use strict";var vr={arrowParens:"avoid",quoteProps:"preserve",tabWidth:4,trailingComma:"none",useTabs:!0};module.exports=vr;
+"use strict";var Wr={arrowParens:"avoid",quoteProps:"preserve",tabWidth:4,trailingComma:"none",useTabs:!0};module.exports=Wr;

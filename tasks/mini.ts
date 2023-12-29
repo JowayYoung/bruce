@@ -9,9 +9,10 @@ const opts = { mangle: { toplevel: true }, nameCache: {} };
 const appDirs = ReadDir({ dir: root, path: "../packages/app/dist", regexp: /assets/ });
 const icoDirs = ReadDir({ dir: root, path: "../packages/ico/dist" });
 const imgDirs = ReadDir({ dir: root, path: "../packages/img/dist" });
+const lngDirs = ReadDir({ dir: root, path: "../packages/lng/dist" });
 const pkgDirs = ReadDir({ dir: root, path: "../packages/pkg/dist" });
 const stdDirs = ReadDir({ dir: root, path: "../packages/std/dist" });
-const dirs = [...appDirs, ...icoDirs, ...imgDirs, ...pkgDirs, ...stdDirs];
+const dirs = [...appDirs, ...icoDirs, ...imgDirs, ...lngDirs, ...pkgDirs, ...stdDirs];
 const exts = [".js", ".mjs"];
 
 dirs.forEach(async(v) => {

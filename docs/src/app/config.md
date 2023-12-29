@@ -32,8 +32,8 @@ order: 3
 
 选项|功能|默认|备注
 :-:|:-:|:-:|-
-**frame**|请选择开发框架|`js`|可选`js/react`
 **appName**|请输入应用名称|`unknown`|只能由数字、字母或中划线组成且首末位字符只能为数字或字母
+**frame**|请选择开发框架|`js`|可选`js/react`
 **style**|请选择预设样式|`scss`|可选`scss/less`
 **deps**|请选择应用依赖|`[]`|提供`js/react`相关的开发依赖，可选通用设计、通用工具、页面路由、状态管理和网络请求
 **useTs**|请确认是否集成TypeScript|`false`|生成`tsconfig.json`，可以使用TS开发项目
@@ -71,7 +71,7 @@ order: 3
 
 选项|功能|默认|备注
 :-:|:-:|:-:|-
-**cache**|请选择废弃缓存|`[]`|可选`dist/node_modules/package-lock.json/yarn.lock`
+**caches**|请选择废弃缓存|`[]`|可选`dist/node_modules/package-lock.json/yarn.lock`
 
 ## 命令参数
 

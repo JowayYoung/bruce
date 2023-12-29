@@ -1,11 +1,10 @@
 {
 	"name": "@yangzw/bruce-pkg",
-	"version": "1.1.7",
-	"description": "A Package Processing Tool For Strengthening NPM Command",
+	"version": "1.1.8",
+	"description": "A package processing tool that enhances Npm commands",
 	"keywords": [
 		"bruce-pkg",
 		"pkg",
-		"master",
 		"package",
 		"create",
 		"publish"
@@ -29,30 +28,29 @@
 		"bruce-pkg": "dist/index.js"
 	},
 	"scripts": {
-		"build": "rimraf dist && tsc --project tsconfig.json && npm link",
-		"dev": "nodemon --watch src --watch package.json --watch tsconfig.json --ext ts --exec \"npm run build\"",
-		"mount": "npm link"
+		"build": "rimraf dist && tsc -p tsconfig.json",
+		"dev": "nodemon -w src -w package.json -w tsconfig.json -e ts -x \"npm run build\""
 	},
 	"engines": {
 		"node": ">=18.0.0",
 		"npm": ">=8.6.0"
 	},
 	"dependencies": {
+		"@inquirer/prompts": "3.3.0",
 		"@yangzw/bruce-us": "workspace:*",
 		"chalk": "5.3.0",
 		"commander": "11.1.0",
 		"execa": "8.0.1",
 		"figures": "6.0.1",
-		"inquirer": "9.2.12",
-		"listr2": "8.0.0",
-		"ora": "7.0.1",
+		"listr2": "8.0.1",
+		"ora": "8.0.1",
 		"semver": "7.5.4"
 	},
 	"devDependencies": {
-		"@types/inquirer": "9.0.7",
-		"@types/node": "20.10.4",
+		"@types/node": "20.10.5",
 		"@types/semver": "7.5.6",
 		"nodemon": "3.0.2",
+		"rxjs": "7.8.1",
 		"typescript": "5.3.3"
 	},
 	"license": "MIT",

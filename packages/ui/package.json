@@ -1,12 +1,14 @@
 {
 	"name": "@yangzw/bruce-ui",
-	"version": "1.1.7",
-	"description": "A React General User Design",
+	"version": "1.1.8",
+	"description": "A generalized component library that React-based development",
 	"keywords": [
 		"bruce-ui",
+		"ui",
 		"component",
 		"design",
-		"ui",
+		"react",
+		"common",
 		"actionsheet",
 		"alert",
 		"button",
@@ -16,7 +18,9 @@
 		"loading",
 		"modal",
 		"sharesheet",
-		"toast"
+		"toast",
+		"browser",
+		"screen"
 	],
 	"author": {
 		"name": "JowayYoung",
@@ -36,9 +40,8 @@
 	"browser": "dist/index.umd.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "rimraf dist && rollup --config rollup.config.ts --configPlugin typescript",
-		"dev": "nodemon --watch src --watch package.json --watch rollup.config.ts --watch tsconfig.json --ext css,scss,ts,tsx --exec \"npm run build\"",
-		"mount": "",
+		"build": "rimraf dist && rollup -c rollup.config.ts --configPlugin typescript",
+		"dev": "nodemon -w src -w package.json -w rollup.config.ts -w tsconfig.json -e css,scss,ts,tsx -x \"npm run build\"",
 		"test": "vite"
 	},
 	"engines": {
@@ -47,7 +50,7 @@
 	},
 	"dependencies": {
 		"@yangzw/bruce-us": "workspace:*",
-		"classnames": "2.3.2",
+		"classnames": "2.5.0",
 		"disable-scroll": "0.6.0",
 		"react-copy-to-clipboard": "5.1.0"
 	},
@@ -59,9 +62,9 @@
 		"@rollup/plugin-replace": "5.0.5",
 		"@rollup/plugin-terser": "0.4.4",
 		"@rollup/plugin-typescript": "11.1.5",
-		"@types/react": "18.2.45",
+		"@types/react": "18.2.46",
 		"@types/react-copy-to-clipboard": "5.0.7",
-		"@types/react-dom": "18.2.17",
+		"@types/react-dom": "18.2.18",
 		"@vitejs/plugin-react": "4.2.1",
 		"nodemon": "3.0.2",
 		"postcss": "8.4.32",
@@ -70,14 +73,14 @@
 		"postcss-preset-env": "9.3.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"rollup": "4.9.0",
+		"rollup": "4.9.1",
 		"rollup-plugin-cleandir": "2.0.0",
 		"rollup-plugin-dts": "6.1.0",
 		"rollup-plugin-postcss": "4.0.2",
-		"sass": "1.69.5",
+		"sass": "1.69.6",
 		"tslib": "2.6.2",
 		"typescript": "5.3.3",
-		"vite": "5.0.9"
+		"vite": "5.0.10"
 	},
 	"peerDependencies": {
 		"react": ">=18.0.0",

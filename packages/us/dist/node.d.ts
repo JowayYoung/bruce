@@ -116,10 +116,11 @@ declare function ReadDir({ dir, path, regexp, type }: {
 declare function ReadJson<T>(path?: string, dir?: string): T | null;
 declare function ReadYaml<T>(path?: string, dir?: string): T | null;
 declare function RemoveDir(path?: string, dir?: string): void;
-declare function VerifyPath(path?: string, dir?: string): {
+interface VPRerutnType {
     flag: boolean;
     msg: string;
-};
+}
+declare function VerifyPath(path?: string, dir?: string): VPRerutnType;
 
 declare function AutoPort({ host, onCall, port }: {
     host?: string;
@@ -135,11 +136,12 @@ declare function GetIP(): string;
 declare function RunCmd(cmd?: string): string;
 
 type SystemEnum = "windows" | "macos" | "linux";
-declare function NodeType(): {
+interface NodeTypeType {
     nodeVs: string;
     npmVs: string;
     system: SystemEnum;
     systemVs: string;
-};
+}
+declare function NodeType(): NodeTypeType;
 
 export { AbsPath, AsyncTo, AutoPort, CalcNum, CalcNumPlus, CheckObjValidKey, CheckPath, CheckPort, CheckText, CheckTextPlus, ChunkArr, CopyDir, CreateDir, Debounce, DesePhone, EnvType, FillNum, FilterObjKey, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetIP, GroupArr, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, MATCH, MatchBracketText, NodeType, RandomColor, RandomId, RandomNum, RandomNumPlus, ReadDir, ReadJson, ReadYaml, RecentMonths, RemoveDir, RemoveObjEmptyKey, RemoveTag, ReverseText, RoundNum, RunCmd, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, ThousandNum, Throttle, TypeOf, VerifyPath, WaitFor };

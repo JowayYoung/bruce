@@ -1,0 +1,75 @@
+{
+	"name": "@yangzw/bruce-lng",
+	"version": "1.1.8",
+	"description": "A language processing tool that facilitates the management of multilingual texts",
+	"keywords": [
+		"bruce-lng",
+		"lng",
+		"i18n",
+		"internationalization",
+		"lang",
+		"language",
+		"lg",
+		"text",
+		"ar",
+		"de",
+		"en",
+		"es",
+		"fr",
+		"id",
+		"ja",
+		"ko",
+		"pt",
+		"ru",
+		"th",
+		"vi",
+		"zh"
+	],
+	"author": {
+		"name": "JowayYoung",
+		"email": "young.joway@outlook.com"
+	},
+	"homepage": "https://github.com/JowayYoung",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JowayYoung/bruce.git"
+	},
+	"bugs": {
+		"email": "young.joway@outlook.com",
+		"url": "https://github.com/JowayYoung/bruce/issues"
+	},
+	"type": "module",
+	"main": "dist/index.js",
+	"bin": {
+		"bruce-lng": "dist/index.js"
+	},
+	"scripts": {
+		"build": "rimraf dist && tsc -p tsconfig.json",
+		"dev": "nodemon -w src -w package.json -w tsconfig.json -e ts -x \"npm run build\""
+	},
+	"engines": {
+		"node": ">=18.0.0",
+		"npm": ">=8.6.0"
+	},
+	"dependencies": {
+		"@inquirer/prompts": "3.3.0",
+		"@yangzw/bruce-us": "workspace:*",
+		"chalk": "5.3.0",
+		"commander": "11.1.0",
+		"exceljs": "4.4.0",
+		"figures": "6.0.1",
+		"ora": "8.0.1",
+		"semver": "7.5.4"
+	},
+	"devDependencies": {
+		"@types/node": "20.10.5",
+		"@types/semver": "7.5.6",
+		"nodemon": "3.0.2",
+		"typescript": "5.3.3"
+	},
+	"license": "MIT",
+	"private": true,
+	"publishConfig": {
+		"access": "public"
+	}
+}

@@ -186,7 +186,7 @@ declare function actionToast({ className, delay, text }: ActionToastType): Promi
 
 declare function useDesktop(): boolean;
 
-interface ParamsType$1 {
+interface ParamsType {
     opts?: {
         root?: Element | Document | null;
         rootMargin?: string;
@@ -195,12 +195,12 @@ interface ParamsType$1 {
     position?: "top" | "bottom";
     ref: RefObject<HTMLElement> | null | undefined;
 }
-declare function useOnCross({ opts, position, ref }: ParamsType$1): boolean;
+declare function useOnCross({ opts, position, ref }: ParamsType): boolean;
 
-interface ParamsType {
+interface ReturnType {
     height: number;
     width: number;
 }
-declare function useOnResize(): ParamsType;
+declare function useOnResize(): ReturnType;
 
 export { Actionsheet, Button, Empty, Icon, Loading, Modal, type ShareAppType, Sharesheet, Toast, actionAlert, actionDialog, actionToast, useActionsheet, useAlert, useDesktop, useDialog, useLoading, useModal, useOnCross, useOnResize, useSharesheet };

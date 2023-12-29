@@ -1,10 +1,14 @@
 {
 	"name": "@yangzw/bruce-ico",
-	"version": "1.1.7",
-	"description": "An Icon Processing Tool For Generating Css Icons Based On Css Background And Mask",
+	"version": "1.1.8",
+	"description": "An icon processing tool that generates CSS icons based on CSS background masks",
 	"keywords": [
 		"bruce-ico",
 		"ico",
+		"icon",
+		"cssfont",
+		"iconfont",
+		"webfont",
 		"css",
 		"background",
 		"mask"
@@ -28,9 +32,8 @@
 		"bruce-ico": "dist/index.js"
 	},
 	"scripts": {
-		"build": "rimraf dist && tsc --project tsconfig.json && npm link",
-		"dev": "nodemon --watch src --watch package.json --watch tsconfig.json --ext ts --exec \"npm run build\"",
-		"mount": "npm link"
+		"build": "rimraf dist && tsc -p tsconfig.json",
+		"dev": "nodemon -w src -w package.json -w tsconfig.json -e ts -x \"npm run build\""
 	},
 	"engines": {
 		"node": ">=18.0.0",
@@ -44,12 +47,12 @@
 		"figures": "6.0.1",
 		"is-animated": "2.0.2",
 		"mime-types": "2.1.35",
-		"ora": "7.0.1",
+		"ora": "8.0.1",
 		"semver": "7.5.4"
 	},
 	"devDependencies": {
 		"@types/mime-types": "2.1.4",
-		"@types/node": "20.10.4",
+		"@types/node": "20.10.5",
 		"@types/semver": "7.5.6",
 		"nodemon": "3.0.2",
 		"typescript": "5.3.3"

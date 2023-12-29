@@ -2,14 +2,15 @@
 	"name": "@yangzw/bruce",
 	"type": "module",
 	"scripts": {
-		"build": "pnpm recursive exec -- npm run build",
-		"clean": "npm run clean:module && npm run clean:output",
-		"clean:module": "rimraf packages/us/node_modules && rimraf node_modules pnpm-lock.yaml && pnpm recursive exec -- rimraf node_modules pnpm-lock.yaml",
-		"clean:output": "pnpm recursive exec -- rimraf coverage dist",
-		"commit": "git add --all . && git-cz",
-		"init": "npm i -g commitizen cz-customizable rimraf && pnpm i -r",
-		"mini": "ts-node-esm tasks/mini.ts && pnpm recursive exec -- npm run mount",
-		"rebuild": "npm run clean && npm run init && npm run build && npm run mini"
+		"build": "pnpm -r exec -- npm run build",
+		"clean": "rimraf packages/us/node_modules && rimraf node_modules pnpm-lock.yaml && pnpm -r exec -- rimraf node_modules pnpm-lock.yaml",
+		"commit": "git add -A . && git-cz",
+		"init": "npm i -g commitizen cz-customizable rimraf && pnpm -r install",
+		"link": "pnpm -F !@yangzw/bruce-type -F !@yangzw/bruce-ui -F !@yangzw/bruce-us -r exec -- npm link",
+		"mini": "ts-node-esm tasks/mini.ts",
+		"publish": "pnpm -reg https://registry.npmjs.org/ -r --dry-run --no-git-checks publish",
+		"publish:prod": "pnpm -reg https://registry.npmjs.org/ -r --no-git-checks publish",
+		"rebuild": "npm run clean && npm run init && npm run build && npm run mini && npm run link && npm run commit"
 	},
 	"config": {
 		"cz-customizable": {
@@ -22,7 +23,7 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "20.10.4",
+		"@types/node": "20.10.5",
 		"@yangzw/bruce-us": "workspace:*",
 		"terser": "5.26.0",
 		"ts-node": "10.9.2",
@@ -31,5 +32,6 @@
 	"workspaces": [
 		"packages/*"
 	],
+	"license": "MIT",
 	"private": true
 }

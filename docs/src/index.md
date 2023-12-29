@@ -16,14 +16,14 @@ bgImageStyle:
 # heroFullScreen: true
 actions:
   - link: /app/index.md
-    text: 🌐 bruce-app
+    text: 📦 bruce-app
     type: primary
   - link: /ico/index.md
     text: 🔥 bruce-ico
   - link: /img/index.md
     text: 🖼️ bruce-img
-  - link: /lib/index.md
-    text: 📦 bruce-lib
+  - link: /lng/index.md
+    text: 🌐 bruce-lng
   - link: /pkg/index.md
     text: ⚡ bruce-pkg
   - link: /std/index.md
@@ -35,7 +35,7 @@ actions:
 # Content
 highlights:
   - header: 介绍
-    description: <span class="line"><b>Bruce FEES</b>是一套完整的多功能的<b>前端工程化多包管理解决方案</b>，涵盖前端开发流程中常见的多个<b>脚手架</b>、<b>工具</b>和<b>类库</b>。</span><span class="line">它基于<b>webpack、rollup、postcss、sass、less、babel、typescript、stylelint、eslint、jest、react、vue、vuepress</b>等多个<b>Npm模块</b>搭建和开发底层架构，采用<b>Monorepo模式</b>和<b>pnpm</b>组织和管理仓库代码。</span><span class="line">目的是简化整个前端开发流程，通过自动化工具处理那些重复繁琐的任务，以提高整体开发效率并降低维护成本。这个框架还致力提供一个高度可扩展的基础架构，方便开发人员在项目中增加新的工具和技术，以满足不断变化的需求。</span>
+    description: <span class="line"><b>Bruce FEES</b>是一套完整的多功能的<b>前端工程化多包管理解决方案</b>，涵盖前端开发流程中常见的多个<b>脚手架</b>、<b>工具</b>和<b>类库</b>。</span><span class="line">它基于<b>webpack、rollup、postcss、sass、less、babel、typescript、stylelint、eslint、jest、react、vue、vuepress</b>等多个<b>Npm模块</b>搭建和开发底层架构，采用<b>Monorepo模式</b>和<b>pnpm</b>组织和管理仓库代码。</span><span class="line">目的是简化整个前端开发流程，通过自动化工具处理那些重复繁琐的任务，以便提高整体开发效率并降低维护成本。这个框架还致力提供一个高度可扩展的基础架构，方便开发人员在项目中增加新的工具和技术，以便满足不断变化的需求。</span>
     image: https://jowayyoung.github.io/static/bruce/summary.svg
     bgImage: https://jowayyoung.github.io/static/bruce/bg/cyan-light.svg
     bgImageDark: https://jowayyoung.github.io/static/bruce/bg/cyan-dark.svg
@@ -47,23 +47,23 @@ highlights:
     features:
       - details: 一个零配置开箱即用的JS/React应用自动化构建脚手架，真正实现构建代码和业务代码完全分离，无需关注构建过程，专心编写业务代码
         link: /app/index.md
-        title: 🌐 bruce-app
+        title: 📦 bruce-app
       - details: 一个基于CSS背景遮罩生成CSS图标的图标处理工具，为图标提供文件监听、格式转换和样式生成的功能
         link: /ico/index.md
         title: 🔥 bruce-ico
       - details: 一个多功能无限制的图像处理工具，为图像提供压缩、分组、标记和变换的批处理功能
         link: /img/index.md
         title: 🖼️ bruce-img
-      - details: 一个零配置开箱即用的JS/React类库自动化构建脚手架，真正实现构建代码和业务代码完全分离，无需关注构建过程，专心编写业务代码
-        link: /lib/index.md
-        title: 📦 bruce-lib
+      - details: 一个方便管理多国语言文案的语言处理工具，为i18n业务需求提供表格式的管理功能
+        link: /lng/index.md
+        title: 🌐 bruce-lng
       - details: 一个强化Npm命令的模块处理工具，为模块提供基本骨架创建和链式检查发布的功能
         link: /pkg/index.md
         title: ⚡ bruce-pkg
       - details: 一个集成代码校验的VSCode配置工具，配合VSCode插件为用户提供项目文件的代码校验、代码美化、代码修复和错误提示的功能
         link: /std/index.md
         title: ⚙️ bruce-std
-      - details: 一个React通用组件库，提供基础组件、表单组件、向导组件、展示组件、反馈组件等通用组件
+      - details: 一个基于React开发的通用组件库，提供基础组件、表单组件、向导组件、展示组件、反馈组件等通用组件
         link: /ui/index.md
         title: 🎨 bruce-ui
       - details: 一个没有框架约束的通用工具库，提供Web环境、Node环境和混合环境的工具函数

@@ -3,9 +3,9 @@ import { extname } from "path";
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
 
-const dirs = readdirSync("src/us", "utf8").filter(v => statSync(`src/us/${v}`).isDirectory());
+const dirs = readdirSync("src/us").filter(v => statSync(`src/us/${v}`).isDirectory());
 const total = dirs.reduce((t, v) => {
-	const count = readdirSync(`src/us/${v}`, "utf8").filter(w => extname(w) === ".md").length;
+	const count = readdirSync(`src/us/${v}`).filter(w => extname(w) === ".md").length;
 	return t + count;
 }, 0);
 console.log(total);
@@ -30,10 +30,10 @@ export default defineUserConfig({
 		logo: "https://jowayyoung.github.io/static/bruce/logo.svg",
 		navbar: [
 			{ icon: "lightbulb", link: "/index.md", text: "指南" },
-			{ icon: "globe", link: "/app/index.md", text: "app" },
+			{ icon: "cube", link: "/app/index.md", text: "app" },
 			{ icon: "fire-flame-curved", link: "/ico/index.md", text: "ico" },
 			{ icon: "image", link: "/img/index.md", text: "img" },
-			{ icon: "cube", link: "/lib/index.md", text: "lib" },
+			{ icon: "globe", link: "/lng/index.md", text: "lng" },
 			{ icon: "bolt", link: "/pkg/index.md", text: "pkg" },
 			{ icon: "gear", link: "/std/index.md", text: "std" },
 			{ icon: "palette", link: "/ui/index.md", text: "ui" },
@@ -70,7 +70,7 @@ export default defineUserConfig({
 			"/app/": "structure",
 			"/ico/": "structure",
 			"/img/": "structure",
-			"/lib/": "structure",
+			"/lng/": "structure",
 			"/pkg/": "structure",
 			"/std/": "structure",
 			"/ui/": "structure",

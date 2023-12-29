@@ -1,9 +1,10 @@
 {
 	"name": "@yangzw/bruce-type",
-	"version": "1.1.7",
-	"description": "A TypeScript Types Tool For Bruce FEES",
+	"version": "1.1.8",
+	"description": "A Typescript type tool with Bruce FEES integration",
 	"keywords": [
 		"bruce-type",
+		"type",
 		"types",
 		"typescript"
 	],
@@ -24,9 +25,8 @@
 	"module": "dist/index.esm.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "rimraf dist && rollup --config rollup.config.ts --configPlugin typescript",
-		"dev": "nodemon --watch src --watch package.json --watch tsconfig.json --ext ts --exec \"npm run build\"",
-		"mount": ""
+		"build": "rimraf dist && rollup -c rollup.config.ts --configPlugin typescript",
+		"dev": "nodemon -w src -w package.json -w tsconfig.json -e ts -x \"npm run build\""
 	},
 	"engines": {
 		"node": ">=18.0.0",
@@ -36,9 +36,9 @@
 	"devDependencies": {
 		"@rollup/plugin-terser": "0.4.4",
 		"@rollup/plugin-typescript": "11.1.5",
-		"@types/node": "20.10.4",
+		"@types/node": "20.10.5",
 		"nodemon": "3.0.2",
-		"rollup": "4.9.0",
+		"rollup": "4.9.1",
 		"rollup-plugin-cleandir": "2.0.0",
 		"rollup-plugin-dts": "6.1.0",
 		"typescript": "5.3.3"

@@ -13,7 +13,7 @@ module.exports = {
 		{ name: "bruce-app" },
 		{ name: "bruce-ico" },
 		{ name: "bruce-img" },
-		{ name: "bruce-lib" },
+		{ name: "bruce-lng" },
 		{ name: "bruce-pkg" },
 		{ name: "bruce-std" },
 		{ name: "bruce-type" },

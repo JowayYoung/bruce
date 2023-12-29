@@ -4,14 +4,14 @@
 
 ### 开发计划
 
-- [ ] **@yangzw/bruce-app**：应用`@1.1.7`✔️
-- [x] **@yangzw/bruce-ico**：图标`@1.1.7`
-- [x] **@yangzw/bruce-img**：图像`@1.1.7`✔️
-- [ ] **@yangzw/bruce-lib**：类库
-- [x] **@yangzw/bruce-pkg**：模块`@1.1.7`✔️
-- [x] **@yangzw/bruce-std**：规范`@1.1.7`✔️
-- [x] **@yangzw/bruce-ui**：组件`@1.1.7`
-- [x] **@yangzw/bruce-us**：工具`@1.1.7`✔️
+- [ ] **@yangzw/bruce-app**：应用`@1.1.8`✔️
+- [x] **@yangzw/bruce-ico**：图标`@1.1.8`
+- [x] **@yangzw/bruce-img**：图像`@1.1.8`✔️
+- [ ] **@yangzw/bruce-lng**：语言`@1.1.8`
+- [x] **@yangzw/bruce-pkg**：模块`@1.1.8`✔️
+- [x] **@yangzw/bruce-std**：规范`@1.1.8`✔️
+- [x] **@yangzw/bruce-ui**：组件`@1.1.8`
+- [x] **@yangzw/bruce-us**：工具`@1.1.8`✔️
 
 ### 色彩定义
 
@@ -28,14 +28,19 @@
 
 ### 指令步骤
 
-- 清空缓存：`npm run clean`、`npm run clean:module`、`npm run clean:output`
-- 安装依赖：`npm run init`
-- 构建源码：`npm run build`
-- 构建源码(单包)：`pnpm run --filter=@yangzw/bruce-std build`
-- 调试源码(单包)：`pnpm run --filter=@yangzw/bruce-std dev`
-- 增加依赖(单包)：`pnpm add bootstrap-icons --filter=@yangzw/bruce-ui`
-- 删除依赖(单包)：`pnpm remove bootstrap-icons --filter=@yangzw/bruce-ui`
-- 发布模块(单包)：`pnpm publish --filter=@yangzw/bruce-us --no-git-checks --registry https://registry.npmjs.org/`
+- 重建源码(0)：`npm run rebuild`(不包括`publish`命令)
+- 清空缓存(1)：`npm run clean`
+- 初始项目(2)：`npm run init`
+- 构建源码(3)：`npm run build`
+- 压缩源码(4)：`npm run mini`
+- 挂载源码(5)：`npm run link`
+- 提交源码(6)：`npm run commit`
+- 发布源码(7)：`npm run publish`
+- 构建源码(单包)：`pnpm -F @yangzw/bruce-std run build`
+- 调试源码(单包)：`pnpm -F @yangzw/bruce-std run dev`
+- 增加依赖(单包)：`pnpm -F @yangzw/bruce-ui add bootstrap-icons`
+- 删除依赖(单包)：`pnpm -F @yangzw/bruce-ui remove bootstrap-icons`
+- 发布模块(单包)：`pnpm -reg https://registry.npmjs.org/ -F @yangzw/bruce-us --no-git-checks publish`
 
 ### 开发细节
 
@@ -139,7 +144,7 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 - [x] **strict**：启用所有严格类型的检查
 - [x] **target**：编译之后的代码需要支持ECMAScript的版本
 - [x] **exclude**：排除指定的文件或目录
-- [x] **include**：包含指定的文件或目录
+- [x] **include**：包括指定的文件或目录
 
 ```json
 {
@@ -169,6 +174,11 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"outDir": "dist",
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		},
 		"removeComments": true,
 		"resolveJsonModule": true,
 		"sourceMap": false,
@@ -200,17 +210,17 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 		"bruce-pkg": "dist/index.js"
 	},
 	"scripts": {
-		"build": "rimraf dist && tsc --project tsconfig.json && npm link",
-		"dev": "nodemon --watch src --watch package.json --watch tsconfig.json --ext ts --exec \"npm run build\""
+		"build": "rimraf dist && tsc -p tsconfig.json && npm link",
+		"dev": "nodemon -w src -w package.json -w tsconfig.json -e ts -x \"npm run build\""
 	}
 }
 ```
 
-调试时执行`pnpm run --filter=@yangzw/bruce-pkg dev`。具体来说，命令中每个参数的作用如下。
+调试时执行`pnpm run -F @yangzw/bruce-pkg dev`。具体来说，命令中每个参数的作用如下。
 
-- [x] **--watch**：缩写为`-w`，监听指定文件或目录的变化，如果存在多个目标，就用多个`--watch`来监听
-- [x] **--ext**：监听文件后缀，如果存在多种文件，就用逗号隔开
-- [x] **--exec**：文件发生变化时需要执行的命令，需要使用两个`\"`来包裹命令
+- [x] **-w**：全写为`--watch`，监听指定文件或目录的变化，如果存在多个目标，就用多个`-w`来监听
+- [x] **-e**：全写为`--ext`，监听文件后缀，如果存在多种文件，就用逗号隔开
+- [x] **-x**：全写为`--exec`，文件发生变化时需要执行的命令，需要使用两个`\"`来包裹命令
 
 最后，规范`ts/tsx文件`的编写。参考[文档1](https://docs.astro.build/zh-cn/guides/imports/#typescript)和[文档2](https://github.com/zhongsp/TypeScript/blob/dev/zh/release-notes/typescript-4.7.md#新的文件扩展名)。
 
