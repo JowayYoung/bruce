@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-a74cb682","path":"/us/boolean/","title":"Boolean","lang":"zh-CN","frontmatter":{"title":"Boolean","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null}');export{e as data};
