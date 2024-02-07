@@ -50,6 +50,10 @@
 	"autoimport.doubleQuotes": true,
 	"autoimport.filesToScan": "**/*.{js,ts,jsx,tsx}",
 	"autoimport.showNotifications": true,
+	// Beautify
+	"beautify.config": {
+		"wrap_line_length": 0
+	},
 	// Eslint
 	"eslint.nodePath": "C:/Users/n7440/AppData/Roaming/Nvm/v18.18.0/node_modules/@yangzw/bruce-std/node_modules/eslint",
 	"eslint.options": {
@@ -87,6 +91,9 @@
 	"[html]": {
 		"editor.defaultFormatter": "HookyQR.beautify"
 	},
+	"[wxml]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
 	"[css]": {
 		"files.removeFinalNewlines": false
 	},
@@ -111,5 +118,15 @@
 	"[typescriptreact]": {
 		"editor.formatOnPaste": false,
 		"editor.formatOnSave": false
-	}
+	},
+	// 微信小程序
+	"emmet.includeLanguages": {
+		"wxml": "html"
+	},
+	"files.associations": {
+		"*.cjson": "jsonc",
+		"*.wxs": "javascript",
+		"*.wxss": "css"
+	},
+	"minapp-vscode.disableAutoConfig": true
 }

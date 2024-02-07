@@ -1,1 +1,1 @@
-import Oo from"./copy.mjs";import O from"./init.mjs";import Uo from"./update.mjs";export{Oo as Copy,O as Init,Uo as Update};
+import Io from"./copy.mjs";import O from"./init.mjs";import Jo from"./update.mjs";export{Io as Copy,O as Init,Jo as Update};

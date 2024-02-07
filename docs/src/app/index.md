@@ -25,9 +25,9 @@ order: 1
 总之，它提供一种非常简便和直观的编程环境和工作流程，让开发人员可以更加专注于应用本身的开发和调试，以便提高开发效率和工作质量。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.8-f66.svg)
-![node](https://img.shields.io/badge/node-%3E%3D16.0.0-3c9.svg)
-![npm](https://img.shields.io/badge/npm-%3E%3D7.10.0-3c9.svg)
+![version](https://img.shields.io/badge/version-1.1.10-f66.svg)
+![node](https://img.shields.io/badge/node-%3E%3D18.0.0-3c9.svg)
+![npm](https://img.shields.io/badge/npm-%3E%3D8.6.0-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)
 ![build](https://img.shields.io/badge/build-passing-f90.svg)
 ![coverage](https://img.shields.io/badge/coverage-mostly-09f.svg)
@@ -111,15 +111,12 @@ pnpm i -g @yangzw/bruce-app
 
 #### ES5浏览器范围
 
-品牌|浏览器|版本范围
-:-:|:-:|:-:
-![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png)|**Chrome**|`< 51`
-![Edge](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png)|**Edge**|`< 15`
-![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png)|**Firefox**|`< 54`
-![Opera](https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png)|**Opera**|`< 38`
-![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png)|**Safari**|`< 9`
-![Android](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chromium/chromium_48x48.png)|**Android**|`< 5`
-![iOS](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png)|**iOS**|`< 10`
+```txt
+> 0.2%
+last 2 versions
+not dead
+IE 11
+```
 
 #### ES6浏览器范围
 

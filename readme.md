@@ -4,14 +4,14 @@
 
 ### 开发计划
 
-- [ ] **@yangzw/bruce-app**：应用`@1.1.8`✔️
-- [x] **@yangzw/bruce-ico**：图标`@1.1.8`
-- [x] **@yangzw/bruce-img**：图像`@1.1.8`✔️
-- [ ] **@yangzw/bruce-lng**：语言`@1.1.8`
-- [x] **@yangzw/bruce-pkg**：模块`@1.1.8`✔️
-- [x] **@yangzw/bruce-std**：规范`@1.1.8`✔️
-- [x] **@yangzw/bruce-ui**：组件`@1.1.8`
-- [x] **@yangzw/bruce-us**：工具`@1.1.8`✔️
+- [x] **@yangzw/bruce-app**：应用`@1.1.10`✔️
+- [x] **@yangzw/bruce-ico**：图标`@1.1.10`
+- [x] **@yangzw/bruce-img**：图像`@1.1.10`✔️
+- [x] **@yangzw/bruce-lng**：语言`@1.1.10`
+- [x] **@yangzw/bruce-pkg**：模块`@1.1.10`✔️
+- [x] **@yangzw/bruce-std**：规范`@1.1.10`✔️
+- [x] **@yangzw/bruce-ui**：组件`@1.1.10`
+- [x] **@yangzw/bruce-us**：工具`@1.1.10`✔️
 
 ### 色彩定义
 
@@ -25,10 +25,11 @@
 - [x] `bruce-pkg`依赖的`listr2`目前未升级到`v7`，`v7`存在无法抛出错误的问题，但是`v6`需要显式依赖`enquirer`
 - [x] `vite`从`v4`迁移到`v5`的[注意事项](https://cn.vitejs.dev/guide/migration.html#rollup-4)
 - [ ] `stylelint`从`v15`迁移到`v16`的[注意事项](https://stylelint.io/migration-guide/to-16)
+- [ ] `app/icon`需要去掉`tsconfig.json`的`"skipLibCheck":true`配置
 
 ### 指令步骤
 
-- 重建源码(0)：`npm run rebuild`(不包括`publish`命令)
+- 重建源码(0)：`npm run rebuild`(不包括`publish/upgrade`)
 - 清空缓存(1)：`npm run clean`
 - 初始项目(2)：`npm run init`
 - 构建源码(3)：`npm run build`
@@ -36,6 +37,7 @@
 - 挂载源码(5)：`npm run link`
 - 提交源码(6)：`npm run commit`
 - 发布源码(7)：`npm run publish`
+- 发布源码(8)：`npm run upgrade`
 - 构建源码(单包)：`pnpm -F @yangzw/bruce-std run build`
 - 调试源码(单包)：`pnpm -F @yangzw/bruce-std run dev`
 - 增加依赖(单包)：`pnpm -F @yangzw/bruce-ui add bootstrap-icons`
@@ -137,9 +139,11 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 - [x] **module**：编译之后的模块规范
 - [x] **moduleResolution**：模块解析方式
 - [x] **outDir**：输出目录
+- [x] **paths**：定义文件路径快捷方式
 - [x] **removeComments**：删除代码注释
 - [x] **resolveJsonModule**：允许导入JSON文件
-- [x] **rootDir**：源码目录
+- [x] **rootDir**：源码目录(可选)
+- [x] **skipLibCheck**：跳过错误类型检查(可选，在编译时遇到类型不通过可以使用这个选项来跳过检查)
 - [x] **sourceMap**：生成SourceMap文件
 - [x] **strict**：启用所有严格类型的检查
 - [x] **target**：编译之后的代码需要支持ECMAScript的版本

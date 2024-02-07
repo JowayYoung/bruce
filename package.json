@@ -1,16 +1,19 @@
 {
 	"name": "@yangzw/bruce",
+	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
 		"build": "pnpm -r exec -- npm run build",
 		"clean": "rimraf packages/us/node_modules && rimraf node_modules pnpm-lock.yaml && pnpm -r exec -- rimraf node_modules pnpm-lock.yaml",
 		"commit": "git add -A . && git-cz",
-		"init": "npm i -g commitizen cz-customizable rimraf && pnpm -r install",
+		"init": "npm i -g commitizen cz-customizable rimraf && pnpm -r i",
 		"link": "pnpm -F !@yangzw/bruce-type -F !@yangzw/bruce-ui -F !@yangzw/bruce-us -r exec -- npm link",
 		"mini": "ts-node-esm tasks/mini.ts",
 		"publish": "pnpm -reg https://registry.npmjs.org/ -r --dry-run --no-git-checks publish",
-		"publish:prod": "pnpm -reg https://registry.npmjs.org/ -r --no-git-checks publish",
-		"rebuild": "npm run clean && npm run init && npm run build && npm run mini && npm run link && npm run commit"
+		"publish:npm": "pnpm -reg https://registry.npmjs.org/ -r --no-git-checks publish",
+		"rebuild": "npm run build && npm run mini && npm run link && npm run commit",
+		"rebuild:all": "npm run clean && npm run init && npm run build && npm run mini && npm run link && npm run commit",
+		"upgrade": "ts-node-esm tasks/upgrade.ts"
 	},
 	"config": {
 		"cz-customizable": {
@@ -23,9 +26,11 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "20.10.5",
+		"@types/node": "20.11.16",
+		"@types/semver": "7.5.6",
 		"@yangzw/bruce-us": "workspace:*",
-		"terser": "5.26.0",
+		"semver": "7.6.0",
+		"terser": "5.27.0",
 		"ts-node": "10.9.2",
 		"typescript": "5.3.3"
 	},

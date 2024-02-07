@@ -1,5 +1,6 @@
 import { readdirSync, statSync } from "fs";
 import { extname } from "path";
+import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
 
@@ -12,6 +13,7 @@ console.log(total);
 
 export default defineUserConfig({
 	base: "/bruce/",
+	bundler: viteBundler(),
 	cache: "dist/.cache",
 	description: "前端工程化多包管理最佳实践方案",
 	dest: "dist/build",

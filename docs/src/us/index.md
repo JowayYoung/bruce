@@ -23,9 +23,9 @@ order: 1
 整体包括`106`个函数，分别是`Common`函数`63`个，`Web`函数`29`个，`Node`函数`14`个。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.8-f66.svg)
-![node](https://img.shields.io/badge/node-%3E%3D12.0.0-3c9.svg)
-![npm](https://img.shields.io/badge/npm-%3E%3D6.9.0-3c9.svg)
+![version](https://img.shields.io/badge/version-1.1.10-f66.svg)
+![node](https://img.shields.io/badge/node-%3E%3D18.0.0-3c9.svg)
+![npm](https://img.shields.io/badge/npm-%3E%3D8.6.0-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)
 ![build](https://img.shields.io/badge/build-passing-f90.svg)
 ![coverage](https://img.shields.io/badge/coverage-mostly-09f.svg)
@@ -69,6 +69,6 @@ pnpm i @yangzw/bruce-us
 ## 兼容
 
 - **Web**：`>=95%`
-- **Node**：`>=12.0.0`
+- **Node**：`>=95%`
 
 `Common`函数没有符号标记，`Web`函数使用🔥符号标记，`Node`函数使用💧符号标记。每个函数功能的右侧可能标记一个`🔥/💧`，如果没有标记，在混合环境中都能使用，具体操作请查看[使用](/us/usage.md)。
