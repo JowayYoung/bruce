@@ -25,9 +25,9 @@ order: 1
 总之，它提供一种非常简便和直观的编程环境和工作流程，让开发人员可以更加专注于应用本身的开发和调试，以便提高开发效率和工作质量。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.10-f66.svg)
-![node](https://img.shields.io/badge/node-%3E%3D18.0.0-3c9.svg)
-![npm](https://img.shields.io/badge/npm-%3E%3D8.6.0-3c9.svg)
+![version](https://img.shields.io/badge/version-1.2.6-f66.svg)
+![node](https://img.shields.io/badge/node-%3E%3D18.18.0-3c9.svg)
+![npm](https://img.shields.io/badge/npm-%3E%3D9.8.1-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)
 ![build](https://img.shields.io/badge/build-passing-f90.svg)
 ![coverage](https://img.shields.io/badge/coverage-mostly-09f.svg)
@@ -38,7 +38,7 @@ order: 1
 `@yangzw/bruce-app`依赖多个核心`Npm模块`的最新版本，它是一个基于`vite v4`和`webpack v5`开发出来的极速零配置开箱即用的Web应用构建工具(**每次更新模块版本都会保持所有依赖为最新版本**)，集成各种常见的工具(`postcss`、`sass`、`less`、`babel`、`typescript`、`stylelint`、`eslint`等)扩展构建功能，用于管理**JS/React**技术栈的应用。
 
 ![commander](https://img.shields.io/npm/v/commander?label=commander&color=f66)
-![inquirer](https://img.shields.io/npm/v/inquirer?label=inquirer&color=f66)
+![inquirer](https://img.shields.io/npm/v/%40inquirer%2Fprompts?label=inquirer&color=f66)
 ![vite](https://img.shields.io/npm/v/vite?label=vite&color=66f)
 ![webpack](https://img.shields.io/npm/v/webpack?label=webpack&color=66f)
 ![postcss](https://img.shields.io/npm/v/postcss?label=postcss&color=f90)

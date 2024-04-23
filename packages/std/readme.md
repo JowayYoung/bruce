@@ -9,7 +9,7 @@
 `eslint-config-standard-with-typescript v38-`，tslint配置需要做一些调整。
 
 ```ts
-import { join } from "path";
+import { join } from "node:path";
 
 export default {
 	parserOptions: {
@@ -24,7 +24,7 @@ export default {
 `eslint-config-standard-with-typescript v38+`，tslint配置需要做一些调整。
 
 ```ts
-import { cwd } from "process";
+import { cwd } from "node:process";
 
 export default {
 	parserOptions: {

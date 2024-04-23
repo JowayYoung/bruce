@@ -25,11 +25,6 @@
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"outDir": "dist",
-		"paths": {
-			"@/*": [
-				"src/*"
-			]
-		},
 		"removeComments": true,
 		"resolveJsonModule": true,
 		"sourceMap": false,
@@ -40,10 +35,8 @@
 		"node_modules"
 	],
 	"include": [
-		"docs/**/*.ts",
-		"packages/**/*.ts",
-		"packages/**/*.mts",
-		"packages/**/*.tsx",
-		"tasks/**/*.ts"
+		"docs",
+		"packages",
+		"tasks"
 	]
 }

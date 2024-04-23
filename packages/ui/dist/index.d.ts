@@ -1,6 +1,20 @@
-import { ReactNode, FC, MouseEventHandler, CSSProperties, RefObject } from 'react';
+import { MouseEventHandler, CSSProperties, FC, ReactElement, ReactNode, RefObject } from 'react';
+
+interface ButtonType$1 {
+    className?: string;
+    disabled?: boolean;
+    href?: string;
+    icon?: string;
+    onClick?: MouseEventHandler<HTMLElement>;
+    style?: CSSProperties;
+    target?: "blank" | "self";
+    text?: string;
+    type?: "cancel" | "confirm";
+}
+declare function Button({ className, disabled, href, icon, onClick, style, target, text, type }: ButtonType$1): JSX.Element;
 
 type CloseWayEnum = "all" | "btn" | "mask";
+type ButtonType = ReactElement<typeof Button>;
 interface ModalBaseType {
     children: ReactNode;
     className?: string;
@@ -8,13 +22,13 @@ interface ModalBaseType {
     title?: string;
 }
 interface ModalType extends ModalBaseType {
-    handler?: ReactNode[];
+    handler?: ButtonType[];
     onClose?: () => void | Promise<void>;
     root?: HTMLElement;
     visible?: boolean;
 }
 interface ModalWrapperType extends ModalBaseType {
-    handler?: ReactNode[];
+    handler?: ButtonType[];
     onClose?: () => void | Promise<void>;
 }
 type UseModalType = [
@@ -67,19 +81,6 @@ type UseAlertType = [
 ];
 declare function actionAlert({ btnText, children, className, closeWay, onCancel, onCancelCall, onConfirm, onConfirmCall, title }: AlertType): Promise<void>;
 declare function useAlert(): UseAlertType;
-
-interface ButtonPropsType {
-    className?: string;
-    disabled?: boolean;
-    href?: string;
-    icon?: string;
-    onClick?: MouseEventHandler<HTMLElement>;
-    style?: CSSProperties;
-    target?: "blank" | "self";
-    text?: string;
-    type?: "cancel" | "confirm";
-}
-declare function Button({ className, disabled, href, icon, onClick, style, target, text, type }: ButtonPropsType): JSX.Element;
 
 interface DialogType extends ModalBaseType {
     btnTextCancel?: string;
@@ -203,4 +204,6 @@ interface ReturnType {
 }
 declare function useOnResize(): ReturnType;
 
-export { Actionsheet, Button, Empty, Icon, Loading, Modal, type ShareAppType, Sharesheet, Toast, actionAlert, actionDialog, actionToast, useActionsheet, useAlert, useDesktop, useDialog, useLoading, useModal, useOnCross, useOnResize, useSharesheet };
+declare function LoadIcons(): Promise<boolean>;
+
+export { Actionsheet, Button, Empty, Icon, LoadIcons, Loading, Modal, type ShareAppType, Sharesheet, Toast, actionAlert, actionDialog, actionToast, useActionsheet, useAlert, useDesktop, useDialog, useLoading, useModal, useOnCross, useOnResize, useSharesheet };

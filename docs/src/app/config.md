@@ -21,7 +21,7 @@ order: 3
 **useTimer**|请确认是否时化应用目录|`false`|时间序列化命名输出的应用根目录，增加时间戳区分版本
 **useAnalyzer**|请确认是否分析打包结果|`false`|在构建之后展示构建依赖的关系，可以根据关系图合理分析模块
 
-- `mode`配置提供`test测试环境`、`pre预览环境`和`prod生产环境`，在`js/ts/jsx/tsx`文件中可以使用全局变量`RUN_ENV`来获取`mode`的具值
+- `mode`配置提供`test测试环境`、`pre预览环境`和`prod生产环境`，在`js/ts/jsx/tsx`文件中可用全局变量`RUN_ENV`获取`mode`的具值
 - `polyfill`配置提供`es5 ES5静态垫片`、`es6 ES6静态垫片`、`custom自定义静态垫片`和`dynamic动态垫片`
 	- [x] **自定义静态垫片**：根据业务代码引入，兼容所有自定义范围的浏览器
 	- [x] **动态垫片**：根据`UserAgent`引入，使用Polyfill服务
@@ -36,7 +36,7 @@ order: 3
 **frame**|请选择开发框架|`js`|可选`js/react`
 **style**|请选择预设样式|`scss`|可选`scss/less`
 **deps**|请选择应用依赖|`[]`|提供`js/react`相关的开发依赖，可选通用设计、通用工具、页面路由、状态管理和网络请求
-**useTs**|请确认是否集成TypeScript|`false`|生成`tsconfig.json`，可以使用TS开发项目
+**useTs**|请确认是否集成TypeScript|`false`|生成`tsconfig.json`，可用TS开发项目
 **useInstaller**|请确认是否安装应用依赖|`false`|默认使用`yarn`安装，其次使用`npm`安装
 **ext**|请选择配置后缀|`js/ts`|可选`js/json/ts/yaml`
 
@@ -235,8 +235,8 @@ export default {
 如果使用TS编码，可以安装`@yangzw/bruce-type`提供类型定义。
 
 ```ts
-import { readFileSync, writeFileSync } from "fs";
-import { normalize } from "path";
+import { readFileSync, writeFileSync } from "node:fs";
+import { normalize } from "node:path";
 import { defineConfig } from "@yangzw/bruce-type";
 
 export default defineConfig({

@@ -16,12 +16,12 @@ order: 1
 
 `@yangzw/bruce-img`是一个多功能无限制的图像处理工具，为图像提供压缩、分组、标记和变换的批处理功能。
 
-它的主要作用是采用高效的图像处理算法，可以快速完成图像批处理操作，提高工作效率。通过多种图像处理技术和批处理技术的结合，例如图像压缩、分组、标记和变换，可以帮助用户快速完成各种图像批处理操作。用户可以使用它对大量的图像进行压缩，以便减小图像的存储空间，或对这些图像进行分组、标记或变换，以便后续的处理和分析。
+它的主要作用是采用高效的图像处理算法，可以快速完成图像批处理操作，提高工作效率。通过多种图像处理技术和批处理技术的结合，例如图像压缩、分组、标记和变换，可以快速完成各种图像批处理操作。用户使用它对大量图像进行压缩，以便减小图像的存储空间，或对这些图像进行分组、标记或变换，以便后续的处理和分析。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.10-f66.svg)
-![node](https://img.shields.io/badge/node-%3E%3D18.0.0-3c9.svg)
-![npm](https://img.shields.io/badge/npm-%3E%3D8.6.0-3c9.svg)
+![version](https://img.shields.io/badge/version-1.2.6-f66.svg)
+![node](https://img.shields.io/badge/node-%3E%3D18.18.0-3c9.svg)
+![npm](https://img.shields.io/badge/npm-%3E%3D9.8.1-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)
 ![build](https://img.shields.io/badge/build-passing-f90.svg)
 ![coverage](https://img.shields.io/badge/coverage-mostly-09f.svg)

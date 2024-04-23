@@ -1,7 +1,7 @@
-import { readdirSync, readFileSync, writeFileSync } from "fs";
-import { dirname } from "path";
-import { argv } from "process";
-import { fileURLToPath } from "url";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname } from "node:path";
+import { argv } from "node:process";
+import { fileURLToPath } from "node:url";
 import { AbsPath, ReadJson } from "@yangzw/bruce-us/dist/node.js";
 import Semver from "semver";
 

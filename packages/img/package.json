@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-img",
-	"version": "1.1.10",
+	"version": "1.2.6",
 	"description": "An image processing tool that multifunctional and unrestricted",
 	"keywords": [
 		"bruce-img",
@@ -61,16 +61,16 @@
 		"dev": "nodemon -w src -w package.json -w tsconfig.json -e ts -x \"npm run build\""
 	},
 	"engines": {
-		"node": ">=18.0.0",
-		"npm": ">=8.6.0"
+		"node": ">=18.18.0",
+		"npm": ">=9.8.1"
 	},
 	"dependencies": {
-		"@inquirer/prompts": "4.0.0",
+		"@inquirer/prompts": "5.0.1",
 		"@yangzw/bruce-us": "workspace:*",
 		"chalk": "5.3.0",
 		"commander": "12.0.0",
-		"figures": "6.0.1",
-		"glob": "10.3.10",
+		"figures": "6.1.0",
+		"glob": "10.3.12",
 		"image-size": "1.1.1",
 		"imagemin": "8.0.1",
 		"imagemin-gifsicle": "7.0.0",
@@ -81,7 +81,7 @@
 		"is-animated": "2.0.2",
 		"ora": "8.0.1",
 		"semver": "7.6.0",
-		"sharp": "0.33.2",
+		"sharp": "0.33.3",
 		"text-to-svg": "3.1.5"
 	},
 	"devDependencies": {
@@ -90,11 +90,11 @@
 		"@types/imagemin-jpegtran": "5.0.4",
 		"@types/imagemin-svgo": "10.0.5",
 		"@types/imagemin-webp": "7.0.3",
-		"@types/node": "20.11.16",
-		"@types/semver": "7.5.6",
+		"@types/node": "20.12.7",
+		"@types/semver": "7.5.8",
 		"@types/text-to-svg": "3.1.4",
-		"nodemon": "3.0.3",
-		"typescript": "5.3.3"
+		"nodemon": "3.1.0",
+		"typescript": "5.4.5"
 	},
 	"license": "MIT",
 	"publishConfig": {

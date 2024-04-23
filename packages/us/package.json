@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-us",
-	"version": "1.1.10",
+	"version": "1.2.6",
 	"description": "A generalized tool library without framework constraints",
 	"keywords": [
 		"bruce-us",
@@ -52,15 +52,14 @@
 		"test": "rimraf coverage && jest --coverage --no-cache --watchAll"
 	},
 	"engines": {
-		"node": ">=18.0.0",
-		"npm": ">=8.6.0"
+		"node": ">=18.18.0",
+		"npm": ">=9.8.1"
 	},
 	"dependencies": {
-		"axios": "1.6.7",
 		"dayjs": "1.11.10",
 		"fs-extra": "11.2.0",
 		"rimraf": "5.0.5",
-		"yaml": "2.3.4"
+		"yaml": "2.4.1"
 	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "25.0.7",
@@ -70,16 +69,26 @@
 		"@rollup/plugin-typescript": "11.1.6",
 		"@types/fs-extra": "11.0.4",
 		"@types/jest": "29.5.12",
-		"@types/node": "20.11.16",
+		"@types/node": "20.12.7",
+		"axios": "1.6.8",
 		"jest": "29.7.0",
-		"nodemon": "3.0.3",
-		"rollup": "4.9.6",
+		"nodemon": "3.1.0",
+		"rollup": "4.16.2",
 		"rollup-plugin-cleandir": "2.0.0",
 		"rollup-plugin-dts": "6.1.0",
 		"ts-jest": "29.1.2",
 		"ts-node": "10.9.2",
 		"tslib": "2.6.2",
-		"typescript": "5.3.3"
+		"typescript": "5.4.5"
+	},
+	"peerDependencies": {
+		"axios": ">=1.5.0"
+	},
+	"peerDependenciesMeta": {
+		"axios": {
+			"message": "If you need to use Aios(), please install `axios` and its version must be greater than or equal to `1.5.0`",
+			"optional": true
+		}
 	},
 	"license": "MIT",
 	"publishConfig": {

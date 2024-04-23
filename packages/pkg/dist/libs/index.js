@@ -1,1 +1,1 @@
-import u from"./create.js";import No from"./publish.js";export{u as Create,No as Publish};
+import u from"./create.js";import nr from"./publish.js";export{u as Create,nr as Publish};

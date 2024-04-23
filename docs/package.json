@@ -33,15 +33,14 @@
 		"init": "npm run clean && npm i"
 	},
 	"engines": {
-		"node": ">=18.0.0",
-		"npm": ">=8.6.0"
+		"node": ">=18.18.0",
+		"npm": ">=9.8.1"
 	},
 	"devDependencies": {
-		"@vuepress/bundler-vite": "2.0.0-rc.7",
-		"@vuepress/client": "2.0.0-rc.7",
-		"vue": "3.4.15",
-		"vuepress": "2.0.0-rc.7",
-		"vuepress-theme-hope": "2.0.0-rc.23"
+		"@vuepress/bundler-vite": "2.0.0-rc.9",
+		"vue": "3.4.24",
+		"vuepress": "2.0.0-rc.9",
+		"vuepress-theme-hope": "2.0.0-rc.37"
 	},
 	"license": "MIT",
 	"private": true

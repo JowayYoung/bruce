@@ -1,5 +1,5 @@
-import { readdirSync, statSync } from "fs";
-import { extname } from "path";
+import { readdirSync, statSync } from "node:fs";
+import { extname } from "node:path";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";

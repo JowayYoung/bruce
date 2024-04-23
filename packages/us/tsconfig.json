@@ -25,11 +25,6 @@
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"outDir": "dist",
-		"paths": {
-			"@/*": [
-				"src/*"
-			]
-		},
 		"removeComments": true,
 		"resolveJsonModule": true,
 		"sourceMap": false,
@@ -44,6 +39,8 @@
 	],
 	"include": [
 		"src",
-		"test"
+		"test",
+		"jest.config.ts",
+		"rollup.config.ts"
 	]
 }

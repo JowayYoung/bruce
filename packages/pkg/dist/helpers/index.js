@@ -1,1 +1,1 @@
-import ge from"./create-answer.js";import sr from"./publish-answer.js";export{ge as CreateAnswer,sr as PublishAnswer};
+import Ge from"./create-answer.js";import sr from"./publish-answer.js";export{Ge as CreateAnswer,sr as PublishAnswer};

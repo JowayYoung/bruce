@@ -25,11 +25,6 @@
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"outDir": "dist",
-		"paths": {
-			"@/*": [
-				"src/*"
-			]
-		},
 		"removeComments": true,
 		"resolveJsonModule": true,
 		"sourceMap": false,
@@ -40,6 +35,8 @@
 		"node_modules"
 	],
 	"include": [
-		"src"
+		"src",
+		"rollup.config.ts",
+		"vite.config.ts"
 	]
 }

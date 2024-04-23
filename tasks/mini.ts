@@ -1,6 +1,6 @@
-import { readFileSync, writeFileSync } from "fs";
-import { dirname, extname } from "path";
-import { fileURLToPath } from "url";
+import { readFileSync, writeFileSync } from "node:fs";
+import { dirname, extname } from "node:path";
+import { fileURLToPath } from "node:url";
 import { ReadDir } from "@yangzw/bruce-us/dist/node.js";
 import { minify } from "terser";
 

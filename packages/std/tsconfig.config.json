@@ -25,11 +25,6 @@
 		"module": "CommonJS",
 		"moduleResolution": "Node",
 		"outDir": "dist",
-		"paths": {
-			"@/*": [
-				"src/*"
-			]
-		},
 		"removeComments": true,
 		"resolveJsonModule": true,
 		"rootDir": "config",

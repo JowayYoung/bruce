@@ -4,14 +4,14 @@
 
 ### 开发计划
 
-- [x] **@yangzw/bruce-app**：应用`@1.1.10`✔️
-- [x] **@yangzw/bruce-ico**：图标`@1.1.10`
-- [x] **@yangzw/bruce-img**：图像`@1.1.10`✔️
-- [x] **@yangzw/bruce-lng**：语言`@1.1.10`
-- [x] **@yangzw/bruce-pkg**：模块`@1.1.10`✔️
-- [x] **@yangzw/bruce-std**：规范`@1.1.10`✔️
-- [x] **@yangzw/bruce-ui**：组件`@1.1.10`
-- [x] **@yangzw/bruce-us**：工具`@1.1.10`✔️
+- [x] **@yangzw/bruce-app**：应用`@1.2.6`✔️
+- [x] **@yangzw/bruce-ico**：图标`@1.2.6`
+- [x] **@yangzw/bruce-img**：图像`@1.2.6`✔️
+- [x] **@yangzw/bruce-lng**：语言`@1.2.6`
+- [x] **@yangzw/bruce-pkg**：模块`@1.2.6`✔️
+- [x] **@yangzw/bruce-std**：规范`@1.2.6`✔️
+- [x] **@yangzw/bruce-ui**：组件`@1.2.6`
+- [x] **@yangzw/bruce-us**：工具`@1.2.6`✔️
 
 ### 色彩定义
 
@@ -26,6 +26,7 @@
 - [x] `vite`从`v4`迁移到`v5`的[注意事项](https://cn.vitejs.dev/guide/migration.html#rollup-4)
 - [ ] `stylelint`从`v15`迁移到`v16`的[注意事项](https://stylelint.io/migration-guide/to-16)
 - [ ] `app/icon`需要去掉`tsconfig.json`的`"skipLibCheck":true`配置
+- [ ] `app`的`sass`和`sass-loader`存在版本兼容冲突
 
 ### 指令步骤
 
@@ -119,7 +120,7 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 
 前往[sharp-libvips](https://github.com/lovell/sharp-libvips/releases)手动下载压缩包，将它放置到`npm config get cache`获取目录的`_libvips文件夹`中。
 
-- **Windows**选择`win32-x64.tar.br`下载
+- **Windows**选择`win32-x64.tar.br`或`win32-x64.tar.gz`下载
 - **MacOS**选择`darwin-x64.tar.br`下载
 - **Linux**选择`linux-x64.tar.br`下载
 
@@ -139,11 +140,11 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 - [x] **module**：编译之后的模块规范
 - [x] **moduleResolution**：模块解析方式
 - [x] **outDir**：输出目录
-- [x] **paths**：定义文件路径快捷方式
+- [x] **paths**：定义文件路径快捷方式(在Pnpm项目中无法使用)
 - [x] **removeComments**：删除代码注释
 - [x] **resolveJsonModule**：允许导入JSON文件
 - [x] **rootDir**：源码目录(可选)
-- [x] **skipLibCheck**：跳过错误类型检查(可选，在编译时遇到类型不通过可以使用这个选项来跳过检查)
+- [x] **skipLibCheck**：跳过错误类型检查(可选，在编译时遇到类型不通过可用这个选项跳过检查)
 - [x] **sourceMap**：生成SourceMap文件
 - [x] **strict**：启用所有严格类型的检查
 - [x] **target**：编译之后的代码需要支持ECMAScript的版本

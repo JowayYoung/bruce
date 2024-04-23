@@ -23,9 +23,9 @@ order: 1
 整体包括`106`个函数，分别是`Common`函数`63`个，`Web`函数`29`个，`Node`函数`14`个。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.1.10-f66.svg)
-![node](https://img.shields.io/badge/node-%3E%3D18.0.0-3c9.svg)
-![npm](https://img.shields.io/badge/npm-%3E%3D8.6.0-3c9.svg)
+![version](https://img.shields.io/badge/version-1.2.6-f66.svg)
+![node](https://img.shields.io/badge/node-%3E%3D18.18.0-3c9.svg)
+![npm](https://img.shields.io/badge/npm-%3E%3D9.8.1-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)
 ![build](https://img.shields.io/badge/build-passing-f90.svg)
 ![coverage](https://img.shields.io/badge/coverage-mostly-09f.svg)
@@ -56,6 +56,29 @@ pnpm i @yangzw/bruce-us
 
 :::
 
+如果需要使用[Aios()](/us/function/Aios.md)，请安装`axios`且其版本必须大于等于`1.5.0`。
+
+::: code-tabs#shell
+@tab npm
+
+```sh
+npm i axios
+```
+
+@tab yarn
+
+```sh
+yarn add axios
+```
+
+@tab pnpm
+
+```sh
+pnpm i axios
+```
+
+:::
+
 ## 使用
 
 `@yangzw/bruce-us`根据**Web**和**Node**两种JS运行时环境划分代码，生成三种`bundle.js`。每个文件在不同JS运行时环境中运行，必须根据JS运行时环境引用文件，否则会报错。
@@ -72,3 +95,18 @@ pnpm i @yangzw/bruce-us
 - **Node**：`>=95%`
 
 `Common`函数没有符号标记，`Web`函数使用🔥符号标记，`Node`函数使用💧符号标记。每个函数功能的右侧可能标记一个`🔥/💧`，如果没有标记，在混合环境中都能使用，具体操作请查看[使用](/us/usage.md)。
+
+`web.js/web.esm.js`引用`axios`，如果引入它们且要兼容低版本浏览器，需要将`axios`纳入构建工具的编译范围。因为`axios`的打包文件包括ES6特性语法，如果在构建阶段不处理它，那么低版本浏览器就会报错。
+
+使用`webpack`作为构建工具时，需要在`babel-loader`的`include`中处理。使用`@yangzw/bruce-app`作为构建工具时，需要在`brucerc.(js|json|ts|yaml)`的`transpileDeps`中处理。
+
+```ts
+import { defineConfig } from "@yangzw/bruce-type";
+
+export default defineConfig({
+	// ...
+	transpileDeps: [
+		"axios"
+	] // 转译依赖：Array
+});
+```

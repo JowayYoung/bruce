@@ -25,21 +25,17 @@
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"outDir": "dist",
-		"paths": {
-			"@/*": [
-				"src/*"
-			]
-		},
 		"removeComments": true,
 		"resolveJsonModule": true,
 		"sourceMap": false,
 		"strict": true,
-		"target": "ES6"
+		"target": "ES5"
 	},
 	"exclude": [
 		"node_modules"
 	],
 	"include": [
-		"src"
+		"src",
+		"rollup.config.ts"
 	]
 }
