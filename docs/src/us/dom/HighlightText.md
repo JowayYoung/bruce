@@ -5,8 +5,8 @@ icon: file-code
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**text**|文本|`String`|`""`
-**keyword**|关键字|`String`|`""`
+**text**|文本|`String`|`""`|-
+**keyword**|关键字|`String`|`""`|-
 
 ```js
 import { HighlightText } from "@yangzw/bruce-us/dist/web";

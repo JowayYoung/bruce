@@ -5,7 +5,7 @@ icon: calendar-days
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**count**|个数|`Number`|`6`
+**count**|个数|`Number`|`6`|-
 **format**|格式|`String`|`"YYYY-MM"`|格式参考[DayJS](https://dayjs.gitee.io/docs/en/parse/string-format)
 
 ```js

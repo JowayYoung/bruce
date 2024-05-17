@@ -27,6 +27,7 @@
 		"outDir": "dist",
 		"removeComments": true,
 		"resolveJsonModule": true,
+		"skipLibCheck": true,
 		"sourceMap": false,
 		"strict": true,
 		"target": "ES6"

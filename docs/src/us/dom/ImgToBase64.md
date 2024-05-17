@@ -5,8 +5,8 @@ icon: file-code
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**url**|地址|`String`|`""`
-**type**|类型|`jpg/jpeg/png`|`"jpg"`
+**url**|地址|`String`|`""`|-
+**type**|类型|`jpg/jpeg/png`|`"jpg"`|-
 
 ```js
 import { ImgToBase64 } from "@yangzw/bruce-us/dist/web";

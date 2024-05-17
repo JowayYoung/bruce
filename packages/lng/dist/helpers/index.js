@@ -1,1 +1,1 @@
-import Ge from"./create-answer.js";export{Ge as CreateAnswer};
+import be from"./create-answer.js";export{be as CreateAnswer};

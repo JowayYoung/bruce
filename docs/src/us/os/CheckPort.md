@@ -7,7 +7,7 @@ icon: share-nodes
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**host**|域名|`String`|`本机IP`
+**host**|域名|`String`|`本机IP`|-
 **port**|端口|`Number`|`80`|端口范围在`0~65535`
 
 - [x] `true`表示端口未占用

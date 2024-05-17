@@ -5,7 +5,7 @@ icon: file-code
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**html**|HTML|`String`|`""`
+**html**|HTML|`String`|`""`|-
 
 ```js
 import { FilterXss } from "@yangzw/bruce-us/dist/web";

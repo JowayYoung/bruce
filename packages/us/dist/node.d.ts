@@ -73,7 +73,7 @@ type KeyEnum = string | number | symbol;
 type ObjType<T> = Record<KeyEnum, T | "">;
 declare function CheckObjValidKey<T>(obj?: ObjType<T>, key?: KeyEnum): key is keyof typeof obj;
 declare function FilterObjKey<T>(obj?: ObjType<T>, keys?: KeyEnum[]): ObjType<T>;
-declare function RemoveObjEmptyKey<T>(obj?: ObjType<T>, clear?: boolean): void;
+declare function RemoveObjEmptyKey<T>(obj?: ObjType<T>, clear?: boolean): ObjType<T>;
 
 type FieldEnum = "address" | "count" | "date" | "email" | "idcard" | "image" | "name" | "number" | "password" | "phone";
 type MatchType = Record<FieldEnum, {

@@ -1,4 +1,4 @@
-import { MouseEventHandler, CSSProperties, FC, ReactElement, ReactNode, RefObject } from 'react';
+import { MouseEventHandler, CSSProperties, ReactNode, FC, ReactElement, RefObject } from 'react';
 
 interface ButtonType$1 {
     className?: string;
@@ -127,6 +127,9 @@ interface LoadingType {
     dot?: boolean;
     text?: string;
 }
+interface LoaderType extends LoadingType {
+    visible?: boolean;
+}
 type UseLoadingType = [
     FC<LoadingType>,
     () => void,
@@ -134,6 +137,7 @@ type UseLoadingType = [
     boolean
 ];
 declare function Loading({ className, dot, text }: LoadingType): JSX.Element | null;
+declare function Loader({ className, dot, text, visible }: LoaderType): JSX.Element | null;
 declare function useLoading(): UseLoadingType;
 
 interface ShareAppType {
@@ -177,12 +181,12 @@ interface ToastType {
     className?: string;
     text: string;
 }
-declare function Toast({ className, text }: ToastType): JSX.Element;
 interface ActionToastType {
     className?: string;
     delay?: number;
     text?: string;
 }
+declare function Toast({ className, text }: ToastType): JSX.Element;
 declare function actionToast({ className, delay, text }: ActionToastType): Promise<void>;
 
 declare function useDesktop(): boolean;
@@ -206,4 +210,4 @@ declare function useOnResize(): ReturnType;
 
 declare function LoadIcons(): Promise<boolean>;
 
-export { Actionsheet, Button, Empty, Icon, LoadIcons, Loading, Modal, type ShareAppType, Sharesheet, Toast, actionAlert, actionDialog, actionToast, useActionsheet, useAlert, useDesktop, useDialog, useLoading, useModal, useOnCross, useOnResize, useSharesheet };
+export { type ActionToastType, Actionsheet, type ActionsheetType, type ActionsheetWrapperType, type AlertType, Button, type ButtonType$1 as ButtonType, type CloseWayEnum, type DialogType, Empty, type EmptyType, Icon, type IconType, LoadIcons, Loader, type LoaderType, Loading, type LoadingType, Modal, type ModalBaseType, type ModalType, type ModalWrapperType, type ShareAppType, Sharesheet, type SharesheetType, type SharesheetWrapperType, Toast, type ToastType, type UseActionsheetType, type UseAlertType, type UseDialogType, type UseLoadingType, type UseModalType, type UseSharesheetType, actionAlert, actionDialog, actionToast, useActionsheet, useAlert, useDesktop, useDialog, useLoading, useModal, useOnCross, useOnResize, useSharesheet };

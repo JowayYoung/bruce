@@ -7,7 +7,7 @@
 		"source.fixAll.eslint": "explicit", // Eslint
 		"source.fixAll.stylelint": "explicit" // Stylelint
 	},
-	// "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
+	"editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
 	"editor.detectIndentation": false,
 	"editor.fontFamily": "Source Code Pro",
 	"editor.fontSize": 14,
@@ -52,12 +52,14 @@
 	"autoimport.showNotifications": true,
 	// Beautify
 	"beautify.config": {
+		"indent_with_tabs": true,
 		"wrap_line_length": 0
 	},
 	// Eslint
-	"eslint.nodePath": "C:/Users/n7440/AppData/Roaming/Nvm/v18.18.0/node_modules/@yangzw/bruce-std/node_modules/eslint",
+	// "eslint.experimental.useFlatConfig": true, // 测试
+	"eslint.nodePath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.13.0/node_modules/@yangzw/bruce-std/node_modules/eslint",
 	"eslint.options": {
-		"overrideConfigFile": "C:/Users/n7440/AppData/Roaming/Nvm/v18.18.0/node_modules/@yangzw/bruce-std/dist/eslintrc.js"
+		"overrideConfigFile": "C:/Users/n7440/AppData/Roaming/Nvm/v20.13.0/node_modules/@yangzw/bruce-std/dist/eslintrc.cjs"
 	},
 	// Markdownlint
 	"markdownlint.config": {
@@ -72,21 +74,21 @@
 		"MD047": false
 	},
 	// Prettier
-	"prettier.configPath": "C:/Users/n7440/AppData/Roaming/Nvm/v18.18.0/node_modules/@yangzw/bruce-std/dist/prettierrc.js",
-	"prettier.enable": false,
-	"prettier.ignorePath": "C:/Users/n7440/AppData/Roaming/Nvm/v18.18.0/node_modules/@yangzw/bruce-std/.prettierignore",
+	"prettier.configPath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.13.0/node_modules/@yangzw/bruce-std/dist/prettier.config.cjs",
+	"prettier.ignorePath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.13.0/node_modules/@yangzw/bruce-std/.prettierignore",
+	"prettier.arrowParens": "avoid",
+	"prettier.quoteProps": "preserve",
+	"prettier.tabWidth": 4,
+	"prettier.trailingComma": "none",
+	"prettier.useTabs": true,
 	// RemoveFinalNewlines
 	"files.removeFinalNewlines": true,
+	// SortLines
+	"sortLines.filterBlankLines": true,
 	// Stylelint
-	"stylelint.configFile": "C:/Users/n7440/AppData/Roaming/Nvm/v18.18.0/node_modules/@yangzw/bruce-std/dist/stylelintrc.js",
-	"stylelint.stylelintPath": "C:/Users/n7440/AppData/Roaming/Nvm/v18.18.0/node_modules/@yangzw/bruce-std/node_modules/stylelint",
-	"stylelint.validate": [
-		"html",
-		"css",
-		"scss",
-		"less",
-		"vue"
-	],
+	"stylelint.configFile": "C:/Users/n7440/AppData/Roaming/Nvm/v20.13.0/node_modules/@yangzw/bruce-std/dist/stylelint.config.cjs",
+	"stylelint.stylelintPath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.13.0/node_modules/@yangzw/bruce-std/node_modules/stylelint",
+	"stylelint.validate": ["html", "css", "scss", "less", "vue"],
 	// 独立文件
 	"[html]": {
 		"editor.defaultFormatter": "HookyQR.beautify"
@@ -95,12 +97,18 @@
 		"editor.defaultFormatter": "HookyQR.beautify"
 	},
 	"[css]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
 		"files.removeFinalNewlines": false
 	},
 	"[less]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
 		"files.removeFinalNewlines": false
 	},
 	"[scss]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
 		"files.removeFinalNewlines": false
 	},
 	"[javascript]": {
@@ -118,6 +126,9 @@
 	"[typescriptreact]": {
 		"editor.formatOnPaste": false,
 		"editor.formatOnSave": false
+	},
+	"[json]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
 	},
 	// 微信小程序
 	"emmet.includeLanguages": {

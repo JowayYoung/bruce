@@ -5,9 +5,9 @@ icon: ruler
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**regexp**|正则|`Regexp`|-
-**text**|文本|`String`|`""`
-**msg**|提示|`String`|`""`
+**regexp**|正则|`Regexp`|-|-
+**text**|文本|`String`|`""`|-
+**msg**|提示|`String`|`""`|-
 
 ```js
 import { CheckTextPlus } from "@yangzw/bruce-us";

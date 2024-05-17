@@ -9,14 +9,14 @@ order: 2
 `@yangzw/bruce-std`必须在[VSCode](https://code.visualstudio.com)中使用，`VSCode`安装之后进入这些对接步骤。为了保障每次修改的配置都能生效，就必须重启`VSCode`。
 
 - 打开`VSCode`
-- 选择左边`工具栏`的`插件`，搜索并安装`Prettier/Stylelint/Eslint/Markdownlint/Editorconfig`，安装之后重启`VSCode`
+- 选择左边`工具栏`的`插件`，搜索并安装`Beautify/Prettier/Stylelint/Eslint/Markdownlint/Editorconfig`，安装之后重启`VSCode`
 - 选择`文件 → 首选项 → 设置`，`设置`可选`用户`或`工作区`
 	- **用户**：配置生效之后会作用于全局项目(`如果大部分项目都是单一的React应用或Vue应用，推荐使用全局配置`)
 	- **工作区**：配置生效之后只会作用于当前打开项目
 - 点击`设置`右上角最左边的图标`打开设置(json)`，对应文件是`settings.json`，打开配置文件
 - 插入这些配置并重启`VSCode`
 
-```json{3-17,,19-22,,24-34,,36-37,,39-41}
+```json
 {
 	// 系统设置
 	"css.validate": false, // Stylelint
@@ -28,36 +28,93 @@ order: 2
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier
 	"editor.detectIndentation": false,
+	"editor.fontSize": 14,
 	"editor.formatOnPaste": true, // Prettier
 	"editor.formatOnSave": true, // Prettier
 	"editor.insertSpaces": false,
+	"editor.lineHeight": 25,
 	"files.eol": "\n",
 	"javascript.updateImportsOnFileMove.enabled": "always",
+	"security.workspace.trust.untrustedFiles": "open",
 	"typescript.updateImportsOnFileMove.enabled": "always",
+	"window.zoomLevel": 1,
+	// Beautify
+	"beautify.config": {
+		"indent_with_tabs": true,
+		"wrap_line_length": 0
+	},
 	// Eslint
 	"eslint.nodePath": "path/@yangzw/bruce-std/node_modules/eslint",
 	"eslint.options": {
-		"overrideConfigFile": "path/@yangzw/bruce-std/dist/eslintrc.js"
+		"overrideConfigFile": "path/@yangzw/bruce-std/dist/eslintrc.cjs" // Eslint暂未支持ESM形式的配置文件
 	},
 	// Markdownlint
 	"markdownlint.config": {
-		MD001: false,
-		MD007: false,
-		MD010: false,
-		MD013: false,
-		MD033: false,
-		MD036: false,
-		MD041: false,
-		MD045: false,
-		MD047: false
+		"MD001": false,
+		"MD007": false,
+		"MD010": false,
+		"MD013": false,
+		"MD033": false,
+		"MD036": false,
+		"MD041": false,
+		"MD045": false,
+		"MD047": false
 	},
 	// Prettier
-	"prettier.configPath": "path/@yangzw/bruce-std/dist/prettierrc.js",
+	"prettier.configPath": "path/@yangzw/bruce-std/dist/prettier.config.cjs", // Prettier暂未支持ESM形式的配置文件
 	"prettier.ignorePath": "path/@yangzw/bruce-std/.prettierignore",
+	"prettier.arrowParens": "avoid", // Prettier兜底配置，防止prettier.config.cjs失效
+	"prettier.quoteProps": "preserve", // Prettier兜底配置，防止prettier.config.cjs失效
+	"prettier.tabWidth": 4, // Prettier兜底配置，防止prettier.config.cjs失效
+	"prettier.trailingComma": "none", // Prettier兜底配置，防止prettier.config.cjs失效
+	"prettier.useTabs": true, // Prettier兜底配置，防止prettier.config.cjs失效
+	// RemoveFinalNewlines
+	"files.removeFinalNewlines": true,
 	// Stylelint
-	"stylelint.configFile": "path/@yangzw/bruce-std/dist/stylelintrc.js",
+	"stylelint.configFile": "path/@yangzw/bruce-std/dist/stylelint.config.cjs",
 	"stylelint.stylelintPath": "path/@yangzw/bruce-std/node_modules/stylelint",
-	"stylelint.validate": ["html", "css", "scss", "less", "vue"]
+	"stylelint.validate": ["html", "css", "scss", "less", "vue"],
+	// 独立文件
+	"[html]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	"[wxml]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	"[css]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
+		"files.removeFinalNewlines": false
+	},
+	"[less]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
+		"files.removeFinalNewlines": false
+	},
+	"[scss]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
+		"files.removeFinalNewlines": false
+	},
+	"[javascript]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false
+	},
+	"[typescript]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false
+	},
+	"[javascriptreact]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false
+	},
+	"[typescriptreact]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false
+	},
+	"[json]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	}
 }
 ```
 
@@ -95,7 +152,7 @@ Eslint is disabled since its execution has not been approved or denied yet. Use 
 
 ### prettier无法禁用“插入结尾空行”的功能
 
-在保存代码时，有些开发人员喜欢“插入结尾空行”，有些开发员就不喜欢“插入结尾空行”，而使用`prettier`美化代码之后就会强制使用结尾空行。 `prettier`目前没有相关的配置可以禁用“插入结尾空行”的功能，即使配置`.editorconfig`的`insert_final_newline = false`来禁止插入结尾空行也无法生效。
+在保存代码时，有些开发人员喜欢“插入结尾空行”，有些开发员就不喜欢“插入结尾空行”，而使用`prettier`美化代码之后就会强制使用结尾空行。`prettier`目前没有相关的配置可以禁用“插入结尾空行”的功能，即使配置`.editorconfig`的`insert_final_newline = false`禁止插入结尾空行也无法生效。
 
 因为`prettier`在自己官网也说自己是一个固执己见的代码格式化程序，没有任何方式可以改变它的某些配置，除非修改它的源码。鉴于代码校验和文件格式的问题，对所有文件进行统一美化处理。
 
@@ -104,4 +161,4 @@ Eslint is disabled since its execution has not been approved or denied yet. Use 
 - **md文件**：不做任何处理，可以配合[Remove Final Newlines](https://marketplace.visualstudio.com/items?itemName=DoCode.vscode-remove-final-newlines)插件删除结尾空行
 - **其它文件**：使用`prettier`进行美化，可以配合[Remove Final Newlines](https://marketplace.visualstudio.com/items?itemName=DoCode.vscode-remove-final-newlines)插件删除结尾空行
 
-`prettier`以单个换行符结束所有文件且无法禁用它，所以`prettier`无法针对`insert_final_newline = false`生效，更多的解决方案可以查看[prettier/issues/6360](https://github.com/prettier/prettier/issues/6360)和[I'm trying to use prettier with editorconfig but prettier doesn't respect](https://lightrun.com/answers/prettier-prettier-im-trying-to-use-prettier-with-editorconfig-but-prettier-doesnt-respect)。如果喜欢“插入结尾空行”的功能，请不要安装`Remove Final Newlines`并删除相关的配置。
+`prettier`以单个换行符结束所有文件且无法禁用它，所以`prettier`无法针对`insert_final_newline = false`生效，更多解决方案可以查看[prettier/issues/6360](https://github.com/prettier/prettier/issues/6360)和[I'm trying to use prettier with editorconfig but prettier doesn't respect](https://lightrun.com/answers/prettier-prettier-im-trying-to-use-prettier-with-editorconfig-but-prettier-doesnt-respect)。如果喜欢“插入结尾空行”的功能，请不要安装`Remove Final Newlines`并删除相关的配置。

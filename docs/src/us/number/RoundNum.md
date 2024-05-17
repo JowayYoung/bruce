@@ -7,9 +7,9 @@ icon: calculator
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**dec**|小数个数|`Number`|`2`
-**num**|数值|`Number`|`0`
-**per**|百分比|`Boolean`|`false`
+**dec**|小数个数|`Number`|`2`|-
+**num**|数值|`Number`|`0`|-
+**per**|百分比|`Boolean`|`false`|-
 
 ```js
 import { RoundNum } from "@yangzw/bruce-us";

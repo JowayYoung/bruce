@@ -7,8 +7,8 @@ icon: share-nodes
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**host**|域名|`String`|`本机IP`
-**onCall**|回调函数|`Function`|-
+**host**|域名|`String`|`本机IP`|-
+**onCall**|回调函数|`Function`|-|-
 **port**|端口|`Number`|`80`|端口范围在`0~65535`
 
 ```js

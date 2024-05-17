@@ -5,7 +5,7 @@ icon: keyboard
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**phone**|手机|`String`|`""`
+**phone**|手机|`String`|`""`|-
 
 ```js
 import { DesePhone } from "@yangzw/bruce-us";

@@ -5,7 +5,7 @@ icon: layer-group
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**arr**|数组|`Array<String/Number>`|`[]`
+**arr**|数组|`Array<String/Number>`|`[]`|-
 
 ```js
 import { StatArrMemCount } from "@yangzw/bruce-us";

@@ -5,7 +5,7 @@ icon: file-code
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**events**|地址|`<contextmenu/copy/selectstart>[]`|`[]`
+**events**|地址|`<contextmenu/copy/selectstart>[]`|`[]`|-
 
 ```js
 import { ProhibitEvent } from "@yangzw/bruce-us/dist/web";

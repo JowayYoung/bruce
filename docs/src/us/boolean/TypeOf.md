@@ -5,7 +5,7 @@ icon: gavel
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**data**|数据|`Any`|-
+**data**|数据|`Any`|-|-
 
 - [x] **基础数据类型**：`undefined`、`null`、`string`、`number`、`boolean`、`symbol`
 - [x] **复合数据类型**：`array`、`object`、`date`、`regexp`、`function`、`class`、`set`、`map`、`weakset`、`weakmap`、`element`

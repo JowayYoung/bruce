@@ -11,8 +11,9 @@
 		"mini": "tsx tasks/mini.ts",
 		"publish": "pnpm -reg https://registry.npmjs.org/ -r --dry-run --no-git-checks publish",
 		"publish:npm": "pnpm -reg https://registry.npmjs.org/ -r --no-git-checks publish",
-		"rebuild": "npm run build && npm run mini && npm run link && npm run commit",
-		"rebuild:all": "npm run clean && npm run init && npm run build && npm run mini && npm run link && npm run commit",
+		"rebuild": "npm run build && npm run mini",
+		"rebuild:all": "npm run build && npm run mini && npm run commit",
+		"rebuild:npm": "npm run clean && npm run init && npm run build && npm run mini && npm run link && npm run commit",
 		"upgrade": "tsx tasks/upgrade.ts"
 	},
 	"config": {
@@ -26,12 +27,12 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "20.12.7",
+		"@types/node": "20.12.12",
 		"@types/semver": "7.5.8",
 		"@yangzw/bruce-us": "workspace:*",
-		"semver": "7.6.0",
-		"terser": "5.30.4",
-		"tsx": "4.7.2",
+		"semver": "7.6.2",
+		"terser": "5.31.0",
+		"tsx": "4.10.4",
 		"typescript": "5.4.5"
 	},
 	"workspaces": [

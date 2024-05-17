@@ -12,7 +12,7 @@ order: 1
 - 提高项目代码的可维护性和可接入性，让新成员能够快速适应项目的架构和需求，降低项目的学习成本
 - 保障项目的整体质量，减少`无用代码`、`重复代码`、`错误代码`和`漏洞代码`的产生几率，提高项目的稳定性和安全性
 
-为了实现这些目标，代码校验工具起到非常重要的作用。众所周知，几乎所有编辑器都能配置代码校验工具来检测代码中的错误和漏洞，根据提供的修复方案格输出正确的代码，使得代码更加严谨。
+为了实现这些目标，代码校验工具起到非常重要的作用。众所周知，几乎所有编辑器都能配置代码校验工具检测代码中的错误和漏洞，根据提供的修复方案格输出正确的代码，使得代码更加严谨。
 
 通过使用代码校验工具，开发人员可以轻松地遵循代码规范，在编码时也能避免常见的错误和漏洞，以便提高项目的代码质量和开发效率。
 
@@ -27,7 +27,7 @@ order: 1
 在全局环境中使用它，开发人员可以轻松地进行代码校验，避免常见的错误和漏洞，在编码时遵循统一的编码规范和编码风格。这样不仅可以提高代码的可读性和可维护性，还能降低项目的学习成本和维护成本，使得团队协作更加高效顺畅。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.2.6-f66.svg)
+![version](https://img.shields.io/badge/version-1.3.0-f66.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D18.18.0-3c9.svg)
 ![npm](https://img.shields.io/badge/npm-%3E%3D9.8.1-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)
@@ -81,26 +81,29 @@ pnpm i -g @yangzw/bruce-std
 
 :::
 
-使用VSCode安装`Prettier/Stylelint/Eslint/Markdownlint/Editorconfig`。
+使用VSCode安装`Beautify/Prettier/Stylelint/Eslint/Markdownlint/Editorconfig`。
 
+- [x] **[Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)**：美化HTML/CSS/JS类型文件(作为Prettier的辅助)
 - [x] **[Editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)**：统一编码风格
 - [x] **[Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**：校验JS类型文件
 - [x] **[Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)**：校验MD类型文件
 - [x] **[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)**：美化所有类型文件
 - [x] **[Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)**：校验CSS类型文件
 
-考虑到`prettier`比较固执，只在`stylelint`中集成`prettier`，暂时没有在`eslint`中集成`prettier`，而`eslint`提供的美化功能同样非常厉害。另外`prettier`还能美化其它格式的文件，但是排除`md文件`在外。
+考虑到`prettier`比较固执，只在`stylelint`中集成`prettier`，暂未在`eslint`中集成`prettier`，而`eslint`提供的美化功能同样非常厉害。另外，`prettier`还能美化其它格式的文件，但是排除`json/md文件`在外。
+
+在某些时候`Prettier`真的非常别扭和执着，所以使用`Beautify`代替它美化`html/json文件`。
 
 ## 使用
 
 功能|命令|缩写|范围|使用|描述
 :-:|:-:|:-:|:-:|:-:|-
-复制配置|**bruce-std copy**|`bruce-std c`|`prettier/stylelint/eslint/markdownlint`|全局|打开`settings.json`粘贴配置
-初始配置|**bruce-std init**|`bruce-std i`|`commitlint/editorconfig`|局部|自动将配置写入`package.json`
-更新配置|**bruce-std update**|`bruce-std u`|`prettier/stylelint/eslint/markdownlint`|全局|自动将配置写入`settings.json`
+复制配置|**bruce-std copy**|`bruce-std c`|`Beautify/Prettier`<br>`Stylelint/Eslint/Markdownlint`|全局|打开`settings.json`粘贴配置
+初始配置|**bruce-std init**|`bruce-std i`|`Commitlint/Editorconfig`|局部|自动将配置写入`package.json`<br>自动生成`.editorconfig`和`czrc.cjs`
+更新配置|**bruce-std update**|`bruce-std u`|`Beautify/Prettier`<br>`Stylelint/Eslint/Markdownlint`|全局|自动将配置写入`settings.json`
 
-- `bruce-std c`和`bruce-std u`用于配置`prettier/stylelint/eslint/markdownlint`
-- `bruce-std i`用于配置`commitlint/editorconfig`
+- `bruce-std c`和`bruce-std u`用于配置`Beautify/Prettier/Stylelint/Eslint/Markdownlint`
+- `bruce-std i`用于配置`Commitlint/Editorconfig`
 - `bruce-std c`会抛出`settings.json`的文件路径，在CMD工具中可以直接打开文件
 - `bruce-std u`会覆写`settings.json`，导致原来文件中存在的注释会被清除，**慎用**
 - 手动配置可能比较保险，具体操作请查看[配置](/std/config.md)
@@ -112,9 +115,9 @@ pnpm i -g @yangzw/bruce-std
 
 ---
 
-因为这些代码校验工具各自的特殊性，`@yangzw/bruce-std`分别对`prettier/stylelint/eslint/markdownlint`和`commitlint/editorconfig`做针对性的处理。
+因为这些代码校验工具各自的特殊性，`@yangzw/bruce-std`分别对`Beautify/Prettier/Stylelint/Eslint/Markdownlint`和`Commitlint/Editorconfig`做针对性的处理。
 
-- 对`prettier/stylelint/eslint/markdownlint`做成全局统一配置，执行`bruce-std c`或`bruce-std u`在VSCode的`settings.json`中生成全局配置
-- 对`commitlint/editorconfig`做成项目单一配置，执行`bruce-std i`在项目目录`package.json`中生成局部配置，同时生成`.editorconfig`和`czrc.cjs`
+- 对`Beautify/Prettier/Stylelint/Eslint/Markdownlint`做成全局统一配置，执行`bruce-std c`或`bruce-std u`在VSCode的`settings.json`中生成全局配置
+- 对`Commitlint/Editorconfig`做成项目单一配置，执行`bruce-std i`在项目目录`package.json`中生成局部配置，同时生成`.editorconfig`和`czrc.cjs`
 
 总之，第一条注意事项只需执行一次就能全局生效，第二条注意事项需要在每个项目中执行一次才能正常生效。

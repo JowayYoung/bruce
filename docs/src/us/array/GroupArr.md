@@ -5,8 +5,8 @@ icon: layer-group
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**arr**|数组|`Array`|`[]`
-**key**|属性|`String/Number`|`""`
+**arr**|数组|`Array`|`[]`|-
+**key**|属性|`String/Number`|`""`|-
 
 ```js
 import { GroupArr } from "@yangzw/bruce-us";

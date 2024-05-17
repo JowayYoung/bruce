@@ -5,8 +5,8 @@ icon: object-group
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**obj**|对象|`Object`|`{}`
-**keys**|键名集合|`String[]`|`[]`
+**obj**|对象|`Object`|`{}`|-
+**keys**|键名集合|`String[]`|`[]`|-
 
 ```js
 import { FilterObjKey } from "@yangzw/bruce-us";

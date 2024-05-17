@@ -5,9 +5,9 @@ icon: calculator
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**type**|运算|`+/-/*//`|`+`
-**num1**|数值|`Number`|`0`
-**num2**|数值|`Number`|`0`
+**type**|运算|`+/-/*//`|`+`|-
+**num1**|数值|`Number`|`0`|-
+**num2**|数值|`Number`|`0`|-
 
 ```js
 import { CalcNum } from "@yangzw/bruce-us";

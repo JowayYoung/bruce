@@ -4,14 +4,14 @@
 
 ### 开发计划
 
-- [x] **@yangzw/bruce-app**：应用`@1.2.6`✔️
-- [x] **@yangzw/bruce-ico**：图标`@1.2.6`
-- [x] **@yangzw/bruce-img**：图像`@1.2.6`✔️
-- [x] **@yangzw/bruce-lng**：语言`@1.2.6`
-- [x] **@yangzw/bruce-pkg**：模块`@1.2.6`✔️
-- [x] **@yangzw/bruce-std**：规范`@1.2.6`✔️
-- [x] **@yangzw/bruce-ui**：组件`@1.2.6`
-- [x] **@yangzw/bruce-us**：工具`@1.2.6`✔️
+- [x] **@yangzw/bruce-app**：应用`@1.3.0`✔️
+- [x] **@yangzw/bruce-ico**：图标`@1.3.0`
+- [x] **@yangzw/bruce-img**：图像`@1.3.0`✔️
+- [x] **@yangzw/bruce-lng**：语言`@1.3.0`
+- [x] **@yangzw/bruce-pkg**：模块`@1.3.0`✔️
+- [x] **@yangzw/bruce-std**：规范`@1.3.0`✔️
+- [x] **@yangzw/bruce-ui**：组件`@1.3.0`
+- [x] **@yangzw/bruce-us**：工具`@1.3.0`✔️
 
 ### 色彩定义
 
@@ -25,8 +25,9 @@
 - [x] `bruce-pkg`依赖的`listr2`目前未升级到`v7`，`v7`存在无法抛出错误的问题，但是`v6`需要显式依赖`enquirer`
 - [x] `vite`从`v4`迁移到`v5`的[注意事项](https://cn.vitejs.dev/guide/migration.html#rollup-4)
 - [ ] `stylelint`从`v15`迁移到`v16`的[注意事项](https://stylelint.io/migration-guide/to-16)
-- [ ] `app/icon`需要去掉`tsconfig.json`的`"skipLibCheck":true`配置
-- [ ] `app`的`sass`和`sass-loader`存在版本兼容冲突
+- [ ] `app/ico/img/std`需要去掉`tsconfig.json`的`"skipLibCheck":true`配置
+- [ ] `app`的`sass`和`sass-loader@14`存在版本兼容冲突，`sass-loader`降级到`v13`
+- [ ] `img`的`imagemin-svgo@11`存在`is-svg`错误，降级到`v10`
 
 ### 指令步骤
 
@@ -223,9 +224,9 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 
 调试时执行`pnpm run -F @yangzw/bruce-pkg dev`。具体来说，命令中每个参数的作用如下。
 
-- [x] **-w**：全写为`--watch`，监听指定文件或目录的变化，如果存在多个目标，就用多个`-w`来监听
+- [x] **-w**：全写为`--watch`，监听指定文件或目录的变化，如果存在多个目标，就用多个`-w`监听
 - [x] **-e**：全写为`--ext`，监听文件后缀，如果存在多种文件，就用逗号隔开
-- [x] **-x**：全写为`--exec`，文件发生变化时需要执行的命令，需要使用两个`\"`来包裹命令
+- [x] **-x**：全写为`--exec`，文件发生变化时需要执行的命令，需要使用两个`\"`包裹命令
 
 最后，规范`ts/tsx文件`的编写。参考[文档1](https://docs.astro.build/zh-cn/guides/imports/#typescript)和[文档2](https://github.com/zhongsp/TypeScript/blob/dev/zh/release-notes/typescript-4.7.md#新的文件扩展名)。
 

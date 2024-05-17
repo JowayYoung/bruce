@@ -11,9 +11,9 @@ icon: paperclip
 **downloadAndroid**|Android下载地址|`String`|`""`|Google Play或国内四大手机应用商店提供的下载地址
 **downloadIos**|iOS下载地址|`String`|`""`|App Store提供的下载地址
 **downloadYyb**|应用宝下载地址|`String`|`""`|腾讯应用宝提供的下载地址，如果网页可能在微信中打开就要配置此项
-**host**|域名|`String`|`""`
+**host**|域名|`String`|`""`|-
 **params**|查询参数|`Object`|`{}`|如果键值为对象，请用JSON.stringify()反序列化数据
-**path**|路径|`String`|`""`
+**path**|路径|`String`|`""`|-
 **protocol**|协议|`String`|`""`|无需带上//:
 
 第二个参数以`对象解构`的方式入参

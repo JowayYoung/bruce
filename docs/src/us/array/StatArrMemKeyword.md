@@ -5,8 +5,8 @@ icon: layer-group
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**arr**|数组|`String[]`|`[]`
-**keywords**|关键字集合|`String[]`|`[]`
+**arr**|数组|`String[]`|`[]`|-
+**keywords**|关键字集合|`String[]`|`[]`|-
 
 ```js
 import { StatArrMemKeyword } from "@yangzw/bruce-us";

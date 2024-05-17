@@ -1,1 +1,0 @@
-"use strict";var Cr={arrowParens:"avoid",quoteProps:"preserve",tabWidth:4,trailingComma:"none",useTabs:!0};module.exports=Cr;

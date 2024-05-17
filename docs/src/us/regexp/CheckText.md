@@ -5,8 +5,8 @@ icon: ruler
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**type**|类型|`address/count/date/email/idcard/image/name/number/password/phone`|`"phone"`
-**text**|文本|`String`|`""`
+**type**|类型|`address/count/date/email/idcard/image/name/number/password/phone`|`"phone"`|-
+**text**|文本|`String`|`""`|-
 
 `type`目前包括多个字段，如果`CheckText`无法满足需求，请用`CheckTextPlus`。
 
