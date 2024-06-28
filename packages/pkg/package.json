@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-pkg",
-	"version": "1.3.0",
+	"version": "1.3.2",
 	"description": "A package processing tool that enhances Npm commands",
 	"keywords": [
 		"bruce-pkg",
@@ -36,22 +36,22 @@
 		"npm": ">=9.8.1"
 	},
 	"dependencies": {
-		"@inquirer/prompts": "5.0.3",
+		"@inquirer/prompts": "5.0.7",
 		"@yangzw/bruce-us": "workspace:*",
 		"chalk": "5.3.0",
-		"commander": "12.0.0",
-		"execa": "9.1.0",
+		"commander": "12.1.0",
+		"execa": "9.3.0",
 		"figures": "6.1.0",
-		"listr2": "8.2.1",
+		"listr2": "8.2.3",
 		"ora": "8.0.1",
 		"semver": "7.6.2"
 	},
 	"devDependencies": {
-		"@types/node": "20.12.12",
+		"@types/node": "20.14.9",
 		"@types/semver": "7.5.8",
-		"nodemon": "3.1.0",
+		"nodemon": "3.1.4",
 		"rxjs": "7.8.1",
-		"typescript": "5.4.5"
+		"typescript": "5.5.2"
 	},
 	"license": "MIT",
 	"publishConfig": {

@@ -100,7 +100,7 @@ declare function GetCookie(): CookieType;
 declare function RemoveCookie(key?: string): void;
 declare function SetCookie(key?: string, val?: string, day?: number): void;
 
-declare function AutoResponse(size?: number, dir?: "x" | "y"): void;
+declare function AutoResponse(size?: number): void;
 declare function Base64ToFile(base64?: string, name?: string): File;
 declare function CopyPaste(text?: string, elem?: HTMLElement): Promise<boolean>;
 declare function DownloadFile(url?: string, name?: string): void;

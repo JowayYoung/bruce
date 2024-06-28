@@ -68,6 +68,7 @@ declare function useActionsheet(): UseActionsheetType;
 
 interface AlertType extends ModalBaseType {
     btnText?: string;
+    copyText?: string;
     onCancel?: () => boolean | Promise<boolean>;
     onCancelCall?: (flag: boolean) => void | Promise<void>;
     onConfirm?: () => boolean | Promise<boolean>;
@@ -79,12 +80,14 @@ type UseAlertType = [
     () => Promise<void>,
     boolean
 ];
-declare function actionAlert({ btnText, children, className, closeWay, onCancel, onCancelCall, onConfirm, onConfirmCall, title }: AlertType): Promise<void>;
+declare function actionAlert({ btnText, children, className, closeWay, copyText, onCancel, onCancelCall, onConfirm, onConfirmCall, title }: AlertType): Promise<void>;
 declare function useAlert(): UseAlertType;
 
 interface DialogType extends ModalBaseType {
     btnTextCancel?: string;
     btnTextConfirm?: string;
+    copyTextCancel?: string;
+    copyTextConfirm?: string;
     onCancel?: () => boolean | Promise<boolean>;
     onCancelCall?: (flag: boolean) => void | Promise<void>;
     onConfirm?: () => boolean | Promise<boolean>;
@@ -96,7 +99,7 @@ type UseDialogType = [
     () => Promise<void>,
     boolean
 ];
-declare function actionDialog({ btnTextCancel, btnTextConfirm, children, className, closeWay, onCancel, onCancelCall, onConfirm, onConfirmCall, title }: DialogType): Promise<void>;
+declare function actionDialog({ btnTextCancel, btnTextConfirm, children, className, closeWay, copyTextCancel, copyTextConfirm, onCancel, onCancelCall, onConfirm, onConfirmCall, title }: DialogType): Promise<void>;
 declare function useDialog(): UseDialogType;
 
 interface EmptyType {
