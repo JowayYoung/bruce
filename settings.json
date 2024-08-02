@@ -57,9 +57,9 @@
 	},
 	// Eslint
 	// "eslint.experimental.useFlatConfig": true, // eslint v9
-	"eslint.nodePath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.14.0/node_modules/@yangzw/bruce-std/node_modules/eslint",
+	"eslint.nodePath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.16.0/node_modules/@yangzw/bruce-std/node_modules/eslint",
 	"eslint.options": {
-		"overrideConfigFile": "C:/Users/n7440/AppData/Roaming/Nvm/v20.14.0/node_modules/@yangzw/bruce-std/dist/eslintrc.cjs"
+		"overrideConfigFile": "C:/Users/n7440/AppData/Roaming/Nvm/v20.16.0/node_modules/@yangzw/bruce-std/dist/eslintrc.cjs"
 	},
 	// Markdownlint
 	"markdownlint.config": {
@@ -74,8 +74,8 @@
 		"MD047": false
 	},
 	// Prettier
-	"prettier.configPath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.14.0/node_modules/@yangzw/bruce-std/dist/prettier.config.cjs",
-	"prettier.ignorePath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.14.0/node_modules/@yangzw/bruce-std/.prettierignore",
+	"prettier.configPath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.16.0/node_modules/@yangzw/bruce-std/dist/prettier.config.cjs",
+	"prettier.ignorePath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.16.0/node_modules/@yangzw/bruce-std/.prettierignore",
 	"prettier.arrowParens": "avoid",
 	"prettier.quoteProps": "preserve",
 	"prettier.tabWidth": 4,
@@ -86,8 +86,8 @@
 	// SortLines
 	"sortLines.filterBlankLines": true,
 	// Stylelint
-	"stylelint.configFile": "C:/Users/n7440/AppData/Roaming/Nvm/v20.14.0/node_modules/@yangzw/bruce-std/dist/stylelint.config.cjs",
-	"stylelint.stylelintPath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.14.0/node_modules/@yangzw/bruce-std/node_modules/stylelint",
+	"stylelint.configFile": "C:/Users/n7440/AppData/Roaming/Nvm/v20.16.0/node_modules/@yangzw/bruce-std/dist/stylelint.config.cjs",
+	"stylelint.stylelintPath": "C:/Users/n7440/AppData/Roaming/Nvm/v20.16.0/node_modules/@yangzw/bruce-std/node_modules/stylelint",
 	"stylelint.validate": ["html", "css", "scss", "less", "vue"],
 	// 独立文件
 	"[html]": {

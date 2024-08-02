@@ -6,7 +6,7 @@
 		"build": "pnpm -r exec -- npm run build",
 		"clean": "rimraf packages/us/node_modules && rimraf node_modules pnpm-lock.yaml && pnpm -r exec -- rimraf node_modules pnpm-lock.yaml",
 		"commit": "git add -A . && git-cz",
-		"init": "npm i -g commitizen cz-customizable http-server nrm pnpm rimraf typescript yarn && pnpm -r i",
+		"init": "npm i -g commitizen cz-customizable http-server nrm pnpm rimraf tsx typescript yarn && pnpm -r i",
 		"link": "pnpm -F !@yangzw/bruce-type -F !@yangzw/bruce-ui -F !@yangzw/bruce-us -r exec -- npm link",
 		"mini": "tsx tasks/mini.ts",
 		"publish": "pnpm -reg https://registry.npmjs.org/ -r --dry-run --no-git-checks publish",
@@ -27,13 +27,13 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "20.14.9",
+		"@types/node": "22.0.2",
 		"@types/semver": "7.5.8",
 		"@yangzw/bruce-us": "workspace:*",
-		"semver": "7.6.2",
-		"terser": "5.31.1",
-		"tsx": "4.15.7",
-		"typescript": "5.5.2"
+		"semver": "7.6.3",
+		"terser": "5.31.3",
+		"tsx": "4.16.5",
+		"typescript": "5.5.4"
 	},
 	"workspaces": [
 		"packages/*"

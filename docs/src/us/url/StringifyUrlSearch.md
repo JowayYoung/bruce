@@ -1,5 +1,5 @@
 ---
-title: URL参数序列化 🔥
+title: URL参数序列化
 icon: paperclip
 ---
 
@@ -9,7 +9,7 @@ icon: paperclip
 **clear**|清除假值|`Boolean`|`false`|假值包括`undefined`、`null`、`""`、`NaN`
 
 ```js
-import { StringifyUrlSearch } from "@yangzw/bruce-us/dist/web";
+import { StringifyUrlSearch } from "@yangzw/bruce-us";
 
 StringifyUrlSearch({ address: "", name: "young", sex: "male" }, true); // "?name=young&sex=male"
 ```

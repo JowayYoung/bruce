@@ -4,14 +4,14 @@
 
 ### 开发计划
 
-- [x] **@yangzw/bruce-app**：应用`@1.3.2`✔️
-- [x] **@yangzw/bruce-ico**：图标`@1.3.2`
-- [x] **@yangzw/bruce-img**：图像`@1.3.2`✔️
-- [x] **@yangzw/bruce-lng**：语言`@1.3.2`
-- [x] **@yangzw/bruce-pkg**：模块`@1.3.2`✔️
-- [x] **@yangzw/bruce-std**：规范`@1.3.2`✔️
-- [x] **@yangzw/bruce-ui**：组件`@1.3.2`
-- [x] **@yangzw/bruce-us**：工具`@1.3.2`✔️
+- [x] **@yangzw/bruce-app**：应用`@1.3.3`✔️
+- [x] **@yangzw/bruce-ico**：图标`@1.3.3`
+- [x] **@yangzw/bruce-img**：图像`@1.3.3`✔️
+- [x] **@yangzw/bruce-lng**：语言`@1.3.3`
+- [x] **@yangzw/bruce-pkg**：模块`@1.3.3`✔️
+- [x] **@yangzw/bruce-std**：规范`@1.3.3`✔️
+- [x] **@yangzw/bruce-ui**：组件`@1.3.3`
+- [x] **@yangzw/bruce-us**：工具`@1.3.3`✔️
 
 ### 色彩定义
 
@@ -24,11 +24,12 @@
 
 - [x] `bruce-pkg`依赖的`listr2`目前未升级到`v7`，`v7`存在无法抛出错误的问题，但是`v6`需要显式依赖`enquirer`
 - [x] `vite`从`v4`迁移到`v5`的[注意事项](https://cn.vitejs.dev/guide/migration.html#rollup-4)
-- [ ] `stylelint`从`v15`迁移到`v16`的[注意事项](https://stylelint.io/migration-guide/to-16)
+- [x] `stylelint`从`v15`迁移到`v16`的[注意事项](https://stylelint.io/migration-guide/to-16)
 - [ ] `app/ico/img/std`需要去掉`tsconfig.json`的`"skipLibCheck":true`配置
-- [ ] `app`的`sass`和`sass-loader@14`存在版本兼容冲突，`sass-loader`降级到`v13`
+- [x] `app`的`sass`和`sass-loader@14`存在版本兼容冲突，`sass-loader`降级到`v13`
 - [ ] `img`的`imagemin-svgo@11`存在`is-svg`错误，降级到`v10`
 - [ ] `std`的`eslint-config-love`只能停留在`v47`，需要`eslint`升级到`v9`才能使用`v52`
+- [ ] `std`的`typescript-eslint`只能停留在`v7`，需要`eslint`升级到`v9`才能使用`v8`
 
 ### 指令步骤
 

@@ -7,8 +7,7 @@ declare function StatArrMemKeyword(arr?: string[], keywords?: string[]): string[
 type MemValueEnum = string | number | boolean | null | undefined;
 declare function StatArrMemPosition(arr: MemValueEnum[] | undefined, val: MemValueEnum): number[];
 
-type EnvEnum = "web" | "node";
-declare function EnvType(): EnvEnum;
+declare function EnvType(): "web" | "node";
 declare function IsWeb(): boolean;
 declare function IsNode(): boolean;
 declare function TypeOf<T>(data: T): string;
@@ -38,8 +37,8 @@ declare function IsEmptyArray<T>(data: T): boolean;
 declare function IsEmptyObject<T extends object>(data: T): boolean;
 
 type DateEnum = string | number | Date;
-declare function FormatCountdown(date: DateEnum): string;
-declare function FormatTimeDiff(date: DateEnum, format?: string): string;
+declare function FormatCountdown(date?: DateEnum): string;
+declare function FormatTimeDiff(date?: DateEnum, format?: string): string;
 declare function RecentMonths(count?: number, format?: string): string[];
 
 type TgtFunc<T, R> = (...args: T[]) => R;
@@ -74,15 +73,14 @@ declare function FilterObjKey<T>(obj?: ObjType<T>, keys?: KeyEnum[]): ObjType<T>
 declare function RemoveObjEmptyKey<T>(obj?: ObjType<T>, clear?: boolean): ObjType<T>;
 
 type FieldEnum = "address" | "count" | "date" | "email" | "idcard" | "image" | "name" | "number" | "password" | "phone";
-type MatchType = Record<FieldEnum, {
-    msg: string;
-    regexp: RegExp;
-}>;
 interface CheckType {
     flag: boolean;
     msg: string;
 }
-declare const MATCH: MatchType;
+declare const MATCH: Record<FieldEnum, {
+    msg: string;
+    regexp: RegExp;
+}>;
 declare function CheckText(type?: FieldEnum, text?: string): CheckType;
 declare function CheckTextPlus(regexp: RegExp, text?: string, msg?: string): CheckType;
 declare function MatchBracketText(tgt?: string, text?: string): string[];
@@ -94,6 +92,28 @@ declare function RandomId(len?: number): string;
 declare function RemoveTag(html?: string): string;
 declare function ReverseText(text?: string): string;
 declare function StartScore(rate?: number, len?: number): string;
+
+type EngineEnum = "webkit" | "gecko" | "presto" | "trident";
+type PlatformEnum = "desktop" | "mobile";
+type ShellEnum = "uc" | "qq" | "sougou" | "maxthon" | "2345" | "360" | "liebao" | "xiaomi" | "huawei" | "oppo" | "vivo" | "wechat" | "baidu" | "toutiao";
+type SupporterEnum = "chrome" | "safari" | "edge" | "firefox" | "opera" | "iexplore";
+type SystemEnum = "windows" | "macos" | "linux" | "android" | "ios";
+interface WebsType {
+    engine: EngineEnum | "unknow";
+    engineVs: string;
+    platform: PlatformEnum;
+    supporter: SupporterEnum | "unknow";
+    supporterVs: string;
+    system: SystemEnum | "unknow";
+    systemVs: string;
+    shell?: ShellEnum | "none";
+    shellVs?: string;
+}
+declare function WebType(ua?: string): WebsType;
+
+type SearchType = Record<string, string>;
+declare function ParseUrlSearch(search?: string): SearchType;
+declare function StringifyUrlSearch(search?: Record<string, string | number | boolean | null | undefined>, clear?: boolean): string;
 
 type CookieType = Record<string, string>;
 declare function GetCookie(): CookieType;
@@ -115,8 +135,7 @@ interface JsonpType<T> {
 }
 declare function Jsonp<T>({ name, onCall, url }: JsonpType<T>): Promise<boolean>;
 declare function LoadScript(url?: string, pst?: "body" | "head"): Promise<boolean>;
-type EventEnum = "contextmenu" | "copy" | "selectstart";
-declare function ProhibitEvent(events?: EventEnum[]): void;
+declare function ProhibitEvent(events?: Array<"contextmenu" | "copy" | "selectstart">): void;
 
 interface ResponseType<T> {
     code: number;
@@ -151,26 +170,6 @@ declare function RemoveSStorage(key?: string): void;
 declare function SetLStorage<T>(key: string | undefined, val: T): void;
 declare function SetSStorage<T>(key: string | undefined, val: T): void;
 
-type EngineEnum = "webkit" | "gecko" | "presto" | "trident";
-type PlatformEnum = "desktop" | "mobile";
-type ShellEnum = "uc" | "qq" | "sougou" | "maxthon" | "2345" | "360" | "liebao" | "xiaomi" | "huawei" | "oppo" | "vivo" | "wechat" | "baidu" | "toutiao";
-type SupporterEnum = "chrome" | "safari" | "edge" | "firefox" | "opera" | "iexplore";
-type SystemEnum = "windows" | "macos" | "linux" | "android" | "ios";
-interface WebTypeType {
-    engine: EngineEnum | "unknow";
-    engineVs: string;
-    platform: PlatformEnum;
-    supporter: SupporterEnum | "unknow";
-    supporterVs: string;
-    system: SystemEnum | "unknow";
-    systemVs: string;
-    shell?: ShellEnum | "none";
-    shellVs?: string;
-}
-declare function WebType(ua?: string): WebTypeType;
-
-type SearchType = Record<string, string>;
-type SearchObjType = Record<string, string | number | boolean | null | undefined>;
 interface AppConfigType {
     download: string;
     downloadAndroid: string;
@@ -196,9 +195,7 @@ declare class CallApp {
     protected fallback(): void;
     onCall(): void;
 }
-declare function ParseUrlSearch(): SearchType;
 declare function RemoveUrlSearch(params?: string[]): void;
-declare function SetUrlSearch(search?: SearchObjType): void;
-declare function StringifyUrlSearch(search?: SearchObjType, clear?: boolean): string;
+declare function SetUrlSearch(search?: Record<string, string | number | boolean | null | undefined>): void;
 
 export { Aios, Ajax, AsyncTo, AutoResponse, Base64ToFile, CalcNum, CalcNumPlus, CallApp, CheckObjValidKey, CheckText, CheckTextPlus, ChunkArr, ClearLStorage, ClearSStorage, CopyPaste, Debounce, DesePhone, DownloadFile, DownloadText, EnvType, FillNum, FilterObjKey, FilterXss, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetCookie, GetLStorage, GetSStorage, GroupArr, HighlightText, ImgToBase64, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, Jsonp, LoadScript, MATCH, MatchBracketText, ParseUrlSearch, ProhibitEvent, RandomColor, RandomId, RandomNum, RandomNumPlus, RecentMonths, RemoveCookie, RemoveLStorage, RemoveObjEmptyKey, RemoveSStorage, RemoveTag, RemoveUrlSearch, ReverseText, RoundNum, SetCookie, SetLStorage, SetSStorage, SetUrlSearch, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, StringifyUrlSearch, ThousandNum, Throttle, TypeOf, WaitFor, WebType };

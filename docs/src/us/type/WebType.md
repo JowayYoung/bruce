@@ -1,11 +1,11 @@
 ---
-title: Web类型 🔥
+title: Web类型
 icon: code-branch
 ---
 
 入参|功能|类型|默认|说明
 :-:|:-:|:-:|:-:|-
-**ua**|用户代理|`String`|`"navigator.userAgent"`|可以传入任何`UserAgent`字符串
+**ua**|用户代理|`String`|`""`|可以传入任何`UserAgent`字符串
 
 出参|功能|类型
 :-:|:-:|:-:
@@ -26,7 +26,7 @@ icon: code-branch
 - [x] 安卓系统所有浏览器都是基于`Chromium`进行定制，但是它们的`UserAgent`大部分不包括`chrome`标识，所以载体输出是`safari`
 
 ```js
-import { WebType } from "@yangzw/bruce-us/dist/web";
+import { WebType } from "@yangzw/bruce-us";
 
 WebType();
 /*{

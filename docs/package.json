@@ -38,9 +38,9 @@
 	},
 	"devDependencies": {
 		"@vuepress/bundler-vite": "2.0.0-rc.14",
-		"vue": "3.4.30",
+		"vue": "3.4.35",
 		"vuepress": "2.0.0-rc.14",
-		"vuepress-theme-hope": "2.0.0-rc.50"
+		"vuepress-theme-hope": "2.0.0-rc.52"
 	},
 	"license": "MIT",
 	"private": true
