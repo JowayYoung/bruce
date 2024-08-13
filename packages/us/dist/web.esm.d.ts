@@ -143,23 +143,31 @@ interface ResponseType<T> {
     flag: boolean;
     msg: string;
 }
-declare function Aios<T>({ data, headers, method, progress, timeout, url, useCookie, useJson }: {
+declare function Aios<T, P extends object>({ data, headers, method, progress, timeout, url, useCookie, useJson }: {
     data?: Record<string | number, string | number | boolean | null | undefined>;
     headers?: object;
     method?: "get" | "post";
-    progress?: (p: object) => void;
+    progress?: (p: ProgressEvent) => void;
     timeout?: number;
     url: string;
     useCookie?: boolean;
     useJson?: boolean;
-}): Promise<[Error | null, ResponseType<T> | null]>;
+}): Promise<[Error | null, ResponseType<T> & P | null]>;
 declare function Ajax({ data, error, success, type, url }: {
-    data?: Record<string, string>;
+    data?: Record<string | number, string | number | boolean | null | undefined>;
     error?: (status: number) => void;
     success?: (res: string) => void;
     type?: "get" | "post";
     url: string;
 }): void;
+
+interface ReturnType {
+    code: number;
+    data: number;
+    flag: boolean;
+    msg: string;
+}
+declare function XXX(): Promise<ReturnType>;
 
 declare function ClearLStorage(): void;
 declare function ClearSStorage(): void;
@@ -198,4 +206,4 @@ declare class CallApp {
 declare function RemoveUrlSearch(params?: string[]): void;
 declare function SetUrlSearch(search?: Record<string, string | number | boolean | null | undefined>): void;
 
-export { Aios, Ajax, AsyncTo, AutoResponse, Base64ToFile, CalcNum, CalcNumPlus, CallApp, CheckObjValidKey, CheckText, CheckTextPlus, ChunkArr, ClearLStorage, ClearSStorage, CopyPaste, Debounce, DesePhone, DownloadFile, DownloadText, EnvType, FillNum, FilterObjKey, FilterXss, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetCookie, GetLStorage, GetSStorage, GroupArr, HighlightText, ImgToBase64, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, Jsonp, LoadScript, MATCH, MatchBracketText, ParseUrlSearch, ProhibitEvent, RandomColor, RandomId, RandomNum, RandomNumPlus, RecentMonths, RemoveCookie, RemoveLStorage, RemoveObjEmptyKey, RemoveSStorage, RemoveTag, RemoveUrlSearch, ReverseText, RoundNum, SetCookie, SetLStorage, SetSStorage, SetUrlSearch, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, StringifyUrlSearch, ThousandNum, Throttle, TypeOf, WaitFor, WebType };
+export { Aios, Ajax, AsyncTo, AutoResponse, Base64ToFile, CalcNum, CalcNumPlus, CallApp, CheckObjValidKey, CheckText, CheckTextPlus, ChunkArr, ClearLStorage, ClearSStorage, CopyPaste, Debounce, DesePhone, DownloadFile, DownloadText, EnvType, FillNum, FilterObjKey, FilterXss, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GetCookie, GetLStorage, GetSStorage, GroupArr, HighlightText, ImgToBase64, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, Jsonp, LoadScript, MATCH, MatchBracketText, ParseUrlSearch, ProhibitEvent, RandomColor, RandomId, RandomNum, RandomNumPlus, RecentMonths, RemoveCookie, RemoveLStorage, RemoveObjEmptyKey, RemoveSStorage, RemoveTag, RemoveUrlSearch, ReverseText, RoundNum, SetCookie, SetLStorage, SetSStorage, SetUrlSearch, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, StringifyUrlSearch, ThousandNum, Throttle, TypeOf, WaitFor, WebType, XXX };

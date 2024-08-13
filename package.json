@@ -27,12 +27,12 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "22.0.2",
+		"@types/node": "22.2.0",
 		"@types/semver": "7.5.8",
 		"@yangzw/bruce-us": "workspace:*",
 		"semver": "7.6.3",
-		"terser": "5.31.3",
-		"tsx": "4.16.5",
+		"terser": "5.31.5",
+		"tsx": "4.17.0",
 		"typescript": "5.5.4"
 	},
 	"workspaces": [
