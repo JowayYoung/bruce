@@ -113,9 +113,10 @@ interface WebsType {
 }
 declare function WebType(ua?: string): WebsType;
 
+type DataType = Record<string | number, string | number | boolean | null | undefined>;
 type SearchType = Record<string, string>;
 declare function ParseUrlSearch(search?: string): SearchType;
-declare function StringifyUrlSearch(search?: Record<string, string | number | boolean | null | undefined>, clear?: boolean): string;
+declare function StringifyUrlSearch(search?: DataType, clear?: boolean): string;
 
 declare function AbsPath(path?: string, dir?: string): string;
 declare function CheckPath(path?: string, dir?: string): boolean;

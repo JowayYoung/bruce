@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-lng",
-	"version": "1.3.4",
+	"version": "1.3.5",
 	"description": "A language processing tool that facilitates the management of multilingual texts",
 	"keywords": [
 		"bruce-lng",

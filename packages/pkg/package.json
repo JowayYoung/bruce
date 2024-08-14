@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-pkg",
-	"version": "1.3.4",
+	"version": "1.3.5",
 	"description": "A package processing tool that enhances Npm commands",
 	"keywords": [
 		"bruce-pkg",

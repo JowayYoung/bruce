@@ -111,9 +111,10 @@ interface WebsType {
 }
 declare function WebType(ua?: string): WebsType;
 
+type DataType$1 = Record<string | number, string | number | boolean | null | undefined>;
 type SearchType = Record<string, string>;
 declare function ParseUrlSearch(search?: string): SearchType;
-declare function StringifyUrlSearch(search?: Record<string, string | number | boolean | null | undefined>, clear?: boolean): string;
+declare function StringifyUrlSearch(search?: DataType$1, clear?: boolean): string;
 
 type CookieType = Record<string, string>;
 declare function GetCookie(): CookieType;
@@ -137,14 +138,15 @@ declare function Jsonp<T>({ name, onCall, url }: JsonpType<T>): Promise<boolean>
 declare function LoadScript(url?: string, pst?: "body" | "head"): Promise<boolean>;
 declare function ProhibitEvent(events?: Array<"contextmenu" | "copy" | "selectstart">): void;
 
+type DataType = Record<string | number, string | number | boolean | null | undefined>;
 interface ResponseType<T> {
     code: number;
     data: T | null;
     flag: boolean;
     msg: string;
 }
-declare function Aios<T, P extends object>({ data, headers, method, progress, timeout, url, useCookie, useJson }: {
-    data?: Record<string | number, string | number | boolean | null | undefined>;
+declare function Aios<T, P extends object = Record<string, unknown>>({ data, headers, method, progress, timeout, url, useCookie, useJson }: {
+    data?: DataType;
     headers?: object;
     method?: "get" | "post";
     progress?: (p: ProgressEvent) => void;
@@ -154,7 +156,7 @@ declare function Aios<T, P extends object>({ data, headers, method, progress, ti
     useJson?: boolean;
 }): Promise<[Error | null, ResponseType<T> & P | null]>;
 declare function Ajax({ data, error, success, type, url }: {
-    data?: Record<string | number, string | number | boolean | null | undefined>;
+    data?: DataType;
     error?: (status: number) => void;
     success?: (res: string) => void;
     type?: "get" | "post";

@@ -1,6 +1,6 @@
 {
 	"name": "@yangzw/bruce-std",
-	"version": "1.3.4",
+	"version": "1.3.5",
 	"description": "A VSCode configuration tool with integrated code verification",
 	"keywords": [
 		"bruce-std",
