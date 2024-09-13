@@ -129,15 +129,5 @@
 	},
 	"[json]": {
 		"editor.defaultFormatter": "HookyQR.beautify"
-	},
-	// 微信小程序
-	"emmet.includeLanguages": {
-		"wxml": "html"
-	},
-	"files.associations": {
-		"*.cjson": "jsonc",
-		"*.wxs": "javascript",
-		"*.wxss": "css"
-	},
-	"minapp-vscode.disableAutoConfig": true
+	}
 }

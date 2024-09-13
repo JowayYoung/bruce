@@ -4,14 +4,14 @@
 
 ### 开发计划
 
-- [x] **@yangzw/bruce-app**：应用`@1.3.5`✔️
-- [x] **@yangzw/bruce-ico**：图标`@1.3.5`
-- [x] **@yangzw/bruce-img**：图像`@1.3.5`✔️
-- [x] **@yangzw/bruce-lng**：语言`@1.3.5`
-- [x] **@yangzw/bruce-pkg**：模块`@1.3.5`✔️
-- [x] **@yangzw/bruce-std**：规范`@1.3.5`✔️
-- [x] **@yangzw/bruce-ui**：组件`@1.3.5`
-- [x] **@yangzw/bruce-us**：工具`@1.3.5`✔️
+- [x] **@yangzw/bruce-app**：应用`@1.3.6`✔️
+- [x] **@yangzw/bruce-ico**：图标`@1.3.6`
+- [x] **@yangzw/bruce-img**：图像`@1.3.6`✔️
+- [x] **@yangzw/bruce-lng**：语言`@1.3.6`
+- [x] **@yangzw/bruce-pkg**：模块`@1.3.6`✔️
+- [x] **@yangzw/bruce-std**：规范`@1.3.6`✔️
+- [x] **@yangzw/bruce-ui**：组件`@1.3.6`
+- [x] **@yangzw/bruce-us**：工具`@1.3.6`✔️
 
 ### 色彩定义
 

@@ -19,7 +19,7 @@ order: 1
 它的主要作用是简化模块开发的工作流程，提高模块的开发的效率和质量，增强模块的可塑性和一致性。通过将多个操作步骤和执行流程合并为一条命令，使开发人员可以更加方便快捷地创建、发布和管理模块，避免手动操作带来的繁琐和风险。自动化很多原本需要手动完成的操作，节省开发人员的时间和精力，使得他们可以更加专注代码的编写和优化。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.3.5-f66.svg)
+![version](https://img.shields.io/badge/version-1.3.6-f66.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D18.18.0-3c9.svg)
 ![npm](https://img.shields.io/badge/npm-%3E%3D9.8.1-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)

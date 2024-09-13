@@ -20,10 +20,10 @@ order: 1
 
 它是一个非常实用的工具库，不依赖于任何框架，还具备出色的跨平台兼容性。它提供很多常见的工具函数，可以帮助开发人员更加高效地完成编码。无论你是前端开发还是后端开发，都能使用这个工具库简化开发过程。无论是在浏览器中还是在服务器中，都能使用这个工具库处理各种任务。无论你是需要处理字符串、数组、布尔还是进行DOM操作、URL操作，这个工具库都能满足你的需求。所以，如果你正在寻找一个没有框架约束的通用工具库，`@yangzw/bruce-us`绝对是一个不错的选择。
 
-整体包括`106`个函数，分别是`Common`函数`65`个，`Web`函数`27`个，`Node`函数`14`个。
+整体包括`107`个函数，分别是`Common`函数`66`个，`Web`函数`27`个，`Node`函数`14`个。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.3.5-f66.svg)
+![version](https://img.shields.io/badge/version-1.3.6-f66.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D18.18.0-3c9.svg)
 ![npm](https://img.shields.io/badge/npm-%3E%3D9.8.1-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)
@@ -75,6 +75,29 @@ yarn add axios
 
 ```sh
 pnpm i axios
+```
+
+:::
+
+如果需要使用[Aios()](/us/function/Aios.md)且兼容低版本浏览器，请安装`axios`且其版本必须等于`1.5.0`。
+
+::: code-tabs#shell
+@tab npm
+
+```sh
+npm i axios@1.5.0
+```
+
+@tab yarn
+
+```sh
+yarn add axios@1.5.0
+```
+
+@tab pnpm
+
+```sh
+pnpm i axios@1.5.0
 ```
 
 :::

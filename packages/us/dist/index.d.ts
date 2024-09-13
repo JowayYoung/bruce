@@ -27,6 +27,7 @@ declare function IsSet<T>(data: T): boolean;
 declare function IsMap<T>(data: T): boolean;
 declare function IsWeakSet<T>(data: T): boolean;
 declare function IsWeakMap<T>(data: T): boolean;
+declare function IsFormData<T>(data: T): boolean;
 declare function IsElement<T>(data: T): boolean;
 declare function IsAsyncFunction<T>(data: T): boolean;
 declare function IsSyncFunction<T>(data: T): boolean;
@@ -116,4 +117,4 @@ type SearchType = Record<string, string>;
 declare function ParseUrlSearch(search?: string): SearchType;
 declare function StringifyUrlSearch(search?: DataType, clear?: boolean): string;
 
-export { AsyncTo, CalcNum, CalcNumPlus, CheckObjValidKey, CheckText, CheckTextPlus, ChunkArr, Debounce, DesePhone, EnvType, FillNum, FilterObjKey, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GroupArr, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, MATCH, MatchBracketText, ParseUrlSearch, RandomColor, RandomId, RandomNum, RandomNumPlus, RecentMonths, RemoveObjEmptyKey, RemoveTag, ReverseText, RoundNum, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, StringifyUrlSearch, ThousandNum, Throttle, TypeOf, WaitFor, WebType };
+export { AsyncTo, CalcNum, CalcNumPlus, CheckObjValidKey, CheckText, CheckTextPlus, ChunkArr, Debounce, DesePhone, EnvType, FillNum, FilterObjKey, FixedNum, FormatByte, FormatCountdown, FormatPhone, FormatTimeDiff, GroupArr, IsArguments, IsArray, IsAsyncFunction, IsBoolean, IsClass, IsDate, IsElement, IsEmpty, IsEmptyArray, IsEmptyObject, IsError, IsFormData, IsFunction, IsMap, IsNode, IsNull, IsNumber, IsObject, IsRegExp, IsSet, IsString, IsSymbol, IsSyncFunction, IsUndefined, IsWeakMap, IsWeakSet, IsWeb, MATCH, MatchBracketText, ParseUrlSearch, RandomColor, RandomId, RandomNum, RandomNumPlus, RecentMonths, RemoveObjEmptyKey, RemoveTag, ReverseText, RoundNum, StartScore, StatArrMemCount, StatArrMemKeyword, StatArrMemPosition, StringifyUrlSearch, ThousandNum, Throttle, TypeOf, WaitFor, WebType };
