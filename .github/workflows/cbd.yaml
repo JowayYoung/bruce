@@ -14,7 +14,7 @@ jobs: # 任务
       - name: Toggle
         uses: actions/setup-node@v3
         with:
-          node-version: 18.18.0
+          node-version: 20.14.0
       # 拉取代码
       - name: Checkout
         uses: actions/checkout@v3
