@@ -174,8 +174,8 @@ declare function XXX(): Promise<ReturnType>;
 
 declare function ClearLStorage(): void;
 declare function ClearSStorage(): void;
-declare function GetLStorage<T>(key?: string): T;
-declare function GetSStorage<T>(key?: string): T;
+declare function GetLStorage<T>(key?: string): T | null;
+declare function GetSStorage<T>(key?: string): T | null;
 declare function RemoveLStorage(key?: string): void;
 declare function RemoveSStorage(key?: string): void;
 declare function SetLStorage<T>(key: string | undefined, val: T): void;

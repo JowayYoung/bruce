@@ -25,13 +25,13 @@ order: 2
 [模糊](https://sharp.pixelplumbing.com/api-operation#blur)|`-b, --blur`|`0~1000`|不设置就不生效
 [裁剪](https://sharp.pixelplumbing.com/api-resize#extract)|`-e, --extract`|`left,top,width,height`|不设置就不生效
 [格式](https://sharp.pixelplumbing.com/api-output#toformat)|`-f, --toFormat`|`jpg/png/webp`|不设置就使用原来格式
-[平翻](https://sharp.pixelplumbing.com/api-operation#flip)|`-fi, --flip`|`true`|不设置就不生效
-[对翻](https://sharp.pixelplumbing.com/api-operation#flop)|`-fo, --flop`|`true`|不设置就不生效
+[平翻](https://sharp.pixelplumbing.com/api-operation#flip)|`-i, --flip`|`true`|不设置就不生效
+[对翻](https://sharp.pixelplumbing.com/api-operation#flop)|`-o, --flop`|`true`|不设置就不生效
 [灰度](https://sharp.pixelplumbing.com/api-colour#grayscale)|`-g, --grayscale`|`true`|不设置就不生效
-[负片](https://sharp.pixelplumbing.com/api-operation#negate)|`-ne, --negate`|`true`, `noalpha`|不设置就不生效
-[对比](https://sharp.pixelplumbing.com/api-operation#normalise)|`-no, --normalise`|`true`, `lower,upper`|不设置就不生效
-[尺寸](https://sharp.pixelplumbing.com/api-resize#resize)|`-re, --resize`|`width,height[,fit]`|不设置就不生效
-[旋转](https://sharp.pixelplumbing.com/api-operation#rotate)|`-ro, --rotate`|`angle[,bgcolor]`|不设置就不生效
+[负片](https://sharp.pixelplumbing.com/api-operation#negate)|`-n, --negate`|`true`, `noalpha`|不设置就不生效
+[对比](https://sharp.pixelplumbing.com/api-operation#normalise)|`-l, --normalise`|`true`, `lower,upper`|不设置就不生效
+[尺寸](https://sharp.pixelplumbing.com/api-resize#resize)|`-r, --resize`|`width,height[,fit]`|不设置就不生效
+[旋转](https://sharp.pixelplumbing.com/api-operation#rotate)|`-x, --rotate`|`angle[,bgcolor]`|不设置就不生效
 [锐化](https://sharp.pixelplumbing.com/api-operation#sharpen)|`-s, --sharpen`|`true`, `[sigma,flat,jagged]`|不设置就不生效
 
 `[]`表示可选

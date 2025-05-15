@@ -4,14 +4,14 @@
 
 ### 开发计划
 
-- [x] **@yangzw/bruce-app**：应用`@1.3.6`✔️
-- [x] **@yangzw/bruce-ico**：图标`@1.3.6`
-- [x] **@yangzw/bruce-img**：图像`@1.3.6`✔️
-- [x] **@yangzw/bruce-lng**：语言`@1.3.6`
-- [x] **@yangzw/bruce-pkg**：模块`@1.3.6`✔️
-- [x] **@yangzw/bruce-std**：规范`@1.3.6`✔️
-- [x] **@yangzw/bruce-ui**：组件`@1.3.6`
-- [x] **@yangzw/bruce-us**：工具`@1.3.6`✔️
+- [x] **@yangzw/bruce-app**：应用`@1.3.7`✔️
+- [x] **@yangzw/bruce-ico**：图标`@1.3.7`
+- [x] **@yangzw/bruce-img**：图像`@1.3.7`✔️
+- [x] **@yangzw/bruce-lng**：语言`@1.3.7`
+- [x] **@yangzw/bruce-pkg**：模块`@1.3.7`✔️
+- [x] **@yangzw/bruce-std**：规范`@1.3.7`✔️
+- [x] **@yangzw/bruce-ui**：组件`@1.3.7`
+- [x] **@yangzw/bruce-us**：工具`@1.3.7`✔️
 
 ### 色彩定义
 
@@ -28,8 +28,8 @@
 - [ ] `app/ico/img/std`需要去掉`tsconfig.json`的`"skipLibCheck":true`配置
 - [x] `app`的`sass`和`sass-loader@14`存在版本兼容冲突，`sass-loader`降级到`v13`
 - [ ] `img`的`imagemin-svgo@11`存在`is-svg`错误，降级到`v10`
-- [ ] `std`的`eslint-config-love`只能停留在`v47`，需要`eslint`升级到`v9`才能使用`v52`
-- [ ] `std`的`typescript-eslint`只能停留在`v7`，需要`eslint`升级到`v9`才能使用`v8`
+- [x] `std`的`eslint-config-love`只能停留在`v47`，需要`eslint`升级到`v9`才能使用`v52`(直接移除)
+- [x] `std`的`typescript-eslint`只能停留在`v7`，需要`eslint`升级到`v9`才能使用`v8`
 
 ### 指令步骤
 
@@ -56,7 +56,7 @@
 
 找到`bin/prefix/cache目录`并手动删除，同时保留配置文件`/usr/local/share/.yarnrc`。
 
-```sh
+```bash
 # 获取bin目录：/usr/local/bin
 yarn global bin
 
@@ -69,7 +69,7 @@ yarn cache bin
 
 迁移`bin/prefix/cache目录`到指定位置，`bin目录`要在`prefix目录`中，`prefix目录`和`cache目录`要在同一文件夹中。其中`path`为`/Users/yangzw/Documents/记录/Yarn`。
 
-```sh
+```bash
 # 设置bin目录
 yarn config set prefix path/prefix/bin
 
@@ -82,7 +82,7 @@ yarn config set cache-folder path/cache
 
 将`bin目录`增加到环境变量中，重启配置文件使它生效。
 
-```sh
+```bash
 # 进入配置文件
 vim ~/.bash_profile
 
@@ -95,14 +95,14 @@ source ~/.bash_profile
 
 执行`yarn global add pkg`安装模块并测试它能否在全局环境中使用。
 
-```sh
+```bash
 yarn global add typescript
 tsc -v
 ```
 
 调试范围模块时执行`yarn link`将它挂载到`~/.config/yarn/link`，但是上述配置已经改变`bin/prefix/cache目录`，所以要执行`yarn link --link-folder path`将它指定到`bin目录`中。
 
-```sh
+```bash
 # 进入目录
 cd pkg
 # 链接指令
@@ -115,7 +115,7 @@ yarn unlink --link-folder path/prefix/bin
 
 设置`sharp镜像`指向到淘宝镜像。
 
-```sh
+```bash
 npm config set sharp_binary_host https://npm.taobao.org/mirrors/sharp/
 npm config set sharp_dist_base_url https://npm.taobao.org/mirrors/sharp-libvips/
 npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-libvips/
@@ -177,10 +177,11 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 			"ES2021",
 			"ES2022",
 			"ES2023",
+			"ES2024",
 			"ESNext"
 		],
 		"module": "ESNext",
-		"moduleResolution": "Node",
+		"moduleResolution": "node",
 		"outDir": "dist",
 		"paths": {
 			"@/*": [
@@ -237,4 +238,23 @@ npm config set sharp_libvips_binary_host https://npm.taobao.org/mirrors/sharp-li
 ```ts
 import { getUser } from "./user.js"; // user.ts
 import MyComponent from "./component"; // component.tsx
+```
+
+#### Mac电脑权限问题
+
+在执行`npm run link`之后，生成的文件会存在权限问题，需要开通读写权限。
+
+```bash
+chmod +x /Users/yangzw/Documents/记录/Nvm/versions/node/v22.14.0/bin/bruce-app
+chmod +x /Users/yangzw/Documents/记录/Nvm/versions/node/v22.14.0/bin/bruce-ico
+chmod +x /Users/yangzw/Documents/记录/Nvm/versions/node/v22.14.0/bin/bruce-img
+chmod +x /Users/yangzw/Documents/记录/Nvm/versions/node/v22.14.0/bin/bruce-lng
+chmod +x /Users/yangzw/Documents/记录/Nvm/versions/node/v22.14.0/bin/bruce-pkg
+chmod +x /Users/yangzw/Documents/记录/Nvm/versions/node/v22.14.0/bin/bruce-std
+```
+
+在检查`package.json文件`时，`Version Lens`可能无权读取`node_modules`文件夹的缓存，需要执行以下命令清理缓存。
+
+```bash
+npm cache clean -f
 ```

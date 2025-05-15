@@ -82,16 +82,16 @@ order: 3
 功能|配置|格式|描述
 :-:|:-:|:-:|-
 **分析打包结果**|`-a, --analyze`|`true`|不设置就不生效
-**压缩文件数据**|`-c, --compress`|`true`|不设置就不生效
-**校验样式代码**|`-lc, --lintcss`|`true`|不设置就不生效
-**校验脚本代码**|`-lj, --lintjs`|`true`|不设置就不生效
+**压缩文件数据**|`-s, --compress`|`true`|不设置就不生效
+**校验样式代码**|`-c, --lintcss`|`true`|不设置就不生效
+**校验脚本代码**|`-j, --lintjs`|`true`|不设置就不生效
 **环境模式**|`-m, --mode`|`test/pre/prod`|不设置就默认为`prod`
 **哈希文件名称**|`-n, --named`|`true`|不设置就不生效
 **代码垫片**|`-p, --polyfill`|`es5/es6/custom/dynamic`|不设置就默认为`es6`
 **时化应用目录**|`-t, --timed`|`true`|不设置就不生效
 
 - 示例1：`bruce-app build --mode test --polyfill es5 --analyze --lintcss --lintjs`
-- 示例2：`bruce-app b -m pre -p dynamic -a -lc -lj`
+- 示例2：`bruce-app b -m pre -p dynamic -a -c -j`
 
 > ♾️ 创建应用 **bruce-app create** / **bruce-app c**
 
@@ -101,9 +101,9 @@ order: 3
 **安装应用依赖**|`-i, --install`|`true`|不设置就不生效
 **应用名称**|`-n, --name`|`unknown`|不设置就默认为`unknown`
 **预设样式**|`-s, --style`|`scss`|不设置就默认为`scss`
-**集成TypeScript**|`-ts, --typescript`|`true`|不设置就不生效
+**集成TypeScript**|`-t, --typescript`|`true`|不设置就不生效
 
-- 示例1：`bruce-app create --name test-react-ts --frame react --style less -i -ts`
+- 示例1：`bruce-app create --name test-react-ts --frame react --style less -i -t`
 - 示例2：`bruce-app c -n test-react -f react -s less -i`
 
 > 🕹️ 调试应用 **bruce-app dev** / **bruce-app d**
@@ -111,13 +111,13 @@ order: 3
 功能|配置|格式|描述
 :-:|:-:|:-:|-
 **开启证书服务**|`-e, --encrypt`|`true`|不设置就不生效
-**校验样式代码**|`-lc, --lintcss`|`true`|不设置就不生效
-**校验脚本代码**|`-lj, --lintjs`|`true`|不设置就不生效
+**校验样式代码**|`-c, --lintcss`|`true`|不设置就不生效
+**校验脚本代码**|`-j, --lintjs`|`true`|不设置就不生效
 **打开初始网页**|`-o, --open`|`true`|不设置就不生效
 **代码垫片**|`-p, --port`|`9999`|不设置就默认为`9999`
 
 - 示例1：`bruce-app dev --port 9876 --encrypt --lintcss --lintjs --open`
-- 示例2：`bruce-app d -p 9876 -e -lc -lj -o`
+- 示例2：`bruce-app d -p 9876 -e -c -j -o`
 
 > 🎨 初始物料 **bruce-app init** / **bruce-app i**
 

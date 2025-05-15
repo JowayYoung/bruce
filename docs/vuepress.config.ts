@@ -28,8 +28,13 @@ export default defineUserConfig({
 		},
 		favicon: "favicon.ico",
 		fullscreen: true,
-		iconAssets: "fontawesome",
 		logo: "https://jowayyoung.github.io/static/bruce/logo.svg",
+		markdown: {
+			codeTabs: true,
+			imgLazyload: true,
+			tabs: true,
+			tasklist: true
+		},
 		navbar: [
 			{ icon: "lightbulb", link: "/index.md", text: "指南" },
 			{ icon: "cube", link: "/app/index.md", text: "app" },
@@ -61,11 +66,8 @@ export default defineUserConfig({
 			copyCode: {
 				showInMobile: true
 			},
-			mdEnhance: {
-				codetabs: true,
-				imgLazyload: true,
-				tabs: true,
-				tasklist: true
+			icon: {
+				assets: "fontawesome"
 			}
 		},
 		sidebar: {

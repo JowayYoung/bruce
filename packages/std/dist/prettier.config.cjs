@@ -1,1 +1,1 @@
-const Wo={arrowParens:"avoid",quoteProps:"preserve",tabWidth:4,trailingComma:"none",useTabs:!0};module.exports=Wo;
+const Yo={arrowParens:"avoid",quoteProps:"preserve",tabWidth:4,trailingComma:"none",useTabs:!0};module.exports=Yo;

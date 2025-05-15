@@ -9,10 +9,10 @@ order: 6
 ```json
 {
 	"scripts": {
-		"build": "bruce-app b -lc -lj -m test",
-		"build:pre": "bruce-app b -lc -lj -m pre",
-		"build:prod": "bruce-app b -lc -lj",
-		"dev": "bruce-app d -e -lc -lj -o"
+		"build": "bruce-app b -c -j -m test",
+		"build:pre": "bruce-app b -c -j -m pre",
+		"build:prod": "bruce-app b -c -j",
+		"dev": "bruce-app d -e -c -j -o"
 	}
 }
 ```

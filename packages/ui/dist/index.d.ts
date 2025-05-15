@@ -1,4 +1,4 @@
-import { MouseEventHandler, CSSProperties, ReactNode, FC, ReactElement, RefObject } from 'react';
+import { MouseEventHandler, CSSProperties, JSX, ReactNode, ReactElement, FC, RefObject } from 'react';
 
 interface ButtonType$1 {
     className?: string;
@@ -213,4 +213,5 @@ declare function useOnResize(): ReturnType;
 
 declare function LoadIcons(): Promise<boolean>;
 
-export { type ActionToastType, Actionsheet, type ActionsheetType, type ActionsheetWrapperType, type AlertType, Button, type ButtonType$1 as ButtonType, type CloseWayEnum, type DialogType, Empty, type EmptyType, Icon, type IconType, LoadIcons, Loader, type LoaderType, Loading, type LoadingType, Modal, type ModalBaseType, type ModalType, type ModalWrapperType, type ShareAppType, Sharesheet, type SharesheetType, type SharesheetWrapperType, Toast, type ToastType, type UseActionsheetType, type UseAlertType, type UseDialogType, type UseLoadingType, type UseModalType, type UseSharesheetType, actionAlert, actionDialog, actionToast, useActionsheet, useAlert, useDesktop, useDialog, useLoading, useModal, useOnCross, useOnResize, useSharesheet };
+export { Actionsheet, Button, Empty, Icon, LoadIcons, Loader, Loading, Modal, Sharesheet, Toast, actionAlert, actionDialog, actionToast, useActionsheet, useAlert, useDesktop, useDialog, useLoading, useModal, useOnCross, useOnResize, useSharesheet };
+export type { ActionToastType, ActionsheetType, ActionsheetWrapperType, AlertType, ButtonType$1 as ButtonType, CloseWayEnum, DialogType, EmptyType, IconType, LoaderType, LoadingType, ModalBaseType, ModalType, ModalWrapperType, ShareAppType, SharesheetType, SharesheetWrapperType, ToastType, UseActionsheetType, UseAlertType, UseDialogType, UseLoadingType, UseModalType, UseSharesheetType };

@@ -21,7 +21,7 @@ const finalDirs = pkg === "" ? dirs : dirs.filter(v => v.includes(normalize(`pac
 finalDirs.forEach(async v => {
 	if (exts.includes(extname(v))) {
 		const stext = readFileSync(v, "utf8");
-		const dtext = (await minify(stext, opts)).code;
+		const dtext = (await minify(stext, opts)).code ?? "";
 		!!dtext && writeFileSync(v, dtext, "utf8");
 	}
 });

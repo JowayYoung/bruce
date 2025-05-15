@@ -23,7 +23,7 @@ order: 1
 整体包括`107`个函数，分别是`Common`函数`66`个，`Web`函数`27`个，`Node`函数`14`个。
 
 ![author](https://img.shields.io/badge/author-JowayYoung-f66.svg)
-![version](https://img.shields.io/badge/version-1.3.6-f66.svg)
+![version](https://img.shields.io/badge/version-1.3.7-f66.svg)
 ![node](https://img.shields.io/badge/node-%3E%3D18.18.0-3c9.svg)
 ![npm](https://img.shields.io/badge/npm-%3E%3D9.8.1-3c9.svg)
 ![test](https://img.shields.io/badge/test-passing-f90.svg)
@@ -38,19 +38,19 @@ order: 1
 ::: code-tabs#shell
 @tab npm
 
-```sh
+```bash
 npm i @yangzw/bruce-us
 ```
 
 @tab yarn
 
-```sh
+```bash
 yarn add @yangzw/bruce-us
 ```
 
 @tab pnpm
 
-```sh
+```bash
 pnpm i @yangzw/bruce-us
 ```
 
@@ -61,19 +61,19 @@ pnpm i @yangzw/bruce-us
 ::: code-tabs#shell
 @tab npm
 
-```sh
+```bash
 npm i axios
 ```
 
 @tab yarn
 
-```sh
+```bash
 yarn add axios
 ```
 
 @tab pnpm
 
-```sh
+```bash
 pnpm i axios
 ```
 
@@ -84,19 +84,19 @@ pnpm i axios
 ::: code-tabs#shell
 @tab npm
 
-```sh
+```bash
 npm i axios@1.5.0
 ```
 
 @tab yarn
 
-```sh
+```bash
 yarn add axios@1.5.0
 ```
 
 @tab pnpm
 
-```sh
+```bash
 pnpm i axios@1.5.0
 ```
 

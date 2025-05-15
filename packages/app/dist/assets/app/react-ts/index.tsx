@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";

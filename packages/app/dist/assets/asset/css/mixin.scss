@@ -1,12 +1,15 @@
+@use "sass:map";
+@use "sass:meta";
+@use "sass:string";
 $breakpoints: (
 	desktop: "only screen and (width >= 1000px) and (height >= 800px)"
 ) !default;
 @mixin auto-response($breakpoint) {
-	$query: map-get($breakpoints, $breakpoint);
+	$query: map.get($breakpoints, $breakpoint);
 	@if not $query {
 		@error "找不到`#{$breakpoint}`的值，请确保在`$breakpoints`映射中已经定义它";
 	}
-	$condition: if(type-of($query) == "string", unquote($query), inspect($query));
+	$condition: if(meta.type-of($query) == "string", string.unquote($query), meta.inspect($query));
 	@media #{$condition} {
 		@content;
 	}

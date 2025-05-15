@@ -37,16 +37,17 @@ order: 2
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"security.workspace.trust.untrustedFiles": "open",
 	"typescript.updateImportsOnFileMove.enabled": "always",
-	"window.zoomLevel": 1,
 	// Beautify
 	"beautify.config": {
 		"indent_with_tabs": true,
+		"newline_between_rules": false,
 		"wrap_line_length": 0
 	},
 	// Eslint
+	"eslint.useFlatConfig": true,
 	"eslint.nodePath": "path/@yangzw/bruce-std/node_modules/eslint",
 	"eslint.options": {
-		"overrideConfigFile": "path/@yangzw/bruce-std/dist/eslintrc.cjs" // Eslint暂未支持ESM形式的配置文件
+		"overrideConfigFile": "path/@yangzw/bruce-std/dist/eslint.config.js"
 	},
 	// Markdownlint
 	"markdownlint.config": {
@@ -54,6 +55,7 @@ order: 2
 		"MD007": false,
 		"MD010": false,
 		"MD013": false,
+		"MD024": false,
 		"MD033": false,
 		"MD036": false,
 		"MD041": false,
@@ -61,17 +63,17 @@ order: 2
 		"MD047": false
 	},
 	// Prettier
-	"prettier.configPath": "path/@yangzw/bruce-std/dist/prettier.config.cjs", // Prettier暂未支持ESM形式的配置文件
+	"prettier.configPath": "path/@yangzw/bruce-std/dist/prettier.config.js", // Prettier暂未支持ESM形式的配置文件
 	"prettier.ignorePath": "path/@yangzw/bruce-std/.prettierignore",
-	"prettier.arrowParens": "avoid", // Prettier兜底配置，防止prettier.config.cjs失效
-	"prettier.quoteProps": "preserve", // Prettier兜底配置，防止prettier.config.cjs失效
-	"prettier.tabWidth": 4, // Prettier兜底配置，防止prettier.config.cjs失效
-	"prettier.trailingComma": "none", // Prettier兜底配置，防止prettier.config.cjs失效
-	"prettier.useTabs": true, // Prettier兜底配置，防止prettier.config.cjs失效
+	"prettier.arrowParens": "avoid", // Prettier兜底配置，防止prettier.config.js失效
+	"prettier.quoteProps": "preserve", // Prettier兜底配置，防止prettier.config.js失效
+	"prettier.tabWidth": 4, // Prettier兜底配置，防止prettier.config.js失效
+	"prettier.trailingComma": "none", // Prettier兜底配置，防止prettier.config.js失效
+	"prettier.useTabs": true, // Prettier兜底配置，防止prettier.config.js失效
 	// RemoveFinalNewlines
 	"files.removeFinalNewlines": true,
 	// Stylelint
-	"stylelint.configFile": "path/@yangzw/bruce-std/dist/stylelint.config.cjs",
+	"stylelint.configFile": "path/@yangzw/bruce-std/dist/stylelint.config.js",
 	"stylelint.stylelintPath": "path/@yangzw/bruce-std/node_modules/stylelint",
 	"stylelint.validate": ["html", "css", "scss", "less", "vue"],
 	// 独立文件

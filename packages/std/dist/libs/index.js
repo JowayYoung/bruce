@@ -1,1 +1,1 @@
-import To from"./copy.js";import O from"./init.js";import Uo from"./update.js";export{To as Copy,O as Init,Uo as Update};
+import Uo from"./copy.js";import O from"./init.js";import Vo from"./update.js";export{Uo as Copy,O as Init,Vo as Update};

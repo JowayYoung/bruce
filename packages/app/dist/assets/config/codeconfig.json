@@ -20,10 +20,11 @@
 			"ES2021",
 			"ES2022",
 			"ES2023",
+			"ES2024",
 			"ESNext"
 		],
 		"module": "ESNext",
-		"moduleResolution": "Node",
+		"moduleResolution": "node",
 		"outDir": "dist",
 		"paths": {
 			"@/*": [
